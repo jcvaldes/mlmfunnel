@@ -5,8 +5,7 @@ Route::group(array('before' => 'auth'), function()
 	Route::get('/', ['uses' => 'UserController@dashboard']);
 
 	/* Property */
-	Route::resource('property', 'PropertyController', array('only' => array('index', 'show')));
-	Route::post('/property/image', ['uses' => 'PropertyController@add_image']);
+	Route::resource('landing', 'LandingController');
 
 	/* Branch */
 	Route::resource('branch', 'BranchController', array('only' => array('index', 'show')));

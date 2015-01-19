@@ -11,9 +11,7 @@
     @include('backend.partials.alert')
     <div class="page-title"> <i class="icon-custom-left"></i>
         <h3 class="pull-left"><strong>Listado</strong> de Propiedades</h3>
-        @if(Auth::user()->isAdmin())
-        <a href="/property/create" class="btn btn-success pull-right m-20"> Nueva Propiedad </a>
-        @endif
+        <a href="/landing/create" class="btn btn-success pull-right m-20"> Nueva Landing </a>
     </div>
     <div class="row">
         <div class="col-md-12">
@@ -39,7 +37,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($properties as $key => $property)      
+                                    @foreach ($landings as $key => $property)      
                                     <tr>
                                         <td>{{ $property->id }}</td>
                                         <td>{{ $property->address }}</td>

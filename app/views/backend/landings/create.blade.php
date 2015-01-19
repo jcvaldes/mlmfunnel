@@ -19,95 +19,71 @@
 
 @section('content')
 
-<div id="main-content">    
+<div id="main-content">
+    @include('backend.partials.alert')
     <div class="row">
         <div class="col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h3>Ingreso de <strong>Inmuebles</strong></h3>
-                            <p>Completa el siguiente formulario:</p>
-                            <!-- BEGIN FORM WIZARD WITH VALIDATION -->
-                            <form class="form-wizard" action="/property" method="POST">
-
-                                <h1>Datos del Inmueble</h1>
-                                <section>                                   	
-                                    <div class="form-group col-md-6">
-                                        <label for="plattformCode">Código de Plataforma *</label>
-                                        <input id="plattformCode" name="plattformCode" type="text" class="form-control required">
-                                    </div>   
-
-                                    <div class="form-group col-md-6">
-                                        <label for="stratus">Estrato *</label>
-                                        <input id="stratus" name="stratus" type="text" class="form-control required">
-                                    </div> 
-
-
-
-                                    <div class="form-group col-md-4">
-                                        <label for="country_id">País *</label>
-                                        <select class="form-control required" id="country_id" name="country_id">
-                                            <option selected="selected" disabled>-- Seleccione --</option>          
-                                        </select>
-                                    </div> 
-
-                                    <div class="form-group col-md-4">
-                                        <label for="estate_id">Estado *</label>
-                                        <select class="form-control required" id="estate_id" name="estate_id">
-                                            <option selected="selected" disabled>-- Seleccione --</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="form-group col-md-4">
-                                        <label for="city_id">Ciudad *</label>
-                                        <select class="form-control required" id="city_id" name="city_id">
-                                            <option selected="selected" disabled>-- Seleccione --</option>                                                                                                          
-                                        </select>
-                                    </div>   
-
-                                    <div class="form-group col-md-6">
-                                        <label for="zipcode">Código Postal</label>
-                                        <input id="zipcode" name="zipcode" type="text" class="form-control">
-                                    </div>		
-                                    
-                                    <div class="form-group col-md-6">
-                                        <label for="address">Dirección *</label>
-                                        <input id="address" name="address" type="text" class="form-control required">
-                                    </div> 
-
-
-                                    <div class="form-group col-md-6">
-                                        <label for="valor_comercial">Valor Comercial *</label>
-                                        <input id="valor_comercial" name="valor_comercial" type="text" class="form-control required">
-                                    </div>      
-                                    
-                                    <div class="form-group col-md-6">
-                                        <label for="valor_oportunidad">Valor Oportunidad *</label>
-                                        <input id="valor_oportunidad" name="valor_oportunidad" type="text" class="form-control required">
-                                    </div> 
+            <form action="/operator" method="post" class="form-horizontal" role="form" id="settings">
+                <!-- BEGIN TABS -->
+                <div class="tabbable tabbable-custom form">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#general_settings" data-toggle="tab">Datos del operador</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="space20"></div>
+                        <div class="tab-pane active" id="general_settings">
+                            <div class="row profile">
+                                <div class="col-md-12">
                                     
 
-                                    <div class="form-group col-md-12">
-                                        <label for="description">Descripción </label>
-                                        <textarea name="description" rows="5" class="form-control" placeholder=""></textarea>
-                                    </div>
+                                    <div class="row profile-classic">
+                                        <div class="col-md-12">
+                                            <div class="panel">
+                                                <div class="panel-title line">
+                                                    <div class="caption"><i class="fa fa-info c-gray m-r-10"></i> Datos personales</div>
+                                                </div>
+                                                <div class="panel-body">
+                                                    
+                                                    
+                                                    <div class="row">
+                                                        <div class="control-label col-md-3">Nombre:</div> 
+                                                        <div class="col-md-6">
+                                                            <input type="text" class="form-control" name="full_name" value="">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="control-label col-md-3">Usuario:</div> 
+                                                        <div class="col-md-6">
+                                                            <input type="text" class="form-control" name="username" id="username" value="">                                                           
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="control-label col-md-3">Password:</div> 
+                                                        <div class="col-md-6">
+                                                            <input type="text" class="form-control" name="password" id="password" value="">                                                           
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                    
                                     
-                                    <p class="pull-left m-20">(*) Obligatorio</p>
-                                </section>  
-                                <h1>Imagen</h1>
-                                <section>
-                                    <div class="col-md-12">
-                                        <h3 align="center">Arrastra la imagen hasta aqui.</h3>
-                                        <div id="dropzone" class="dropzone"></div>
-                                    </div>
-                                </section>                                      
-                            </form>
-                            <!-- END FORM WIZARD WITH VALIDATION -->
+                                    <div class="col-sm-12">
+                                        <div class="align-center">
+                                            <button class="btn btn-primary m-r-20 save-user">Guardar</button>
+                                            <a href="/" class="btn btn-default">Cancelar</a>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
                         </div>
+                        
                     </div>
                 </div>
-            </div>
+                <!--END TABS-->
+            </form>
         </div>
     </div>
 </div>

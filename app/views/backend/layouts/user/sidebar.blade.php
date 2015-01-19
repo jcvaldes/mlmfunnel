@@ -4,8 +4,8 @@
             <li class="<?= Request::is('/') ? 'current' : '' ?>">
                 <a href="/"><i class="fa fa-dashboard"></i><span class="sidebar-text">Dashboard</span></a>
             </li>
-            <li class="<?= Request::is('branch*') ? 'current' : '' ?>">
-                <a href="/branch"><i class="glyph-icon flaticon-panels"></i><span class="sidebar-text">Sucursales</span></a>
+            <li class="<?= Request::is('landing*') ? 'current' : '' ?>">
+                <a href="/landing"><i class="glyph-icon flaticon-panels"></i><span class="sidebar-text">Landings</span></a>
             </li>
             <li class="<?= Request::is('user*') ? 'current' : '' ?>">
                 <a href="/user"><i class="glyph-icon flaticon-account"></i><span class="sidebar-text">Usuarios</span></a>
