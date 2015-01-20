@@ -47,6 +47,19 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     'description.required' => 'La descripcion es obligatoria.',
     ];
 
+    public static function boot()
+    {
+        parent::boot();
+
+        static::saving(function($user)
+        {
+            if (Hash::needsRehash($user->password))
+            {
+                $user->password = \Hash::make($user->password);
+            }
+        });
+    }
+
 	public function name(){
         return explode( ' ', $this->full_name)[0];
     }

@@ -11,15 +11,22 @@ class SharedController extends BaseController {
 	public function post_profile()
 	{
 		$inputs = Input::all();
-		$inputs['user_id'] = Auth::user()->id;
+		//dd($inputs);
 
 		$rules = User::$rules;
 		$messages = User::$messages;
 
-		unset($rules['type']);
-		$rules['email'] .= ',email,' . Auth::user()->id;
+		if($inputs['password'] == ''){
+			unset($rules['password']);
+			unset($inputs['password']);
 
-		$inputs['password'] = Auth::user()->password;
+			unset($rules['password_confirmation']);
+			unset($inputs['password_confirmation']);
+		}else{
+			$rules['password'] .= '|confirmed';			
+		}
+
+		$rules['email'] .= ',email,' . Auth::user()->id;
 		
 		$v = Validator::make($inputs, $rules, $messages);
 		
