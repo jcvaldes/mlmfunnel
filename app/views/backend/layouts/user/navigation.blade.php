@@ -10,7 +10,7 @@
             <a id="menu-medium" class="sidebar-toggle tooltips">
                 <i class="fa fa-outdent"></i>
             </a>
-            <a class="navbar-brand" href="/"></a>
+            <a class="navbar-brand" href="/dashboard"></a>
         </div>
         <div class="navbar-center">Usuario</div>
         <div class="navbar-collapse collapse">
@@ -117,7 +117,7 @@
                             @endif
                         </li>
                         <li class="dropdown-footer clearfix">
-                            <a href="/notifications" class="pull-left">Ver todas las notificaciones</a>
+                            <a href="/dashboard/notifications" class="pull-left">Ver todas las notificaciones</a>
                             <a href="/notifications" class="pull-right">
                                 <i class="fa fa-cog"></i>
                             </a>
@@ -135,7 +135,7 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="/profile">
+                            <a href="/dashboard/profile">
                                 <i class="glyph-icon flaticon-account"></i> Mi Perfil
                             </a>
                         </li>                        
@@ -146,7 +146,7 @@
                             <a href="#" title="Bloquear pantalla">
                                 <i class="glyph-icon flaticon-padlock23"></i>
                             </a>
-                            <a href="/logout" title="Salir">
+                            <a href="/auth/logout" title="Salir">
                                 <i class="fa fa-power-off"></i>
                             </a>
                         </li>

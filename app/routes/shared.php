@@ -3,7 +3,7 @@
 Route::any('product/{id}/question', ['uses' => 'QuestionController@store']);
 
 /* Panel */
-Route::group(array('before' => 'auth'), function()
+Route::group(array('before' => 'auth', 'prefix' => 'dashboard'), function()
 {
 	Route::get('profile', ['uses' => 'SharedController@profile']);
 	Route::post('profile', ['uses' => 'SharedController@post_profile']);

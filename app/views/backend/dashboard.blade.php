@@ -111,7 +111,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-                            <h2>Hola {{ Auth::user()->name() }}! Bienvenido al BackOffice de Opción Inmuebles.</h2>
+                            <h2>Hola {{ Auth::user()->name() }}! Bienvenido al BackOffice de MLMfunnels.</h2>
                         </div>                  
                     </div>
                     <hr>

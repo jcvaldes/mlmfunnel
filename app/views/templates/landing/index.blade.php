@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="en" class="bgCover wf-proximanova-i4-active wf-proximanova-i7-active wf-proximanova-n4-active wf-proximanova-n7-active wf-active wf-proximanova-i3-active wf-proximanova-n3-active" style="background-color: rgb(41, 41, 41); background-image: url('./assets/images/amanecer.jpg');">
+<html lang="en" class="bgCover wf-proximanova-i4-active wf-proximanova-i7-active wf-proximanova-n4-active wf-proximanova-n7-active wf-active wf-proximanova-i3-active wf-proximanova-n3-active" style="background-color: rgb(41, 41, 41); background-image: url('/templates/landing/images/amanecer.jpg');">
 
 <head data-next-url="#" data-this-url="#">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
-    <script type="text/javascript" async="" src="./assets/js/cf.js"></script>
-    <script id="facebook-jssdk" src="./assets/js/sdk.js"></script>
+    <script type="text/javascript" async="" src="/templates/landing/js/cf.js"></script>
+    <script id="facebook-jssdk" src="/templates/landing/js/sdk.js"></script>
 
     <title>MLMFunnnels</title>
-    <meta class="metaTagTop" name="description" content="{{ seo.description }}">
-    <meta class="metaTagTop" name="keywords" content="{{ seo.keywords }}">
-    <meta class="metaTagTop" name="author" content="{{ seo.author }}">
+    <meta class="metaTagTop" name="description" content="{{-- seo.description --}}">
+    <meta class="metaTagTop" name="keywords" content="{{-- seo.keywords --}}">
+    <meta class="metaTagTop" name="author" content="{{-- seo.author --}}">
     <meta class="metaTagTop" property="og:image" content="" id="social-image">
 
     <meta content="utf-8" http-equiv="encoding">
     <meta property="og:url" content="#">
     <meta property="og:type" content="website">
     <meta name="viewport" content="initial-scale=1">
-    <link href="./assets/css/lander.css" media="screen" rel="stylesheet">
+    <link href="/templates/landing/css/lander.css" media="screen" rel="stylesheet">
     <!-- css -->
     <!-- CDN stuff -->
-    <link href="./assets/css/css.css" rel="stylesheet" type="text/css">
+    <link href="/templates/landing/css/css.css" rel="stylesheet" type="text/css">
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link href="https://vjs.zencdn.net/4.11/video-js.css" rel="stylesheet">
     <style>
@@ -591,7 +591,7 @@
         <div class="modalBackdropWrapper" style="display: none; background-color: rgba(0, 0, 0, 0.4);"></div>
         <div class="container containerModal midContainer noTopMargin padding40-top padding40-bottom padding40H  noBorder borderSolid border3px cornersAll radius10 shadow0 bgNoRepeat emptySection" id="modalPopup" data-title="Modal" data-block-color="0074C7" style="display: none; margin-top: 100px; padding-top: 40px; padding-bottom: 40px; outline: none; background-color: rgb(255, 255, 255);" data-trigger="none" data-animate="top" data-delay="0">
             <div class="containerInner ui-sortable"></div>
-            <div class="closeLPModal"><img src="./assets/images/closemodal.png" alt="">
+            <div class="closeLPModal"><img src="/templates/landing/images/closemodal.png" alt="">
             </div>
 
 
@@ -617,7 +617,7 @@
                         <div class="col-inner bgCover  noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin">
                             <div class="de elHeadlineWrapper de-editable" id="tmp_headline1-53255" data-de-type="headline" data-de-editing="false" data-title="headline" data-ce="true" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 0px; outline: medium none; cursor: pointer;">
                                 <div class="ne elHeadline lh3 elMargin0 elBGStyle0 hsTextShadow0 hsSize2" style="text-align: right; color: rgba(255, 255, 255, 0.760784);" data-bold="inherit" contenteditable="false">
-                                    <b>Contáctame al:</b> 1 (408) 892-8615</div>
+                                    <b>Contáctame al:</b> {{ $landing->user->phone }}</div>
 
 
 
@@ -647,7 +647,7 @@
                                 </div>
                                 <div class="elVideo" style="display: none;">
                                     <div class="fluid-width-video-wrapper" style="padding-top: 56.25%;">
-                                        <iframe src="./assets/html/I9XUHaw3etw.html" allowfullscreen="" frameborder="0" id="fitvid23503"></iframe>
+                                        <iframe src="/templates/landing/html/I9XUHaw3etw.html" allowfullscreen="" frameborder="0" id="fitvid23503"></iframe>
                                     </div>
                                 </div>
 
@@ -665,14 +665,14 @@
                             <div class="de elMargin0 clearfix elScreenshot_right elFeatureImage_80_20 de-editable" id="tmp_featureimage-32960" data-de-type="featureimage" data-de-editing="false" data-title="Image Feature" data-ce="true" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 20px; outline: medium none; cursor: pointer;">
                                 <div class="elScreenshot_text">
                                     <div class="elScreenshot_text_padding">
-                                        <h3 class="ne elScreenshot_text_headline ssHeadlineSize2" style="color: rgb(255, 255, 255);" contenteditable="false"><b><u>Te invitó:</u> Agustín Romero</b></h3>
-                                        <div class="ne elScreenshot_text_body ssBodySize1" style="color: rgba(255, 255, 255, 0.772549);" contenteditable="false">Contador y Consultor de finanzas para empresas y cualquier otra cosa que desees resaltar en 2 líneas.
+                                        <h3 class="ne elScreenshot_text_headline ssHeadlineSize2" style="color: rgb(255, 255, 255);" contenteditable="false"><b><u>Te invitó:</u> {{ $landing->user->full_name }}</b></h3>
+                                        <div class="ne elScreenshot_text_body ssBodySize1" style="color: rgba(255, 255, 255, 0.772549);" contenteditable="false">{{ $landing->user->description }}
                                             <br>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="elScreenshot_image elAlign_center">
-                                    <img src="./assets/images/agustinromero.png" class="elScreenshot_image_src1 ximg img-circle thumbnailImage shadow20" height="100" width="100">
+                                    <img src="{{ $landing->user->getProfilePicture() }}" class="elScreenshot_image_src1 ximg img-circle thumbnailImage shadow20" height="100" width="100">
                                 </div>
 
 
@@ -898,7 +898,7 @@
     <div id="fb-root" class=" fb_reset">
         <div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
             <div>
-                <iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./assets/html/7r8gQb8MIqE.html" style="border: none;"></iframe>
+                <iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="/templates/landing/html/7r8gQb8MIqE.html" style="border: none;"></iframe>
             </div>
         </div>
         <div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
@@ -926,15 +926,15 @@
     <!-- Fancy JS -->
     <!-- js -->
     <!-- extra JS - TODO: move to lander.js -->
-    <script src="./assets/js/mediaelement.min.js"></script>
-    <script src="./assets/js/parsley.min.js"></script>
-    <script type="text/javascript" src="./assets/js/ate.min.js"></script>
-    <script src="./assets/js/lander.js"></script>
+    <script src="/templates/landing/js/mediaelement.min.js"></script>
+    <script src="/templates/landing/js/parsley.min.js"></script>
+    <script type="text/javascript" src="/templates/landing/js/ate.min.js"></script>
+    <script src="/templates/landing/js/lander.js"></script>
     <!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
     <![endif]-->
     <!-- hidden AR CF editor -->
-    <form data-cf-form-action="true" action="./assets/My Awesome Landing Page - Powered by ClickFunnels.com.html" method="post" id="cfAR" style="display:none">
+    <form data-cf-form-action="true" action="/templates/landing/My Awesome Landing Page - Powered by ClickFunnels.com.html" method="post" id="cfAR" style="display:none">
         <span data-cf-form-fields="true"></span>
         <input id="cf_contact_name" name="contact[name]" data-cf-form-field="name" placeholder="name" class="garlic-auto-save">
         <input id="cf_contact_first_name" name="contact[first_name]" data-cf-form-field="first_name" placeholder="first_name" class="garlic-auto-save">
@@ -966,10 +966,10 @@
         <input name="contact[cart_affiliate_id]" type="hidden" style="display:none;" data-param="affiliate">
     </form>
 
-    <link href="./assets/css/mediaelementplayer.min.css" rel="stylesheet" type="text/css">
-    <link href="./assets/css/mejs-skins.css" rel="stylesheet" type="text/css">
+    <link href="/templates/landing/css/mediaelementplayer.min.css" rel="stylesheet" type="text/css">
+    <link href="/templates/landing/css/mejs-skins.css" rel="stylesheet" type="text/css">
     <!-- billing related JS -->
-    <script src="./assets/js/cf_pe_orders.js"></script>
+    <script src="/templates/landing/js/cf_pe_orders.js"></script>
     <!-- custom 3rd party tracking => moved to noko -->
     <section id="custom-tracking" class="hide"></section>
     <!-- iframe close button --><span class="countdown-time" style="display:none;"></span>
@@ -983,7 +983,7 @@
         document.createElement('audio');
         document.createElement('track');
     </script>
-    <script src="./assets/js/video.js"></script>
+    <script src="/templates/landing/js/video.js"></script>
     <script>
         var page_key = 'hhiiy3mwman2xssg';
         var fid = '370531';
@@ -1009,7 +1009,7 @@
             );
         }
     </script>
-    <script type="text/javascript" src="./assets/js/garlic.cf.js"></script>
+    <script type="text/javascript" src="/templates/landing/js/garlic.cf.js"></script>
     <script type="text/javascript">
         $(function() {
             $('form').garlic({

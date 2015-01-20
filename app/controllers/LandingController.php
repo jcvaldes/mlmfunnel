@@ -10,7 +10,8 @@ class LandingController extends BaseController {
 	 */        
 	public function index()
 	{
-		$landings = Landing::current();
+		$landings = Landing::current()->get();
+
 		return View::make('backend.landings.index', compact('landings'));
 	}
 
@@ -34,16 +35,16 @@ class LandingController extends BaseController {
 	public function store()
 	{
 		$inputs = Input::all();
-		$inputs['image'] = (Session::has('property')) ? Session::get('property') : '';
-		//dd($inputs);
+		//$inputs['template_id'] = 1;
+		$inputs['user_id'] = Auth::user()->id;
 
-		$property = new Property($inputs);
-		if ($property->save())
+		$landing = new Landing($inputs);
+		if ($landing->save())
 		{
-			return Redirect::to('/property')->with('alert', ['type' => 'success', 'message' => 'El inmueble ha sido guardado.']);;			
+			return Redirect::to('/dashboard/landing')->with('alert', ['type' => 'success', 'message' => 'El landing ha sido guardado.']);;			
 		}        
-		dd($property->getErrors());
-        return Redirect::to('/property')->with('alert', ['type' => 'danger', 'message' => 'Ocurrio un error, intenta mas tarde.']);;
+		dd($landing->getErrors());
+        return Redirect::to('/dashboard/landing')->with('alert', ['type' => 'danger', 'message' => 'Ocurrio un error, intenta mas tarde.']);;
 
 	}
 

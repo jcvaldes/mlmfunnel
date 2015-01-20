@@ -10,14 +10,14 @@
 <div id="main-content">
     @include('backend.partials.alert')
     <div class="page-title"> <i class="icon-custom-left"></i>
-        <h3 class="pull-left"><strong>Listado</strong> de Propiedades</h3>
-        <a href="/landing/create" class="btn btn-success pull-right m-20"> Nueva Landing </a>
+        <h3 class="pull-left"><strong>Listado</strong> de landings</h3>
+        <a href="/dashboard/landing/create" class="btn btn-success pull-right m-20"> Nueva Landing </a>
     </div>
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading bg-blue">
-                    <h3 class="panel-title"><strong>Listado</strong> de propiedades</h3>
+                    <h3 class="panel-title"><strong>Listado</strong> de landings</h3>
                 </div>
                 <div class="panel-body">
                     <div class="row">
@@ -27,36 +27,22 @@
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Dirección</th>
-                                        <th>Ciudad</th>
-                                        <th>País</th>
-                                        <th>Imagen</th>
-                                        <th align="center">Visitas / Correos</th>
-                                        <th align="center">V. comercial <br> V. oportunidad</th>
+                                        <th>Nombre</th>
+                                        <th>Enlace</th>                                        
                                         <th>Acciones</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($landings as $key => $property)      
+                                    @foreach ($landings as $key => $landing)      
                                     <tr>
-                                        <td>{{ $property->id }}</td>
-                                        <td>{{ $property->address }}</td>
-                                        <td> {{ $property->city->name }} </td>
-                                        <td>{{ $property->country->name }}</td>
-                                        <td><img src="{{ $property->image }} " alt=""></td>
-                                        <td align="center" style="font-size:18px">
-                                            
-                                            <?php $visit = ((int)$property->getStatistic('visit') > 0) ? $property->getStatistic('visit') : '00'; ?>
-                                            <?php $mail = ((int)$property->getStatistic('mail') > 0) ? $property->getStatistic('mail') : '00'; ?> 
-                                          
-                                            <img class="img-responsive" src='http://placehold.it/200x100/ffffff/000000&text={{ $visit }} / {{ $mail }}' alt="">
-                                           
+                                        <td>{{ $landing->id }}</td>
+                                        <td>{{ $landing->name }}</td>
+                                        <td>{{ $landing->link }}</td>
+                                        
+                                        <td>
+                                            <a href="{{url()}}/{{ $landing->link }}" target="_blank" class="btn btn-success">Vista previa</a>
+                                            <a href="/dashboard/landing/{{ $landing->id }}" class="btn btn-info">Editar</a>
                                         </td>
-                                        <td align="center" style="font-size:18px">
-                                            <img class="img-responsive" src='http://placehold.it/160x60/ffffff/000000&text={{ $property->valor_comercial }}' alt="">
-                                            <img class="img-responsive" src='http://placehold.it/160x60/ffffff/000000&text={{ $property->valor_oportunidad }}' alt="">
-                                        </td>
-                                        <td><a href="/property/{{ $property->id }}" class="btn btn-info">Ver</a></td>
                                     </tr>
                                     @endforeach                                          
                                     

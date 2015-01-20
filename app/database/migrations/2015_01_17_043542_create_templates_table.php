@@ -12,7 +12,7 @@ class CreateTemplatesTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('templates', function($table)
+		/*Schema::create('templates', function($table)
 		{
 		    $table->increments('id');
 		    $table->string('title');
@@ -20,7 +20,7 @@ class CreateTemplatesTable extends Migration {
 		    $table->string('type');
 		    
 		    $table->timestamps();
-		});
+		});*/
 	}
 
 	/**

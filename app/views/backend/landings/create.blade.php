@@ -23,15 +23,15 @@
     @include('backend.partials.alert')
     <div class="row">
         <div class="col-md-12">
-            <form action="/operator" method="post" class="form-horizontal" role="form" id="settings">
+            <form action="/dashboard/landing" method="post" class="form-horizontal" role="form" id="settings">
                 <!-- BEGIN TABS -->
                 <div class="tabbable tabbable-custom form">
                     <ul class="nav nav-tabs">
-                        <li class="active"><a href="#general_settings" data-toggle="tab">Datos del operador</a></li>
+                        <li class="active"><a href="#landing_page" data-toggle="tab">Datos del landing</a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="space20"></div>
-                        <div class="tab-pane active" id="general_settings">
+                        <div class="tab-pane active" id="landing_page">
                             <div class="row profile">
                                 <div class="col-md-12">
                                     
@@ -40,31 +40,25 @@
                                         <div class="col-md-12">
                                             <div class="panel">
                                                 <div class="panel-title line">
-                                                    <div class="caption"><i class="fa fa-info c-gray m-r-10"></i> Datos personales</div>
+                                                    <div class="caption"><i class="fa fa-info c-gray m-r-10"></i> Datos del landing</div>
                                                 </div>
-                                                <div class="panel-body">
-                                                    
+                                                <div class="panel-body">                                                    
                                                     
                                                     <div class="row">
                                                         <div class="control-label col-md-3">Nombre:</div> 
                                                         <div class="col-md-6">
-                                                            <input type="text" class="form-control" name="full_name" value="">
+                                                            <input type="text" class="form-control" name="name" value="" placeholder="Mi landing page #3">
                                                         </div>
                                                     </div>
 
                                                     <div class="row">
-                                                        <div class="control-label col-md-3">Usuario:</div> 
+                                                        <div class="control-label col-md-3">Enlace unico:</div> 
                                                         <div class="col-md-6">
-                                                            <input type="text" class="form-control" name="username" id="username" value="">                                                           
+                                                            <input type="text" class="form-control" name="link" value="" placeholder="mienlaceunico">     
+                                                            <span>{{url()}}/<strong>mienlaceunico</strong></span>                                                      
                                                         </div>
-                                                    </div>
+                                                    </div>   
 
-                                                    <div class="row">
-                                                        <div class="control-label col-md-3">Password:</div> 
-                                                        <div class="col-md-6">
-                                                            <input type="text" class="form-control" name="password" id="password" value="">                                                           
-                                                        </div>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

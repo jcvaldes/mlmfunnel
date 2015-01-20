@@ -15,9 +15,10 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function showWelcome()
+	public function landing($link)
 	{
-		return View::make('hello');
+		$landing = Landing::unique($link)->firstOrFail();
+		return View::make('templates.landing.index', compact('landing'));
 	}
 
 }

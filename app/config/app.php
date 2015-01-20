@@ -121,6 +121,9 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
+		'Rdpascua\Identicon\IdenticonServiceProvider',
+		'Bkwld\Croppa\ServiceProvider',
+		'Intervention\Image\ImageServiceProvider',
 
 	),
 
@@ -189,6 +192,9 @@ return array(
 		'Validator'         => 'Illuminate\Support\Facades\Validator',
 		'View'              => 'Illuminate\Support\Facades\View',
 		'Model' => 'Way\Database\Model',
+		'Identicon'  => 'Rdpascua\Identicon\Facade',
+		'Croppa' => 'Bkwld\Croppa\Facade',
+		'Intervention' => 'Intervention\Image\Facades\Image',
 
 	),
 

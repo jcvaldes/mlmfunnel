@@ -18,8 +18,8 @@ class CreateLandingsTable extends Migration {
 		    $table->string('name');
 		    $table->string('link');
 
-		    $table->integer('template_id')->unsigned();
-		    $table->foreign('template_id')->references('id')->on('templates');
+		    //$table->integer('template_id')->unsigned();
+		    //$table->foreign('template_id')->references('id')->on('templates');
 
 		    $table->integer('user_id')->unsigned();
 		    $table->foreign('user_id')->references('id')->on('users');

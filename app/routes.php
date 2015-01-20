@@ -1,7 +1,7 @@
 <?php
 /* Si no hay usuario logueado redirecciona a la página de login*/
 if(!isset(Auth::user()->id)){
-	Route::get('/', function(){
+	Route::get('/dashboard', function(){
 		return Redirect::to('/auth/login');
 	});	
 }
@@ -18,7 +18,7 @@ Route::post('/auth/forgot', ['uses' => 'RemindersController@postRemind']);
 Route::get('/auth/forgot/{token}', ['uses' => 'RemindersController@getReset']);
 Route::post('/auth/forgot/reset', ['uses' => 'RemindersController@postReset']);
 
-Route::get('logout', ['uses' => 'AuthController@logout']);
+Route::get('/auth/logout', ['uses' => 'AuthController@logout']);
 
 /* :Auth Links */
 /* -------------------------------------------------- */
@@ -45,7 +45,5 @@ App::missing(function($exception)
     
 });
 
-/* API Statistic */
-Route::any('/api/statistic/{id}/{type}', ['uses' => 'StatisticController@store']);
-Route::any('/api/statistic/{id}', ['uses' => 'StatisticController@show']);
-Route::any('/api/statistics', ['uses' => 'StatisticController@statistics']);
+/* Funnel */
+Route::get('/{landing}', ['uses' => 'HomeController@landing']);

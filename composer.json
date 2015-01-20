@@ -6,7 +6,10 @@
 	"type": "project",
 	"require": {
 		"laravel/framework": "4.2.*",
-		"way/database": "dev-master"
+		"way/database": "dev-master",
+		"ielijose/laravel-identicon": "dev-master",
+		"bkwld/croppa": "~3.0",
+		"intervention/image": "2.*"
 	},
 	"autoload": {
 		"classmap": [
