@@ -187,52 +187,41 @@
 <script src="{{ asset('/assets/plugins/jcrop/jquery.Jcrop.min.js') }}"></script>
 
 <script type="text/javascript">
-
-
-$(document).on("ready", function(){
+$(document).on("ready", function() {
     var crop;
-
-    var h = $( window ).height();
-    h = (h/100) *60;
-    $("#avatar figcaption i").on("click", function(){
+    var h = $(window).height();
+    h = (h / 100) * 60;
+    $("#avatar figcaption i").on("click", function() {
         var angle = 0;
-        if($(this).hasClass('fa-rotate-right')){
+        if ($(this).hasClass('fa-rotate-right')) {
             angle = -90;
-        }else{
+        } else {
             angle = 90;
         }
-
         /* post */
-
-        $.post('/dashboard/avatar/rotate',{ angle : angle }, function(data, textStatus, xhr) {
-            $("#avatar img").prop('src', data.avatar+'?nocahe='+Math.random());
-            $("#user-header img").prop('src', data.avatar+'?nocahe='+Math.random());
+        $.post('/dashboard/avatar/rotate', {
+            angle: angle
+        }, function(data, textStatus, xhr) {
+            $("#avatar img").prop('src', data.avatar + '?nocahe=' + Math.random());
+            $("#user-header img").prop('src', data.avatar + '?nocahe=' + Math.random());
         }, 'json');
     });
-
     $("#avatar, #avatar figcaption, #avatar p").dropzone({
         url: "/dashboard/avatar/",
-        createImageThumbnails : false,
+        createImageThumbnails: false,
         init: function() {
-
-            this.on("success", function(file) { 
+            this.on("success", function(file) {
                 $(".font-animation").css('display', 'none');
-
-
-                $.get('/dashboard/avatar', function(data) {                    
+                $.get('/dashboard/avatar', function(data) {
                     $("#avatar img").prop('src', data.avatar);
-
                     $("#image-body").html('<img src="" id="image_crop2" style="max-width:100%"/>');
-
-                    $("#image_crop2").prop('src', data.avatar+'?nocahe='+Math.random());
+                    $("#image_crop2").prop('src', data.avatar + '?nocahe=' + Math.random());
                     $("#modal-view").modal();
-
                     $('#modal-view').on('shown.bs.modal', function(e) {
                         img_width = $('#modal-view img').parent().parent().parent().width();
                         console.log(img_width);
                         $('#modal-view img').width(img_width);
                         $('#modal-view img').height('auto');
-
                         crop = $('#image_crop2').Jcrop({
                             bgOpacity: 0.8,
                             bgColor: 'transparent',
@@ -241,53 +230,43 @@ $(document).on("ready", function(){
                             onSelect: updateCoords
                         }, function() {
                             crop_2 = this;
-                            crop_2.setSelect([img_width/3, 65, img_width/1.5, 65 + 285]);
+                            crop_2.setSelect([img_width / 3, 65, img_width / 1.5, 65 + 285]);
                             crop_2.setOptions({
                                 bgFade: true
                             });
                             crop_2.ui.selection.addClass('jcrop-selection');
                         });
                     })
+                }, 'json');
+            });
+            this.on("addedfile", function(file) {
+                $(".font-animation").css('display', 'inline-block');
+            });
+        }
+    });
 
-}, 'json');
-
-
+    function updateCoords(c) {
+        jQuery('#x').val(c.x);
+        jQuery('#y').val(c.y);
+        jQuery('#w').val(c.w);
+        jQuery('#h').val(c.h);
+    };
+    /* SAVE CROP */
+    $("#save-crop").on("click", function() {
+        var options = {
+            x: $("#x").val(),
+            y: $("#y").val(),
+            w: $("#w").val(),
+            h: $("#h").val(),
+            i: img_width
+        }
+        $.post('/dashboard/avatar/crop', options, function(data, textStatus, xhr) {
+            console.log(data);
+            $("#avatar img").prop('src', data.avatar + '?nocahe=' + Math.random());
+            $("#user-header img").prop('src', data.avatar + '?nocahe=' + Math.random());
+            crop.destroy();
+        }, 'json');
+    })
 });
-
-this.on("addedfile", function(file) { 
-    $(".font-animation").css('display', 'inline-block');
-});
-}
-});
-
-function updateCoords(c)
-{
-    jQuery('#x').val(c.x);
-    jQuery('#y').val(c.y);
-    jQuery('#w').val(c.w);
-    jQuery('#h').val(c.h);
-};
-
-/* SAVE CROP */
-
-$("#save-crop").on("click", function(){
-    var options = {
-        x : $("#x").val(), 
-        y : $("#y").val(), 
-        w : $("#w").val(), 
-        h : $("#h").val(),
-        i : img_width
-    }
-    $.post('/dashboard/avatar/crop',options, function(data, textStatus, xhr) {
-        console.log(data);
-        $("#avatar img").prop('src', data.avatar+'?nocahe='+Math.random());
-        $("#user-header img").prop('src', data.avatar+'?nocahe='+Math.random());
-        crop.destroy();
-    }, 'json');
-})
-
-
-});
-
 </script>
 @stop

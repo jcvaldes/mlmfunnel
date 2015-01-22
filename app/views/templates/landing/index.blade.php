@@ -13,7 +13,7 @@
     <meta class="metaTagTop" property="og:image" content="" id="social-image">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
-    <meta property="og:url" content="{{ url() }}">
+    <meta property="og:url" content="{{ URL::current() }}">
     <meta property="og:type" content="website">
     <meta name="viewport" content="initial-scale=1">
     <link href="https://www.clickfunnels.com/assets/lander.css" media="screen" rel="stylesheet">
@@ -150,7 +150,7 @@
 
                             </div>
                             <div class="de elSharing elAlign_center elMargin0 de-editable" id="tmp_social-81812" data-de-type="social" data-de-editing="false" data-title="Social Shares" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 20px; outline: medium none; cursor: pointer;">
-                                <div data-url="{{ url() }}" class="social-likes socialLikesPreview social-likes_visible social-likes_ready social-white" data-title="{{ url() }}">
+                                <div data-url="{{ URL::current() }}" class="social-likes socialLikesPreview social-likes_visible social-likes_ready social-white" data-title="{{ URL::current() }}">
                                     <div class="social-likes__widget social-likes__widget_facebook" title="Share link on Facebook">
                                         <span class="social-likes__button social-likes__button_facebook"><span class="social-likes__icon social-likes__icon_facebook"></span>Facebook</span><span class="social-likes__counter social-likes__counter_facebook social-likes__counter_empty"></span>
                                     </div>
@@ -161,7 +161,7 @@
                                         <span class="social-likes__button social-likes__button_plusone"><span class="social-likes__icon social-likes__icon_plusone"></span>Google+</span><span class="social-likes__counter social-likes__counter_plusone social-likes__counter_empty"></span>
                                     </div>
                                 </div>
-                                <div class="social-likes socialLikesLive social-white" data-url="{{ url() }}" data-title="{{ $user->full_name }}" style="display: none;">
+                                <div class="social-likes socialLikesLive social-white" data-url="{{ URL::current() }}" data-title="{{ $user->full_name }}" style="display: none;">
                                     <div class="facebook" title="Share link on Facebook">Facebook</div>
                                     <div class="twitter" data-via="mlmfunnel" title="Share link on Twitter">Twitter</div>
                                     <div class="plusone" title="Share link on Google+">Google+</div>
