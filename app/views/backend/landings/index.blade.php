@@ -1,18 +1,14 @@
 @extends('backend.layouts.master')
 
 @section('css')
-    <link rel="stylesheet" href="{{ asset('/assets/plugins/datatables/dataTables.css') }}">
-    <link rel="stylesheet" href="{{ asset('/assets/plugins/datatables/dataTables.tableTools.css') }}">
+<link rel="stylesheet" href="/assets/plugins/magnific/magnific-popup.css">
 @stop
 
 @section('content')
 
 <div id="main-content">
     @include('backend.partials.alert')
-    <div class="page-title"> <i class="icon-custom-left"></i>
-        <h3 class="pull-left"><strong>Listado</strong> de landings</h3>
-        <a href="/dashboard/landing/create" class="btn btn-success pull-right m-20"> Nueva Landing </a>
-    </div>
+    
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
@@ -23,31 +19,28 @@
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12 table-responsive table-blue filter-right">
 
-                            <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-hover table-dynamic">
-                                <thead>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Nombre</th>
-                                        <th>Enlace</th>                                        
-                                        <th>Acciones</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($landings as $key => $landing)      
-                                    <tr>
-                                        <td>{{ $landing->id }}</td>
-                                        <td>{{ $landing->name }}</td>
-                                        <td>{{ $landing->link }}</td>
-                                        
-                                        <td>
-                                            <a href="{{url()}}/{{ $landing->link }}" target="_blank" class="btn btn-success">Vista previa</a>
-                                            <a href="/dashboard/landing/{{ $landing->id }}" class="btn btn-info">Editar</a>
-                                        </td>
-                                    </tr>
-                                    @endforeach                                          
-                                    
-                                </tbody>
-                            </table>
+                            <div class="row article">
+                                <div class="col-md-3">
+                                    <div class="thumbnail">
+                                        <div class="overlay">
+                                            <div class="thumbnail-actions">
+                                                <a href="/assets/img/landings/landing.jpg" class="btn btn-default btn-icon btn-rounded magnific" title="/animal 1"><i class="fa fa-search"></i></a>
+                                            </div>
+                                        </div>
+                                        <img src="/assets/img/landings/landing.jpg" alt="/animal" class="img-responsive">
+                                    </div>    
+                                </div>
+                                <div class="col-md-9">
+                                    <h3><a href="#">Landing page</a></h3>
+                                    <div class="search-info">
+                                        <span class="search-date"><i class="fa fa-rocket"></i>Inactiva</span>
+                                    </div>
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia , nisi ut aliquid ex ea commodi consequatur? </p>
+                                    <div><a class="btn btn-info f-right m-t-10" href="/dashboard/landing/configure/"><i class="fa fa-gear"></i> Configurar</a></div>
+                                </div>
+                            </div>
+                            
+                            
                         </div>
                     </div>
                 </div>
@@ -57,11 +50,5 @@
 </div>
 @stop
 @section('javascript')
-    <script src="{{ asset('/assets/plugins/bootstrap-switch/bootstrap-switch.js') }}"></script>
-    <script src="{{ asset('/assets/plugins/bootstrap-progressbar/bootstrap-progressbar.js') }}"></script>
-    <script src="{{ asset('/assets/plugins/datatables/dynamic/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ asset('/assets/plugins/datatables/dataTables.bootstrap.js') }}"></script>
-    <script src="{{ asset('/assets/plugins/datatables/dataTables.tableTools.js') }}"></script>
-    <script src="{{ asset('/assets/plugins/datatables/table.editable.js') }}"></script>
-    <script src="{{ asset('/assets/js/table_dynamic.js') }}"></script>
+<script src="/assets/plugins/magnific/jquery.magnific-popup.min.js"></script>
 @stop
