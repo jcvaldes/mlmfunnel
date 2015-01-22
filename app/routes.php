@@ -4,6 +4,9 @@ if(!isset(Auth::user()->id)){
 	Route::get('/dashboard', function(){
 		return Redirect::to('/auth/login');
 	});	
+	Route::get('/', function(){
+		return Redirect::to('/auth/login');
+	});	
 }
 
 /* -------------------------------------------------- */
@@ -11,6 +14,9 @@ if(!isset(Auth::user()->id)){
 
 Route::get('/auth/login', ['as' => 'login', 'uses' => 'AuthController@showLogin']);
 Route::post('/auth/login', ['as' => 'login', 'uses' => 'AuthController@login']);
+
+Route::get('/auth/register', ['as' => 'register', 'uses' => 'AuthController@showRegister']);
+Route::post('/auth/register', ['as' => 'register', 'uses' => 'AuthController@register']);
 
 Route::get('/auth/forgot', ['uses' => 'AuthController@showForgot']);
 Route::post('/auth/forgot', ['uses' => 'RemindersController@postRemind']);

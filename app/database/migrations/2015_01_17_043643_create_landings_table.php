@@ -16,11 +16,9 @@ class CreateLandingsTable extends Migration {
 		{
 		    $table->increments('id');
 		    $table->string('name');
-		    $table->string('link');
-
-		    //$table->integer('template_id')->unsigned();
-		    //$table->foreign('template_id')->references('id')->on('templates');
-
+		    
+		    $table->enum('status', ['enabled', 'disabled'])->default('disabled');
+		   
 		    $table->integer('user_id')->unsigned();
 		    $table->foreign('user_id')->references('id')->on('users');
 		    $table->timestamps();

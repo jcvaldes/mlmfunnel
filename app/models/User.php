@@ -24,12 +24,13 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
      */
     protected $hidden = array('password', 'remember_token');
 
-    protected $fillable = ['full_name', 'phone', 'picture', 'description', 'email', 'password', 'type'];
+    protected $fillable = ['full_name', 'phone', 'picture', 'description', 'email', 'password', 'type', 'username'];
 
     public static $rules = [
     'full_name' => 'required',
     'phone' => 'required',
     'description' => 'required',
+    'username' => 'required|unique:users',
     'email' => 'required|email|unique:users',
     'password' => 'required',
     ];
@@ -40,6 +41,8 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     'email.required' => 'El correo es obligatorio.',
     'email.email' => 'Formato de correo invalido.',
     'email.unique' => 'El correo ya esta registrado en nuestra base de datos.',
+    'username.required' => 'El usuario es obligatorio.',
+    'username.unique' => 'El usuario no esta disponible.',
     'password.required' => 'La contraseña es obligatoria.',
     'password.confirmed' => 'Las contraseñas deben coincidir.',
     'password_confirmation.required' => 'La confirmación de contraseña es obligatoria.',

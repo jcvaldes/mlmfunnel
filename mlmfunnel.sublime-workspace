@@ -1,0 +1,1251 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"com",
+				"compact"
+			],
+			[
+				"contet",
+				"content"
+			],
+			[
+				"sila",
+				"silabas"
+			],
+			[
+				"fami",
+				"familia"
+			],
+			[
+				"pala",
+				"palabras"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"corr",
+				"correcto"
+			],
+			[
+				"inn",
+				"innerHTML"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"rem",
+				"removeClassName"
+			],
+			[
+				"attr",
+				"attr	.attr() - single"
+			],
+			[
+				"add",
+				"addClass	.addClass()"
+			],
+			[
+				"border-to",
+				"border-top-width"
+			],
+			[
+				"pad",
+				"padding-top"
+			],
+			[
+				"remo",
+				"removeClass	.removeClass()"
+			],
+			[
+				"dra",
+				"dragSrcEl_"
+			],
+			[
+				"image",
+				"imagenes"
+			],
+			[
+				"ea",
+				"each	.each()"
+			],
+			[
+				"prev",
+				"preventDefault"
+			],
+			[
+				"fot",
+				"font-size"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"border-ri",
+				"border-right"
+			],
+			[
+				"border-r",
+				"border-radius"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"strto",
+				"strtoupper"
+			],
+			[
+				"marg",
+				"margin-left"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"cur",
+				"cur	cursor: ${pointer};"
+			],
+			[
+				"has",
+				"hasClass	.hasClass()"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"key",
+				"keydown	.keydown()"
+			],
+			[
+				"ajaxs",
+				"ajaxsetup	$.ajaxSetup()"
+			],
+			[
+				"margi",
+				"margin-right"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"border",
+				"border"
+			],
+			[
+				"bold",
+				"bolder"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"Gato",
+				"newt_grid_add_components_to_form"
+			],
+			[
+				"path",
+				"pathinfo"
+			],
+			[
+				"Enter",
+				"enterprise"
+			],
+			[
+				"ut",
+				"utf8_encode"
+			],
+			[
+				"user",
+				"users"
+			],
+			[
+				"mysql_fetch_",
+				"mysql_fetch_object"
+			],
+			[
+				"ima",
+				"images"
+			],
+			[
+				"str_re",
+				"str_replace"
+			],
+			[
+				"desc",
+				"description"
+			],
+			[
+				"clas",
+				"clasificado"
+			],
+			[
+				"va",
+				"valor_oportunidad"
+			],
+			[
+				"valor_",
+				"valor_comercial"
+			],
+			[
+				"notifi",
+				"notifications"
+			],
+			[
+				"n",
+				"notifications"
+			],
+			[
+				"bra",
+				"branch"
+			],
+			[
+				"prop",
+				"prop	.prop() - single"
+			],
+			[
+				"modal-f",
+				"modal-filter"
+			],
+			[
+				"array_p",
+				"array_push"
+			],
+			[
+				"sub",
+				"substring"
+			],
+			[
+				"line",
+				"line_chart"
+			],
+			[
+				"get",
+				"get	$.get()"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"em",
+				"employs"
+			],
+			[
+				"ente",
+				"enterprises"
+			],
+			[
+				"produc",
+				"products"
+			],
+			[
+				"General",
+				"GeneralManager"
+			],
+			[
+				"ser",
+				"service_id"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"pro",
+				"prop	.prop() - single"
+			],
+			[
+				"pass",
+				"password"
+			],
+			[
+				"br",
+				"branch"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"count",
+				"country"
+			],
+			[
+				"remove",
+				"removeClass	.removeClass()"
+			],
+			[
+				"js",
+				"json_encode"
+			],
+			[
+				"Schem",
+				"Schema-blueprintResolver	Schema-blueprintResolver"
+			],
+			[
+				"app",
+				"appendChild"
+			],
+			[
+				"ab",
+				"absolute"
+			],
+			[
+				"first",
+				"first_video"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/controllers/LandingController.php",
+			"settings":
+			{
+				"buffer_size": 4374,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/models/Landing.php",
+			"settings":
+			{
+				"buffer_size": 836,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/backend/landings/index.blade.php",
+			"settings":
+			{
+				"buffer_size": 3433,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/routes/shared.php",
+			"settings":
+			{
+				"buffer_size": 2283,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/controllers/SharedController.php",
+			"settings":
+			{
+				"buffer_size": 1037,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/backend/shared/profile.blade.php",
+			"settings":
+			{
+				"buffer_size": 13618,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/models/User.php",
+			"settings":
+			{
+				"buffer_size": 3068,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/views/backend/login.blade.php",
+			"settings":
+			{
+				"buffer_size": 4967,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/backend/login.blade.php",
+			"settings":
+			{
+				"buffer_size": 5081,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/routes.php",
+			"settings":
+			{
+				"buffer_size": 11487,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/routes.php",
+			"settings":
+			{
+				"buffer_size": 1730,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/controllers/AuthController.php",
+			"settings":
+			{
+				"buffer_size": 1246,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 81.0,
+		"selected_items":
+		[
+			[
+				"Package Control: disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"pac",
+				"Package Control: Disable Package"
+			]
+		],
+		"width": 512.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/routes/user.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/controllers/SharedController.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/dashboard.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/controllers/HomeController.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/templates/landing/index.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/controllers/UploadController.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/models/User.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/.gitignore",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/config/app.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/config/app.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/routes.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/config/app.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/composer.json",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/composer.json",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/landings/create.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/models/Notification.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/routes.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/models/User.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/models/User.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/controllers/AuthController.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/layouts/user/sidebar.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/layouts/user/navigation.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/controllers/UserController.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/composer.json",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/controllers/ProductController.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/models/Product.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/operators/create.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/landings/index.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/database/migrations/2015_01_17_043643_create_landings_table.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/database/migrations/2015_01_17_043542_create_templates_table.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/controllers/PropertyController.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/config/database.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/config/database.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/routes.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/js/familia.js",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/tercer-grado/familia-de-palabras.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/home.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/js/main/Agente.js",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/segundo-grado/a-sumar.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/js/multiplicar.js",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/tercer-grado/a-restar.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/tercer-grado/a-multiplicar.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/js/sumar.js",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/tercer-grado/a-sumar.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/segundo-grado/a-restar.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/js/adivina-la-palabra.js",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/primer-grado/adivina-la-palabra.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/tercer-grado/dameros.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/js/dameros.js",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/js/plugins/jquery.sopaletras.js",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/tercer-grado/sustantivos.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/controllers/UserController.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/layouts/master.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/models/Notification.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/database/seeds/DatabaseSeeder.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/database/seeds/VenezuelaTableSeeder.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/bootstrap/start.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/bootstrap/start.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/config/local/database.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/templates/video/index.html",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/database/migrations/2014_06_29_184529_create_geo_tables.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/js/arrastra-los-numeros.js",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/segundo-grado/ordena-los-numeros.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/segundo-grado/arrastra-los-numeros.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/js/mayor-que-menor-que.js",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/segundo-grado/mayor-que-menor-que.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/segundo-grado/singular-y-plural.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/segundo-grado/caminos-de-flechas.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/js/camino-de-flechas.js",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/models/User.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/database/seeds/AppTableSeeder.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/database/migrations/2014_06_26_125148_create_usuarios_table.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/database/migrations/2015_01_15_013445_create_password_reminders_table.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/controllers/AuthController.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/routes.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/public/assets/css/style.min.css",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/controllers/RemindersController.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/forgot.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/login.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/register.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/controllers/AuthController.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/layouts/usuario/navigation.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/database/migrations/2015_01_15_003000_create_portal_table.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/database/migrations/2015_01_15_003244_create_dialogo_table.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/config/database.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/routes/usuario.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/controllers/UsuarioController.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/usuario/calendario.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/usuario/carta.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/usuario/dashboard.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/usuario/documentos.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/usuario/pasantia.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/usuario/pasantias.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/usuario/registrar-pasantia.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/layouts/master.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/layouts/usuario/sidebar.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/layouts/usuario/master.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/public/assets/css/colors/color-dark.css",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/public/assets/css/style.css",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/js/cada-palabra-en-su-lugar.js",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/segundo-grado/cada-palabra-en-su-lugar.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/css/segundo-grado.css",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/primer-grado/formando-palabras.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/primer-grado/figuras-mas-letras.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/css/primer-grado.css",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/primer-grado/camino-de-letras.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/js/figuras-mas-letras.js",
+		"/C/wamp/www/TrackFunnel/template/html/mail.html",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/layouts/sidebar.blade.php",
+		"/C/Users/Eli Jose Carrasquero/AppData/Local/Temp/Rar$EXa0.961/SopaLetras/default.html",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/primer-grado/partes-computador.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/layouts/footer.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/layouts/agente.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/segundo-grado/a-restr.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/segundo-grado/aprende-el-abecedario.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/js/camino-de-letras.js",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/css/camino-de-letras.css",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/css/formando-palabras.css",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/js/formando-palabras.js",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/css/adivina-la-palabra.css",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/layouts/master.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Desktop/Nueva carpeta/sopa.html",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/primer-grado/aprende-los-numeros.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/primer-grado/aprende-las-formas-geometricas.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/primer-grado/aprende-el-abecedario.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/TrackFunnel/app/config/local/database.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/TrackFunnel/app/views/backend/login.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/TrackFunnel/app/views/backend/layouts/master.blade.php"
+	],
+	"find":
+	{
+		"height": 47.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"C:\\Users\\Eli Jose Carrasquero\\Documents\\GitHub\\Trackfunnel",
+			"C:\\Users\\Eli Jose Carrasquero\\AppData\\Roaming\\iSpy",
+			"C:\\wamp\\www\\ceglys",
+			"C:\\wamp\\www\\server-camaron",
+			"C:\\Users\\Eli Jose Carrasquero\\Documents\\GitHub\\SabuesOOnline.com\\app\\views\\backend\\classified",
+			"C:\\Users\\Eli Jose Carrasquero\\Documents\\GitHub\\opcioninmuebles\\app\\controllers",
+			"C:\\Users\\Eli Jose Carrasquero\\Documents\\GitHub\\opcioninmuebles\\app\\views",
+			"C:\\Users\\Eli Jose Carrasquero\\Documents\\GitHub\\opcioninmuebles\\public\\assets\\plugins",
+			"C:\\Users\\Eli Jose Carrasquero\\Documents\\GitHub\\SabuesOOnline.com\\public\\backend\\assets\\plugins",
+			"C:\\Users\\Eli Jose Carrasquero\\Documents\\GitHub\\opcioninmuebles\\public",
+			"C:\\Users\\Eli Jose Carrasquero\\Documents\\GitHub\\opcioninmuebles\\app\\views"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"profile_picture",
+			"./templates",
+			"/assets/",
+			"properties",
+			"Receptionist",
+			"backend.",
+			"\"",
+			"+",
+			"backend/",
+			"/auth",
+			"/backend",
+			"type",
+			"estudiante",
+			"EstudianteC",
+			"Estudiante",
+			"alert",
+			"RewriteRule",
+			"controllers/",
+			"controller/",
+			"bootstrap.js",
+			"border-ra",
+			"alert",
+			"column",
+			"columns-full",
+			"style=\"float:right\"",
+			" ",
+			"#",
+			"segundo",
+			"<h1>a</h1>",
+			" class=\"falta\"",
+			"<input type=\"text\">",
+			"/segundo-grado/singular-y-plural",
+			"segundo-grado/singular-y-plural",
+			" ",
+			"<span></span>",
+			"createFunnelNow",
+			"}}",
+			"{{",
+			"}}",
+			"{{",
+			"category",
+			".category-tree-node",
+			"drag",
+			"btn",
+			"btn ",
+			"btn",
+			"button.btn",
+			"user",
+			"Users",
+			"src=\"//",
+			"Access this server locally through",
+			"border-ra",
+			"tab",
+			", 'descripcion' => 'Circulo'",
+			"formas-geometricas",
+			"letras-abecedario",
+			"6183A9",
+			"				 \n												\n					",
+			"nicdark_mpopup_window",
+			"--------------------------------------------------------",
+			"clientes",
+			"src=\"js",
+			"href=\"css",
+			"index.html#",
+			"components.php",
+			"single-product.php",
+			"shop-checkout.php",
+			"shop-cart.php",
+			"index.php",
+			"<?",
+			"Callee",
+			"Websocket closed, please try reloading page later.",
+			"../..",
+			"opcioninmuebles.com",
+			"navbar navbar-default",
+			"navbar",
+			"Call with",
+			"Calcelar",
+			"calcelar",
+			"Call with",
+			"Access confirmation",
+			"You",
+			"Users online",
+			"mgVideoChatSimpleUser",
+			"operator1",
+			"Login",
+			"amelia.css",
+			"config",
+			"debugg",
+			"loginParams",
+			"setCookie",
+			"index.html",
+			"include",
+			"@extends('backend.classified.layouts.master')",
+			"panel/",
+			"STATICFILES_DIRS",
+			"static",
+			"SETTINGS_PATH",
+			"./My Awesome Landing Page_files/nGt_JGHYEO4.html",
+			"facebook",
+			"col-sm-7",
+			"Auth::user()",
+			"col-lg-2 col-md-2 col-sm-2",
+			"col-lg-3 col-md-3 col-sm-3",
+			"col-lg-6 col-md-6 col-sm-6",
+			"images",
+			"dist",
+			"js/",
+			".generalmanager",
+			"@extends('backend.generalmanager.layouts.master')",
+			"backend.generalmanager",
+			"d2",
+			" value=\"probandosonido@hotmail.com\"",
+			"product",
+			"}}',",
+			"$branch",
+			"$enterprise",
+			"backend/",
+			"user",
+			"customer",
+			"Search ",
+			"Search",
+			"Showing",
+			"entries",
+			"Buscar",
+			"customer",
+			"id=\"field-1\" ",
+			"panel/"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"picture",
+			"/templates",
+			"/templates/landing/",
+			"landings",
+			"User",
+			"",
+			"'",
+			"",
+			"tipo",
+			"usuario",
+			"UsuarioC",
+			"Usuario",
+			"dnd",
+			"",
+			"imagenes",
+			"class=\"right\"",
+			"-",
+			"/tercer-grado/",
+			"tercer",
+			"",
+			"							<h4 class=\"white nicdark_margin10\">NOMBRES PROPIOS</h4>\n							<input class=\"nicdark_bg_grey2 grey small subtitle\" type=\"text\" value=\"\" placeholder=\"Escribir...\">\n							<a href=\"#\" class=\"nicdark_btn nicdark_bg_green small nicdark_shadow nicdark_radius white nicdark_margin10\"><i class=\"icon-check \"></i>&nbsp;&nbsp;&nbsp;COMPROBAR</a>\n						</div>",
+			"<div class=\"nicdark_textevidence nicdark_bg_greydark\">\n							<h4 class=\"white nicdark_margin10\">NOMBRES PROPIOS</h4>\n							<input class=\"nicdark_bg_grey2 grey small subtitle\" type=\"text\" value=\"\" placeholder=\"Escribir...\">\n							<a href=\"#\" class=\"nicdark_btn nicdark_bg_green small nicdark_shadow nicdark_radius white nicdark_margin10\"><i class=\"icon-check \"></i>&nbsp;&nbsp;&nbsp;COMPROBAR</a>\n						</div>",
+			"",
+			"-",
+			"<span class=\"falta\"></span>",
+			"btn btn-success",
+			"btn btn-success disabled",
+			"--}}",
+			"{{--",
+			"--}}",
+			"}}}",
+			"{{{",
+			".category-tree-node,\n.subcategory-tree-node ",
+			"btn boton",
+			"button.boton",
+			"src=\"http://",
+			"",
+			"partes-computador",
+			"formas-geometricas",
+			"ffffff",
+			"",
+			"src=\"/js",
+			"href=\"/css",
+			"#",
+			"/",
+			"<?php",
+			"",
+			"#",
+			"@extends('backend.layouts.master')",
+			"",
+			"https://www.youtube.com/embed/nGt_JGHYEO4",
+			"col-sm-7 m-t-10",
+			"col-sm-7  m-t-10",
+			"User::find($id)",
+			"col-lg-4 col-md-4 col-sm-4",
+			"col-lg-2 col-md-2 col-sm-2",
+			"col-lg-3 col-md-3 col-sm-3",
+			"/assets/images",
+			"./assets/images",
+			"./assets/js/",
+			"",
+			"@extends('backend.layouts.master')",
+			"backend",
+			"",
+			"$property",
+			"$employ",
+			"",
+			"branch",
+			"",
+			"$user",
+			"",
+			"customer",
+			"",
+			"customer",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 11,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/controllers/LandingController.php",
+					"settings":
+					{
+						"buffer_size": 4374,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								807,
+								807
+							],
+							[
+								986,
+								986
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 495.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/models/Landing.php",
+					"settings":
+					{
+						"buffer_size": 836,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								692,
+								692
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 341.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/views/backend/landings/index.blade.php",
+					"settings":
+					{
+						"buffer_size": 3433,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								499,
+								499
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 132.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/routes/shared.php",
+					"settings":
+					{
+						"buffer_size": 2283,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								84,
+								84
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/controllers/SharedController.php",
+					"settings":
+					{
+						"buffer_size": 1037,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								553,
+								553
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 154.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/views/backend/shared/profile.blade.php",
+					"settings":
+					{
+						"buffer_size": 13618,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								13312,
+								13312
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 5700.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/models/User.php",
+					"settings":
+					{
+						"buffer_size": 3068,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1630,
+								1630
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 926.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/views/backend/login.blade.php",
+					"settings":
+					{
+						"buffer_size": 4967,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3731,
+								3809
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1496.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/views/backend/login.blade.php",
+					"settings":
+					{
+						"buffer_size": 5081,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3956,
+								3956
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1324.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/routes.php",
+					"settings":
+					{
+						"buffer_size": 11487,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1054,
+								912
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 264.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "app/routes.php",
+					"settings":
+					{
+						"buffer_size": 1730,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								643,
+								643
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 154.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "app/controllers/AuthController.php",
+					"settings":
+					{
+						"buffer_size": 1246,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1202,
+								1202
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1023.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 45.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"replace":
+	{
+		"height": 74.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 211.0,
+	"status_bar_visible": true
+}

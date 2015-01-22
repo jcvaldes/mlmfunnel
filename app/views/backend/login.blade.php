@@ -6,7 +6,7 @@
 
 <head>       
     <meta charset="utf-8">
-    <title>MLMfunnels</title>
+    <title>Acceder :: MLMfunnels</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="" name="description" />
     <meta content="themes-lab" name="author" />
@@ -22,6 +22,11 @@
     <!-- END  MANDATORY STYLE -->
     <!-- BEGIN PAGE LEVEL STYLE -->
     <link href="{{ asset('assets/css/animate-custom.css') }}" rel="stylesheet">
+    <style>
+    #login-block {
+        padding-top: 0px;
+    }
+    </style>
     <!-- END PAGE LEVEL STYLE -->
     <script src="{{ asset('assets/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js') }}"></script>
 </head>
@@ -70,6 +75,7 @@
                         <div class="login-links">
                             <a href="/auth/forgot">Olvidastes tu Password?</a>
                             <br>
+                            <a href="/auth/register">No tienes una cuenta? <strong>Registrate</strong></a>
                         </div>
                     </div>
                 </div>

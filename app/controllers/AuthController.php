@@ -11,6 +11,15 @@ class AuthController extends BaseController {
 		}		
 	}
 
+	public function showRegister()
+	{
+		if(Auth::user()){
+			return Redirect::to('panel');
+		}else{
+			return View::make('backend.register');
+		}		
+	}
+
 	public function showForgot()
 	{
 		if(Auth::user()){
@@ -47,9 +56,31 @@ class AuthController extends BaseController {
 				return Redirect::to('/auth/login')->with('alert', ['type' => 'danger', 'message' => 'Credenciales invalidas']);
 			}
 		}
+	}	
 
+	public function register()
+	{
+		$inputs = Input::all();
+		$rules = User::$rules;
+		$messages = User::$messages;
+
+		//dd($inputs);
+		
+		$rules['password'] = $rules['password'] . '|confirmed';
+		$rules['password_confirmation'] = 'required';
+		unset($rules['description']);
+
+		$v = Validator::make($inputs, $rules, $messages);
+		
+		if ($v->passes())
+		{
+			$user = User::create($inputs);
+			Auth::loginUsingId($user->id);
+			return Redirect::to('/dashboard/');
+		}else{
+			return Redirect::back()->withInput()->withErrors($v->messages());
+		}		
 	}
-	
 
 	public function logout()
 	{
