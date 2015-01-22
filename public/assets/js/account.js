@@ -29,9 +29,7 @@ $(function(){
         e.preventDefault();
         var l = Ladda.create(this);
         l.start();
-        setTimeout(function () {
-            window.location.href = "index.html";
-        }, 2000);
+        $('#submit-form').parent("form").submit();
 
     });
 	}
