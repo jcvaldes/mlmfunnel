@@ -12,7 +12,7 @@
 
     a.url{
         text-shadow: 0 0 2px #999;
-        font-size:24px;
+        font-size:20px;
     }
     .col-centered{
       display: block;

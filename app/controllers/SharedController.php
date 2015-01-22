@@ -25,7 +25,7 @@ class SharedController extends BaseController {
 		}else{
 			$rules['password'] .= '|confirmed';			
 		}
-
+		unset($rules['username']);
 		$rules['email'] .= ',email,' . Auth::user()->id;
 		
 		$v = Validator::make($inputs, $rules, $messages);

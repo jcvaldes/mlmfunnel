@@ -12,6 +12,7 @@ class UserTableSeeder extends Seeder {
 			'description' => 'Bio',
 			'email' => 'user@gmail.com',
 			'password' => \Hash::make('2512'),
+			'username' => 'ielijose',
 			'type' => 'user'
 			));
 
@@ -22,6 +23,7 @@ class UserTableSeeder extends Seeder {
 			'description' => 'Bio',
 			'email' => 'admin@gmail.com',
 			'password' => \Hash::make('2512'),
+			'username' => 'admin',
 			'type' => 'admin'
 			));
 
