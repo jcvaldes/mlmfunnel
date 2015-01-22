@@ -15,10 +15,10 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function landing($link)
+	public function landing($user, $link)
 	{
-		$landing = Landing::unique($link)->firstOrFail();
-		return View::make('templates.landing.index', compact('landing'));
+		$user = User::username($user)->firstOrFail();
+		return View::make('templates.landing.index', compact('user'));
 	}
 
 }

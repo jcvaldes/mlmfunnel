@@ -617,7 +617,7 @@
                         <div class="col-inner bgCover  noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin">
                             <div class="de elHeadlineWrapper de-editable" id="tmp_headline1-53255" data-de-type="headline" data-de-editing="false" data-title="headline" data-ce="true" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 0px; outline: medium none; cursor: pointer;">
                                 <div class="ne elHeadline lh3 elMargin0 elBGStyle0 hsTextShadow0 hsSize2" style="text-align: right; color: rgba(255, 255, 255, 0.760784);" data-bold="inherit" contenteditable="false">
-                                    <b>Contáctame al:</b> {{ $landing->user->phone }}</div>
+                                    <b>Contáctame al:</b> {{ $user->phone }}</div>
 
 
 
@@ -665,14 +665,14 @@
                             <div class="de elMargin0 clearfix elScreenshot_right elFeatureImage_80_20 de-editable" id="tmp_featureimage-32960" data-de-type="featureimage" data-de-editing="false" data-title="Image Feature" data-ce="true" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 20px; outline: medium none; cursor: pointer;">
                                 <div class="elScreenshot_text">
                                     <div class="elScreenshot_text_padding">
-                                        <h3 class="ne elScreenshot_text_headline ssHeadlineSize2" style="color: rgb(255, 255, 255);" contenteditable="false"><b><u>Te invitó:</u> {{ $landing->user->full_name }}</b></h3>
-                                        <div class="ne elScreenshot_text_body ssBodySize1" style="color: rgba(255, 255, 255, 0.772549);" contenteditable="false">{{ $landing->user->description }}
+                                        <h3 class="ne elScreenshot_text_headline ssHeadlineSize2" style="color: rgb(255, 255, 255);" contenteditable="false"><b><u>Te invitó:</u> {{ $user->full_name }}</b></h3>
+                                        <div class="ne elScreenshot_text_body ssBodySize1" style="color: rgba(255, 255, 255, 0.772549);" contenteditable="false">{{ $user->description }}
                                             <br>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="elScreenshot_image elAlign_center">
-                                    <img src="{{ $landing->user->getProfilePicture() }}" class="elScreenshot_image_src1 ximg img-circle thumbnailImage shadow20" height="100" width="100">
+                                    <img src="{{ $user->getProfilePicture() }}" class="elScreenshot_image_src1 ximg img-circle thumbnailImage shadow20" height="100" width="100">
                                 </div>
 
 

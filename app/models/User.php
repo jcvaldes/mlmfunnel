@@ -63,6 +63,15 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         });
     }
 
+    /* Scopes */       
+
+    public function scopeUsername($query, $username)
+    {
+        return $query->where('username', $username);
+    }
+
+    /* functions */
+
 	public function name(){
         return explode( ' ', $this->full_name)[0];
     }

@@ -54,4 +54,4 @@ App::missing(function($exception)
 });
 
 /* Funnel */
-Route::get('/{landing}', ['uses' => 'HomeController@landing']);
+Route::get('{user}/{landing}', ['uses' => 'HomeController@landing']);
