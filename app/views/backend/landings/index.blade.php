@@ -4,14 +4,21 @@
 <link rel="stylesheet" href="/assets/plugins/magnific/magnific-popup.css">
 <style>
     .qrcode {
-      width:160px;
-      height:160px;
-      margin-top:15px;
+      width:128px;
+      height:128px;
+      margin-right: auto;
+      margin-left: auto;
     }
 
     a.url{
         text-shadow: 0 0 2px #999;
         font-size:24px;
+    }
+    .col-centered{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
     }
 </style>
 @stop
@@ -48,13 +55,13 @@
                                         {{--<span class="search-date"><i class="fa fa-rocket"></i>Inactiva</span>--}}
                                     </div>
                                     <p><br>
-                                        <a class="url" data-qr="qr-landing" href="{{url()}}/{{Auth::user()->username}}/landing">{{url()}}/{{Auth::user()->username}}/landing</a>
+                                        <a class="url" target="_blank" data-qr="qr-landing" href="{{url()}}/{{Auth::user()->username}}/landing">{{url()}}/{{Auth::user()->username}}/landing</a>
                                     </p>                                    
                                 </div>
 
-                                <div class="col col-md-3 center">
+                                <div class="col col-md-3 col-centered">
                                     <div id="qr-landing" class="qrcode"></div>
-                                    <div><a class="btn btn-info f-right m-t-10" href="/dashboard/landing/configure/"><i class="fa fa-gear"></i> Configurar</a></div>
+                                    <div><a class="btn btn-info m-t-10" href="/dashboard/landing/configure/"><i class="fa fa-gear"></i> Configurar</a></div>
                                 </div>
                             </div>
                             
