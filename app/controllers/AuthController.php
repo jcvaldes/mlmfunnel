@@ -14,7 +14,7 @@ class AuthController extends BaseController {
 	public function showRegister()
 	{
 		if(Auth::user()){
-			return Redirect::to('panel');
+			return Redirect::to('/dashboard');
 		}else{
 			return View::make('backend.register');
 		}		
