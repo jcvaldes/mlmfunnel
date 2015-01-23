@@ -642,7 +642,7 @@
         if (o.add("search hassearch noresults nosubresults counter"), d.add("search reset change"), "boolean" == typeof r && (r = {
             add: r,
             search: r
-        }), "object" != typeof r && (r = {}), r = e.extend(!0, {}, e[n].defaults[t], r), r.add && (e('<div class="' + o.search + '"><div class="chat-header">Contactos</div></div>').prependTo(this.$menu).append('<input placeholder="' + r.placeholder + '" type="text" autocomplete="off" />'), r.noResults && e("ul, ol", this.$menu).first().append('<li class="' + o.noresults + '">' + r.noResults + "</li>")), e("div." + o.search, this.$menu).length && this.$menu.addClass(o.hassearch), r.search) {
+        }), "object" != typeof r && (r = {}), r = e.extend(!0, {}, e[n].defaults[t], r), r.add && (e('<div class="' + o.search + '"><div class="chat-header">Contacts</div></div>').prependTo(this.$menu).append('<input placeholder="' + r.placeholder + '" type="text" autocomplete="off" />'), r.noResults && e("ul, ol", this.$menu).first().append('<li class="' + o.noresults + '">' + r.noResults + "</li>")), e("div." + o.search, this.$menu).length && this.$menu.addClass(o.hassearch), r.search) {
             var i = e("div." + o.search, this.$menu).find("input");
             if (i.length) {
                 var u = e("." + o.panel, this.$menu),
@@ -676,7 +676,7 @@
         add: !1,
         search: !1,
         showLinksOnly: !0,
-        placeholder: "Buscar",
-        noResults: "Sin resultados."
+        placeholder: "Search",
+        noResults: "No results found."
     }, e[n].addons = e[n].addons || [], e[n].addons.push(t)
 }(jQuery);

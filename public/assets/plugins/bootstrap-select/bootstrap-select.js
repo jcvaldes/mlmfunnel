@@ -412,6 +412,7 @@
                     $drop.css({'top' : pos.top + actualHeight, 'left' : pos.left, 'width' : $element[0].offsetWidth, 'position' : 'absolute'});
                 };
             this.$newElement.on('click', function() {
+
                 if (that.isDisabled()) {
                     return;
                 }
@@ -517,6 +518,7 @@
                 }
             });
 
+            
             this.$menu.on('click', 'li a', function(e) {
                 var clickedIndex = $(this).parent().index(),
                     prevValue = that.$element.val(),

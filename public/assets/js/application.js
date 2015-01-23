@@ -293,7 +293,7 @@ if($.cookie('style-color')){
     $('#theme-color').attr("href", "assets/css/colors/" + color_ + ".css");
 }
 else{
-    //$('#theme-color').attr("href", "assets/css/colors/color-dark.css");
+    $('#theme-color').attr("href", "assets/css/colors/color-dark.css");
 }
 
 //*********************************** CUSTOM FUNCTIONS *****************************//
@@ -389,21 +389,11 @@ if ($('.animate-number').length && $.fn.numerator) {
 }
 
 /****  Custom Select Input  ****/
-/*if ($('select').length && $.fn.selectpicker) {
+if ($('select').length && $.fn.selectpicker) {
   setTimeout(function(){
     $('select').selectpicker();
   },50);
-}*/
-
-
-if ($('select').length && $.fn.selectpicker) {
-    if(!$(this).data('noselect')=='noselect'){
-        $('select').selectpicker();    
-    }    
 }
-
-
-
 /****  Show Tooltip  ****/
 if ($('[data-rel="tooltip"]').length && $.fn.tooltip) {
     $('[data-rel="tooltip"]').tooltip();
@@ -442,10 +432,6 @@ $('.toggle_checkbox').on('click', function () {
         $(this).closest('#task-manager').find('input:checkbox').prop('checked', false);
     }
 });
-
-
-
-
 
 
 /****  Form Validation with Icons  ****/
@@ -628,9 +614,29 @@ if ($('.cke-editor').length && $.fn.ckeditor) {
 }
 
 /****  Tables Dynamic  ****/
-
-/****  Tables Dynamic  ****/
-
+if ($('.table-dynamic').length && $.fn.dataTable) {
+    $('.table-dynamic').each(function () {
+        var opt = {};
+        // Tools: export to Excel, CSV, PDF & Print
+        if ($(this).hasClass('table-tools')) {
+            opt.sDom = "<'row'<'col-md-6'f><'col-md-6'T>r>t<'row'<'col-md-6'i><'spcol-md-6an6'p>>",
+            opt.oTableTools = {
+                "sSwfPath": "/assets/plugins/datatables/swf/copy_csv_xls_pdf.swf",
+                "aButtons": ["csv", "xls", "pdf", "print"]
+            };
+        }
+        if ($(this).hasClass('no-header')) {
+            opt.bFilter = false;
+            opt.bLengthChange = false;
+        }
+        if ($(this).hasClass('no-footer')) {
+            opt.bInfo = false;
+            opt.bPaginate = false;
+        }
+        var oTable = $(this).dataTable(opt);
+        oTable.fnDraw();
+    });
+}
 
 /****  Table progress bar  ****/
 if ($('body').data('page') == 'tables' || $('body').data('page') == 'products' || $('body').data('page') == 'blog') {
@@ -678,7 +684,7 @@ if ($('.magnific').length && $.fn.magnificPopup) {
 
 
 /****  Initiation of Main Functions  ****/
-$(document).ready(function () {
+jQuery(document).ready(function () {
 
     manageSidebar();
     toggleSidebarMenu();

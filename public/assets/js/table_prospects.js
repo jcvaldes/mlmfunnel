@@ -4,14 +4,19 @@ $(function () {
         "bFilter": true,
     };
 
-    opt.sDom = "<'row'<'col-md-6'f><'col-md-6'T>r>t<'row'<'col-md-6'i><'spcol-md-6an6'p>>",
+            opt.sDom = "<'row'<'col-md-6'f><'col-md-6'T>r>t<'row'<'col-md-6'i><'spcol-md-6an6'p>>",
+    opt.oTableTools = {
+        "sSwfPath": "/assets/plugins/datatables/swf/copy_csv_xls_pdf.swf",
+        "aButtons": ["csv", "pdf"]
+    };
 
-    opt.sDom = 'T<"clear">lrtip',
-    opt.sDom = "<'row'<'col-md-6'f><'col-md-6'T>r>t<'row'<'col-md-6'i><'spcol-md-6an6'p>>",
-            opt.oTableTools = {
-                "sSwfPath": "/assets/plugins/datatables/swf/copy_csv_xls_pdf.swf",
-                "aButtons": ["csv", "xls", "pdf", "print"]
-            };
+    opt.columnDefs = [
+            
+            {
+                "targets": [ 3 ],
+                "visible": false
+            }
+        ];
 
     opt.language = {
         "sProcessing":     "Procesando...",
@@ -37,6 +42,8 @@ $(function () {
             "sSortDescending": ": Activar para ordenar la columna de manera descendente"
         }
     };
+
+
 
     var oTable = $("#datatable").dataTable(opt);
     oTable.fnDraw();

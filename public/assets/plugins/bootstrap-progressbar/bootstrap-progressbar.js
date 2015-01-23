@@ -37,7 +37,7 @@
         var $back_text = this.$back_text;
         var $front_text = this.$front_text;
         var options = this.options;
-        var aria_valuetransitiongoal = $this.attr('aria-valuetransitiongoal');
+        var aria_valuetransitiongoal = $this.attr('data-aria-valuetransitiongoal');
         var aria_valuemin = $this.attr('aria-valuemin') || 0;
         var aria_valuemax = $this.attr('aria-valuemax') || 100;
         var is_vertical = $parent.hasClass('vertical');
@@ -46,7 +46,7 @@
         var fail = options.fail && typeof options.fail === 'function' ? options.fail : Progressbar.defaults.fail;
 
         if (!aria_valuetransitiongoal) {
-            fail('aria-valuetransitiongoal not set');
+            fail('data-aria-valuetransitiongoal not set');
             return;
         }
         var percentage = Math.round(100 * (aria_valuetransitiongoal - aria_valuemin) / (aria_valuemax - aria_valuemin));

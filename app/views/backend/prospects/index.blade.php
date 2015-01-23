@@ -33,7 +33,7 @@
                                 <hr>
                             </div>
                             
-                            <table id="datatable" cellpadding="0" cellspacing="0" border="0" class="table table-striped table-hover table-dynamic table-tools">
+                            <table id="datatable" cellpadding="0" cellspacing="0" border="0" class="table table-striped table-hover">
                                 <thead>
                                     <tr>
                                         <th>Nombre</th>
