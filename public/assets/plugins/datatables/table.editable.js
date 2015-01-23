@@ -55,10 +55,10 @@ var EditableTable = function () {
                 "bPaginate": false,
                 "sPaginationType": "bootstrap",
                 "oLanguage": {
-                    "sLengthMenu": "_MENU_ items por página",
+                    "sLengthMenu": "_MENU_ records per page",
                     "oPaginate": {
-                        "sPrevious": "Anterior",
-                        "sNext": "Siguiente"
+                        "sPrevious": "Prev",
+                        "sNext": "Next"
                     }
                 },
                 "aoColumnDefs": [{

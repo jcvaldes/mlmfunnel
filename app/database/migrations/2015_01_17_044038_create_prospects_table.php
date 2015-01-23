@@ -18,11 +18,13 @@ class CreateProspectsTable extends Migration {
 			$table->string('name');
 			$table->string('email');		    
 			$table->string('phone');
-			$table->string('ip');
-			$table->boolean('confirmed');
+			$table->string('type');
 
-			$table->integer('landing_id')->unsigned();
-			$table->foreign('landing_id')->references('id')->on('landings');
+			$table->string('ip');
+			$table->boolean('confirmed')->default(0);
+
+			$table->integer('user_id')->unsigned();
+			$table->foreign('user_id')->references('id')->on('users');
 
 			$table->timestamps();
 		});

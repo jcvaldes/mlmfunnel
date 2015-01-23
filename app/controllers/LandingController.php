@@ -37,6 +37,7 @@ class LandingController extends BaseController {
 		$inputs = Input::all();
 		//$inputs['template_id'] = 1;
 		$inputs['user_id'] = Auth::user()->id;
+		
 
 		$landing = new Landing($inputs);
 		if ($landing->save())

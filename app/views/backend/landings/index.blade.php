@@ -43,7 +43,7 @@
                                     <div class="thumbnail">
                                         <div class="overlay">
                                             <div class="thumbnail-actions">
-                                                <a href="/assets/img/landings/landing.jpg" class="btn btn-default btn-icon btn-rounded magnific" title="/animal 1"><i class="fa fa-search"></i></a>
+                                                <a href="/assets/img/landings/landing.jpg" class="btn btn-default btn-icon btn-rounded magnific" title="Landing page"><i class="fa fa-search"></i></a>
                                             </div>
                                         </div>
                                         <img src="/assets/img/landings/landing.jpg" alt="/animal" class="img-responsive">
@@ -55,7 +55,7 @@
                                         {{--<span class="search-date"><i class="fa fa-rocket"></i>Inactiva</span>--}}
                                     </div>
                                     <p><br>
-                                        <a class="url" target="_blank" data-qr="qr-landing" href="{{url()}}/{{Auth::user()->username}}/landing">{{url()}}/{{Auth::user()->username}}/landing</a>
+                                        <a class="url" target="_blank" data-qr="qr-landing" href="{{url()}}/landing/{{Auth::user()->username}}">{{url()}}/landing/{{Auth::user()->username}}</a>
                                     </p>                                    
                                 </div>
 

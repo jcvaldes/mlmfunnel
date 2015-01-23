@@ -1,22 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" class="bgCover wf-proximanova-i4-active wf-proximanova-i7-active wf-proximanova-n4-active wf-proximanova-n7-active wf-active wf-proximanova-i3-active wf-proximanova-n3-active" style='background-color: rgb(41, 41, 41); background-image: url("https://coachingactivo.files.wordpress.com/2013/07/amanecer-dos-2.jpg");'>
+<html lang="en" class="bgCover wf-proximanova-i4-active wf-proximanova-i7-active wf-proximanova-n4-active wf-proximanova-n7-active wf-active wf-proximanova-i3-active wf-proximanova-n3-active" style='background-color: rgb(41, 41, 41); background-image: url("/templates/landing/images/amanecer.jpg");'>
 
 <head data-next-url="#" data-this-url="#">
     <meta charset="UTF-8">
-        
-    <link rel="shortcut icon" href="https://nodo.s3.amazonaws.com/assets/images/nodo/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="https://nodo.s3.amazonaws.com/assets/images/nodo/favicon.ico" type="image/x-icon">
     <title>{{ $user->full_name }} :: MLMfunnels</title>
-    <meta class="metaTagTop" name="description" content="description for your awesome landing page">
-    <meta class="metaTagTop" name="keywords" content="clickfunnels, landing page, web site editor">
-    <meta class="metaTagTop" name="author" content="Your Name">
+    <meta class="metaTagTop" name="description" content="">
+    <meta class="metaTagTop" name="keywords" content="mlmfunnel, landing page, web site">
+    <meta class="metaTagTop" name="author" content="MLMfunnel">
     <meta class="metaTagTop" property="og:image" content="" id="social-image">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
     <meta property="og:url" content="{{ URL::current() }}">
     <meta property="og:type" content="website">
     <meta name="viewport" content="initial-scale=1">
-    <link href="https://www.clickfunnels.com/assets/lander.css" media="screen" rel="stylesheet">
+    <link href="/templates/landing/css/lander.css" media="screen" rel="stylesheet">
     <!-- css -->
     <!-- CDN stuff -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700%7COswald:400,700%7CDroid+Sans:400,700%7CRoboto:400,700%7CLato:400,700%7CPT+Sans:400,700%7CSource+Sans+Pro:400,700%7CNoto+Sans:400,700%7CPT+Sans:400,700%7CUbuntu:400,700%7CBitter:400,700%7CPT+Serif:400,700%7CRokkitt:400,700%7CDroid+Serif:400,700%7CRaleway:400,700%7CInconsolata:400,700" rel="stylesheet" type="text/css">
@@ -84,7 +81,7 @@
         <div class="modalBackdropWrapper" style="display: none; background-color: rgba(0, 0, 0, 0.4);"></div>
         <div class="container containerModal midContainer noTopMargin padding40-top padding40-bottom padding40H  noBorder borderSolid border3px cornersAll radius10 shadow0 bgNoRepeat emptySection" id="modalPopup" data-title="Modal" data-block-color="0074C7" style="display: none; margin-top: 100px; padding-top: 40px; padding-bottom: 40px; outline: none; background-color: rgb(255, 255, 255);" data-trigger="none" data-animate="top" data-delay="0">
             <div class="containerInner ui-sortable"></div>
-            <div class="closeLPModal"><img src="https://nodo.s3.amazonaws.com/editor/closemodal.png" alt="">
+            <div class="closeLPModal"><img src="/templates/landing/images/closemodal.png" alt="">
             </div>
 
         </div>
@@ -170,6 +167,7 @@
                             </div>
                         </div>
                     </div>
+                    {{ Form::open(['route' => 'suscribe', 'method' => 'POST']) }}
                     <div style="outline: none;" id="col-right-474" class="col-md-6 innerContent col_right" data-col="right" data-trigger="none" data-animate="fade" data-delay="500" data-title="Right column">
                         <div style="background-color: rgba(0, 0, 0, 0.64); padding: 40px;" class="col-inner bgCover  noBorder borderSolid border3px cornersAll P0-top P0-bottom P0H noTopMargin radius10 shadow40">
                             <div style="outline: medium none; cursor: pointer;" class="de elHeadlineWrapper de-editable" id="tmp_headline1-86070" data-de-type="headline" data-de-editing="false" data-title="headline" data-ce="true" data-trigger="none" data-animate="fade" data-delay="500">
@@ -191,16 +189,21 @@
                             <div style="margin-top: 15px; outline: medium none; cursor: pointer;" class="de elInputWrapper de-input-block elAlign_center elMargin0 de-editable" id="input-57742" data-de-type="input" data-de-editing="false" data-title="Phone Input" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500">
                                 <input placeholder="Ingresa Tu Número Telefónico..." name="phone" class="elInput elInput100 elAlign_left elInputBR5 elInputIRight required0 elInputIColor elInputIPhone elInputMid elInputStyle2 elInputBG2" data-type="extra" type="text">
                             </div>
+
                             <div style="margin-top: 15px; outline: medium none; cursor: pointer;" class="de elBTN elAlign_center elMargin0 de-editable" id="tmp_button-93582" data-de-type="button" data-de-editing="false" data-title="button" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500">
-                                <a href="#submit-form" class="elButton elButtonColor1 elButtonFull elButtonSize2 elButtonBottomBorder elButtonTxtColor1" style="color: rgb(255, 255, 255); background-color: rgb(235, 129, 37);">
+                                <button type="submit" class="elButton elButtonColor1 elButtonFull elButtonSize2 elButtonBottomBorder elButtonTxtColor1" style="color: rgb(255, 255, 255); background-color: rgb(235, 129, 37);">
                                     <span class="elButtonMain">¡Acceder Ahora!</span>
                                     <span class="elButtonSub"></span>
-                                </a>
+                                </button>
 
                             </div>
+
                         </div>
                     </div>
+                    {{ Form::hidden('user_id', $user->id) }}
+                    {{ Form::hidden('type', 'landing') }}
 
+                    {{ Form::close() }}
                 </div>
             </div>
 
