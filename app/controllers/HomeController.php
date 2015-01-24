@@ -18,7 +18,20 @@ class HomeController extends BaseController {
 	public function landing($link, $user)
 	{
 		$user = User::username($user)->firstOrFail();
-		return View::make('templates.landing.index', compact('user'));
+		switch ($link) {
+			case 'landing':
+				return View::make('templates.landing.index', compact('user'));
+				break;
+
+			case 'thankyou':
+				return View::make('templates.landing.thanks', compact('user'));
+				break;
+			
+			default:
+				# code...
+				break;
+		}
+		
 	}
 
 	public function suscribe()
@@ -29,7 +42,8 @@ class HomeController extends BaseController {
 		$prospect = new Prospect($inputs);
 		if ($prospect->save())
 		{
-			dd($prospect);
+			$user = User::find($prospect->user_id);
+			return Redirect::to('thankyou/'.$user->username);
 			//return Redirect::to($inputs['type']/')->with('alert', ['type' => 'success', 'message' => 'El cliente ha sido registrado.']);;			
 		}        
 		dd($customer->getErrors());

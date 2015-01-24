@@ -81,12 +81,12 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         return $this->type == 'admin';
     }
 
-    public function getProfilePicture()
+    public function getProfilePicture($width = 200)
     {
     	if($this->picture){
-    		return Croppa::url($this->picture,200);
+    		return Croppa::url($this->picture,$width);
     	}else{
-    		return Identicon::getImageDataUri($this->id, 200);
+    		return Identicon::getImageDataUri($this->id, $width);
             //return "";
     	}
     	
