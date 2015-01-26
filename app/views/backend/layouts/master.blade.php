@@ -75,6 +75,7 @@
     <script src="{{ asset('/assets/plugins/numerator/jquery-numerator.js') }}"></script>
     <script src="{{ asset('/assets/plugins/jquery.cookie.min.js') }}" type="text/javascript"></script>
     
+    <script src="{{ asset('/assets/plugins/moment-with-locales.min.js') }}" type="text/javascript"></script>
     <!-- BEGIN PAGE LEVEL SCRIPTS -->
     @yield('javascript')
     <!-- END  PAGE LEVEL SCRIPTS -->

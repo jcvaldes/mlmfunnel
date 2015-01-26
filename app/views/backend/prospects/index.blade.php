@@ -38,7 +38,11 @@
                                 </div>
 
                                 <div class="col-md-4">
-                                    <button class="btn btn-lg btn-success" id="filter-date">Filtrar por fecha</button>
+                                    <button class="btn btn-lg btn-success col-md-12" id="filter-date">Filtrar por fecha</button>
+
+                                    <button class="btn btn-lg btn-info m-t-10 col-md-12" id="filter-day"> <i class="fa fa-calendar"></i> Hoy</button>
+                                    <button class="btn btn-lg btn-info m-t-10 col-md-12" id="filter-week"> <i class="fa fa-calendar"></i> Esta semana</button>
+                                    <button class="btn btn-lg btn-info m-t-10 col-md-12" id="filter-month"> <i class="fa fa-calendar"></i> Este mes</button>
                                 </div>
                                 
                                 <div class="col-md-12">
@@ -107,8 +111,6 @@
         </div>
     </div>
 </div>
-
-<a href="javascript:void(0)" class="btn bg-purple filterbtn">Filtrar</a>
 
 @stop
 

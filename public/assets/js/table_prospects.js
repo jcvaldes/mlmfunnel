@@ -13,6 +13,8 @@ $(function () {
         "aButtons": ["csv", "pdf"]
     };
 
+    opt.order = [[ 5, "desc" ]]
+
     opt.columnDefs = [            
             {
                 "targets": [ 4 ],
@@ -29,7 +31,6 @@ $(function () {
 
     $.fn.dataTable.ext.search.push(
         function( settings, data, dataIndex ) {  
-            console.log(settings);
             //alert(settings.oPreviousSearch.sSearch);
             if(settings.oPreviousSearch.sSearch == 'datecomparevaluesofthis'){
                 var start = opt.start.split('-');
@@ -70,31 +71,22 @@ $(function () {
 
 $.fn.dataTable.ext.afnFiltering.push(
     function( oSettings, aData, iDataIndex ) {
-        var iFini = opt.start;
-        var iFfin = opt.end;
-        var iStartDateCol = 5;
-        var iEndDateCol = 5;
- 
-        iFini=iFini.substring(6,10) + iFini.substring(3,5)+ iFini.substring(0,2);
-        iFfin=iFfin.substring(6,10) + iFfin.substring(3,5)+ iFfin.substring(0,2);
- 
-        var datofini=aData[iStartDateCol].substring(6,10) + aData[iStartDateCol].substring(3,5)+ aData[iStartDateCol].substring(0,2);
-        var datoffin=aData[iEndDateCol].substring(6,10) + aData[iEndDateCol].substring(3,5)+ aData[iEndDateCol].substring(0,2);
- 
-        if ( iFini === "" && iFfin === "" )
-        {
-            return true;
+        var start = moment(opt.start);
+        var end = moment(opt.end);
+        var current = moment(aData[5]);
+
+        if(moment(opt.start).isValid()){
+            $("#start").datepicker('update', new Date(opt.start));
         }
-        else if ( iFini <= datofini && iFfin === "")
+
+        if(moment(opt.end).isValid()){
+            $("#end").datepicker('update', new Date(opt.end));
+        }        
+       
+
+        if (start <= current && end >= current)
         {
-            return true;
-        }
-        else if ( iFfin >= datoffin && iFini === "")
-        {
-            return true;
-        }
-        else if (iFini <= datofini && iFfin >= datoffin)
-        {
+            console.log(start +" -> "+ end +" -> "+ current);
             return true;
         }
         return false;
@@ -129,8 +121,39 @@ $.fn.dataTable.ext.afnFiltering.push(
     oTable.fnFilter( $('#filter-page').val() );
 
     $("#filter-date").on("click", function(){
-        opt.start = $('#start').data('date') || '';
-        opt.end = $('#end').data('date') || '';
+        opt.start = moment($('#start').data('date')).format("YYYY-MM-DD");
+        opt.end = moment($('#end').data('date')).format("YYYY-MM-DD");
+
         oTable.fnFilter();
     })
+
+    $("#filter-day").on("click", function(){
+        opt.start = moment().format("YYYY-MM-DD");
+        opt.end = moment().format("YYYY-MM-DD");
+        oTable.fnFilter();
+    })
+
+    $("#filter-week").on("click", function(){
+        opt.start = moment().subtract(1, 'week').format("YYYY-MM-DD");
+        opt.end = moment().format("YYYY-MM-DD");
+        oTable.fnFilter();
+    })
+
+    $("#filter-month").on("click", function(){
+        opt.start = moment().subtract(1, 'month').format("YYYY-MM-DD");        
+        opt.end = moment().format("YYYY-MM-DD");        
+        oTable.fnFilter();
+    })
+
+
+    $("#start").datepicker().on("changeDate", function(e){
+        opt.start = moment(e.date);
+        oTable.fnFilter();
+    });
+    $("#end").datepicker().on("changeDate", function(e){
+        opt.end = moment(e.date);
+        oTable.fnFilter();
+    });
+
+
 });
