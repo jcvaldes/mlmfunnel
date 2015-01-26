@@ -495,7 +495,7 @@ if ($('.datepicker').length && $.fn.datepicker) {
             inline: datepicker_inline
         });
 
-        $(this).datepicker('update', new Date());
+        $(this).datepicker('setDate', new Date());
     });
 }
 

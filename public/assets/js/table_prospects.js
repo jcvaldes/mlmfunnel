@@ -134,13 +134,14 @@ $.fn.dataTable.ext.afnFiltering.push(
     })
 
     $("#filter-week").on("click", function(){
-        opt.start = moment().subtract(1, 'week').format("YYYY-MM-DD");
+        opt.start = moment().startOf('week').format("YYYY-MM-DD");
+        //opt.start = moment().subtract(1, 'week').format("YYYY-MM-DD");
         opt.end = moment().format("YYYY-MM-DD");
         oTable.fnFilter();
     })
 
     $("#filter-month").on("click", function(){
-        opt.start = moment().subtract(1, 'month').format("YYYY-MM-DD");        
+        opt.start = moment().startOf('month').format("YYYY-MM-DD");
         opt.end = moment().format("YYYY-MM-DD");        
         oTable.fnFilter();
     })
@@ -155,5 +156,23 @@ $.fn.dataTable.ext.afnFiltering.push(
         oTable.fnFilter();
     });
 
+    /* init */
+    opt.start = moment().format("YYYY-MM-DD");
+    opt.end = moment().format("YYYY-MM-DD");
+    oTable.fnFilter();
+
+    /* change color */
+
+    $(".filter-word").on("click", function(){
+        $.each($(".filter-word.btn-success"), function(index, val) {
+            $(this).removeClass('btn-success');
+            $(this).addClass('btn-info');
+        });
+
+        if($(this).hasClass('btn-info')){
+            $(this).removeClass('btn-info');
+            $(this).addClass('btn-success');
+        }
+    })
 
 });
