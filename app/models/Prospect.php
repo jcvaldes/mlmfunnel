@@ -43,6 +43,12 @@ class Prospect extends Model {
         return strtoupper($this->name[0]);
     }
 
+     public function getComputerDate(){
+        return explode(' ', $this->created_at)[0];
+    }
+
+    
+
     public function getHumanDate()
     {
         $txt = 'carbon.timediff.';

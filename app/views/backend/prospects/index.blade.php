@@ -1,6 +1,13 @@
 @extends('backend.layouts.master')
 
 @section('css')
+<link rel="stylesheet" href="{{ asset('/assets/plugins/magnific/magnific-popup.css') }}">    
+
+<link href="{{ asset('/assets/plugins/datetimepicker/jquery.datetimepicker.css') }}" rel="stylesheet">
+    <link href="{{ asset('/assets/plugins/pickadate/themes/default.css') }}" rel="stylesheet">
+    <link href="{{ asset('/assets/plugins/pickadate/themes/default.date.css') }}" rel="stylesheet">
+    <link href="{{ asset('/assets/plugins/pickadate/themes/default.time.css') }}" rel="stylesheet">
+
     <link rel="stylesheet" href="{{ asset('/assets/plugins/datatables/dataTables.css') }}">
     <link rel="stylesheet" href="{{ asset('/assets/plugins/datatables/dataTables.tableTools.css') }}">
     
@@ -19,6 +26,28 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12 table-responsive table-blue filter-left">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h4>Desde:</h4>
+                                    <div id="start" data-inline="true" data-date-format="yyyy-mm-dd" class="datepicker" data-inline="true"></div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <h4>Hasta:</h4>
+                                    <div id="end" data-inline="true" data-date-format="yyyy-mm-dd" class="datepicker" data-inline="true"></div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <button class="btn btn-lg btn-success" id="filter-date">Filtrar por fecha</button>
+                                </div>
+                                
+                                <div class="col-md-12">
+                                   <hr>
+                               </div>
+
+
+                           </div>
+
                             <div class="col-md-2">
                                 <h4>Filtrar por página:</h4>
                             </div>
@@ -34,7 +63,9 @@
 
                                     @foreach (range('A', 'Z') as $letra) 
                                     <button type="button" class="btn btn-sm btn-info filter-word" data-word="{{ $letra }}">{{ $letra }}</button>
-                                    @endforeach                                  
+                                    @endforeach 
+
+                                    <button type="button" class="btn btn-sm btn-danger filter-word" data-word="">Todas</button>                                 
                                                             
                             </div>
 
@@ -62,8 +93,8 @@
                                         <td>{{ $prospect->name }}</td>
                                         <td>{{ $prospect->email }} </td>
                                         <td>{{ $prospect->phone }}</td>
-                                        <td>{{ $prospect->type }}</td>                                        
-                                        <th style="text-align:center">{{ $prospect->getHumanDate() }}</th>
+                                        <td>{{ $prospect->type }}</td>    
+                                        <th style="text-align:center">{{ $prospect->getComputerDate() }}</th>
                                         <td style="text-align:center"><a href="/prospect/{{ $prospect->id }}" class="btn btn-info">Ver mas</a></td>
                                     </tr>
                                     @endforeach
@@ -77,14 +108,20 @@
     </div>
 </div>
 
+<a href="javascript:void(0)" class="btn bg-purple filterbtn">Filtrar</a>
+
 @stop
 
 @section('javascript')
+    <script src="{{ asset('/assets/plugins/bootstrap-datepicker/bootstrap-datepicker.js') }}"></script>
+
     <script src="{{ asset('/assets/plugins/bootstrap-switch/bootstrap-switch.js') }}"></script>
     <script src="{{ asset('/assets/plugins/bootstrap-progressbar/bootstrap-progressbar.js') }}"></script>
     <script src="{{ asset('/assets/plugins/datatables/dynamic/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('/assets/plugins/datatables/dataTables.bootstrap.js') }}"></script>
     <script src="{{ asset('/assets/plugins/datatables/dataTables.tableTools.js') }}"></script>
     <script src="{{ asset('/assets/plugins/datatables/table.editable.js') }}"></script>
-    <script src="{{ asset('/assets/js/table_prospects.js') }}"></script>
+    <script src="{{ asset('/assets/js/table_prospects.js') }}"></script> 
+
+    
 @stop
