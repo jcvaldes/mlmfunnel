@@ -1,6 +1,7 @@
 $(function () {
 
     var opt = {
+        word : '',
         "bFilter": true,
     };
 
@@ -51,10 +52,10 @@ $(function () {
     $.fn.dataTable.ext.search.push(
         function( settings, data, dataIndex ) {    
 
-            var letra = $('#filter-word').val();
+            var letra = opt.word;
             var page = $('#filter-page').val();
 
-            if ((letra == data[0] || letra == 'false' ) && page == data[4])
+            if ((letra == data[0] || letra == '' ) && page == data[4])
             {
                 return true;
             }
@@ -66,6 +67,11 @@ $(function () {
 
     var oTable = $("#datatable").dataTable(opt);
     oTable.fnDraw();
+
+    $(".filter-word").on("click", function(){
+        opt.word = $(this).data('word');
+        oTable.fnFilter(opt.word);
+    })
 
     $('.filter').change( function() { 
         if($(this).val() == 'false'){

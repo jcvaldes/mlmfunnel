@@ -19,28 +19,23 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12 table-responsive table-blue filter-left">
-                            <div class="col-md-3">
-                                <h4>Filtrar por landing:</h4>
+                            <div class="col-md-2">
+                                <h4>Filtrar por página:</h4>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-2">
                                 <select class="form-control filter" id="filter-page">
                                     <option value="landing">Landing</option>
                                     <option value="herbalife">Herbalife</option>
                                     <option value="sugar">Sugar</option>
                                 </select>
                             </div>
+                            
+                            <div class="col col-md-8 buttons-page">
 
-                            <div class="col-md-3">
-                                <h4>Filtrar por letra:</h4>
-                            </div>
-
-                            <div class="col col-md-3">
-                                <select class="form-control filter" id="filter-word">
-                                    <option value="false">-- Seleccione --</option>
                                     @foreach (range('A', 'Z') as $letra) 
-                                    <option value="{{ $letra }}">{{ $letra }}</option>  
+                                    <button type="button" class="btn btn-sm btn-info filter-word" data-word="{{ $letra }}">{{ $letra }}</button>
                                     @endforeach                                  
-                                </select>                                
+                                                            
                             </div>
 
 
