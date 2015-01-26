@@ -4,7 +4,6 @@ if(!isset(Auth::user()->id)){
 	Route::get('/dashboard', function(){
 		return Redirect::to('/auth/login');
 	});	
-	
 }
 
 Route::get('/', function(){

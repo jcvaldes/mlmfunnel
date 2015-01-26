@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"pa",
+				"padding"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"req",
+				"required"
+			],
+			[
 				"com",
 				"compact"
 			],
@@ -130,10 +146,6 @@
 			[
 				"strto",
 				"strtoupper"
-			],
-			[
-				"marg",
-				"margin-left"
 			],
 			[
 				"fon",
@@ -340,98 +352,34 @@
 	"buffers":
 	[
 		{
-			"file": "app/controllers/LandingController.php",
+			"file": "app/models/Prospect.php",
 			"settings":
 			{
-				"buffer_size": 4374,
+				"buffer_size": 1937,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/models/Landing.php",
+			"file": "app/controllers/ProspectController.php",
 			"settings":
 			{
-				"buffer_size": 836,
+				"buffer_size": 4382,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/views/backend/landings/index.blade.php",
+			"file": "app/views/backend/prospects/index.blade.php",
 			"settings":
 			{
-				"buffer_size": 3433,
+				"buffer_size": 4452,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/routes/shared.php",
+			"file": "public/assets/js/table_prospects.js",
 			"settings":
 			{
-				"buffer_size": 2283,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/controllers/SharedController.php",
-			"settings":
-			{
-				"buffer_size": 1037,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/backend/shared/profile.blade.php",
-			"settings":
-			{
-				"buffer_size": 13618,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/models/User.php",
-			"settings":
-			{
-				"buffer_size": 3068,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/views/backend/login.blade.php",
-			"settings":
-			{
-				"buffer_size": 4967,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/backend/login.blade.php",
-			"settings":
-			{
-				"buffer_size": 5081,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/routes.php",
-			"settings":
-			{
-				"buffer_size": 11487,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/routes.php",
-			"settings":
-			{
-				"buffer_size": 1730,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/controllers/AuthController.php",
-			"settings":
-			{
-				"buffer_size": 1246,
+				"buffer_size": 1848,
 				"line_ending": "Windows"
 			}
 		}
@@ -468,36 +416,67 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/controllers/HomeController.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/routes.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/css/nicdark_style.css",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/layouts/sidebar.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/templates/landing/index.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/templates/landing/thanks.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/public/assets/js/application.js",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/models/User.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/layouts/master.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/public/tables_dynamic.html",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/public/backend/tables_dynamic.html",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/public/backend/assets/js/application.js",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/public/backend/assets/js/animations.js",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/public/backend/assets/js/table_dynamic.js",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/public/assets/plugins/datatables/spanish.json",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/landings/index.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/layouts/user/sidebar.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/controllers/CustomerController.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/controllers/LandingController.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/controllers/StatisticController.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/routes/user.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/templates/landing/a.html",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/public/templates/landing/css/landing.css",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/shared/profile.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/database/seeds/UserTableSeeder.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/database/migrations/2015_01_17_043408_create_users_table.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/controllers/AuthController.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/database/migrations/2015_01_17_044038_create_prospects_table.php",
+		"/C/Users/Eli Jose Carrasquero/AppData/Local/Temp/Rar$EXa0.026/index.html",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/controllers/SharedController.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/routes/shared.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/public/assets/css/landing.css",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/postreceive.sh",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/public/assets/js/account.js",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/login.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/register.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/database/migrations/2015_01_17_043643_create_landings_table.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/database/migrations/2015_01_17_043542_create_templates_table.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/controllers/AuthController.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/views/backend/login.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/routes.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/controllers/SharedController.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/dashboard.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/controllers/HomeController.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/templates/landing/index.blade.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/controllers/UploadController.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/models/User.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/.gitignore",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/config/app.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/config/app.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/routes.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/config/app.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/composer.json",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/composer.json",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/landings/create.blade.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/models/Notification.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/routes.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/models/User.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/models/User.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/controllers/AuthController.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/layouts/user/sidebar.blade.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/layouts/user/navigation.blade.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/controllers/UserController.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/composer.json",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/controllers/ProductController.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/models/Product.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/operators/create.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/landings/index.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/database/migrations/2015_01_17_043643_create_landings_table.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/database/migrations/2015_01_17_043542_create_templates_table.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/controllers/PropertyController.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/config/database.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/config/database.php",
@@ -520,7 +499,6 @@
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/js/plugins/jquery.sopaletras.js",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/tercer-grado/sustantivos.blade.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/controllers/UserController.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/layouts/master.blade.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/models/Notification.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/database/seeds/DatabaseSeeder.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/database/seeds/VenezuelaTableSeeder.php",
@@ -548,7 +526,6 @@
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/forgot.blade.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/login.blade.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/register.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/controllers/AuthController.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/layouts/usuario/navigation.blade.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/database/migrations/2015_01_15_003000_create_portal_table.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/database/migrations/2015_01_15_003244_create_dialogo_table.php",
@@ -566,36 +543,7 @@
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/layouts/usuario/sidebar.blade.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/layouts/usuario/master.blade.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/public/assets/css/colors/color-dark.css",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/public/assets/css/style.css",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/js/cada-palabra-en-su-lugar.js",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/segundo-grado/cada-palabra-en-su-lugar.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/css/segundo-grado.css",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/primer-grado/formando-palabras.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/primer-grado/figuras-mas-letras.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/css/primer-grado.css",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/primer-grado/camino-de-letras.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/js/figuras-mas-letras.js",
-		"/C/wamp/www/TrackFunnel/template/html/mail.html",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/layouts/sidebar.blade.php",
-		"/C/Users/Eli Jose Carrasquero/AppData/Local/Temp/Rar$EXa0.961/SopaLetras/default.html",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/primer-grado/partes-computador.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/layouts/footer.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/layouts/agente.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/segundo-grado/a-restr.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/segundo-grado/aprende-el-abecedario.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/js/camino-de-letras.js",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/css/camino-de-letras.css",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/css/formando-palabras.css",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/js/formando-palabras.js",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/css/adivina-la-palabra.css",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/layouts/master.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Desktop/Nueva carpeta/sopa.html",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/primer-grado/aprende-los-numeros.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/primer-grado/aprende-las-formas-geometricas.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/primer-grado/aprende-el-abecedario.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/TrackFunnel/app/config/local/database.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/TrackFunnel/app/views/backend/login.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/TrackFunnel/app/views/backend/layouts/master.blade.php"
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/public/assets/css/style.css"
 	],
 	"find":
 	{
@@ -606,6 +554,8 @@
 		"height": 0.0,
 		"where_history":
 		[
+			"C:\\Users\\Eli Jose Carrasquero\\Documents\\GitHub\\mlmfunnel\\public\\assets\\js",
+			"C:\\Users\\Eli Jose Carrasquero\\Documents\\GitHub\\mlmfunnel",
 			"C:\\Users\\Eli Jose Carrasquero\\Documents\\GitHub\\Trackfunnel",
 			"C:\\Users\\Eli Jose Carrasquero\\AppData\\Roaming\\iSpy",
 			"C:\\wamp\\www\\ceglys",
@@ -624,6 +574,16 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"tables_dynamic",
+			".table",
+			"table",
+			"url(",
+			"pasartes",
+			"fb_xdm_frame_https",
+			"landing->",
+			"=\"a",
+			"panel",
+			"backend/",
 			"profile_picture",
 			"./templates",
 			"/assets/",
@@ -741,17 +701,7 @@
 			"}}',",
 			"$branch",
 			"$enterprise",
-			"backend/",
-			"user",
-			"customer",
-			"Search ",
-			"Search",
-			"Showing",
-			"entries",
-			"Buscar",
-			"customer",
-			"id=\"field-1\" ",
-			"panel/"
+			"backend/"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -759,6 +709,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"",
+			"=\"/a",
+			"",
 			"picture",
 			"/templates",
 			"/templates/landing/",
@@ -844,82 +797,77 @@
 	"groups":
 	[
 		{
-			"selected": 11,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/controllers/LandingController.php",
+					"file": "app/models/Prospect.php",
 					"settings":
 					{
-						"buffer_size": 4374,
+						"buffer_size": 1937,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								807,
-								807
-							],
-							[
-								986,
-								986
+								1078,
+								1078
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 495.0,
+						"translation.y": 671.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "app/models/Landing.php",
+					"file": "app/controllers/ProspectController.php",
 					"settings":
 					{
-						"buffer_size": 836,
+						"buffer_size": 4382,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								692,
-								692
+								211,
+								211
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 341.0,
+						"translation.y": 286.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "app/views/backend/landings/index.blade.php",
+					"file": "app/views/backend/prospects/index.blade.php",
 					"settings":
 					{
-						"buffer_size": 3433,
+						"buffer_size": 4452,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								499,
-								499
+								1576,
+								1576
 							]
 						],
 						"settings":
@@ -929,256 +877,36 @@
 							"translate_tabs_to_spaces": true,
 							"word_wrap": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 132.0,
+						"translation.x": 152.0,
+						"translation.y": 352.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "app/routes/shared.php",
+					"file": "public/assets/js/table_prospects.js",
 					"settings":
 					{
-						"buffer_size": 2283,
+						"buffer_size": 1848,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								84,
-								84
+								534,
+								534
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/controllers/SharedController.php",
-					"settings":
-					{
-						"buffer_size": 1037,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								553,
-								553
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 154.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/views/backend/shared/profile.blade.php",
-					"settings":
-					{
-						"buffer_size": 13618,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								13312,
-								13312
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 5700.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/models/User.php",
-					"settings":
-					{
-						"buffer_size": 3068,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1630,
-								1630
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 926.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/views/backend/login.blade.php",
-					"settings":
-					{
-						"buffer_size": 4967,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3731,
-								3809
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1496.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "app/views/backend/login.blade.php",
-					"settings":
-					{
-						"buffer_size": 5081,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3956,
-								3956
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1324.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/routes.php",
-					"settings":
-					{
-						"buffer_size": 11487,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1054,
-								912
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 264.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "app/routes.php",
-					"settings":
-					{
-						"buffer_size": 1730,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								643,
-								643
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 154.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "app/controllers/AuthController.php",
-					"settings":
-					{
-						"buffer_size": 1246,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1202,
-								1202
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1023.0,
+						"translation.y": 55.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1236,11 +964,15 @@
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"",
+				"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/agente.sublime-project"
+			]
 		],
-		"width": 0.0
+		"width": 380.0
 	},
 	"show_minimap": true,
 	"show_open_files": false,

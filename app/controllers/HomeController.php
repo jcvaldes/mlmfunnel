@@ -17,6 +17,10 @@ class HomeController extends BaseController {
 
 	public function landing($link, $user)
 	{
+		if($link=='dashboard'){
+			return Redirect::route('login');
+		}
+		
 		$user = User::username($user)->firstOrFail();
 		switch ($link) {
 			case 'landing':

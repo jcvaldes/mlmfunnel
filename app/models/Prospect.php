@@ -39,6 +39,10 @@ class Prospect extends Model {
     }
 
     /* Function */
+    public function getInitialWord(){
+        return strtoupper($this->name[0]);
+    }
+
     public function getHumanDate()
     {
         $txt = 'carbon.timediff.';

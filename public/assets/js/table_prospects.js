@@ -13,7 +13,11 @@ $(function () {
     opt.columnDefs = [
             
             {
-                "targets": [ 3 ],
+                "targets": [ 4 ],
+                "visible": false
+            },
+            {
+                "targets": [ 0 ],
                 "visible": false
             }
         ];
@@ -44,14 +48,33 @@ $(function () {
     };
 
 
+    $.fn.dataTable.ext.search.push(
+        function( settings, data, dataIndex ) {    
+
+            var letra = $('#filter-word').val();
+            var page = $('#filter-page').val();
+
+            if ((letra == data[0] || letra == 'false' ) && page == data[4])
+            {
+                return true;
+            }
+            return false;
+        }
+    );
+
+
 
     var oTable = $("#datatable").dataTable(opt);
     oTable.fnDraw();
 
-    $('#landingpages').change( function() { 
-        oTable.fnFilter( $(this).val() );
+    $('.filter').change( function() { 
+        if($(this).val() == 'false'){
+            oTable.fnFilter( $('#filter-page').val() );
+        }else{
+            oTable.fnFilter( $(this).val() );
+        }        
     });
 
-    oTable.fnFilter( $('#landingpages').val() );
+    oTable.fnFilter( $('#filter-page').val() );
 
 });

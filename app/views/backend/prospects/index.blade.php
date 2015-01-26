@@ -14,7 +14,7 @@
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading bg-blue">
-                    <h3 class="panel-title"><strong>Listado</strong> de clientes</h3>
+                    <h3 class="panel-title"><strong>Listado</strong> de prospectos</h3>
                 </div>
                 <div class="panel-body">
                     <div class="row">
@@ -23,12 +23,27 @@
                                 <h4>Filtrar por landing:</h4>
                             </div>
                             <div class="col-md-3">
-                                <select class="form-control" id="landingpages">
-                                    <option ="landing">Landing</option>
-                                    <option ="herbalife">Herbalife</option>
-                                    <option ="sugar">Sugar</option>
+                                <select class="form-control filter" id="filter-page">
+                                    <option value="landing">Landing</option>
+                                    <option value="herbalife">Herbalife</option>
+                                    <option value="sugar">Sugar</option>
                                 </select>
                             </div>
+
+                            <div class="col-md-3">
+                                <h4>Filtrar por letra:</h4>
+                            </div>
+
+                            <div class="col col-md-3">
+                                <select class="form-control filter" id="filter-word">
+                                    <option value="false">-- Seleccione --</option>
+                                    @foreach (range('A', 'Z') as $letra) 
+                                    <option value="{{ $letra }}">{{ $letra }}</option>  
+                                    @endforeach                                  
+                                </select>                                
+                            </div>
+
+
                             <div class="col-md-12">
                                 <hr>
                             </div>
@@ -36,6 +51,7 @@
                             <table id="datatable" cellpadding="0" cellspacing="0" border="0" class="table table-striped table-hover">
                                 <thead>
                                     <tr>
+                                        <th>Letra</th>
                                         <th>Nombre</th>
                                         <th>Email</th>
                                         <th>Teléfono</th>
@@ -47,10 +63,11 @@
                                 <tbody>
                                     @foreach ($prospects as $key => $prospect)      
                                     <tr>
+                                        <td>{{ $prospect->getInitialWord() }}</td>
                                         <td>{{ $prospect->name }}</td>
                                         <td>{{ $prospect->email }} </td>
                                         <td>{{ $prospect->phone }}</td>
-                                        <td>{{ $prospect->type }}</td>
+                                        <td>{{ $prospect->type }}</td>                                        
                                         <th style="text-align:center">{{ $prospect->getHumanDate() }}</th>
                                         <td style="text-align:center"><a href="/prospect/{{ $prospect->id }}" class="btn btn-info">Ver mas</a></td>
                                     </tr>
