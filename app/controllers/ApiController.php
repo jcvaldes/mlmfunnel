@@ -28,7 +28,9 @@ class ApiController extends BaseController {
 		$prospect = Prospect::findOrFail($id);	
 		$prospect->fill($inputs);
 		if($prospect->save()){
-			return json_encode(["error" => false, "message" => "Datos guardados con exito."]);
+			$prospect->error = false;
+			$prospect->message = "Datos guardados con exito.";
+			return $prospect->toJson();
 		}else{
 			return json_encode(["error" => true, "message" => "Ocurrio un error."]);
 		}

@@ -163,8 +163,18 @@ $(function () {
         data.email = $("#email").val();
 
         console.log(row);
+
+
         
         $.post('/api/prospect/'+$("#id").val()+'/edit', data, function(data, textStatus, xhr) {
+            var p
+            var tr = row.closest('tr');
+            tr.children().eq(0).text(data.name);
+            tr.children().eq(1).text(data.email);
+            tr.children().eq(2).text(data.phone);
+            
+
+
             if(!data.error){
                 jSuccess(
                     "<i class='fa fa-check-square-o' style='padding-right:6px'></i>" + data.message, {
