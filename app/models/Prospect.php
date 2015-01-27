@@ -39,11 +39,7 @@ class Prospect extends Model {
     }
 
     /* Function */
-    public function getInitialWord(){
-        return strtoupper($this->name[0]);
-    }
-
-     public function getComputerDate(){
+    public function getComputerDate(){
         return explode(' ', $this->created_at)[0];
     }
 

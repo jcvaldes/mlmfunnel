@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="{{ asset('/assets/plugins/datatables/dataTables.css') }}">
 <link rel="stylesheet" href="{{ asset('/assets/plugins/datatables/dataTables.tableTools.css') }}">
 
+<link rel="stylesheet" href="{{ asset('/assets/plugins/jnotify/jNotify.jquery.css') }}">
 @stop
 
 @section('content')
@@ -28,35 +29,35 @@
                         <div class="col-md-12 col-sm-12 col-xs-12 table-responsive table-blue filter-left">
 
                             <div class="row">
-                                
-
-                            <div class="col-md-2">
-                                <h4>Filtrar por página:</h4>
-                            </div>
-                            <div class="col-md-2">
-                                <select class="form-control filter" id="filter-page">
-                                    <option value="landing">Landing</option>
-                                    <option value="herbalife">Herbalife</option>
-                                    <option value="sugar">Sugar</option>
-                                </select>
-                            </div>
-
-                            <div class="col col-md-8 buttons-page">
-
-                                @foreach (range('A', 'Z') as $letra) 
-                                <button type="button" class="btn btn-sm btn-info filter-word" data-word="{{ $letra }}">{{ $letra }}</button>
-                                @endforeach 
-
-                                <button type="button" class="btn btn-sm btn-danger filter-word" data-word="">Todas</button>                                 
-
-                            </div>
 
 
-                        <div class="col-md-12">
-                            <hr>
-                        </div>
+                                <div class="col-md-2">
+                                    <h4>Filtrar por página:</h4>
+                                </div>
+                                <div class="col-md-2">
+                                    <select class="form-control filter" id="filter-page">
+                                        <option value="landing">Landing</option>
+                                        <option value="herbalife">Herbalife</option>
+                                        <option value="sugar">Sugar</option>
+                                    </select>
+                                </div>
 
-                        
+                                <div class="col col-md-8 buttons-page">
+
+                                    @foreach (range('A', 'Z') as $letra) 
+                                    <button type="button" class="btn btn-sm btn-info filter-word" data-word="{{ $letra }}">{{ $letra }}</button>
+                                    @endforeach 
+
+                                    <button type="button" class="btn btn-sm btn-danger filter-word" data-word="">Todas</button>                                 
+
+                                </div>
+
+
+                                <div class="col-md-12">
+                                    <hr>
+                                </div>
+
+
                             </div>
 
 
@@ -73,53 +74,93 @@
                                 </div>
 
                                 <div class="col-md-6">
-                                    <button class="btn btn-lg btn-info m-10 col-md-3" id="filter-day">Hoy</button>
-                                    <button class="btn btn-lg btn-info m-10 col-md-4" id="filter-week">Semana</button>
-                                    <button class="btn btn-lg btn-info m-10 col-md-3" id="filter-month">Mes</button>
+                                    <button class="btn btn-lg btn-info m-10 col-md-3 filter-range" id="filter-day">Hoy</button>
+                                    <button class="btn btn-lg btn-info m-10 col-md-4 filter-range" id="filter-week">Semana</button>
+                                    <button class="btn btn-lg btn-info m-10 col-md-3 filter-range" id="filter-month">Mes</button>
                                 </div>
 
-                                <div class="col-md-12">
-                                   <hr>
-                               </div>
+                                <div class="col-md-12"><hr></div>
 
 
-                           </div>
+                            </div>
 
-                           
 
-                        <table id="datatable" cellpadding="0" cellspacing="0" border="0" class="table table-striped table-hover">
-                            <thead>
-                                <tr>
-                                    <th>Letra</th>
-                                    <th>Nombre</th>
-                                    <th>Email</th>
-                                    <th>Teléfono</th>
-                                    <th>Landing</th>
-                                    <th style="text-align:center">Miembro desde</th>
-                                    <th style="text-align:center">Acciones</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($prospects as $key => $prospect)      
-                                <tr>
-                                    <td>{{ $prospect->getInitialWord() }}</td>
-                                    <td>{{ $prospect->name }}</td>
-                                    <td>{{ $prospect->email }} </td>
-                                    <td>{{ $prospect->phone }}</td>
-                                    <td>{{ $prospect->type }}</td>    
-                                    <th style="text-align:center">{{ $prospect->getComputerDate() }}</th>
-                                    <td style="text-align:center"><a href="/prospect/{{ $prospect->id }}" class="btn btn-info">Ver mas</a></td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+
+                            <table id="datatable" cellpadding="0" cellspacing="0" border="0" class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Nombre</th>
+                                        <th>Email</th>
+                                        <th>Teléfono</th>
+                                        <th>Landing</th>
+                                        <th style="text-align:center">Miembro desde</th>
+                                        <th style="text-align:center">Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($prospects as $key => $prospect)      
+                                    <tr>
+                                        <td>{{ $prospect->name }}</td>
+                                        <td>{{ $prospect->email }} </td>
+                                        <td>{{ $prospect->phone }}</td>
+                                        <td>{{ $prospect->type }}</td>    
+                                        <th style="text-align:center">{{ $prospect->getComputerDate() }}</th>
+                                        <td style="text-align:center">
+                                            <button class="btn btn-info edit-prospect" data-id="{{ $prospect->id }}"><i class="fa fa-edit"></i></button>                                        
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
+<div class="modal fade" id="modal-prospect" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title"><strong>Editar prospecto</strong></h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="field-1" class="control-label">Nombre</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="field-2" class="control-label">Teléfono</label>
+                            <input type="text" class="form-control"  id="phone" name="phone" placeholder="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="field-3" class="control-label">Email</label>
+                            <input type="text" class="form-control" id="email" name="email" placeholder="">
+                        </div>
+                    </div>
+                </div>                
+            </div>
+            <div class="modal-footer text-center">
+                <input type="hidden" id="id" value=""/>
+                <button type="button" class="btn btn-primary" id="save" data-dismiss="modal"><i class="fa fa-check"></i> Guardar</button>
+            </div>
+        </div>
+    </div>
 </div>
+<div class="md-overlay"></div> <!-- Overlay Element. Important: place just after last modal -->
+
 
 @stop
 
@@ -134,5 +175,7 @@
 <script src="{{ asset('/assets/plugins/datatables/table.editable.js') }}"></script>
 <script src="{{ asset('/assets/js/table_prospects.js') }}"></script> 
 
-
+<script src="{{ asset('/assets/plugins/jnotify/jNotify.jquery.min.js') }}"></script>
+<script src="{{ asset('/assets/js/notifications.js') }}"></script>
+<script src="{{ asset('/assets/plugins/jnotify/jNotify.jquery.min.js') }}"></script>
 @stop

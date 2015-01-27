@@ -10,3 +10,11 @@ Route::group(array('before' => 'auth', 'prefix' => 'dashboard'), function()
 	Route::resource('prospect', 'ProspectController');
 
 });
+
+
+Route::group(array('before' => 'auth', 'prefix' => 'api'), function()
+{
+	Route::post('/prospect/{id}', ['uses' => 'ApiController@prospect']);
+	Route::post('/prospect/{id}/edit', ['uses' => 'ApiController@prospect_edit']);	
+
+});

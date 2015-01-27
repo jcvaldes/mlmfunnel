@@ -73,7 +73,7 @@
                             </p>
                         </li>
                         <li class="dropdown-body">
-                            {{ $count = 0 }}
+                            <?php $count = 0; ?>
                             @if($count > 0)
                             <ul class="dropdown-menu-list withScroll" data-height="220">
 
@@ -82,14 +82,11 @@
                                     {{--<li>                                   
                                         <i class="fa p-r-10 f-18 {{ $n->getClass() }} "></i>
                                         {{ $n->notification }}
-                                        <span class="dropdown-time">{{ $n->getHumanDate() }}</span>
-                                        
+                                        <span class="dropdown-time">{{ $n->getHumanDate() }}</span>                                        
                                     </li> --}}
 
                                     <li class="clearfix">
-                                        <span class="pull-left p-r-5">
-                                            {{ $n->getIcon() }}                                        
-                                        </span>
+                                        <span class="pull-left p-r-5">{{ $n->getIcon() }}</span>
                                         <div class="clearfix">
                                             <div>
                                                 {{ $n->getReminder() }} 
@@ -100,20 +97,12 @@
                                             <p>{{ $n->notification }}</p>
                                         </div>
                                     </li>
-
-
-                                </a>                              
-
-                                @endforeach
-                                
+                                </a>
+                                @endforeach                                
                             </ul>
 
                             @else
-
-                            <a href="#">
-                                Sin notificaciones.
-                            </a>
-
+                            <a href="#">Sin notificaciones.</a>
                             @endif
                         </li>
                         <li class="dropdown-footer clearfix">
@@ -129,7 +118,7 @@
                 <!-- BEGIN USER DROPDOWN -->
                 <li class="dropdown" id="user-header">
                     <a href="#" class="dropdown-toggle c-white" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                        <img src="/assets/img/avatars/avatar1.png" alt="user avatar" width="30" class="p-r-5">
+                        <img src="{{ Auth::user()->getProfilePicture() }}" alt="user avatar" width="30" class="p-r-5">
                         <span class="username">{{ Auth::user()->full_name }}</span>
                         <i class="fa fa-angle-down p-r-10"></i>
                     </a>
