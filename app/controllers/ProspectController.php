@@ -10,8 +10,12 @@ class ProspectController extends BaseController {
 	 */        
 	public function index()
 	{
-		$prospects = Prospect::current()->get();
+		if(Input::has('ref') && Input::get('ref') == 'notify'){
+			$n = Notification::unread()->find((int) Input::get('n'));
+			$n->read();			
+		}
 
+		$prospects = Prospect::current()->get();
 		return View::make('backend.prospects.index', compact('prospects'));
 	}
 

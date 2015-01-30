@@ -23,7 +23,6 @@ class Notification extends Model {
         static::created(function($notification){   
             switch ($notification->type) {
                 case 'new_prospect':
-                    //$data = ['prospect' => $prospect->branch->address, 'id' => $customer->id ,'cliente' => $customer->name .' '. $customer->lastname];
                     $prospect = Prospect::find($notification->type_id);
                     $user = User::find($notification->user_id);
 
@@ -36,9 +35,6 @@ class Notification extends Model {
                 break;
 
             }
-
-            
-            
         });       
     }
 
@@ -97,8 +93,8 @@ class Notification extends Model {
             return "/panel/question/" . $this->type_id . "?ref=notify&n=" . $this->id;
             break;
 
-            case 'new_customer':
-            return "/customer/" . $this->type_id . "?ref=notify&n=" . $this->id;
+            case 'new_prospect':
+            return "/dashboard/prospect/?ref=notify&n=" . $this->id;
             break;
 
             case 'assigned':
