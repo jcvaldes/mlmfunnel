@@ -33,6 +33,19 @@ class Prospect extends Model {
             return ($p->count() == 0);
         });
         
+        static::created(function($prospect)
+        {   
+
+            /* Notification */
+            $n = new Notification([
+                'notification' => 'Se ha registrado un prospecto.', 
+                'type' => 'new_prospect', 
+                'type_id' => $prospect->id,
+                'user_id' => $prospect->user->id
+                ]);
+            $n->save();
+
+        });       
     }
 
 

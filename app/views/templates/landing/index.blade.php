@@ -116,13 +116,13 @@
                 <div style="outline: none;" class="row bgCover  noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin" id="row-950710000" data-trigger="none" data-animate="fade" data-delay="500" data-title="2 column row">
                     <div style="outline: none;" id="col-left-994" class="col-md-6 innerContent col_left" data-col="left" data-trigger="none" data-animate="fade" data-delay="500" data-title="Left column">
                         <div class="col-inner bgCover  noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin">
-                            <div data-youtube-controls="no" data-youtube-autoplay="yes" data-youtube-url="https://www.youtube.com/watch?v=I9XUHaw3etw" data-video-type="youtube" class="de elVideoWrapper de-video-block elVideoWidth100 elMargin0 elVideoSkin1 de-editable" id="tmp_video-25090" data-de-type="video" data-de-editing="false" data-title="video" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="outline: medium none; cursor: pointer;">
+                            <div data-youtube-controls="no" data-youtube-autoplay="yes" data-youtube-url="https://www.youtube.com/watch?v=JjBF1Faj-H4" data-video-type="youtube" class="de elVideoWrapper de-video-block elVideoWidth100 elMargin0 elVideoSkin1 de-editable" id="tmp_video-25090" data-de-type="video" data-de-editing="false" data-title="video" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="outline: medium none; cursor: pointer;">
                                 <div class="elVideoplaceholder">
                                     <div class="elVideoplaceholder_inner">
                                     </div>
                                 </div>
                                 <div class="elVideo" style="display: none;">
-                                    <iframe src="https://www.youtube.com/embed/I9XUHaw3etw?autoplay=1&amp;modestbranding=1&amp;controls=0&amp;showinfo=0&amp;rel=0&amp;hd=1" allowfullscreen="" frameborder="0" height="360" width="640"></iframe>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/JjBF1Faj-H4?autoplay=1&amp;modestbranding=1&amp;controls=0&amp;showinfo=0&amp;rel=0&amp;hd=1" frameborder="0" allowfullscreen></iframe>
                                 </div>
 
                             </div>

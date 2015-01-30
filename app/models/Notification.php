@@ -1,7 +1,7 @@
 <?php
 use Carbon\Carbon;
 
-class Notification extends Eloquent {
+class Notification extends Model {
 
     protected $table = 'notifications';
     public $timestamp = true;
@@ -13,6 +13,36 @@ class Notification extends Eloquent {
     'type' => 'required',
     'user_id' => 'required',
     ];
+
+    /* BOOT */
+
+    public static function boot()
+    {
+        parent::boot();
+
+        static::created(function($notification){   
+            switch ($notification->type) {
+                case 'new_prospect':
+                    //$data = ['prospect' => $prospect->branch->address, 'id' => $customer->id ,'cliente' => $customer->name .' '. $customer->lastname];
+                    $prospect = Prospect::find($notification->type_id);
+                    $user = User::find($notification->user_id);
+
+                    $data = ['name' => $prospect->name, 'email' => $prospect->email, 'phone' => $prospect->phone];
+                    Mail::send('emails.notify.new-prospect', $data, function($message) use ($user)
+                    {
+                        $message->from('noreply@mlmfunnel.com', 'MLMfunnel');
+                        $message->to($user->email, $user->full_name)->subject('Nuevo prospecto! - MLMfunnel');
+                    });
+                break;
+
+            }
+
+            
+            
+        });       
+    }
+
+    /* Reltaionships */
 
     public function user()
     {
@@ -95,12 +125,12 @@ class Notification extends Eloquent {
         $delta = abs($other->diffInSeconds($this->created_at));
 
         $divs = array(
-           'second' => Carbon::SECONDS_PER_MINUTE,
-           'minute' => Carbon::MINUTES_PER_HOUR,
-           'hour'   => Carbon::HOURS_PER_DAY,
-           'day'    => 30,
-           'month'  => Carbon::MONTHS_PER_YEAR
-           );
+         'second' => Carbon::SECONDS_PER_MINUTE,
+         'minute' => Carbon::MINUTES_PER_HOUR,
+         'hour'   => Carbon::HOURS_PER_DAY,
+         'day'    => 30,
+         'month'  => Carbon::MONTHS_PER_YEAR
+         );
 
         $unit = 'year';
         foreach ($divs as $divUnit => $divValue) {

@@ -64,7 +64,7 @@
                 <li class="dropdown" id="messages-header">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                         <i class="glyph-icon flaticon-notifications"></i>
-                        <span class="badge badge-primary badge-header">{{-- $count = Notification::unread()->count() --}}</span>
+                        <span class="badge badge-primary badge-header">{{ $count = Notification::unread()->count() }}</span>
                     </a>
                     <ul class="dropdown-menu">
                         <li class="dropdown-header clearfix">
@@ -73,7 +73,6 @@
                             </p>
                         </li>
                         <li class="dropdown-body">
-                            <?php $count = 0; ?>
                             @if($count > 0)
                             <ul class="dropdown-menu-list withScroll" data-height="220">
 
