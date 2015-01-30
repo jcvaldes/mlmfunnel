@@ -36,4 +36,16 @@ class ApiController extends BaseController {
 		}
 	}
 
+	public function prospect_delete($id)
+	{		
+		
+		if(Prospect::destroy($id)){
+			return json_encode(["error" => false, "message" => "Prospecto eliminado."]);
+		}else{
+			return json_encode(["error" => true, "message" => "Ocurrio un error."]);
+		}
+	}
+
+	
+
 }

@@ -44,15 +44,10 @@ class HomeController extends BaseController {
 		$inputs['ip'] = Request::getClientIp();
 
 		$prospect = new Prospect($inputs);
-		if ($prospect->save())
-		{
-			$user = User::find($prospect->user_id);
-			return Redirect::to('thankyou/'.$user->username);
-			//return Redirect::to($inputs['type']/')->with('alert', ['type' => 'success', 'message' => 'El cliente ha sido registrado.']);;			
-		}        
-		dd($customer->getErrors());
-        return Redirect::to('/customer')->with('alert', ['type' => 'danger', 'message' => 'Ocurrio un error, intenta mas tarde.']);;
-
+		$user = User::find($prospect->user_id);
+		$prospect->save();
+		
+		return Redirect::to('thankyou/'.$user->username);
 	}
 
 

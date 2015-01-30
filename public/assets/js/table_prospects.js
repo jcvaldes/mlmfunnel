@@ -14,10 +14,10 @@ $(function () {
     };
     opt.order = [[ 4, "desc" ]]
     opt.columnDefs = [            
-        {
-            "targets": [ 3 ],
-            "visible": false
-        }            
+    {
+        "targets": [ 3 ],
+        "visible": false
+    }            
     ];
     opt.language = {"sProcessing":     "Procesando...", "sLengthMenu":     "Mostrar _MENU_ registros", "sZeroRecords":    "No se encontraron resultados", "sEmptyTable":     "Ningún dato disponible en esta tabla", "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros", "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros", "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)", "sInfoPostFix":    "", "sSearch":         "Buscar: ", "sUrl":            "", "sInfoThousands":  ",", "sLoadingRecords": "Cargando...", "oPaginate": {"sFirst":    "Primero", "sLast":     "Último", "sNext":     "Siguiente", "sPrevious": "Anterior"}, "oAria": {"sSortAscending":  ": Activar para ordenar la columna de manera ascendente", "sSortDescending": ": Activar para ordenar la columna de manera descendente"} };
 
@@ -31,7 +31,7 @@ $(function () {
             }
             return false;
         }
-    );
+        );
 
     $.fn.dataTable.ext.afnFiltering.push(
         function( oSettings, aData, iDataIndex ) {
@@ -52,7 +52,7 @@ $(function () {
             }
             return false;
         }
-    );
+        );
     /* Declaration */
     var oTable = $("#datatable").dataTable(opt);
     oTable.fnDraw();
@@ -197,6 +197,42 @@ $(function () {
                     });
             }
         },"json");
+    });
+
+
+    $(document).on("click", ".delete-prospect", function(){
+        var id = $(this).data('id');
+        row = $(this);
+
+        $.post('/api/prospect/'+id+'/delete', function(data, textStatus, xhr) {     
+
+
+            if(!data.error){
+                row.closest('tr').remove();
+                jSuccess(
+                    "<i class='fa fa-check-square-o' style='padding-right:6px'></i>" + data.message, {
+                        HorizontalPosition: 'right',
+                        VerticalPosition: 'bottom',
+                        ShowOverlay: $(this).data("overlay") ? $(this).data("overlay") : false,
+                        TimeShown: $(this).data("timeshown") ? $(this).data("timeshown") : 1500,
+                        OpacityOverlay: $(this).data("opacity") ? $(this).data("opacity") : 0.5,
+                        MinWidth: $(this).data("min-width") ? $(this).data("min-width") : 250
+                    });
+            } else {
+                jError(
+                    "<i class='fa fa-frown-o' style='padding-right:6px'></i>" + data.message, {
+                        HorizontalPosition: 'right',
+                        VerticalPosition: 'bottom',
+                        ShowOverlay: $(this).data("overlay") ? $(this).data("overlay") : false,
+                        TimeShown: $(this).data("timeshown") ? $(this).data("timeshown") : 1500,
+                        OpacityOverlay: $(this).data("opacity") ? $(this).data("opacity") : 0.5,
+                        MinWidth: $(this).data("min-width") ? $(this).data("min-width") : 250
+                    });
+            }
+
+        },"json");
+
+
     })
 
 });

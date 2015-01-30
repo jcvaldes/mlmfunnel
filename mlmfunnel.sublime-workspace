@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"end",
+				"endDate"
+			],
+			[
 				"pa",
 				"padding"
 			],
@@ -355,7 +359,7 @@
 			"file": "app/models/Prospect.php",
 			"settings":
 			{
-				"buffer_size": 1937,
+				"buffer_size": 1952,
 				"line_ending": "Windows"
 			}
 		},
@@ -371,7 +375,7 @@
 			"file": "app/views/backend/prospects/index.blade.php",
 			"settings":
 			{
-				"buffer_size": 4452,
+				"buffer_size": 8917,
 				"line_ending": "Windows"
 			}
 		},
@@ -379,7 +383,87 @@
 			"file": "public/assets/js/table_prospects.js",
 			"settings":
 			{
-				"buffer_size": 1848,
+				"buffer_size": 7286,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Eli Jose Carrasquero/Desktop/base_boxed_2column_query.html",
+			"settings":
+			{
+				"buffer_size": 28930,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/debut/www.freetemplates.bz/design/mile/preview/index.html",
+			"settings":
+			{
+				"buffer_size": 86132,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/Eli Jose Carrasquero/AppData/Local/Temp/Rar$EXa0.130/demo/index.html",
+			"settings":
+			{
+				"buffer_size": 5769,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/Eli Jose Carrasquero/AppData/Local/Temp/Rar$EXa0.830/newsletter.html",
+			"settings":
+			{
+				"buffer_size": 6218,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/Eli Jose Carrasquero/AppData/Local/Temp/Rar$EXa0.087/email-blueprints-master/templates/transactional_basic.html",
+			"settings":
+			{
+				"buffer_size": 17084,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/routes.php",
+			"settings":
+			{
+				"buffer_size": 1675,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/views/backend/classified/product/show.blade.php",
+			"settings":
+			{
+				"buffer_size": 18388,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/public/backend/assets/js/product.show.js",
+			"settings":
+			{
+				"buffer_size": 4401,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/controllers/ApiController.php",
+			"settings":
+			{
+				"buffer_size": 1036,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/routes/user.php",
+			"settings":
+			{
+				"buffer_size": 496,
 				"line_ending": "Windows"
 			}
 		}
@@ -416,15 +500,19 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/public/assets/js/application.js",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/views/backend/properties/edit.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/layouts/user/sidebar.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/layouts/master.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/layouts/user/navigation.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/views/backend/layouts/navigation.blade.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/controllers/HomeController.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/routes.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/css/nicdark_style.css",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/layouts/sidebar.blade.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/templates/landing/index.blade.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/templates/landing/thanks.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/public/assets/js/application.js",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/models/User.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/layouts/master.blade.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/public/tables_dynamic.html",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/public/backend/tables_dynamic.html",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/public/backend/assets/js/application.js",
@@ -432,7 +520,6 @@
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/public/backend/assets/js/table_dynamic.js",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/public/assets/plugins/datatables/spanish.json",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/landings/index.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/layouts/user/sidebar.blade.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/controllers/CustomerController.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/controllers/LandingController.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/controllers/StatisticController.php",
@@ -471,7 +558,6 @@
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/models/Notification.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/routes.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/models/User.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/layouts/user/navigation.blade.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/controllers/UserController.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/composer.json",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/controllers/ProductController.php",
@@ -541,9 +627,7 @@
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/usuario/registrar-pasantia.blade.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/layouts/master.blade.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/layouts/usuario/sidebar.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/layouts/usuario/master.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/public/assets/css/colors/color-dark.css",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/public/assets/css/style.css"
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/layouts/usuario/master.blade.php"
 	],
 	"find":
 	{
@@ -574,6 +658,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"color-dark",
+			"console",
+			"count",
+			"YYYYMMDD",
+			"YYYY-MM-DD",
+			"YYYYMMDD",
+			"yyyy-mm-dd",
+			"YYYY-MM-DD",
+			"filter",
 			"tables_dynamic",
 			".table",
 			"table",
@@ -692,16 +785,7 @@
 			"images",
 			"dist",
 			"js/",
-			".generalmanager",
-			"@extends('backend.generalmanager.layouts.master')",
-			"backend.generalmanager",
-			"d2",
-			" value=\"probandosonido@hotmail.com\"",
-			"product",
-			"}}',",
-			"$branch",
-			"$enterprise",
-			"backend/"
+			".generalmanager"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -709,6 +793,10 @@
 		"regex": false,
 		"replace_history":
 		[
+			"YYYY-MM-DD",
+			"yyyy-mm-dd",
+			"YYYY-MM-DD",
+			"YYYYMMDD",
 			"",
 			"=\"/a",
 			"",
@@ -797,7 +885,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 9,
 			"sheets":
 			[
 				{
@@ -805,15 +893,15 @@
 					"file": "app/models/Prospect.php",
 					"settings":
 					{
-						"buffer_size": 1937,
+						"buffer_size": 1952,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1078,
-								1078
+								1002,
+								1002
 							]
 						],
 						"settings":
@@ -823,7 +911,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 671.0,
+						"translation.y": 737.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -859,15 +947,15 @@
 					"file": "app/views/backend/prospects/index.blade.php",
 					"settings":
 					{
-						"buffer_size": 4452,
+						"buffer_size": 8917,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1576,
-								1576
+								762,
+								762
 							]
 						],
 						"settings":
@@ -877,8 +965,8 @@
 							"translate_tabs_to_spaces": true,
 							"word_wrap": false
 						},
-						"translation.x": 152.0,
-						"translation.y": 352.0,
+						"translation.x": 11.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -888,15 +976,15 @@
 					"file": "public/assets/js/table_prospects.js",
 					"settings":
 					{
-						"buffer_size": 1848,
+						"buffer_size": 7286,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								534,
-								534
+								5851,
+								5851
 							]
 						],
 						"settings":
@@ -906,7 +994,278 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 55.0,
+						"translation.y": 3489.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/C/Users/Eli Jose Carrasquero/Desktop/base_boxed_2column_query.html",
+					"settings":
+					{
+						"buffer_size": 28930,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/C/debut/www.freetemplates.bz/design/mile/preview/index.html",
+					"settings":
+					{
+						"buffer_size": 86132,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4356.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/C/Users/Eli Jose Carrasquero/AppData/Local/Temp/Rar$EXa0.130/demo/index.html",
+					"settings":
+					{
+						"buffer_size": 5769,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 605.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/C/Users/Eli Jose Carrasquero/AppData/Local/Temp/Rar$EXa0.830/newsletter.html",
+					"settings":
+					{
+						"buffer_size": 6218,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/C/Users/Eli Jose Carrasquero/AppData/Local/Temp/Rar$EXa0.087/email-blueprints-master/templates/transactional_basic.html",
+					"settings":
+					{
+						"buffer_size": 17084,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/routes.php",
+					"settings":
+					{
+						"buffer_size": 1675,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1419,
+								6
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/views/backend/classified/product/show.blade.php",
+					"settings":
+					{
+						"buffer_size": 18388,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								531,
+								435
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/public/backend/assets/js/product.show.js",
+					"settings":
+					{
+						"buffer_size": 4401,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								673,
+								1993
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 352.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "app/controllers/ApiController.php",
+					"settings":
+					{
+						"buffer_size": 1036,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								910,
+								910
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 319.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "app/routes/user.php",
+					"settings":
+					{
+						"buffer_size": 496,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								486,
+								486
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

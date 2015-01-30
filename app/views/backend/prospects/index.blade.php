@@ -106,7 +106,8 @@
                                         <td>{{ $prospect->type }}</td>    
                                         <th style="text-align:center">{{ $prospect->getComputerDate() }}</th>
                                         <td style="text-align:center">
-                                            <button class="btn btn-info edit-prospect" data-id="{{ $prospect->id }}"><i class="fa fa-edit"></i></button>                                        
+                                            <button totle="Editar" class="btn btn-info edit-prospect" data-id="{{ $prospect->id }}"><i class="fa fa-edit"></i></button>                                        
+                                            <button totle="Eliminar" class="btn btn-danger delete-prospect" data-id="{{ $prospect->id }}"><i class="fa fa-trash-o"></i></button>
                                         </td>
                                     </tr>
                                     @endforeach

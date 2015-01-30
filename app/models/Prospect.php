@@ -23,12 +23,40 @@ class Prospect extends Model {
         'type.required' => 'Campo obligatorio.',
         'user_id.required' => 'Campo obligatorio.',
 	];
+
+    public static function boot()
+    {
+        parent::boot();
+        static::creating(function($prospect)
+        {
+            $p = Prospect::owner($prospect->user_id)->type($prospect->type)->email($prospect->email)->get();
+            return ($p->count() == 0);
+        });
+        
+    }
+
+
   
     /* Scopes */
     
     public function scopeCurrent($query)
     {
         return $query->where('user_id', Auth::user()->id);
+    }
+
+     public function scopeOwner($query, $user_id)
+    {
+        return $query->where('user_id', $user_id);
+    }
+
+    public function scopeType($query, $landing)
+    {
+        return $query->where('type', $landing);
+    }
+
+    public function scopeEmail($query, $email)
+    {
+        return $query->where('email', $email);
     }
     
     /* Relationships */
