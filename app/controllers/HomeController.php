@@ -17,6 +17,8 @@ class HomeController extends BaseController {
 
 	public function landing($link, $user)
 	{
+		//$c = Clickatell::send("Probando Clickatell Landing: ". $link ." Usuario: " . $user, "+584169595982");
+		//dd($c);
 		if($link=='dashboard'){
 			return Redirect::route('login');
 		}

@@ -124,6 +124,7 @@ return array(
 		'Rdpascua\Identicon\IdenticonServiceProvider',
 		'Bkwld\Croppa\ServiceProvider',
 		'Intervention\Image\ImageServiceProvider',
+		'Ielijose\Clickatell\ClickatellServiceProvider',
 
 	),
 
@@ -195,6 +196,7 @@ return array(
 		'Identicon'  => 'Rdpascua\Identicon\Facade',
 		'Croppa' => 'Bkwld\Croppa\Facade',
 		'Intervention' => 'Intervention\Image\Facades\Image',
+		'Clickatell' => 'Ielijose\Clickatell\Facades\Clickatell',
 
 	),
 

@@ -26,6 +26,8 @@ class Notification extends Model {
                     $prospect = Prospect::find($notification->type_id);
                     $user = User::find($notification->user_id);
 
+                    Clickatell::send("Nuevo Interesado en ".$prospect->type." - Nombre: ".$prospect->name." Email: ".$prospect->email." Tel.: ".$prospect->phone, $user->phone);
+
                     $data = ['name' => $prospect->name, 'email' => $prospect->email, 'phone' => $prospect->phone];
                     Mail::send('emails.notify.new-prospect', $data, function($message) use ($user)
                     {
