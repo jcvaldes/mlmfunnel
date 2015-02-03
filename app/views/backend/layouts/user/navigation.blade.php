@@ -105,8 +105,8 @@
                             @endif
                         </li>
                         <li class="dropdown-footer clearfix">
-                            <a href="/dashboard/notifications" class="pull-left">Ver todas las notificaciones</a>
-                            <a href="/notifications" class="pull-right">
+                            <a href="/dashboard/prospect" class="pull-left">Ver todas las notificaciones</a>
+                            <a href="/dashboard/prospect" class="pull-right">
                                 <i class="fa fa-cog"></i>
                             </a>
                         </li>

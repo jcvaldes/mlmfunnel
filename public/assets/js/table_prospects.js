@@ -200,8 +200,9 @@ $(function () {
     });
 
 
-    $(document).on("click", ".delete-prospect", function(){
-        var id = $(this).data('id');
+$(document).on("click", ".delete-prospect", function(){
+    var id = $(this).data('id');
+    if(confirm("Desea eliminar este prospecto?\nNo se puede revertir el proceso.")){
         row = $(this);
 
         $.post('/api/prospect/'+id+'/delete', function(data, textStatus, xhr) {     
@@ -232,7 +233,7 @@ $(function () {
 
         },"json");
 
-
-    })
+    }
+})
 
 });

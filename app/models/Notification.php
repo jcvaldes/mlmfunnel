@@ -29,7 +29,7 @@ class Notification extends Model {
                     Clickatell::send("Nuevo Interesado en ".$prospect->type." - Nombre: ".$prospect->name." Email: ".$prospect->email." Tel.: ".$prospect->phone, $user->phone);
 
                     $data = ['name' => $prospect->name, 'email' => $prospect->email, 'phone' => $prospect->phone];
-                    Mail::send('emails.notify.new-prospect', $data, function($message) use ($user)
+                    Mail::queue('emails.notify.new-prospect', $data, function($message) use ($user)
                     {
                         $message->from('noreply@mlmfunnel.com', 'MLMfunnel');
                         $message->to($user->email, $user->full_name)->subject('Nuevo prospecto! - MLMfunnel');
