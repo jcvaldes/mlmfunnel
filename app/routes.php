@@ -10,6 +10,11 @@ Route::get('/', function(){
 	return Redirect::to('/auth/login');
 });	
 
+/* API Statistic */
+Route::any('/api/statistic/{id}/{page}/{type}', ['uses' => 'StatisticController@store']);
+Route::any('/api/statistic/{id}', ['uses' => 'StatisticController@show']);
+Route::any('/api/statistics', ['uses' => 'StatisticController@statistics']);
+
 /* -------------------------------------------------- */
 /* Auth Links */
 
@@ -56,16 +61,3 @@ App::missing(function($exception)
 Route::get('{landing}/{user}', ['uses' => 'HomeController@landing']);
 Route::post('/suscribe', ['as' => 'suscribe', 'uses' => 'HomeController@suscribe']);
 
-Route::get('postreceive', function(){
-	try{
-		$payload = json_decode($_REQUEST['payload']);
-	}catch(Exception $e){
-		exit(0);
-	}
-
-	file_put_contents('/logs/github.txt', print_r($payload, TRUE), FILE_APPEND);
-
-	if ($payload->ref === 'refs/heads/master'){
-		exec(public_path().'../postreceive.sh');
-	}
-});

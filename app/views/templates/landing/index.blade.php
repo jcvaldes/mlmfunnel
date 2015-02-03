@@ -200,6 +200,7 @@
 
                         </div>
                     </div>
+                     {{ Form::hidden('url', url()) }}
                     {{ Form::hidden('user_id', $user->id) }}
                     {{ Form::hidden('type', 'landing') }}
 
@@ -374,6 +375,11 @@
     </script>
     <script src="https://vjs.zencdn.net/4.11/video.js"></script>
     <script type="text/javascript" src="https://addthisevent.com/libs/1.5.8/ate.min.js"></script>
+    <script src="/assets/js/statistics.js"></script>
+
+    <script>    
+
+  </script>
 </body>
 
 </html>
