@@ -33,7 +33,7 @@ App::after(function($request, $response)
 |
 */
 
-Route::filter('auth', function()
+Route::filter('auth', function($route, $request)
 {
 	if (Auth::guest())
 	{
@@ -43,7 +43,7 @@ Route::filter('auth', function()
 		}
 		else
 		{
-			return Redirect::guest('login');
+			return Redirect::guest('/auth/login?redirect=' . Request::fullUrl()  );
 		}
 	}
 });
@@ -67,7 +67,7 @@ Route::filter('auth.basic', function()
 
 Route::filter('guest', function()
 {
-	if (Auth::check()) return Redirect::to('/');
+	if (Auth::check()) return Redirect::guest('/auth/login?redirect=' . Request::fullUrl()  );
 });
 
 /*

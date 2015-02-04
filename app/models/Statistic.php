@@ -19,8 +19,36 @@ class Statistic extends Model {
     
 
     /* Relationships */
+    public function scopeCurrent($query)
+    {
+        return $query->where('user_id', Auth::user()->id);
+    }
+
+    public function scopePage($query, $page)
+    {
+        return $query->where('page', $page);
+    }
+
+    public function scopeType($query, $type)
+    {
+        return $query->where('type', $type);
+    }
 
 
     /* Function */
+
+    public static function stats($page)
+    {
+        $statistics = Statistic::current()->type($page)->get(); 
+
+        $data = [];
+       
+        $data['visit'] = Statistic::current()->page($page)->type('visit')->get()->count();
+        $data['unique'] = Statistic::current()->page($page)->groupBy('ip')->get()->count();
+        $data['prospect'] = Prospect::current()->type($page)->get()->count();
+        $data['convertion'] = ($data['prospect'] / $data['unique']) * 100; 
+
+        return $data;           
+    }
     
 }

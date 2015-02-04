@@ -10,142 +10,188 @@
 @section('content')
 
 <div id="main-content" class="dashboard">
-    @if(isset($data))
-    <div class="row">
+    <div class="row m-t-10">
         <div class="col-md-12">
+            <div class="tabcordion">
+                <ul id="myTab" class="nav nav-tabs nav-dark">
+                    <li class="active"><a href="#products" data-toggle="tab">Estadísticas</a></li>
+                </ul>
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane fade active in" id="products">
+                     <div class="row p-20">
+                        <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+                            <table id="products-table" class="table table-tools table-hover">
+                                <thead>
+                                    <tr>
+                                        <th><strong>Landing</strong></th>
+                                        <th class="text-center"><strong>Visitas</strong></th>
+                                        <th class="text-center"><strong>Visitas Unicas</strong></th>
+                                        <th class="text-center"><strong>Prospectos</strong></th>
+                                        <th class="text-center"><strong>Conversion</strong></th>
+                                        <th class="text-center"><strong>Acciones</strong></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php $stats = Statistic::stats('landing'); ?>
+                                    <tr>
+                                        <td>Landing</td>
+                                        <td class="text-center"><strong>{{ $stats['visit'] }}</strong></td>
+                                        <td class="text-center">{{ $stats['unique'] }}</td>
+                                        <td class="text-center">{{ $stats['prospect'] }}</td>
+                                        <td class="text-center c-green"><strong>{{ $stats['convertion'] }}%</strong></td>
 
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <div class="panel no-bd bd-9 panel-stat">
-                    <div class="panel-body bg-dark">
-                        <div class="icon"><i class="fa fa-archive"></i>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="stat-num">{{ $data['total'] }}</div>
-                                <a href="/customer"><h3>Clientes</h3></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                                        <td class="text-center "> 
+                                            <a href="#" class="edit btn btn-sm btn-default"><i class="fa fa-dashboard"></i> Estadísticas</a>
+                                        </td>
+                                    </tr>
 
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <div class="panel no-bd bd-9 panel-stat">
-                    <div class="panel-body bg-blue">
-                        <div class="icon"><i class="fa fa-question"></i>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="stat-num">{{ $data['prospecto'] }}</div>
-                                <a href="/customer?estado=prospecto"><h3>Prospectos</h3></a>
-
-                            </div>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <div class="panel no-bd bd-9 panel-stat">
-                    <div class="panel-body bg-green">
-                        <div class="icon"><i class="fa fa-check"></i></div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="stat-num">{{ $data['asignado'] }}</div>
-                                <a href="/customer?estado=asignado"><h3>Asignados</h3></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <div class="panel no-bd bd-9 panel-stat">
-                    <div class="panel-body bg-red">
-                        <div class="icon"><i class="fa fa-envelope"></i>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="stat-num">{{ $data['negociacion'] }}</div>
-                                <a href="/customer?estado=negociacion"><h3>Negociación</h3></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <div class="panel no-bd bd-9 panel-stat">
-                    <div class="panel-body bg-orange">
-                        <div class="icon"><i class="fa fa-money"></i>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="stat-num">{{ $data['interesado'] }}</div>
-                                <a href="/customer?estado=interesado"><h3>Interesados</h3></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <div class="panel no-bd bd-9 panel-stat">
-                    <div class="panel-body bg-purple">
-                        <div class="icon"><i class="fa fa-legal"></i>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="stat-num">{{ $data['compro'] }}</div>
-                                <a href="/customer?estado=compro"><h3>Compró</h3></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </div>                            
             </div>
         </div>
-       
-        
     </div>
-    @endif
-    <div class="row">
-        <div class="col-md-12">
-            <div class="panel">
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-                            <h2>Hola {{ Auth::user()->name() }}! Bienvenido al BackOffice de MLMfunnels.</h2>
-                        </div>                  
+</div>
+
+
+@if(isset($data))
+<div class="row">
+    <div class="col-md-12">
+
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="panel no-bd bd-9 panel-stat">
+                <div class="panel-body bg-dark">
+                    <div class="icon"><i class="fa fa-archive"></i>
                     </div>
-                    <hr>
                     <div class="row">
                         <div class="col-md-12">
-                            <div id="graph-wrapper">
-                                <div class="graph-info p-r-10">
-                                    <a href="javascript:void(0)" class="btn bg-green">Correos</a>
-                                    <a href="javascript:void(0)" class="btn bg-blue">Visitas</a>
-
-                                    <a href="javascript:void(0)" class="btn bg-purple filter">Filtrar</a> 
-                                    <button href="#" id="bars" class="btn" disabled>
-                                        <span></span>
-                                    </button>
-                                    <button href="#" id="lines" class="btn active" disabled>
-                                        <span></span>
-                                    </button>
-                                </div>
-                                <div class="h-300">
-                                    <div class="h-300" id="graph-lines" style="width: 100%"></div>
-                                    <div class="h-300" id="graph-bars" style="width: 100%"></div>
-                                </div>
-                            </div>
-
-                            <input type="hidden" id="start" value="{{ Input::get('start') }}">
-                            <input type="hidden" id="end" value="{{ Input::get('end') }}">
+                            <div class="stat-num">{{ $data['total'] }}</div>
+                            <a href="/customer"><h3>Clientes</h3></a>
                         </div>
-                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="panel no-bd bd-9 panel-stat">
+                <div class="panel-body bg-blue">
+                    <div class="icon"><i class="fa fa-question"></i>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="stat-num">{{ $data['prospecto'] }}</div>
+                            <a href="/customer?estado=prospecto"><h3>Prospectos</h3></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="panel no-bd bd-9 panel-stat">
+                <div class="panel-body bg-green">
+                    <div class="icon"><i class="fa fa-check"></i></div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="stat-num">{{ $data['asignado'] }}</div>
+                            <a href="/customer?estado=asignado"><h3>Asignados</h3></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="panel no-bd bd-9 panel-stat">
+                <div class="panel-body bg-red">
+                    <div class="icon"><i class="fa fa-envelope"></i>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="stat-num">{{ $data['negociacion'] }}</div>
+                            <a href="/customer?estado=negociacion"><h3>Negociación</h3></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="panel no-bd bd-9 panel-stat">
+                <div class="panel-body bg-orange">
+                    <div class="icon"><i class="fa fa-money"></i>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="stat-num">{{ $data['interesado'] }}</div>
+                            <a href="/customer?estado=interesado"><h3>Interesados</h3></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="panel no-bd bd-9 panel-stat">
+                <div class="panel-body bg-purple">
+                    <div class="icon"><i class="fa fa-legal"></i>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="stat-num">{{ $data['compro'] }}</div>
+                            <a href="/customer?estado=compro"><h3>Compró</h3></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
+
+</div>
+@endif
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                        <h2>Hola {{ Auth::user()->name() }}! Bienvenido al BackOffice de MLMfunnels.</h2>
+                    </div>                  
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="graph-wrapper">
+                            <div class="graph-info p-r-10">
+                                <a href="javascript:void(0)" class="btn bg-green">Correos</a>
+                                <a href="javascript:void(0)" class="btn bg-blue">Visitas</a>
+
+                                <a href="javascript:void(0)" class="btn bg-purple filter">Filtrar</a> 
+                                <button href="#" id="bars" class="btn" disabled>
+                                    <span></span>
+                                </button>
+                                <button href="#" id="lines" class="btn active" disabled>
+                                    <span></span>
+                                </button>
+                            </div>
+                            <div class="h-300">
+                                <div class="h-300" id="graph-lines" style="width: 100%"></div>
+                                <div class="h-300" id="graph-bars" style="width: 100%"></div>
+                            </div>
+                        </div>
+
+                        <input type="hidden" id="start" value="{{ Input::get('start') }}">
+                        <input type="hidden" id="end" value="{{ Input::get('end') }}">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
     {{--<div class="row">        
         <div class="col-lg-12 m-b-20">
             <div class="modal fade" id="event-modal">
@@ -234,17 +280,17 @@
                 </div>
                 <div class="modal-body ">   
 
-                <div class="row">
-                    <div class="col-md-6" align="center">
-                        <h3>Desde:</h3>
-                        <div class="datepicker start" data-inline="true" data-date-format="yyyy-mm-dd"></div>
-                    </div>
+                    <div class="row">
+                        <div class="col-md-6" align="center">
+                            <h3>Desde:</h3>
+                            <div class="datepicker start" data-inline="true" data-date-format="yyyy-mm-dd"></div>
+                        </div>
 
-                    <div class="col-md-6" align="center">
-                        <h3>Hasta:</h3>
-                        <div class="datepicker end" data-inline="true" data-date-format="yyyy-mm-dd"></div>
-                    </div>                    
-                </div> 
+                        <div class="col-md-6" align="center">
+                            <h3>Hasta:</h3>
+                            <div class="datepicker end" data-inline="true" data-date-format="yyyy-mm-dd"></div>
+                        </div>                    
+                    </div> 
 
                 </div>        
                 <div class="modal-footer text-center">
