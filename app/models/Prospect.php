@@ -71,6 +71,14 @@ class Prospect extends Model {
     {
         return $query->where('email', $email);
     }
+
+    public function scopeDates($query, $start, $end)
+    {
+        if(!isset($start) || !isset($end)){
+            return;
+        }
+        return $query->whereBetween('created_at', array($start, $end));
+    }
     
     /* Relationships */
     

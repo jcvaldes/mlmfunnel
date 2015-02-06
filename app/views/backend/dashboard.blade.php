@@ -20,6 +20,13 @@
                     <div class="tab-pane fade active in" id="products">
                        <div class="row p-20">
                         <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+                            @if(Input::has('start'))
+                            <div class="pull-left">
+                                <strong> Filtrando desde {{ Input::get('start')}} hasta {{ Input::get('end')}} </strong>
+                                <a href="/dashboard" class="btn btn-danger m-l-10"><i class="fa fa-trash-o"></i> No filtrar por fecha!</a>
+                            </div>
+                            @endif
+                            <a href="javascript:void(0)" class="btn btn-info filter pull-right"> <i class="fa fa-calendar"></i>  Filtrar por fechas</a>
                             <table id="products-table" class="table table-tools table-hover">
                                 <thead>
                                     <tr>
@@ -28,21 +35,17 @@
                                         <th class="text-center"><strong>Visitas Unicas</strong></th>
                                         <th class="text-center"><strong>Prospectos</strong></th>
                                         <th class="text-center"><strong>Conversion</strong></th>
-                                        <th class="text-center"><strong>Acciones</strong></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php $stats = Statistic::stats('landing'); ?>
                                     <tr>
                                         <td>Landing</td>
-                                        <td class="text-center"><strong>{{ $stats['visit'] }}</strong></td>
-                                        <td class="text-center">{{ $stats['unique'] }}</td>
-                                        <td class="text-center">{{ $stats['prospect'] }}</td>
-                                        <td class="text-center c-green"><strong>{{ $stats['convertion'] }}%</strong></td>
+                                        <td class="text-center"><strong>{{ $landing['visit'] }}</strong></td>
+                                        <td class="text-center">{{ $landing['unique'] }}</td>
+                                        <td class="text-center">{{ $landing['prospect'] }}</td>
+                                        <td class="text-center c-green"><strong>{{ $landing['convertion'] }}%</strong></td>
 
-                                        <td class="text-center "> 
-                                            <a href="#" class="edit btn btn-sm btn-default"><i class="fa fa-dashboard"></i> Estadísticas</a>
-                                        </td>
+                                       
                                     </tr>
 
                                 </tbody>
@@ -62,99 +65,75 @@
 
         </div>
     </div>
+
+
+
 </div>
 
 
 @if(isset($data))
-<div class="row">
+<div class="row m-t-20">
     <div class="col-md-12">
 
-        <div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="col-lg-3 col-md-3 col-sm-3">
             <div class="panel no-bd bd-9 panel-stat">
                 <div class="panel-body bg-dark">
-                    <div class="icon"><i class="fa fa-archive"></i>
+                    <div class="icon"><i class="glyph-icon flaticon-visitors"></i>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="stat-num">{{ $data['total'] }}</div>
-                            <a href="/customer"><h3>Clientes</h3></a>
+                            <div class="stat-num">{{ $data['visit'] }}</div>
+                            <a href="#"><h3>Visitas</h3></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="col-lg-3 col-md-3 col-sm-3">
             <div class="panel no-bd bd-9 panel-stat">
                 <div class="panel-body bg-blue">
                     <div class="icon"><i class="fa fa-question"></i>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="stat-num">{{ $data['prospecto'] }}</div>
-                            <a href="/customer?estado=prospecto"><h3>Prospectos</h3></a>
+                            <div class="stat-num">{{ $data['unique'] }}</div>
+                            <a href="#"><h3>Visitas unicas</h3></a>
 
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="col-lg-3 col-md-3 col-sm-3">
             <div class="panel no-bd bd-9 panel-stat">
                 <div class="panel-body bg-green">
-                    <div class="icon"><i class="fa fa-check"></i></div>
+                    <div class="icon"><i class="fa fa-user"></i></div>
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="stat-num">{{ $data['asignado'] }}</div>
-                            <a href="/customer?estado=asignado"><h3>Asignados</h3></a>
+                            <div class="stat-num">{{ $data['prospect'] }}</div>
+                            <a href="#"><h3>Prospectos</h3></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="col-lg-3 col-md-3 col-sm-3">
             <div class="panel no-bd bd-9 panel-stat">
                 <div class="panel-body bg-red">
-                    <div class="icon"><i class="fa fa-envelope"></i>
+                    <div class="icon"><i class="fa fa-level-up"></i>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="stat-num">{{ $data['negociacion'] }}</div>
-                            <a href="/customer?estado=negociacion"><h3>Negociación</h3></a>
+                            <div class="stat-num">{{ $data['convertion'] }}%</div>
+                            <a href="#"><h3>Conversión</h3></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="col-lg-4 col-md-4 col-sm-4">
-            <div class="panel no-bd bd-9 panel-stat">
-                <div class="panel-body bg-orange">
-                    <div class="icon"><i class="fa fa-money"></i>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="stat-num">{{ $data['interesado'] }}</div>
-                            <a href="/customer?estado=interesado"><h3>Interesados</h3></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-4">
-            <div class="panel no-bd bd-9 panel-stat">
-                <div class="panel-body bg-purple">
-                    <div class="icon"><i class="fa fa-legal"></i>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="stat-num">{{ $data['compro'] }}</div>
-                            <a href="/customer?estado=compro"><h3>Compró</h3></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+       
     </div>
 
 

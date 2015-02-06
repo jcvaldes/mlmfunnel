@@ -34,18 +34,26 @@ class Statistic extends Model {
         return $query->where('type', $type);
     }
 
+    public function scopeDates($query, $start, $end)
+    {
+        if(!isset($start) || !isset($end)){
+            return;
+        }
+        return $query->whereBetween('created_at', array($start, $end));
+    }
+
 
     /* Function */
 
-    public static function stats($page)
+    public static function stats($page, $start = null, $end = null)
     {
         $statistics = Statistic::current()->type($page)->get(); 
 
         $data = [];
        
-        $data['visit'] = Statistic::current()->page($page)->type('visit')->get()->count();
-        $data['unique'] = Statistic::current()->page($page)->groupBy('ip')->get()->count();
-        $data['prospect'] = Prospect::current()->type($page)->get()->count();
+        $data['visit'] = Statistic::current()->page($page)->type('visit')->dates($start, $end)->get()->count();
+        $data['unique'] = Statistic::current()->page($page)->groupBy('ip')->dates($start, $end)->get()->count();
+        $data['prospect'] = Prospect::current()->type($page)->dates($start, $end)->get()->count();
         $data['convertion'] = ($data['unique']==0) ? 0 : ($data['prospect'] / $data['unique']) * 100; 
         return $data;           
     }
