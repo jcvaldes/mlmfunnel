@@ -46,8 +46,7 @@ class Statistic extends Model {
         $data['visit'] = Statistic::current()->page($page)->type('visit')->get()->count();
         $data['unique'] = Statistic::current()->page($page)->groupBy('ip')->get()->count();
         $data['prospect'] = Prospect::current()->type($page)->get()->count();
-        $data['convertion'] = ($data['prospect'] / $data['unique']) * 100; 
-
+        $data['convertion'] = ($data['unique']==0) ? 0 : ($data['prospect'] / $data['unique']) * 100; 
         return $data;           
     }
     

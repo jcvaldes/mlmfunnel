@@ -18,7 +18,7 @@
                 </ul>
                 <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade active in" id="products">
-                     <div class="row p-20">
+                       <div class="row p-20">
                         <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
                             <table id="products-table" class="table table-tools table-hover">
                                 <thead>
@@ -48,9 +48,18 @@
                                 </tbody>
                             </table>
                         </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                                <h2>Hola {{ Auth::user()->name() }}! Bienvenido al BackOffice de MLMfunnels.</h2>
+                            </div>                  
+                        </div>
                     </div>
                 </div>                            
             </div>
+
+
+
+
         </div>
     </div>
 </div>
@@ -151,15 +160,12 @@
 
 </div>
 @endif
+{{--
 <div class="row">
     <div class="col-md-12">
         <div class="panel">
             <div class="panel-body">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-                        <h2>Hola {{ Auth::user()->name() }}! Bienvenido al BackOffice de MLMfunnels.</h2>
-                    </div>                  
-                </div>
+                
                 <hr>
                 <div class="row">
                     <div class="col-md-12">
@@ -190,7 +196,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 
     {{--<div class="row">        
         <div class="col-lg-12 m-b-20">
