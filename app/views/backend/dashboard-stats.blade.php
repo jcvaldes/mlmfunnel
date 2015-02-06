@@ -10,175 +10,113 @@
 @section('content')
 
 <div id="main-content" class="dashboard">
-    <div class="row m-t-10">
+  
+
+    @if(isset($data))
+    <div class="row m-t-20">
         <div class="col-md-12">
-            <div class="tabcordion">
-                <ul id="myTab" class="nav nav-tabs nav-dark">
-                    <li class="active"><a href="#products" data-toggle="tab">Estadísticas</a></li>
-                </ul>
-                <div id="myTabContent" class="tab-content">
-                    <div class="tab-pane fade active in" id="products">
-                       <div class="row p-20">
-                        <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
-                            @if(Input::has('start'))
-                            <div class="pull-left">
-                                <strong> Filtrando desde {{ Input::get('start')}} hasta {{ Input::get('end')}} </strong>
-                                <a href="/dashboard" class="btn btn-danger m-l-10"><i class="fa fa-trash-o"></i> Eliminar filtro</a>
-                            </div>
-                            @endif
-                            <a href="javascript:void(0)" class="btn btn-info filter pull-right"> <i class="fa fa-calendar"></i>  Filtrar por fechas</a>
-                            <table id="products-table" class="table table-tools table-hover">
-                                <thead>
-                                    <tr>
-                                        <th><strong>Landing</strong></th>
-                                        <th class="text-center"><strong>Visitas</strong></th>
-                                        <th class="text-center"><strong>Visitas Unicas</strong></th>
-                                        <th class="text-center"><strong>Prospectos</strong></th>
-                                        <th class="text-center"><strong>Conversion</strong></th>
-                                        <th class="text-center">Acciones</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Landing</td>
-                                        <td class="text-center"><strong>{{ $landing['visit'] }}</strong></td>
-                                        <td class="text-center">{{ $landing['unique'] }}</td>
-                                        <td class="text-center">{{ $landing['prospect'] }}</td>
-                                        <td class="text-center c-green"><strong>{{ $landing['convertion'] }}%</strong></td>
 
-                                        <td class="text-center "> 
-                                            <a href="/dashboard/landing" class="edit btn btn-sm btn-default"><i class="fa fa-dashboard"></i> Estadísticas</a>
-                                        </td>
-                                    </tr>
-
-                                </tbody>
-                            </table>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="panel no-bd bd-9 panel-stat">
+                    <div class="panel-body bg-dark">
+                        <div class="icon"><i class="glyph-icon flaticon-visitors"></i>
                         </div>
                         <div class="row">
-                            <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-                                <h2>Hola {{ Auth::user()->name() }}! Bienvenido al BackOffice de MLMfunnels.</h2>
-                            </div>                  
-                        </div>
-                    </div>
-                </div>                            
-            </div>
-
-
-
-
-        </div>
-    </div>
-
-
-
-</div>
-
-
-@if(isset($data))
-<div class="row m-t-20">
-    <div class="col-md-12">
-
-        <div class="col-lg-3 col-md-3 col-sm-3">
-            <div class="panel no-bd bd-9 panel-stat">
-                <div class="panel-body bg-dark">
-                    <div class="icon"><i class="glyph-icon flaticon-visitors"></i>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="stat-num">{{ $data['visit'] }}</div>
-                            <a href="#"><h3>Visitas</h3></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-3 col-md-3 col-sm-3">
-            <div class="panel no-bd bd-9 panel-stat">
-                <div class="panel-body bg-blue">
-                    <div class="icon"><i class="fa fa-question"></i>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="stat-num">{{ $data['unique'] }}</div>
-                            <a href="#"><h3>Visitas unicas</h3></a>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-3">
-            <div class="panel no-bd bd-9 panel-stat">
-                <div class="panel-body bg-green">
-                    <div class="icon"><i class="fa fa-user"></i></div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="stat-num">{{ $data['prospect'] }}</div>
-                            <a href="#"><h3>Prospectos</h3></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-3">
-            <div class="panel no-bd bd-9 panel-stat">
-                <div class="panel-body bg-red">
-                    <div class="icon"><i class="fa fa-level-up"></i>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="stat-num">{{ $data['convertion'] }}%</div>
-                            <a href="#"><h3>Conversión</h3></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-
-
-</div>
-@endif
-{{--
-<div class="row">
-    <div class="col-md-12">
-        <div class="panel">
-            <div class="panel-body">
-                
-                <hr>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div id="graph-wrapper">
-                            <div class="graph-info p-r-10">
-                                <a href="javascript:void(0)" class="btn bg-green">Correos</a>
-                                <a href="javascript:void(0)" class="btn bg-blue">Visitas</a>
-
-                                <a href="javascript:void(0)" class="btn bg-purple filter">Filtrar</a> 
-                                <button href="#" id="bars" class="btn" disabled>
-                                    <span></span>
-                                </button>
-                                <button href="#" id="lines" class="btn active" disabled>
-                                    <span></span>
-                                </button>
-                            </div>
-                            <div class="h-300">
-                                <div class="h-300" id="graph-lines" style="width: 100%"></div>
-                                <div class="h-300" id="graph-bars" style="width: 100%"></div>
+                            <div class="col-md-12">
+                                <div class="stat-num">{{ $data['visit'] }}</div>
+                                <a href="#"><h3>Visitas</h3></a>
                             </div>
                         </div>
-
-                        <input type="hidden" id="start" value="{{ Input::get('start') }}">
-                        <input type="hidden" id="end" value="{{ Input::get('end') }}">
                     </div>
+                </div>
+            </div>
 
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="panel no-bd bd-9 panel-stat">
+                    <div class="panel-body bg-blue">
+                        <div class="icon"><i class="fa fa-question"></i>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="stat-num">{{ $data['unique'] }}</div>
+                                <a href="#"><h3>Visitas unicas</h3></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="panel no-bd bd-9 panel-stat">
+                    <div class="panel-body bg-green">
+                        <div class="icon"><i class="fa fa-user"></i></div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="stat-num">{{ $data['prospect'] }}</div>
+                                <a href="#"><h3>Prospectos</h3></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="panel no-bd bd-9 panel-stat">
+                    <div class="panel-body bg-red">
+                        <div class="icon"><i class="fa fa-level-up"></i>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="stat-num">{{ $data['convertion'] }}%</div>
+                                <a href="#"><h3>Conversión</h3></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+    @endif
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel">
+                <div class="panel-body">
+                    
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="graph-wrapper">
+                                <div class="graph-info p-r-10">
+                                    <a href="javascript:void(0)" class="btn bg-green">Correos</a>
+                                    <a href="javascript:void(0)" class="btn bg-blue">Visitas</a>
+
+                                    <a href="javascript:void(0)" class="btn bg-purple filter">Filtrar</a> 
+                                    <button href="#" id="bars" class="btn" disabled>
+                                        <span></span>
+                                    </button>
+                                    <button href="#" id="lines" class="btn active" disabled>
+                                        <span></span>
+                                    </button>
+                                </div>
+                                <div class="h-300">
+                                    <div class="h-300" id="graph-lines" style="width: 100%"></div>
+                                    <div class="h-300" id="graph-bars" style="width: 100%"></div>
+                                </div>
+                            </div>
+
+                            <input type="hidden" id="start" value="{{ Input::get('start') }}">
+                            <input type="hidden" id="end" value="{{ Input::get('end') }}">
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div> --}}
+    </div> 
 
     {{--<div class="row">        
         <div class="col-lg-12 m-b-20">
