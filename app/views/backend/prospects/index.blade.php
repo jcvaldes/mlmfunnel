@@ -89,26 +89,30 @@
                             <table id="datatable" cellpadding="0" cellspacing="0" border="0" class="table table-striped table-hover">
                                 <thead>
                                     <tr>
-                                        <th>Nombre</th>
-                                        <th>Email</th>
-                                        <th>Teléfono</th>
-                                        <th>Landing</th>
-                                        <th style="text-align:center">Miembro desde</th>
-                                        <th style="text-align:center">Acciones</th>
+                                        
+                                        <th class="hidden-sm hidden-xs">Nombre</th>
+                                        <th class="hidden-sm hidden-xs">Email</th>
+                                        <th class="hidden-sm hidden-xs">Teléfono</th>
+                                        <th class="hidden-sm hidden-xs">Landing</th>
+                                        <th class="hidden-sm hidden-xs" style="text-align:center">Miembro desde</th>
+                                        <th class="hidden-sm hidden-xs" style="text-align:center">Acciones</th>
+                                        <th class="hidden-md hidden-lg">Datos</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($prospects as $key => $prospect)      
                                     <tr>
-                                        <td>{{ $prospect->name }}</td>
-                                        <td>{{ $prospect->email }} </td>
-                                        <td>{{ $prospect->phone }}</td>
-                                        <td>{{ $prospect->type }}</td>    
-                                        <th style="text-align:center">{{ $prospect->getComputerDate() }}</th>
-                                        <td style="text-align:center">
+                                        
+                                        <td class="hidden-sm hidden-xs">{{ $prospect->name }}</td>
+                                        <td class="hidden-sm hidden-xs">{{ $prospect->email }} </td>
+                                        <td class="hidden-sm hidden-xs">{{ $prospect->phone }}</td>
+                                        <td class="hidden-sm hidden-xs">{{ $prospect->type }}</td>    
+                                        <th class="hidden-sm hidden-xs" style="text-align:center">{{ $prospect->getComputerDate() }}</th>
+                                        <td class="hidden-sm hidden-xs" style="text-align:center">
                                             <button totle="Editar" class="btn btn-info edit-prospect" data-id="{{ $prospect->id }}"><i class="fa fa-edit"></i></button>                                        
                                             <button totle="Eliminar" class="btn btn-danger delete-prospect" data-id="{{ $prospect->id }}"><i class="fa fa-trash-o"></i></button>
                                         </td>
+                                        <td class="hidden-md hidden-lg">{{ $prospect->name }} <br>{{ $prospect->email }} <br>{{ $prospect->phone }} <br>{{ $prospect->type }} <br> {{ $prospect->getComputerDate() }} </td>
                                     </tr>
                                     @endforeach
                                 </tbody>

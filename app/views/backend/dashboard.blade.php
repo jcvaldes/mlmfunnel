@@ -23,7 +23,7 @@
                             @if(Input::has('start'))
                             <div class="pull-left">
                                 <strong> Filtrando desde {{ Input::get('start')}} hasta {{ Input::get('end')}} </strong>
-                                <a href="/dashboard" class="btn btn-danger m-l-10"><i class="fa fa-trash-o"></i> No filtrar por fecha!</a>
+                                <a href="/dashboard" class="btn btn-danger m-l-10"><i class="fa fa-trash-o"></i> Eliminar filtro</a>
                             </div>
                             @endif
                             <a href="javascript:void(0)" class="btn btn-info filter pull-right"> <i class="fa fa-calendar"></i>  Filtrar por fechas</a>
