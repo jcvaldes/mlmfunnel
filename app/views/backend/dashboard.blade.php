@@ -47,7 +47,7 @@
                                         <td class="text-center c-green"><strong>{{ $landing['convertion'] }}%</strong></td>
 
                                         <td class="text-center "> 
-                                            <a href="/dashboard/landing" class="edit btn btn-sm btn-default"><i class="fa fa-dashboard"></i> Estadísticas</a>
+                                            <a href="/dashboard/stats/landing" class="edit btn btn-sm btn-default"><i class="fa fa-dashboard"></i> Estadísticas</a>
                                         </td>
                                     </tr>
 
