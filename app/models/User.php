@@ -70,6 +70,11 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         return $query->where('username', $username);
     }
 
+     public function scopeClient($query)
+    {
+        return $query->where('type', 'user');
+    }
+
     /* functions */
 
 	public function name(){
@@ -123,5 +128,9 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
         $txt .= $unit;
         return Lang::choice($txt, $delta, compact('delta'));
+    }
+
+    public function getComputerDate(){
+        return explode(' ', $this->created_at)[0];
     }
 }

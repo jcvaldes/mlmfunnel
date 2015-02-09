@@ -37,7 +37,12 @@ class UserController extends BaseController {
 		return View::make('backend.dashboard-stats', compact('data', 'landing'));
 	}
 
+	public function index()
+	{
+		$users = User::client()->get();
 
+		return View::make('backend.users.index', compact('users'));
+	}
 	
 
 }
