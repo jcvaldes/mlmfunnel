@@ -359,7 +359,7 @@
 			"file": "app/models/Prospect.php",
 			"settings":
 			{
-				"buffer_size": 1952,
+				"buffer_size": 3185,
 				"line_ending": "Windows"
 			}
 		},
@@ -367,7 +367,58 @@
 			"file": "app/controllers/ProspectController.php",
 			"settings":
 			{
-				"buffer_size": 4382,
+				"buffer_size": 4523,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/backend/dashboard-stats.blade.php",
+			"settings":
+			{
+				"buffer_size": 12295,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<?php\nuse Carbon\\Carbon;\nclass StatisticController extends BaseController {\n	\n	/**\n	 * Store a newly created resource in storage.\n	 * POST /api/statistic/{id}/{type}\n	 *\n	 * @return Response\n	 */\n	public function store($id, $page, $type)\n	{\n		header('Access-Control-Allow-Origin: *');\n\n		$user = User::find($id);\n		if(isset($user->id)){\n			$data['user_id'] = $id;\n			$data['page'] = $page;\n			$data['type'] = $type;\n			$data['ip'] = Request::getClientIp();\n\n			$statistic = new Statistic($data);\n			if ($statistic->save())\n			{\n				return $statistic->toJson();\n			}\n\n			return $statistic->getErrors();\n		}\n		\n	}\n\n	/**\n	 * Store a newly created resource in storage.\n	 * GET /api/statistic/{id}\n	 *\n	 * @return Response\n	 */\n	public function show($id)\n	{\n\n		$start = (Input::get('start')) ? Input::get('start') : Carbon::now()->subMonth(1);\n		$end = (Input::get('end')) ? Input::get('end') : Carbon::now();\n\n\n		$property = Property::find($id);\n		if(isset($property->id)){\n			$statistics = DB::table('statistics')\n			->select(DB::raw('DATE(created_at) as date'), DB::raw('property_id, type'), DB::raw('count(*) as views'))\n			->groupBy('date', 'type')\n			->where('property_id', $id)\n			->whereBetween('created_at', array($start, $end))\n			->get();\n			$data = [];\n			foreach ($statistics as $key => $statistic) {\n				$data[$statistic->date][$statistic->type] = $statistic->views;\n			}\n			return json_encode($data);\n		}\n		\n	}\n\n	/**\n	 * Store a newly created resource in storage.\n	 * GET /api/statistic/{id}\n	 *\n	 * @return Response\n	 */\n	public function statistics()\n	{\n		/*$statistics = DB::table('statistics')\n		->select(DB::raw('DATE(created_at) as date'), DB::raw('property_id, type'), DB::raw('count(*) as views'))\n		->groupBy('date', 'type')\n		->get();*/\n\n		$start = (Input::get('start')) ? Input::get('start') : Carbon::now()->subMonth(1);\n		$end = (Input::get('end')) ? Input::get('end') : Carbon::now();\n\n\n		$statistics = DB::table('statistics')\n		->select(DB::raw('DATE(created_at) as date'), DB::raw('user_id, type'), DB::raw('count(*) as views'))\n		->whereBetween('created_at', array($start, $end))\n		->groupBy('date', 'type')\n		->get();\n\n\n		$data = [];\n		foreach ($statistics as $key => $statistic) {\n			$data[$statistic->date][$statistic->type] = $statistic->views;\n		}\n\n		return json_encode($data);\n\n	}\n\n	\n\n	\n	    \n}",
+			"file": "app/controllers/StatisticController.php",
+			"file_size": 2427,
+			"file_write_time": 130674659457563151,
+			"settings":
+			{
+				"buffer_size": 2326,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/models/Statistic.php",
+			"settings":
+			{
+				"buffer_size": 1557,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Eli Jose Carrasquero/Desktop/paypal.html",
+			"settings":
+			{
+				"buffer_size": 478,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/controllers/UserController.php",
+			"settings":
+			{
+				"buffer_size": 1530,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/controllers/GeneralmanagerController.php",
+			"settings":
+			{
+				"buffer_size": 2740,
 				"line_ending": "Windows"
 			}
 		},
@@ -375,95 +426,23 @@
 			"file": "app/views/backend/prospects/index.blade.php",
 			"settings":
 			{
-				"buffer_size": 8917,
+				"buffer_size": 9830,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "public/assets/js/table_prospects.js",
-			"settings":
-			{
-				"buffer_size": 7286,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/Eli Jose Carrasquero/Desktop/base_boxed_2column_query.html",
-			"settings":
-			{
-				"buffer_size": 28930,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/C/debut/www.freetemplates.bz/design/mile/preview/index.html",
-			"settings":
-			{
-				"buffer_size": 86132,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/C/Users/Eli Jose Carrasquero/AppData/Local/Temp/Rar$EXa0.130/demo/index.html",
-			"settings":
-			{
-				"buffer_size": 5769,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/C/Users/Eli Jose Carrasquero/AppData/Local/Temp/Rar$EXa0.830/newsletter.html",
-			"settings":
-			{
-				"buffer_size": 6218,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/C/Users/Eli Jose Carrasquero/AppData/Local/Temp/Rar$EXa0.087/email-blueprints-master/templates/transactional_basic.html",
-			"settings":
-			{
-				"buffer_size": 17084,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/routes.php",
-			"settings":
-			{
-				"buffer_size": 1675,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/views/backend/classified/product/show.blade.php",
-			"settings":
-			{
-				"buffer_size": 18388,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/public/backend/assets/js/product.show.js",
-			"settings":
-			{
-				"buffer_size": 4401,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/controllers/ApiController.php",
-			"settings":
-			{
-				"buffer_size": 1036,
-				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "app/routes/user.php",
 			"settings":
 			{
-				"buffer_size": 496,
+				"buffer_size": 655,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/backend/dashboard.blade.php",
+			"settings":
+			{
+				"buffer_size": 15296,
 				"line_ending": "Windows"
 			}
 		}
@@ -500,14 +479,32 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/controllers/SharedController.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/prospects/index.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/public/backend/assets/js/product.show.js",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/controllers/ApiController.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/routes/user.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/landings/index.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/controllers/UserController.php",
+		"/C/wamp/www/activewear.dev/app/filters.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/routes.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/controllers/HomeController.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/filters.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/controllers/UserController.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/views/backend/classified/product/show.blade.php",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/routes.php",
+		"/C/Users/Eli Jose Carrasquero/AppData/Local/Temp/Rar$EXa0.087/email-blueprints-master/templates/transactional_basic.html",
+		"/C/Users/Eli Jose Carrasquero/AppData/Local/Temp/Rar$EXa0.830/newsletter.html",
+		"/C/Users/Eli Jose Carrasquero/AppData/Local/Temp/Rar$EXa0.130/demo/index.html",
+		"/C/debut/www.freetemplates.bz/design/mile/preview/index.html",
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/public/assets/js/table_prospects.js",
+		"/C/Users/Eli Jose Carrasquero/Desktop/base_boxed_2column_query.html",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/public/assets/js/application.js",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/views/backend/properties/edit.blade.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/layouts/user/sidebar.blade.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/layouts/master.blade.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/layouts/user/navigation.blade.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/views/backend/layouts/navigation.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/controllers/HomeController.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/routes.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/css/nicdark_style.css",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/layouts/sidebar.blade.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/templates/landing/index.blade.php",
@@ -519,11 +516,9 @@
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/public/backend/assets/js/animations.js",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/public/backend/assets/js/table_dynamic.js",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/public/assets/plugins/datatables/spanish.json",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/landings/index.blade.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/controllers/CustomerController.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/controllers/LandingController.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/controllers/StatisticController.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/routes/user.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/templates/landing/a.html",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/public/templates/landing/css/landing.css",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/shared/profile.blade.php",
@@ -544,7 +539,6 @@
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/controllers/AuthController.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/views/backend/login.blade.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/routes.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/controllers/SharedController.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/dashboard.blade.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/controllers/UploadController.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/models/User.php",
@@ -556,7 +550,6 @@
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/composer.json",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/landings/create.blade.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/models/Notification.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/routes.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/models/User.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/controllers/UserController.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/composer.json",
@@ -584,7 +577,6 @@
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/js/dameros.js",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/js/plugins/jquery.sopaletras.js",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/tercer-grado/sustantivos.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/controllers/UserController.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/models/Notification.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/database/seeds/DatabaseSeeder.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/database/seeds/VenezuelaTableSeeder.php",
@@ -614,20 +606,7 @@
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/register.blade.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/layouts/usuario/navigation.blade.php",
 		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/database/migrations/2015_01_15_003000_create_portal_table.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/database/migrations/2015_01_15_003244_create_dialogo_table.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/config/database.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/routes/usuario.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/controllers/UsuarioController.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/usuario/calendario.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/usuario/carta.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/usuario/dashboard.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/usuario/documentos.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/usuario/pasantia.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/usuario/pasantias.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/usuario/registrar-pasantia.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/layouts/master.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/layouts/usuario/sidebar.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/layouts/usuario/master.blade.php"
+		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/database/migrations/2015_01_15_003244_create_dialogo_table.php"
 	],
 	"find":
 	{
@@ -885,7 +864,7 @@
 	"groups":
 	[
 		{
-			"selected": 9,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -893,15 +872,15 @@
 					"file": "app/models/Prospect.php",
 					"settings":
 					{
-						"buffer_size": 1952,
+						"buffer_size": 3185,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1002,
-								1002
+								2096,
+								2096
 							]
 						],
 						"settings":
@@ -911,7 +890,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 737.0,
+						"translation.y": 1067.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -921,15 +900,15 @@
 					"file": "app/controllers/ProspectController.php",
 					"settings":
 					{
-						"buffer_size": 4382,
+						"buffer_size": 4523,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								211,
-								211
+								0,
+								0
 							]
 						],
 						"settings":
@@ -944,28 +923,27 @@
 				},
 				{
 					"buffer": 2,
-					"file": "app/views/backend/prospects/index.blade.php",
+					"file": "app/views/backend/dashboard-stats.blade.php",
 					"settings":
 					{
-						"buffer_size": 8917,
+						"buffer_size": 12295,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								762,
-								762
+								456,
+								456
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
 							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": false
+							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 11.0,
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -973,155 +951,73 @@
 				},
 				{
 					"buffer": 3,
-					"file": "public/assets/js/table_prospects.js",
+					"file": "app/controllers/StatisticController.php",
 					"settings":
 					{
-						"buffer_size": 7286,
+						"buffer_size": 2326,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5851,
-								5851
+								1340,
+								1340
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3489.0,
+						"translation.y": 670.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "/C/Users/Eli Jose Carrasquero/Desktop/base_boxed_2column_query.html",
+					"file": "app/models/Statistic.php",
 					"settings":
 					{
-						"buffer_size": 28930,
+						"buffer_size": 1557,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1391,
+								1391
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 410.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "/C/debut/www.freetemplates.bz/design/mile/preview/index.html",
+					"file": "/C/Users/Eli Jose Carrasquero/Desktop/paypal.html",
 					"settings":
 					{
-						"buffer_size": 86132,
+						"buffer_size": 478,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 4356.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "/C/Users/Eli Jose Carrasquero/AppData/Local/Temp/Rar$EXa0.130/demo/index.html",
-					"settings":
-					{
-						"buffer_size": 5769,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 605.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "/C/Users/Eli Jose Carrasquero/AppData/Local/Temp/Rar$EXa0.830/newsletter.html",
-					"settings":
-					{
-						"buffer_size": 6218,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "/C/Users/Eli Jose Carrasquero/AppData/Local/Temp/Rar$EXa0.087/email-blueprints-master/templates/transactional_basic.html",
-					"settings":
-					{
-						"buffer_size": 17084,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
+								478,
+								478
 							]
 						],
 						"settings":
@@ -1135,25 +1031,106 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
-					"file": "/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/routes.php",
+					"buffer": 6,
+					"file": "app/controllers/UserController.php",
 					"settings":
 					{
-						"buffer_size": 1675,
+						"buffer_size": 1530,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1419,
-								6
+								1489,
+								1489
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 270.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/controllers/GeneralmanagerController.php",
+					"settings":
+					{
+						"buffer_size": 2740,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								98,
+								530
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 40.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/views/backend/prospects/index.blade.php",
+					"settings":
+					{
+						"buffer_size": 9830,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5931,
+								5931
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 41.0,
+						"translation.y": 1360.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "app/routes/user.php",
+					"settings":
+					{
+						"buffer_size": 655,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								163,
+								157
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1163,18 +1140,18 @@
 				},
 				{
 					"buffer": 10,
-					"file": "/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/views/backend/classified/product/show.blade.php",
+					"file": "app/views/backend/dashboard.blade.php",
 					"settings":
 					{
-						"buffer_size": 18388,
+						"buffer_size": 15296,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								531,
-								435
+								3078,
+								3078
 							]
 						],
 						"settings":
@@ -1184,88 +1161,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 4.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/public/backend/assets/js/product.show.js",
-					"settings":
-					{
-						"buffer_size": 4401,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								673,
-								1993
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 352.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "app/controllers/ApiController.php",
-					"settings":
-					{
-						"buffer_size": 1036,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								910,
-								910
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 319.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "app/routes/user.php",
-					"settings":
-					{
-						"buffer_size": 496,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								486,
-								486
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 680.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

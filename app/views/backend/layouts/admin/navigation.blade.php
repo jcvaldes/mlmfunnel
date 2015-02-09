@@ -10,9 +10,9 @@
             <a id="menu-medium" class="sidebar-toggle tooltips">
                 <i class="fa fa-outdent"></i>
             </a>
-            <a class="navbar-brand" href="/"></a>
+            <a class="navbar-brand" href="/dashboard"></a>
         </div>
-        <div class="navbar-center">Agent</div>
+        <div class="navbar-center">Administrador</div>
         <div class="navbar-collapse collapse">
             <!-- BEGIN TOP NAVIGATION MENU -->
             <ul class="nav navbar-nav pull-right header-menu">
@@ -81,14 +81,11 @@
                                     {{--<li>                                   
                                         <i class="fa p-r-10 f-18 {{ $n->getClass() }} "></i>
                                         {{ $n->notification }}
-                                        <span class="dropdown-time">{{ $n->getHumanDate() }}</span>
-                                        
+                                        <span class="dropdown-time">{{ $n->getHumanDate() }}</span>                                        
                                     </li> --}}
 
                                     <li class="clearfix">
-                                        <span class="pull-left p-r-5">
-                                            {{ $n->getIcon() }}                                        
-                                        </span>
+                                        <span class="pull-left p-r-5">{{ $n->getIcon() }}</span>
                                         <div class="clearfix">
                                             <div>
                                                 {{ $n->getReminder() }} 
@@ -99,25 +96,17 @@
                                             <p>{{ $n->notification }}</p>
                                         </div>
                                     </li>
-
-
-                                </a>                              
-
-                                @endforeach
-                                
+                                </a>
+                                @endforeach                                
                             </ul>
 
                             @else
-
-                            <a href="#">
-                                Sin notificaciones.
-                            </a>
-
+                            <a href="#">Sin notificaciones.</a>
                             @endif
                         </li>
                         <li class="dropdown-footer clearfix">
-                            <a href="/notifications" class="pull-left">Ver todas las notificaciones</a>
-                            <a href="/notifications" class="pull-right">
+                            <a href="/dashboard/prospect" class="pull-left">Ver todas las notificaciones</a>
+                            <a href="/dashboard/prospect" class="pull-right">
                                 <i class="fa fa-cog"></i>
                             </a>
                         </li>
@@ -128,13 +117,13 @@
                 <!-- BEGIN USER DROPDOWN -->
                 <li class="dropdown" id="user-header">
                     <a href="#" class="dropdown-toggle c-white" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                        <img src="/assets/img/avatars/avatar1.png" alt="user avatar" width="30" class="p-r-5">
-                        <span class="username">{{ Auth::user()->full_name }} {{ Auth::user()->getTypeName() }}</span>
+                        <img src="{{ Auth::user()->getProfilePicture() }}" alt="user avatar" width="30" class="p-r-5">
+                        <span class="username">{{ Auth::user()->full_name }}</span>
                         <i class="fa fa-angle-down p-r-10"></i>
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="/profile">
+                            <a href="/dashboard/profile">
                                 <i class="glyph-icon flaticon-account"></i> Mi Perfil
                             </a>
                         </li>                        
@@ -145,17 +134,13 @@
                             <a href="#" title="Bloquear pantalla">
                                 <i class="glyph-icon flaticon-padlock23"></i>
                             </a>
-                            <a href="/logout" title="Salir">
+                            <a href="/auth/logout" title="Salir">
                                 <i class="fa fa-power-off"></i>
                             </a>
                         </li>
                     </ul>
-
-
-
                 </li>
-                <!-- END USER DROPDOWN -->
-                
+                <!-- END USER DROPDOWN -->                
             </ul>
             <!-- END TOP NAVIGATION MENU -->
         </div>
