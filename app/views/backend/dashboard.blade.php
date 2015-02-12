@@ -10,6 +10,77 @@
 @section('content')
 
 <div id="main-content" class="dashboard">
+
+    @if(isset($data))
+    <div class="row m-t-20">
+        <div class="col-md-12">
+
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="panel no-bd bd-9 panel-stat">
+                    <div class="panel-body bg-dark">
+                        <div class="icon"><i class="glyph-icon flaticon-visitors"></i>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="stat-num">{{ $data['visit'] }}</div>
+                                <a href="#"><h3>Visitas</h3></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="panel no-bd bd-9 panel-stat">
+                    <div class="panel-body bg-blue">
+                        <div class="icon"><i class="fa fa-question"></i>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="stat-num">{{ $data['unique'] }}</div>
+                                <a href="#"><h3>Visitas unicas</h3></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="panel no-bd bd-9 panel-stat">
+                    <div class="panel-body bg-green">
+                        <div class="icon"><i class="fa fa-user"></i></div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="stat-num">{{ $data['prospect'] }}</div>
+                                <a href="#"><h3>Prospectos</h3></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="panel no-bd bd-9 panel-stat">
+                    <div class="panel-body bg-red">
+                        <div class="icon"><i class="fa fa-level-up"></i>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="stat-num">{{ $data['convertion'] }}%</div>
+                                <a href="#"><h3>Conversión</h3></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+    @endif
+
+
     <div class="row m-t-10">
         <div class="col-md-12">
             <div class="tabcordion">
@@ -18,7 +89,14 @@
                 </ul>
                 <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade active in" id="products">
-                       <div class="row p-20">
+                     <div class="row p-20">
+                         <div class="row">
+                            <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                                <h2>Hola {{ Auth::user()->name() }}! Bienvenido al BackOffice de MLMfunnels.</h2>
+                            </div>                  
+                        </div>
+
+                        
                         <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
                             @if(Input::has('start'))
                             <div class="pull-left">
@@ -54,11 +132,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-                                <h2>Hola {{ Auth::user()->name() }}! Bienvenido al BackOffice de MLMfunnels.</h2>
-                            </div>                  
-                        </div>
+
                     </div>
                 </div>                            
             </div>
@@ -74,80 +148,13 @@
 </div>
 
 
-@if(isset($data))
-<div class="row m-t-20">
-    <div class="col-md-12">
-
-        <div class="col-lg-3 col-md-3 col-sm-3">
-            <div class="panel no-bd bd-9 panel-stat">
-                <div class="panel-body bg-dark">
-                    <div class="icon"><i class="glyph-icon flaticon-visitors"></i>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="stat-num">{{ $data['visit'] }}</div>
-                            <a href="#"><h3>Visitas</h3></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-3 col-md-3 col-sm-3">
-            <div class="panel no-bd bd-9 panel-stat">
-                <div class="panel-body bg-blue">
-                    <div class="icon"><i class="fa fa-question"></i>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="stat-num">{{ $data['unique'] }}</div>
-                            <a href="#"><h3>Visitas unicas</h3></a>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-3">
-            <div class="panel no-bd bd-9 panel-stat">
-                <div class="panel-body bg-green">
-                    <div class="icon"><i class="fa fa-user"></i></div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="stat-num">{{ $data['prospect'] }}</div>
-                            <a href="#"><h3>Prospectos</h3></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-3">
-            <div class="panel no-bd bd-9 panel-stat">
-                <div class="panel-body bg-red">
-                    <div class="icon"><i class="fa fa-level-up"></i>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="stat-num">{{ $data['convertion'] }}%</div>
-                            <a href="#"><h3>Conversión</h3></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
 
-    </div>
-
-
-</div>
-@endif
-{{--
 <div class="row">
     <div class="col-md-12">
         <div class="panel">
             <div class="panel-body">
-                
+
                 <hr>
                 <div class="row">
                     <div class="col-md-12">
@@ -178,7 +185,7 @@
             </div>
         </div>
     </div>
-</div> --}}
+</div> 
 
     {{--<div class="row">        
         <div class="col-lg-12 m-b-20">

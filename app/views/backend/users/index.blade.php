@@ -88,7 +88,7 @@
                                         <th class="hidden-md hidden-lg">Datos</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="tbody" class="hide">
                                     @foreach ($users as $key => $user)      
                                     <tr>
                                         

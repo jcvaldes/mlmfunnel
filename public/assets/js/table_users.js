@@ -78,6 +78,7 @@ $(function () {
     })
     $(document).ready(function(){
         $("#filter-day").trigger("click");
+        $("#tbody").removeClass('hide');
     });
 
     
