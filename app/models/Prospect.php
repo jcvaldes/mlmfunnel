@@ -47,8 +47,6 @@ class Prospect extends Model {
 
         });       
     }
-
-
   
     /* Scopes */
     
@@ -90,9 +88,7 @@ class Prospect extends Model {
     /* Function */
     public function getComputerDate(){
         return explode(' ', $this->created_at)[0];
-    }
-
-    
+    }    
 
     public function getHumanDate()
     {

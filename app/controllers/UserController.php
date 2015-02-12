@@ -39,7 +39,7 @@ class UserController extends BaseController {
 
 	public function index()
 	{
-		$users = User::client()->get();
+		$users = User::all();
 
 		return View::make('backend.users.index', compact('users'));
 	}

@@ -84,6 +84,10 @@ $(function () {
         opt.end = moment().format("YYYY-MM-DD");
         oTable.fnFilter();
     })
+    $(document).ready(function(){
+        $("#filter-day").trigger("click");
+        $("#tbody").removeClass('hide');
+    });
 
     $("#filter-week").on("click", function(){
         opt.start = moment().startOf('week').format("YYYY-MM-DD");
