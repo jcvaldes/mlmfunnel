@@ -22,7 +22,7 @@
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading bg-blue">
-                    <h3 class="panel-title"><strong>Listado</strong> de prospectos</h3>
+                    <h3 class="panel-title"><strong>Listado</strong> de usuarios</h3>
                 </div>
                 <div class="panel-body">
                     <div class="row">
@@ -84,6 +84,7 @@
                                         <th class="hidden-sm hidden-xs">Email</th>
                                         <th class="hidden-sm hidden-xs">Teléfono</th>
                                         <th class="hidden-sm hidden-xs" style="text-align:center">Miembro desde</th>
+                                        <th class="hidden-sm hidden-xs">Estado</th>
                                         <th class="hidden-sm hidden-xs" style="text-align:center">Acciones</th>
                                         <th class="hidden-md hidden-lg">Datos</th>
                                     </tr>
@@ -97,6 +98,8 @@
                                         <td class="hidden-sm hidden-xs">{{ $user->phone }}</td>
                                         <th class="hidden-sm hidden-xs" style="text-align:center">{{ $user->getComputerDate() }}</th>
                                         
+                                        <td class="hidden-sm hidden-xs text-center">{{ $user->getStatus() }}</td>
+
                                         <td class="hidden-sm hidden-xs" style="text-align:center">
                                             <a href="/dashboard/user/{{$user->id}}" class="btn btn-info"><i class="fa fa-edit"></i> Editar</a>
                                         </td>

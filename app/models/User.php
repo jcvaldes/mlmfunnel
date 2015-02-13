@@ -24,7 +24,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
      */
     protected $hidden = array('password', 'remember_token');
 
-    protected $fillable = ['full_name', 'phone', 'picture', 'description', 'email', 'password', 'type', 'username'];
+    protected $fillable = ['full_name', 'phone', 'picture', 'description', 'email', 'password', 'type', 'username', 'status'];
 
     public static $rules = [
     'full_name' => 'required',
@@ -151,5 +151,23 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
     public function getComputerDate(){
         return explode(' ', $this->created_at)[0];
+    }
+
+    public function getStatus()
+    {
+        switch ($this->status) {
+            case 'active':
+                return '<span class="label label-success">Activo</span>';
+                break;
+
+            case 'suspended':
+                return '<span class="label label-warning">Suspendido</span>';
+                break;
+
+            case 'inactive':
+                return '<span class="label label-default">Inactivo</span>';
+                break;
+          
+        }
     }
 }

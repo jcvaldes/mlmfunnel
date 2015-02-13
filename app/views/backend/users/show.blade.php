@@ -97,6 +97,37 @@
                                                     </div>
                                                 </div>
 
+
+                                                <div class="row">
+                                                    <div class="control-label col-md-3">Estado:</div> 
+                                                    <div class="col-md-6">
+                                                        <div class="skin-section">
+                                                                <div>
+                                                                    <label>
+                                                                        <input type="radio" value="active" name="status"
+                                                                        @if($user->status =='active') checked @endif>Activo
+                                                                    </label>
+                                                                </div>
+                                                                
+                                                                <div>
+                                                                    <label>
+                                                                        <input type="radio" value="suspended" name="status"
+                                                                        @if($user->status =='suspended') checked @endif>Suspendido
+                                                                    </label> 
+                                                                </div>
+
+                                                                <div>
+                                                                    <label>
+                                                                        <input type="radio" value="inactive" name="status"
+                                                                        @if($user->status =='inactive') checked @endif>Inactivo
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                    </div>
+                                                </div>
+
+
+
                                             </div>
                                         </div>
                                     </div>
@@ -130,7 +161,7 @@
 
                                 <div class="col-sm-12">
                                     <div class="align-center">
-                                        <a href="/" class="btn btn-default">Cancelar</a>
+                                        <a href="/" class="btn btn-default m-r-20">Cancelar</a>
 
                                         <button class="btn btn-primary m-r-20 save-profile">Guardar</button>
                                         
