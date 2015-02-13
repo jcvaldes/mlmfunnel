@@ -45,7 +45,8 @@ class Prospect extends Model {
                 ]);
             $n->save();
 
-        });       
+        }); 
+        
     }
   
     /* Scopes */
@@ -55,7 +56,7 @@ class Prospect extends Model {
         return $query->where('user_id', Auth::user()->id);
     }
 
-     public function scopeOwner($query, $user_id)
+    public function scopeOwner($query, $user_id)
     {
         return $query->where('user_id', $user_id);
     }

@@ -43,6 +43,63 @@ class UserController extends BaseController {
 
 		return View::make('backend.users.index', compact('users'));
 	}
+
+
+	public function show($id)
+	{
+		$user = User::findOrFail($id);
+
+		return View::make('backend.users.show', compact('user'));
+	}
+
+
+	public function update($id)
+	{
+		$inputs = Input::all();
+
+		$rules = User::$rules;
+		$messages = User::$messages;
+
+		if($inputs['password'] == ''){
+			unset($rules['password']);
+			unset($inputs['password']);
+
+			unset($rules['password_confirmation']);
+			unset($inputs['password_confirmation']);
+		}else{
+			$rules['password'] .= '|confirmed';			
+		}
+
+		unset($rules['type']);
+		unset($rules['username']);
+		$rules['email'] .= ',email,' . $id;
+		
+		$v = Validator::make($inputs, $rules, $messages);
+		
+		if ($v->passes())
+		{
+			$user = User::find($id);
+			$user->fill($inputs);
+			if ($user->save()){
+				return Redirect::to('/dashboard/user/' . $id)->with('alert', ['type' => 'success', 'message' => 'El usuario se ha actualizado.']);
+			}
+			
+		}
+		return Redirect::back()->withInput()->withErrors($v->messages());
+	}
+
+	/**
+	 * Remove the specified resource from storage.
+	 * DELETE /user/{id}
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function destroy($id)
+	{
+		User::destroy($id);
+		return Redirect::to('/dashboard/user');
+	}
 	
 
 }

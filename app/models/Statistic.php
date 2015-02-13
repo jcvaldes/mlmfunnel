@@ -24,6 +24,11 @@ class Statistic extends Model {
         return $query->where('user_id', Auth::user()->id);
     }
 
+    public function scopeOwner($query, $user_id)
+    {
+        return $query->where('user_id', $user_id);
+    }
+
     public function scopePage($query, $page)
     {
         return $query->where('page', $page);

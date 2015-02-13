@@ -61,6 +61,25 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
                 $user->password = \Hash::make($user->password);
             }
         });
+        
+        static::deleting(function($user)
+        {   
+            $prospects = Prospect::owner($user->id)->get();
+
+            foreach ($prospects as $key => $p) {
+                Prospect::destroy($p->id);
+            }
+
+            $statistics = Statistic::owner($user->id)->get();
+            
+            foreach ($statistics as $key => $s) {
+                Statistic::destroy($s->id);
+            }
+
+            if(File::exists( public_path() . $user->picture )){
+                Croppa::delete($user->picture);               
+            }            
+        });
     }
 
     /* Scopes */       

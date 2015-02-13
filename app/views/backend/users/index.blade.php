@@ -84,7 +84,7 @@
                                         <th class="hidden-sm hidden-xs">Email</th>
                                         <th class="hidden-sm hidden-xs">Teléfono</th>
                                         <th class="hidden-sm hidden-xs" style="text-align:center">Miembro desde</th>
-                                        {{--<th class="hidden-sm hidden-xs" style="text-align:center">Acciones</th>--}}
+                                        <th class="hidden-sm hidden-xs" style="text-align:center">Acciones</th>
                                         <th class="hidden-md hidden-lg">Datos</th>
                                     </tr>
                                 </thead>
@@ -97,10 +97,9 @@
                                         <td class="hidden-sm hidden-xs">{{ $user->phone }}</td>
                                         <th class="hidden-sm hidden-xs" style="text-align:center">{{ $user->getComputerDate() }}</th>
                                         
-                                        {{--<td class="hidden-sm hidden-xs" style="text-align:center">
-                                            <button totle="Editar" class="btn btn-info edit-prospect" data-id="{{ $user->id }}"><i class="fa fa-edit"></i></button>                                        
-                                            <button totle="Eliminar" class="btn btn-danger delete-prospect" data-id="{{ $user->id }}"><i class="fa fa-trash-o"></i></button>
-                                        </td>--}}
+                                        <td class="hidden-sm hidden-xs" style="text-align:center">
+                                            <a href="/dashboard/user/{{$user->id}}" class="btn btn-info"><i class="fa fa-edit"></i> Editar</a>
+                                        </td>
                                         <td class="hidden-md hidden-lg">{{ $user->full_name }} <br>{{ $user->email }} <br>{{ $user->phone }} <br> {{ $user->getComputerDate() }} </td>
                                     </tr>
                                     @endforeach
