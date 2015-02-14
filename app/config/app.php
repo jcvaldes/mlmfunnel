@@ -125,6 +125,8 @@ return array(
 		'Bkwld\Croppa\ServiceProvider',
 		'Intervention\Image\ImageServiceProvider',
 		'Ielijose\Clickatell\ClickatellServiceProvider',
+		'Ielijose\Heywire\HeywireServiceProvider',
+
 
 	),
 
@@ -192,11 +194,12 @@ return array(
 		'URL'               => 'Illuminate\Support\Facades\URL',
 		'Validator'         => 'Illuminate\Support\Facades\Validator',
 		'View'              => 'Illuminate\Support\Facades\View',
-		'Model' => 'Way\Database\Model',
-		'Identicon'  => 'Rdpascua\Identicon\Facade',
-		'Croppa' => 'Bkwld\Croppa\Facade',
-		'Intervention' => 'Intervention\Image\Facades\Image',
-		'Clickatell' => 'Ielijose\Clickatell\Facades\Clickatell',
+		'Model' 			=> 'Way\Database\Model',
+		'Identicon'  		=> 'Rdpascua\Identicon\Facade',
+		'Croppa'			=> 'Bkwld\Croppa\Facade',
+		'Intervention' 		=> 'Intervention\Image\Facades\Image',
+		'Clickatell'		=> 'Ielijose\Clickatell\Facades\Clickatell',
+		'Heywire'          	=> 'Ielijose\Heywire\Facades\Heywire',
 
 	),
 
