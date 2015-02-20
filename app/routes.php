@@ -10,6 +10,10 @@ Route::get('/', function(){
 	return Redirect::to('/auth/login');
 });	
 
+Route::get('/aweber', function(){
+	return View::make('aweber');
+});	
+
 /* API Statistic */
 Route::any('/api/statistic/{id}/{page}/{type}', ['uses' => 'StatisticController@store']);
 Route::any('/api/statistic/{id}', ['uses' => 'StatisticController@show']);
