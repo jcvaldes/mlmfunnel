@@ -27,7 +27,7 @@ $app = new Illuminate\Foundation\Application;
 $env = $app->detectEnvironment(array(
 
 	'local' => array('ielijose', 'ielijose-laptop'),
-	'production' => array('ielijose-server'),
+	'production' => array('ielijose-server', 'aws3031.alojamientowebseguro.com'),
 
 ));
 

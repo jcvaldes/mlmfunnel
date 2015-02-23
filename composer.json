@@ -11,7 +11,8 @@
 		"bkwld/croppa": "~3.0",
 		"intervention/image": "2.*",
 		"ielijose/clickatell": "dev-master",
-		"ielijose/heywire": "dev-master"
+		"ielijose/heywire": "dev-master",
+		"yangqi/htmldom": "dev-master"
 	},
 	"autoload": {
 		"classmap": [

@@ -55,9 +55,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'mlmfunnel',
-			'username'  => 'forge',
-			'password'  => 'aIxQq4AdfmvibVD3VeR2',
+			'database'  => 'dineroys_funnel',
+			'username'  => 'dineroys_funnel',
+			'password'  => '4CT?*TeeLPr!',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
