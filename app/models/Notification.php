@@ -26,17 +26,19 @@ class Notification extends Model {
                     $prospect = Prospect::find($notification->type_id);
                     $user = User::find($notification->user_id);
 
-                    Clickatell::send("Nuevo Interesado en ".$prospect->type." - Nombre: ".$prospect->name." Email: ".$prospect->email." Tel.: ".$prospect->phone, $user->phone);
-                    //Heywire::text($user->phone, "Nuevo Interesado en ".$prospect->type." - Nombre: ".$prospect->name." Email: ".$prospect->email." Tel.: ".$prospect->phone);
-                    
-                    $data = ['name' => $prospect->name, 'email' => $prospect->email, 'phone' => $prospect->phone];
-                    Mail::queue('emails.notify.new-prospect', $data, function($message) use ($user)
-                    {
-                        $message->from('noreply@mlmfunnel.com', 'MLMfunnel');
-                        $message->to($user->email, $user->full_name)->subject('Nuevo prospecto! - MLMfunnel');
-                    });
+                    if($user->notif_email){
+                        $data = ['name' => $prospect->name, 'email' => $prospect->email, 'phone' => $prospect->phone];
+                        Mail::queue('emails.notify.new-prospect', $data, function($message) use ($user)
+                        {
+                            $message->from('noreply@mlmfunnel.com', 'MLMfunnel');
+                            $message->to($user->email, $user->full_name)->subject('Nuevo prospecto! - MLMfunnel');
+                        });
+                    }
+                    if($user->notif_phone){
+                        Clickatell::send("Nuevo Interesado en ".$prospect->type." - Nombre: ".$prospect->name." Email: ".$prospect->email." Tel.: ".$prospect->phone, $user->phone);
+                        //Heywire::text($user->phone, "Nuevo Interesado en ".$prospect->type." - Nombre: ".$prospect->name." Email: ".$prospect->email." Tel.: ".$prospect->phone);
+                    }                    
                 break;
-
             }
         });       
     }

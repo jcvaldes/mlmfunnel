@@ -57,20 +57,24 @@ class UploadController extends BaseController {
     public function post_avatar()
     {
         $file = Input::file('file');
-        $destinationPath = public_path() . '/uploads/avatar/';
-        $filename = str_random(16)."_".$file->getClientOriginalName();
-        $upload_success = Input::file('file')->move($destinationPath, $filename);
+        if (Input::hasFile('file')) { 
+            if (Input::file('file')->isValid()) {
+                
+                 $destinationPath = public_path() . '/uploads/avatar/';
+                 $filename = str_random(16)."_".$file->getClientOriginalName();
+                 $upload_success = Input::file('file')->move($destinationPath, $filename);
 
-        if ($upload_success) {
-            $avatar = '/uploads/avatar/' . $filename;
+                 if($upload_success){
+                    $avatar = '/uploads/avatar/' . $filename;
+                    Session::put('avatar', $avatar);
+                    $response = ['avatar' => $avatar, 'success' => 200];
 
-            Session::put('avatar', $avatar);
-            $response = ['avatar' => $avatar, 'success' => 200];
-
-            return Response::json($response);
-        } else {
-            return Response::json('error', 400);
-        }
+                    return Response::json($response);
+                } else {
+                    return Response::json('error', 400);
+                }
+            }
+        }       
     }
     # Avatar Crop
     public function post_avatar_crop()

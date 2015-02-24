@@ -13,6 +13,9 @@ class SharedController extends BaseController {
 		$inputs = Input::all();
 		//dd($inputs);
 
+		$inputs['notif_email'] = Input::has('notif_email');
+		$inputs['notif_phone'] = Input::has('notif_phone');
+
 		$rules = User::$rules;
 		$messages = User::$messages;
 

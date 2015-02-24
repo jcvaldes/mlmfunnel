@@ -105,6 +105,28 @@
                                         <div class="col-md-12">
                                             <div class="panel">
                                                 <div class="panel-title line">
+                                                    <div class="caption"><i class="fa fa-bell c-gray m-r-10"></i> Notificaciones:</div>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <div class="row-fluid col-md-6">
+                                                        <label>
+                                                            {{ Form::checkbox('notif_email', 1, $user->notif_email) }} Via Email
+                                                        </label>                                    
+                                                    </div>
+                                                    <div class="row-fluid col-md-6">
+                                                        <label>
+                                                            {{ Form::checkbox('notif_phone', 1, $user->notif_phone) }} Via Teléfono
+                                                        </label>                                    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row profile-classic">
+                                        <div class="col-md-12">
+                                            <div class="panel">
+                                                <div class="panel-title line">
                                                     <div class="caption"><i class="fa fa-key c-gray m-r-10"></i> Seguridad</div>
                                                 </div>
                                                 <div class="panel-body">
