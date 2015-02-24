@@ -299,7 +299,7 @@
                     <div style="outline: none;" id="col-full-678" class="col-md-12 innerContent col_left" data-col="full" data-trigger="none" data-animate="fade" data-delay="500" data-title="full column">
                         <div class="col-inner bgCover  noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin">
                             <div style="outline: medium none; cursor: pointer;" class="de elHeadlineWrapper de-editable" id="tmp_headline1-15092" data-de-type="headline" data-de-editing="false" data-title="headline" data-ce="true" data-trigger="none" data-animate="fade" data-delay="500">
-                                <div class="ne elHeadline lh3 elMargin0 elBGStyle0 hsTextShadow0 hsSize18" style="text-align: center; color: rgb(255, 255, 255);" data-bold="inherit" contenteditable="false">Copyright 2014 - Your Company Name - Marketing Team, LLC
+                                <div class="ne elHeadline lh3 elMargin0 elBGStyle0 hsTextShadow0 hsSize18" style="text-align: center; color: rgb(255, 255, 255);" data-bold="inherit" contenteditable="false">Copyright 2015 - DineroySalud.net
                                     <br>
                                 </div>
 
@@ -410,8 +410,11 @@
                 event.preventDefault();
                 var form = $("#suscribe-form").serialize();                
                 $.post('/suscribe', form, function(data, textStatus, xhr) {
-                   $("#suscribe-form").submit();
+
+                   
                 });
+
+                setTimeout(function(){ $("#suscribe-form").submit(); }, 1000);
             });
         });
     </script>   

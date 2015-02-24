@@ -66,14 +66,14 @@ $(function () {
 
     $("#filter-date").on("click", function(){
         opt.start = moment($('#start').data('date')).format("YYYY-MM-DD");
-        opt.end = moment($('#end').data('date')).format("YYYY-MM-DD");
+        opt.end = moment($('#end').data('date')).add(1, 'days').format("YYYY-MM-DD");
 
         oTable.fnFilter();
     })
 
     $("#filter-day").on("click", function(){
         opt.start = moment().format("YYYY-MM-DD");
-        opt.end = moment().format("YYYY-MM-DD");
+        opt.end = moment().add(1, 'days').format("YYYY-MM-DD");
         oTable.fnFilter();
     })
     $(document).ready(function(){
@@ -85,13 +85,13 @@ $(function () {
     $("#filter-week").on("click", function(){
         opt.start = moment().startOf('week').format("YYYY-MM-DD");
         //opt.start = moment().subtract(1, 'week').format("YYYY-MM-DD");
-        opt.end = moment().format("YYYY-MM-DD");
+        opt.end = moment().add(1, 'days').format("YYYY-MM-DD");
         oTable.fnFilter();
     })
 
     $("#filter-month").on("click", function(){
         opt.start = moment().startOf('month').format("YYYY-MM-DD");
-        opt.end = moment().format("YYYY-MM-DD");        
+        opt.end = moment().add(1, 'days').format("YYYY-MM-DD");        
         oTable.fnFilter();
     })
 
