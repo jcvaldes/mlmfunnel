@@ -30,8 +30,8 @@ class Notification extends Model {
                         $data = ['name' => $prospect->name, 'email' => $prospect->email, 'phone' => $prospect->phone];
                         Mail::queue('emails.notify.new-prospect', $data, function($message) use ($user)
                         {
-                            $message->from('noreply@mlmfunnel.com', 'MLMfunnel');
-                            $message->to($user->email, $user->full_name)->subject('Nuevo prospecto! - MLMfunnel');
+                            $message->from(Setting::key('app_maile')->first()->value, Setting::key('app_name')->first()->value);
+                            $message->to($user->email, $user->full_name)->subject('Nuevo prospecto! - ' . Setting::key('app_name')->first()->value);
                         });
                     }
                     if($user->notif_phone==1){
