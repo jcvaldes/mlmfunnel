@@ -410,11 +410,7 @@
                 event.preventDefault();
 
                 var form = $("#suscribe-form").serialize();
-                var r;
-
-                $.ajaxSetup({
-                    async: false,
-                });
+                var r;              
                 
                 $.post('/suscribe', form, function(data, textStatus, xhr) {
                     r = data.error;
