@@ -20,13 +20,10 @@ class UploadController extends BaseController {
 
                     return Response::json($response);
                 } else {
-                   // return Response::json('error', 400);
-                    dd(['error' => 'no subio']);
+                   return Response::json('error', 400);
                 }                
-            }
-            dd(['error' => 'no es valido']);
-        }   
-        dd(['error' => 'no hay archivo']);    
+            }            
+        }
     }
     # Avatar Crop
     public function post_avatar_crop()
