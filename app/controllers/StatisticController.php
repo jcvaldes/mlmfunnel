@@ -79,6 +79,7 @@ class StatisticController extends BaseController {
 
 		$statistics = DB::table('statistics')
 		->select(DB::raw('DATE(created_at) as date'), DB::raw('user_id, type'), DB::raw('count(*) as views'))
+		->where('user_id', Auth::user()->id)
 		->whereBetween('created_at', array($start, $end))
 		->groupBy('date', 'type')
 		->get();

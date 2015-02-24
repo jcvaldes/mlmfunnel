@@ -160,7 +160,6 @@
                     <div class="col-md-12">
                         <div id="graph-wrapper">
                             <div class="graph-info p-r-10">
-                                <a href="javascript:void(0)" class="btn bg-green">Correos</a>
                                 <a href="javascript:void(0)" class="btn bg-blue">Visitas</a>
 
                                 <a href="javascript:void(0)" class="btn bg-purple filter">Filtrar</a> 
@@ -271,7 +270,7 @@
             <form action="#">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <h4 class="modal-title" id="myModalLabel"><strong>Filtrar notificaciones</strong> </h4>
+                    <h4 class="modal-title" id="myModalLabel"><strong>Filtrar estadisticas</strong> </h4>
                 </div>
                 <div class="modal-body ">   
 

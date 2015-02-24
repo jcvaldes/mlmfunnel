@@ -73,31 +73,7 @@
             lineWidth: 3
         },
         color: '#fff'
-    }, {
-        label: "Correos",
-        data: mails,
-        animator: {
-            steps: 300,
-            duration: 1000,
-            start: 0
-        },
-        lines: {
-            fill: 0.7,
-            lineWidth: 0,
-        },
-        color: '#18A689'
-    }, {
-        label: "Correos",
-        data: mails,
-        points: {
-            show: true,
-            fill: true,
-            radius: 6,
-            fillColor: "#18A689",
-            lineWidth: 3
-        },
-        color: '#fff'
-    }, ];
+    },  ];
 
     function lineCharts(){
         var line_chart = $.plotAnimator($('#graph-lines'), graph_lines, {
@@ -149,15 +125,7 @@
         // Visitors
         data: visits,
         color: '#00b5f3'
-    }, {
-        // Returning Visitors
-        data: mails,
-        color: '#18A689',
-        points: {
-            radius: 4,
-            fillColor: '#008fc0'
-        }
-    }];
+    }, ];
 
     function barCharts(){
         bar_chart = $.plotAnimator($('#graph-bars'), graph_bars, {
