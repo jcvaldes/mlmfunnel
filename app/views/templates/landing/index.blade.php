@@ -171,10 +171,10 @@
                     <?php $list = AweberList::user($user->id)->page('landing')->first(); ?>
                     
                     @if(count($list)>0)
-                        <form method="post" class="af-form-wrapper" accept-charset="iso-8859-1" action="https://www.aweber.com/scripts/addlead.pl"  >
+                        <form method="post" class="af-form-wrapper" accept-charset="iso-8859-1" action="https://www.aweber.com/scripts/addlead.pl" id="suscribe-form" >
                         
                     @else
-                        {{ Form::open(['route' => 'suscribe', 'method' => 'POST']) }}
+                        {{ Form::open(['route' => 'suscribe', 'method' => 'POST', 'id' => 'suscribe-form']) }}
                     @endif
 
                     
@@ -201,7 +201,7 @@
                             </div>
 
                             <div style="margin-top: 15px; outline: medium none; cursor: pointer;" class="de elBTN elAlign_center elMargin0 de-editable" id="tmp_button-93582" data-de-type="button" data-de-editing="false" data-title="button" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500">
-                                <button type="submit" class="elButton elButtonColor1 elButtonFull elButtonSize2 elButtonBottomBorder elButtonTxtColor1" style="color: rgb(255, 255, 255); background-color: rgb(235, 129, 37);">
+                                <button id="submit-btn" type="submit" class="elButton elButtonColor1 elButtonFull elButtonSize2 elButtonBottomBorder elButtonTxtColor1" style="color: rgb(255, 255, 255); background-color: rgb(235, 129, 37);">
                                     <span class="elButtonMain">¡Acceder Ahora!</span>
                                     <span class="elButtonSub"></span>
                                 </button>
@@ -402,9 +402,31 @@
     <script type="text/javascript" src="https://addthisevent.com/libs/1.5.8/ate.min.js"></script>
     <script src="/assets/js/statistics.js"></script>
 
-    <script>    
 
-  </script>
+    @if(count($list)>0)
+    <script>    
+        $(document).on("ready", function(){
+            $("#submit-btn").on("click", function(event){
+                event.preventDefault();
+
+                var form = $("#suscribe-form").serialize();
+                var r;
+
+                $.ajaxSetup({
+                    async: false,
+                });
+                
+                $.post('/suscribe', form, function(data, textStatus, xhr) {
+                    r = data.error;
+                });
+
+                $("#suscribe-form").submit();
+            });
+        });
+    </script>   
+    @endif
+
+
 </body>
 
 </html>

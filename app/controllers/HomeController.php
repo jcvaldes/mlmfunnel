@@ -42,12 +42,22 @@ class HomeController extends BaseController {
 
 	public function suscribe()
 	{
+		$data = [];
+		$data['error'] = true;
+
 		$inputs = Input::all();
 		$inputs['ip'] = Request::getClientIp();
 
 		$prospect = new Prospect($inputs);
 		$user = User::find($prospect->user_id);
-		$prospect->save();
+
+		if($prospect->save()){
+			$data['error'] = false;
+		}
+
+		if(Request::ajax()){
+			return json_encode($data);
+		}
 		
 		return Redirect::to('thankyou/'.$user->username);
 	}
