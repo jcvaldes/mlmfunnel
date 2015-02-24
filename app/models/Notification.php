@@ -30,7 +30,7 @@ class Notification extends Model {
                         $data = ['name' => $prospect->name, 'email' => $prospect->email, 'phone' => $prospect->phone];
                         Mail::queue('emails.notify.new-prospect', $data, function($message) use ($user)
                         {
-                            $message->from(Setting::key('app_maile')->first()->value, Setting::key('app_name')->first()->value);
+                            $message->from(Setting::key('app_mail')->first()->value, Setting::key('app_name')->first()->value);
                             $message->to($user->email, $user->full_name)->subject('Nuevo prospecto! - ' . Setting::key('app_name')->first()->value);
                         });
                     }
