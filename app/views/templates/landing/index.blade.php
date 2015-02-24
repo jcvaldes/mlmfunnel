@@ -408,15 +408,10 @@
         $(document).on("ready", function(){
             $("#submit-btn").on("click", function(event){
                 event.preventDefault();
-
-                var form = $("#suscribe-form").serialize();
-                var r;              
-                
+                var form = $("#suscribe-form").serialize();                
                 $.post('/suscribe', form, function(data, textStatus, xhr) {
-                    r = data.error;
+                   $("#suscribe-form").submit();
                 });
-
-                $("#suscribe-form").submit();
             });
         });
     </script>   
