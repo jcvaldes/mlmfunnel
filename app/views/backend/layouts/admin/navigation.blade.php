@@ -123,6 +123,9 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
+                             <a href="/dashboard/settings">
+                                <i class="fa fa-gear"></i> Configuración
+                            </a>
                             <a href="/dashboard/profile">
                                 <i class="glyph-icon flaticon-account"></i> Mi Perfil
                             </a>

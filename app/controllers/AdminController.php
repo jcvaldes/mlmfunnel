@@ -68,4 +68,27 @@ class AdminController extends BaseController {
         return Response::json(['avatar' => User::find($id)->picture]);
     }
 
+
+    /* SETTINGS */
+
+    public function settings()
+    {
+        return View::make('backend.settings');
+    }
+
+    public function settings_post()
+    {
+        $inputs = Input::all();
+
+        foreach ($inputs as $key => $value) {
+            $setting = Setting::firstOrNew(['key' => $key]);
+            $setting->value = $value;
+            $setting->save();
+        }
+        return Redirect::to('/dashboard/settings')->with('alert', ['type' => 'success', 'message' => 'Configuración guardada.']);
+    }
+
+
+   
+
 }

@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'info@mlmfunnel.com', 'name' => 'MLMfunnel'),
+	'from' => array('address' => Setting::key('app_mail')->first()->value, 'name' => Setting::key('app_name')->first()->value),
 
 	/*
 	|--------------------------------------------------------------------------

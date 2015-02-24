@@ -5,6 +5,9 @@ Route::group(array('before' => 'auth', 'prefix' => 'dashboard'), function()
 	Route::get('/', ['uses' => 'UserController@dashboard']);
 	Route::get('/stats/{page}', ['uses' => 'UserController@dashboard_stats']);
 
+	Route::get('/settings', ['uses' => 'AdminController@settings']);
+	Route::post('/settings', ['uses' => 'AdminController@settings_post']);
+
 	/* Landing */
 	Route::resource('user', 'UserController');
 
