@@ -26,7 +26,7 @@ class Notification extends Model {
                     $prospect = Prospect::find($notification->type_id);
                     $user = User::find($notification->user_id);
 
-                    if($user->notif_email){
+                    if($user->notif_email==1){
                         $data = ['name' => $prospect->name, 'email' => $prospect->email, 'phone' => $prospect->phone];
                         Mail::queue('emails.notify.new-prospect', $data, function($message) use ($user)
                         {
@@ -34,7 +34,7 @@ class Notification extends Model {
                             $message->to($user->email, $user->full_name)->subject('Nuevo prospecto! - MLMfunnel');
                         });
                     }
-                    if($user->notif_phone){
+                    if($user->notif_phone==1){
                         Clickatell::send("Nuevo Interesado en ".$prospect->type." - Nombre: ".$prospect->name." Email: ".$prospect->email." Tel.: ".$prospect->phone, $user->phone);
                         //Heywire::text($user->phone, "Nuevo Interesado en ".$prospect->type." - Nombre: ".$prospect->name." Email: ".$prospect->email." Tel.: ".$prospect->phone);
                     }                    

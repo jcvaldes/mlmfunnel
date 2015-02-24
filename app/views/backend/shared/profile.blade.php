@@ -229,7 +229,7 @@ $(document).on("ready", function() {
         }, 'json');
     });
     $("#avatar, #avatar figcaption, #avatar p").dropzone({
-        url: "/dashboard/avatar/",
+        url: "/dashboard/avatar",
         createImageThumbnails: false,
         init: function() {
             this.on("success", function(file) {
