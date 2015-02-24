@@ -8,13 +8,13 @@ class UserController extends BaseController {
 		$end = (Input::get('end')) ? Input::get('end') : null;
 
 		$data = [];
-       
-        $data['visit'] = Statistic::current()->type('visit')->dates($start, $end)->get()->count();
-        $data['unique'] = Statistic::current()->groupBy('ip')->dates($start, $end)->get()->count();
-        $data['prospect'] = Prospect::current()->dates($start, $end)->get()->count();
-        $data['convertion'] = ($data['unique']==0) ? 0 : ($data['prospect'] / $data['unique']) * 100;
 
-        $landing = Statistic::stats('landing', $start, $end);
+		$data['visit'] = Statistic::current()->type('visit')->dates($start, $end)->get()->count();
+		$data['unique'] = Statistic::current()->groupBy('ip')->dates($start, $end)->get()->count();
+		$data['prospect'] = Prospect::current()->dates($start, $end)->get()->count();
+		$data['convertion'] = ($data['unique']==0) ? 0 : ($data['prospect'] / $data['unique']) * 100;
+
+		$landing = Statistic::stats('landing', $start, $end);
 
 		return View::make('backend.dashboard', compact('data', 'landing'));
 	}
@@ -26,13 +26,13 @@ class UserController extends BaseController {
 		$end = (Input::get('end')) ? Input::get('end') : null;
 
 		$data = [];
-       
-        $data['visit'] = Statistic::current()->type('visit')->page($page)->dates($start, $end)->get()->count();
-        $data['unique'] = Statistic::current()->groupBy('ip')->page($page)->dates($start, $end)->get()->count();
-        $data['prospect'] = Prospect::current()->type($page)->dates($start, $end)->get()->count();
-        $data['convertion'] = ($data['unique']==0) ? 0 : ($data['prospect'] / $data['unique']) * 100;
 
-        $landing = Statistic::stats($page, $start, $end);
+		$data['visit'] = Statistic::current()->type('visit')->page($page)->dates($start, $end)->get()->count();
+		$data['unique'] = Statistic::current()->groupBy('ip')->page($page)->dates($start, $end)->get()->count();
+		$data['prospect'] = Prospect::current()->type($page)->dates($start, $end)->get()->count();
+		$data['convertion'] = ($data['unique']==0) ? 0 : ($data['prospect'] / $data['unique']) * 100;
+
+		$landing = Statistic::stats($page, $start, $end);
 
 		return View::make('backend.dashboard-stats', compact('data', 'landing'));
 	}
@@ -101,5 +101,38 @@ class UserController extends BaseController {
 		return Redirect::to('/dashboard/user');
 	}
 	
+
+	public function page_setup()
+	{
+		//$inputs = Input::all();
+		//dd($inputs);
+		if(Input::has('aweber-code') && Input::has('page')){
+			$html = new Htmldom(Input::get('aweber-code'));
+
+			$form['meta_web_form_id'] = (isset($html->find('input[name="meta_web_form_id"]')[0]->value)) ? $html->find('input[name="meta_web_form_id"]')[0]->value : '';
+			$form['listname'] = (isset($html->find('input[name="listname"]')[0]->value)) ? $html->find('input[name="listname"]')[0]->value : '';
+			$form['page'] = Input::get('page');
+
+			$aweberlist = new AweberList($form);
+			if ($aweberlist->save())
+			{
+				return Redirect::to('/dashboard/landing')->with('alert', ['type' => 'success', 'message' => 'Cambios guardados con exito.']);;			
+			}
+
+			//dd($form);
+		}
+		return Redirect::to('/dashboard/landing')->with('alert', ['type' => 'danger', 'message' => 'Ocurrio un error, intenta mas tarde.']);
+	}
+
+	public function delete_list($page)
+	{
+		$list = AweberList::current()->page($page)->first();
+		if (AweberList::destroy($list->id))
+		{
+			return Redirect::to('/dashboard/landing')->with('alert', ['type' => 'warning', 'message' => 'Lista eliminada.']);			
+		}else{
+			return Redirect::to('/dashboard/landing')->with('alert', ['type' => 'danger', 'message' => 'Ocurrio un error, intenta mas tarde.']);
+		}
+	}
 
 }

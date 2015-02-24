@@ -126,6 +126,7 @@ return array(
 		'Intervention\Image\ImageServiceProvider',
 		'Ielijose\Clickatell\ClickatellServiceProvider',
 		'Ielijose\Heywire\HeywireServiceProvider',
+		'Yangqi\Htmldom\HtmldomServiceProvider',
 
 
 	),
@@ -200,6 +201,7 @@ return array(
 		'Intervention' 		=> 'Intervention\Image\Facades\Image',
 		'Clickatell'		=> 'Ielijose\Clickatell\Facades\Clickatell',
 		'Heywire'          	=> 'Ielijose\Heywire\Facades\Heywire',
+		'Htmldom' => 'Yangqi\Htmldom\Htmldom',
 
 	),
 

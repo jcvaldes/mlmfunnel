@@ -5,6 +5,10 @@ Route::group(array('before' => 'auth', 'prefix' => 'dashboard'), function()
 	Route::get('/', ['uses' => 'UserController@dashboard']);
 	Route::get('/stats/{page}', ['uses' => 'UserController@dashboard_stats']);
 
+
+	Route::post('/setup-page', ['uses' => 'UserController@page_setup']);
+	Route::get('/delete-list/{page}', ['uses' => 'UserController@delete_list']);
+
 	/* Landing */
 	Route::resource('landing', 'LandingController');
 

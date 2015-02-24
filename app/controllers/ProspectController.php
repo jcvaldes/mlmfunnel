@@ -48,7 +48,7 @@ class ProspectController extends BaseController {
 		{
 			return Redirect::to('/dashboard/landing')->with('alert', ['type' => 'success', 'message' => 'El landing ha sido guardado.']);;			
 		}        
-		dd($landing->getErrors());
+		//dd($landing->getErrors());
         return Redirect::to('/dashboard/landing')->with('alert', ['type' => 'danger', 'message' => 'Ocurrio un error, intenta mas tarde.']);;
 
 	}

@@ -69,7 +69,8 @@
 
                             {{ Form::password('password_confirmation', array('placeholder'=>'Confirmar contraseña:', 'class' => 'input-field')) }}
                             
-                            <button id="submit-form" type="submit" class="btn btn-login ladda-button" data-style="expand-left"><span class="ladda-label">Registrar</span></button>
+                            <button  type="submit" class="btn btn-login ladda-button" data-style="expand-left"><span class="ladda-label">Registrar</span></button>
+
                         {{Form::close()}}
 
                         <div class="login-links">

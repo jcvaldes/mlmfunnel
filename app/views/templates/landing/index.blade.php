@@ -167,7 +167,17 @@
                             </div>
                         </div>
                     </div>
-                    {{ Form::open(['route' => 'suscribe', 'method' => 'POST']) }}
+
+                    <?php $list = AweberList::user($user->id)->page('landing')->first(); ?>
+                    
+                    @if(count($list)>0)
+                        <form method="post" class="af-form-wrapper" accept-charset="iso-8859-1" action="https://www.aweber.com/scripts/addlead.pl"  >
+                        
+                    @else
+                        {{ Form::open(['route' => 'suscribe', 'method' => 'POST']) }}
+                    @endif
+
+                    
                     <div style="outline: none;" id="col-right-474" class="col-md-6 innerContent col_right" data-col="right" data-trigger="none" data-animate="fade" data-delay="500" data-title="Right column">
                         <div style="background-color: rgba(0, 0, 0, 0.64); padding: 40px;" class="col-inner bgCover  noBorder borderSolid border3px cornersAll P0-top P0-bottom P0H noTopMargin radius10 shadow40">
                             <div style="outline: medium none; cursor: pointer;" class="de elHeadlineWrapper de-editable" id="tmp_headline1-86070" data-de-type="headline" data-de-editing="false" data-title="headline" data-ce="true" data-trigger="none" data-animate="fade" data-delay="500">
@@ -200,9 +210,24 @@
 
                         </div>
                     </div>
-                     {{ Form::hidden('url', url()) }}
+                    {{ Form::hidden('url', url()) }}
                     {{ Form::hidden('user_id', $user->id) }}
                     {{ Form::hidden('type', 'landing') }}
+
+
+                    @if(count($list)>0)
+                    <input type="hidden" name="meta_web_form_id" value="{{ $list->meta_web_form_id }}" />
+                    <input type="hidden" name="meta_split_id" value="" />
+                    <input type="hidden" name="listname" value="{{ $list->listname }}" />
+                    <input type="hidden" name="redirect" value="{{ url().'/thankyou/'. $user->username }}"/>
+
+                    <input type="hidden" name="meta_adtracking" value="mlmfunnel" />
+                    <input type="hidden" name="meta_message" value="1" />
+                    <input type="hidden" name="meta_required" value="name,email" />
+
+                    <input type="hidden" name="meta_tooltip" value="" />
+
+                    @endif
 
                     {{ Form::close() }}
                 </div>
