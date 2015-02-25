@@ -24,6 +24,11 @@ class HomeController extends BaseController {
 		}
 		
 		$user = User::username($user)->firstOrFail();
+
+		if($user->isSuspended()){
+			return Redirect::route('login');
+		}
+
 		switch ($link) {
 			case 'landing':
 				return View::make('templates.landing.index', compact('user'));

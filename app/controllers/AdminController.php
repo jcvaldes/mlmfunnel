@@ -73,7 +73,7 @@ class AdminController extends BaseController {
 
     public function settings()
     {
-        return View::make('backend.settings');
+        return View::make('backend.pages.settings');
     }
 
     public function settings_post()

@@ -3,6 +3,7 @@
 Route::group(array('before' => 'auth', 'prefix' => 'dashboard'), function()
 {
 	Route::get('/', ['uses' => 'UserController@dashboard']);
+	Route::get('/suspended', ['uses' => 'UserController@suspended']);
 	Route::get('/stats/{page}', ['uses' => 'UserController@dashboard_stats']);
 
 

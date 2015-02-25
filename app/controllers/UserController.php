@@ -37,12 +37,19 @@ class UserController extends BaseController {
 		return View::make('backend.dashboard-stats', compact('data', 'landing'));
 	}
 
+	public function suspended()
+	{
+		return View::make('backend.pages.suspended');
+	}
+
 	public function index()
 	{
 		$users = User::all();
 
 		return View::make('backend.users.index', compact('users'));
 	}
+
+	
 
 
 	public function show($id)

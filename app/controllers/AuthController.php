@@ -51,7 +51,12 @@ class AuthController extends BaseController {
 			);		
 
 			if ($r = Auth::attempt($userdata)) {
-				return Redirect::to('/dashboard');
+				if(Auth::user()->status == 'suspended'){
+					return Redirect::to('/dashboard/suspended');
+				}else{
+					return Redirect::to('/dashboard');
+				}
+				
 			} else {
 				return Redirect::to('/auth/login')->with('alert', ['type' => 'danger', 'message' => 'Credenciales invalidas']);
 			}
