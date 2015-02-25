@@ -118,35 +118,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
     public function getHumanDate()
     {
-        $txt = 'carbon.timediff.';
-        $isNow = true;
-        $other = Carbon::now();
-        $delta = abs($other->diffInSeconds($this->created_at));
-
-        $divs = array(
-           'second' => Carbon::SECONDS_PER_MINUTE,
-           'minute' => Carbon::MINUTES_PER_HOUR,
-           'hour'   => Carbon::HOURS_PER_DAY,
-           'day'    => 30,
-           'month'  => Carbon::MONTHS_PER_YEAR
-           );
-
-        $unit = 'year';
-        foreach ($divs as $divUnit => $divValue) {
-            if ($delta < $divValue) {
-                $unit = $divUnit;
-                break;
-            }
-
-            $delta = floor($delta / $divValue);
-        }
-
-        if ($delta == 0) {
-            $delta = 1;
-        }
-
-        $txt .= $unit;
-        return Lang::choice($txt, $delta, compact('delta'));
+        $txt = 'carbon.timediff.'; $isNow = true; $other = Carbon::now(); $delta = abs($other->diffInSeconds($this->created_at)); $divs = array('second' => Carbon::SECONDS_PER_MINUTE, 'minute' => Carbon::MINUTES_PER_HOUR, 'hour'   => Carbon::HOURS_PER_DAY, 'day'    => 30, 'month'  => Carbon::MONTHS_PER_YEAR ); $unit = 'year'; foreach ($divs as $divUnit => $divValue) {if ($delta < $divValue) {$unit = $divUnit; break; } $delta = floor($delta / $divValue); } if ($delta == 0) {$delta = 1; } $txt .= $unit; return Lang::choice($txt, $delta, compact('delta'));
     }
 
     public function getComputerDate(){
@@ -166,8 +138,21 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
             case 'inactive':
                 return '<span class="label label-default">Inactivo</span>';
-                break;
-          
+                break;          
         }
     }
+
+    public function getType()
+    {
+        switch ($this->type) {
+            case 'user':
+                return '<span class="label label-success">Usuario</span>';
+                break;
+
+            case 'admin':
+                return '<span class="label label-primary">Administrador</span>';
+                break;          
+        }
+    }
+    
 }

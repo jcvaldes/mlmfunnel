@@ -85,6 +85,7 @@
                                         <th class="hidden-sm hidden-xs">Teléfono</th>
                                         <th class="hidden-sm hidden-xs" style="text-align:center">Miembro desde</th>
                                         <th class="hidden-sm hidden-xs">Estado</th>
+                                        <th class="hidden-sm hidden-xs">Tipo</th>
                                         <th class="hidden-sm hidden-xs" style="text-align:center">Acciones</th>
                                         <th class="hidden-md hidden-lg">Datos</th>
                                     </tr>
@@ -99,6 +100,7 @@
                                         <th class="hidden-sm hidden-xs" style="text-align:center">{{ $user->getComputerDate() }}</th>
                                         
                                         <td class="hidden-sm hidden-xs text-center">{{ $user->getStatus() }}</td>
+                                        <td class="hidden-sm hidden-xs text-center">{{ $user->getType() }}</td>
 
                                         <td class="hidden-sm hidden-xs" style="text-align:center">
                                             <a href="/dashboard/user/{{$user->id}}" class="btn btn-info"><i class="fa fa-edit"></i> Editar</a>
