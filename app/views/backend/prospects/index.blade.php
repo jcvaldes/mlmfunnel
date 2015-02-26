@@ -117,6 +117,12 @@
                                     @endforeach
                                 </tbody>
                             </table>
+                            @if(Auth::user()->isSuspended())
+                            <input type="hidden" id="export" value="0"/>
+                            @else
+                            <input type="hidden" id="export" value="1"/>
+                            @endif
+                
                         </div>
                     </div>
                 </div>
@@ -159,6 +165,7 @@
             </div>
             <div class="modal-footer text-center">
                 <input type="hidden" id="id" value=""/>
+
                 <button type="button" class="btn btn-primary" id="save" data-dismiss="modal"><i class="fa fa-check"></i> Guardar</button>
             </div>
         </div>

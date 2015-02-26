@@ -7,7 +7,15 @@ $(function () {
         "bFilter": true,
     };
 
-    opt.sDom = "<'row'<'col-md-6'f><'col-md-6'T>r>t<'row'<'col-md-6'i><'spcol-md-6an6'p>>",
+    if($("#export").val() == 1){
+        opt.sDom = "<'row'<'col-md-6'f><'col-md-6'T>r>t<'row'<'col-md-6'i><'spcol-md-6an6'p>>";
+    }else{
+        opt.sDom = "<'row'<'col-md-6'f>r>t<'row'<'col-md-6'i><'spcol-md-6an6'p>>";
+    }
+
+    
+
+
     opt.oTableTools = {
         "sSwfPath": "/assets/plugins/datatables/swf/copy_csv_xls_pdf.swf",
         "aButtons": ["csv", "pdf"]
