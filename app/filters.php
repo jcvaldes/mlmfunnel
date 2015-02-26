@@ -48,6 +48,16 @@ Route::filter('auth', function($route, $request)
 	}
 });
 
+Route::filter('active', function($route, $request)
+{
+
+	if (Auth::user()->isSuspended())
+	{		
+		return Redirect::to('/dashboard/suspended');
+	}
+
+});
+
 
 Route::filter('auth.basic', function()
 {
