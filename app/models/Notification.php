@@ -35,8 +35,11 @@ class Notification extends Model {
                         });
                     }
                     if($user->notif_phone==1){
-                        Clickatell::send("Nuevo Interesado en ".$prospect->type." - Nombre: ".$prospect->name." Email: ".$prospect->email." Tel.: ".$prospect->phone, $user->phone);
-                        //Heywire::text($user->phone, "Nuevo Interesado en ".$prospect->type." - Nombre: ".$prospect->name." Email: ".$prospect->email." Tel.: ".$prospect->phone);
+                        if(Setting::key('sms_way')->first()->value == 'clickatell'){
+                            Clickatell::send("Nuevo Interesado en ".$prospect->type." - Nombre: ".$prospect->name." Email: ".$prospect->email." Tel.: ".$prospect->phone, $user->phone);
+                        }else if(Setting::key('sms_way')->first()->value == 'heywire'){
+                            Heywire::text($user->phone, "Nuevo Interesado en ".$prospect->type." - Nombre: ".$prospect->name." Email: ".$prospect->email." Tel.: ".$prospect->phone);
+                        }                        
                     }                    
                 break;
             }

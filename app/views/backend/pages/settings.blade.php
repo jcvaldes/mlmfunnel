@@ -61,12 +61,12 @@
                                                 <div class="panel-body">
                                                     <div class="row-fluid col-md-6">
                                                         <label>
-                                                            {{ Form::checkbox('sms_way', 'heywire', 0) }} Via Heywire
+                                                            {{ Form::radio('sms_way', 'heywire', (Setting::key('sms_way')->first()->value == 'heywire')) }} Via Heywire
                                                         </label>                                    
                                                     </div>
                                                     <div class="row-fluid col-md-6">
                                                         <label>
-                                                            {{ Form::checkbox('sms_way', 'clickatell', 0) }} Via Clickatell
+                                                            {{ Form::radio('sms_way', 'clickatell', (Setting::key('sms_way')->first()->value == 'clickatell')) }} Via Clickatell
                                                         </label>                                    
                                                     </div>
                                                 </div>
