@@ -18,4 +18,8 @@ Route::group(array('before' => 'auth', 'prefix' => 'dashboard'), function()
 	Route::any('admin-avatar/crop/{id}', ['uses' => 'AdminController@post_avatar_crop']);
 	Route::any('admin-avatar/rotate/{id}', ['uses' => 'AdminController@post_avatar_rotate']);
 
+
+	Route::post('logo', ['uses' => 'UploadController@post_logo']);
+	Route::get('logo', ['uses' => 'UploadController@get_logo']);
+
 });

@@ -15,6 +15,14 @@ Route::group(array('before' => 'auth', 'prefix' => 'dashboard'), function()
 	Route::get('avatar', ['uses' => 'UploadController@get_avatar']);	
 	Route::any('avatar/crop', ['uses' => 'UploadController@post_avatar_crop']);
 	Route::any('avatar/rotate', ['uses' => 'UploadController@post_avatar_rotate']);	
+
+
+	Route::get('/email/prospect', function(){
+		$p = Prospect::first();
+		$user = Auth::user();
+
+		return View::make('emails.notify.new-prospect', compact('p', 'user'));
+	});
 });
 
 

@@ -72,4 +72,39 @@ class UploadController extends BaseController {
         return Response::json(['avatar' => Auth::user()->picture]);
     }
 
+
+
+    # Logo Upload
+    public function post_logo()
+    {
+        $file = Input::file('file');
+        if (Input::hasFile('file')) { 
+            if (Input::file('file')->isValid()) {
+
+                 $destinationPath = public_path() . '/uploads/logos/';
+                 $filename = str_random(16)."_".$file->getClientOriginalName();
+                 $upload_success = Input::file('file')->move($destinationPath, $filename);
+
+                 if($upload_success){
+                    $logo = '/uploads/logos/' . $filename;
+                    
+                    $setting = Setting::firstOrNew(['key' => 'app_logo']);
+                    $setting->value = $logo;
+                    $setting->save();
+
+                    $response = ['logo' => $logo, 'success' => 200];
+
+                    return Response::json($response);
+                } else {
+                   return Response::json('error', 400);
+                }                
+            }            
+        }
+    }   
+
+
+    public function get_logo()
+    {
+        return Response::json(['logo' => Setting::key('app_logo')->first()->value]);        
+    }
 }

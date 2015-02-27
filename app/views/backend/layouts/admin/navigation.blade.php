@@ -10,7 +10,7 @@
             <a id="menu-medium" class="sidebar-toggle tooltips">
                 <i class="fa fa-outdent"></i>
             </a>
-            <a class="navbar-brand" href="/dashboard"></a>
+            <a class="navbar-brand" href="/dashboard" style="background:url('{{ Setting::key('app_logo')->first()->value }}') no-repeat center; width:130px;"></a>
         </div>
         <div class="navbar-center">Administrador</div>
         <div class="navbar-collapse collapse">

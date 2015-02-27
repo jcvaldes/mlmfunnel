@@ -31,7 +31,26 @@
                                                 <div class="panel-title line">
                                                     <div class="caption"><i class="fa fa-gear c-gray m-r-10"></i> Configuración del sistema</div>
                                                 </div>
-                                                <div class="panel-body">                                                   
+                                                <div class="panel-body">    
+
+
+                                                    <div class="row">
+                                                        <div class="control-label col-md-3">Logo: <br><small>Tamaño recomendado: 130x40px</small></div> 
+                                                        <div class="col-md-6">
+                                                            <figure id="avatar" class="logo">
+
+                                                                <img id="dropzone" src="{{ Setting::key('app_logo')->first()->value }}" alt=""/>    
+                                                                <figcaption>
+                                                                    <p>Cambiar imagen</p>
+                                                                </figcaption>
+
+                                                            </figure>
+                                                            <div class="font-animation logo">
+                                                                <i class="fa fa-spinner faa-spin animated" style="display: inline-block; font-size:2em"></i> 
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
 
                                                     <div class="row">
                                                         <div class="control-label col-md-3">Nombre:</div> 
@@ -44,6 +63,48 @@
                                                         <div class="control-label col-md-3">Correo Electronico:</div> 
                                                         <div class="col-md-6">
                                                             <input type="text" class="form-control" name="app_mail" value="{{ Setting::key('app_mail')->first()->value }}">
+                                                        </div>
+                                                    </div> 
+
+                                                    <div class="row">
+                                                        <div class="control-label col-md-3">Dirección:</div> 
+                                                        <div class="col-md-6">
+                                                            <input type="text" class="form-control" name="app_address" value="{{ Setting::key('app_address')->first()->value }}">
+                                                        </div>
+                                                    </div>                                                    
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                     <div class="row profile-classic">
+                                        <div class="col-md-12">
+                                            <div class="panel">
+                                                <div class="panel-title line">
+                                                    <div class="caption"><i class="fa fa-facebook c-gray m-r-10"></i> Redes Sociales</div>
+                                                </div>
+                                                <div class="panel-body">                                                   
+
+                                                    <div class="row">
+                                                        <div class="control-label col-md-3">Twitter:</div> 
+                                                        <div class="col-md-6">
+                                                            <input type="text" class="form-control" name="app_twitter" value="{{ Setting::key('app_twitter')->first()->value }}">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="control-label col-md-3">Facebook:</div> 
+                                                        <div class="col-md-6">
+                                                            <input type="text" class="form-control" name="app_facebook" value="{{ Setting::key('app_facebook')->first()->value }}">
+                                                        </div>
+                                                    </div> 
+
+                                                    <div class="row">
+                                                        <div class="control-label col-md-3">Google+:</div> 
+                                                        <div class="col-md-6">
+                                                            <input type="text" class="form-control" name="app_google" value="{{ Setting::key('app_google')->first()->value }}">
                                                         </div>
                                                     </div>                                                    
 
@@ -137,85 +198,27 @@
 
 <script type="text/javascript">
 $(document).on("ready", function() {
-    var crop;
-    var h = $(window).height();
-    h = (h / 100) * 60;
-    $("#avatar figcaption i").on("click", function() {
-        var angle = 0;
-        if ($(this).hasClass('fa-rotate-right')) {
-            angle = -90;
-        } else {
-            angle = 90;
-        }
-        /* post */
-        $.post('/dashboard/avatar/rotate', {
-            angle: angle
-        }, function(data, textStatus, xhr) {
-            $("#avatar img").prop('src', data.avatar + '?nocahe=' + Math.random());
-            $("#user-header img").prop('src', data.avatar + '?nocahe=' + Math.random());
-        }, 'json');
-    });
     $("#avatar, #avatar figcaption, #avatar p").dropzone({
-        url: "/dashboard/avatar",
+        url: "/dashboard/logo",
         createImageThumbnails: false,
         init: function() {
             this.on("success", function(file) {
                 $(".font-animation").css('display', 'none');
-                $.get('/dashboard/avatar', function(data) {
-                    $("#avatar img").prop('src', data.avatar);
-                    $("#image-body").html('<img src="" id="image_crop2" style="max-width:100%"/>');
-                    $("#image_crop2").prop('src', data.avatar + '?nocahe=' + Math.random());
-                    $("#modal-view").modal();
-                    $('#modal-view').on('shown.bs.modal', function(e) {
-                        img_width = $('#modal-view img').parent().parent().parent().width();
-                        console.log(img_width);
-                        $('#modal-view img').width(img_width);
-                        $('#modal-view img').height('auto');
-                        crop = $('#image_crop2').Jcrop({
-                            bgOpacity: 0.8,
-                            bgColor: 'transparent',
-                            addClass: 'jcrop-dark',
-                            aspectRatio: 1 / 1,
-                            onSelect: updateCoords
-                        }, function() {
-                            crop_2 = this;
-                            crop_2.setSelect([img_width / 3, 65, img_width / 1.5, 65 + 285]);
-                            crop_2.setOptions({
-                                bgFade: true
-                            });
-                            crop_2.ui.selection.addClass('jcrop-selection');
-                        });
-                    })
+                $.get('/dashboard/logo', function(data) {
+                     $("#avatar img").prop('src', data.logo + '?nocahe=' + Math.random());
+                     $("a.navbar-brand").css('background', "url('"+data.logo + '?nocahe=' + Math.random()+"') no-repeat center");
                 }, 'json');
             });
             this.on("addedfile", function(file) {
                 $(".font-animation").css('display', 'inline-block');
             });
+
+            this.on("addedfile", function(file, uploadprogress) {
+                console.log(uploadprogress);
+            });
         }
     });
-
-    function updateCoords(c) {
-        jQuery('#x').val(c.x);
-        jQuery('#y').val(c.y);
-        jQuery('#w').val(c.w);
-        jQuery('#h').val(c.h);
-    };
-    /* SAVE CROP */
-    $("#save-crop").on("click", function() {
-        var options = {
-            x: $("#x").val(),
-            y: $("#y").val(),
-            w: $("#w").val(),
-            h: $("#h").val(),
-            i: img_width
-        }
-        $.post('/dashboard/avatar/crop', options, function(data, textStatus, xhr) {
-            console.log(data);
-            $("#avatar img").prop('src', data.avatar + '?nocahe=' + Math.random());
-            $("#user-header img").prop('src', data.avatar + '?nocahe=' + Math.random());
-            crop.destroy();
-        }, 'json');
-    })
+    
 });
 </script>
 @stop
