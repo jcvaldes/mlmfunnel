@@ -202,17 +202,21 @@ $(document).on("ready", function() {
         url: "/dashboard/logo",
         createImageThumbnails: false,
         init: function() {
-            this.on("success", function(file) {
-                $(".font-animation").css('display', 'none');
+            this.on("success", function(file) {                
                 $.get('/dashboard/logo', function(data) {
                      $("#avatar img").prop('src', data.logo + '?nocahe=' + Math.random());
                      $("a.navbar-brand").css('background', "url('"+data.logo + '?nocahe=' + Math.random()+"') no-repeat center");
                 }, 'json');
             });
+
             this.on("addedfile", function(file) {
                 $(".font-animation").css('display', 'inline-block');
             });
 
+            this.on("complete", function(file) {
+                $(".font-animation").css('display', 'none');
+            });
+           
             this.on("addedfile", function(file, uploadprogress) {
                 console.log(uploadprogress);
             });

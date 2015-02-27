@@ -87,8 +87,4 @@ class AdminController extends BaseController {
         }
         return Redirect::to('/dashboard/settings')->with('alert', ['type' => 'success', 'message' => 'Configuración guardada.']);
     }
-
-
-   
-
 }
