@@ -80,6 +80,8 @@ class AdminController extends BaseController {
     {
         $inputs = Input::all();
 
+        $inputs['app_export'] = Input::has('app_export');
+
         foreach ($inputs as $key => $value) {
             $setting = Setting::firstOrNew(['key' => $key]);
             $setting->value = $value;

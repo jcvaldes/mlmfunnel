@@ -71,7 +71,18 @@
                                                         <div class="col-md-6">
                                                             <input type="text" class="form-control" name="app_address" value="{{ Setting::key('app_address')->first()->value }}">
                                                         </div>
-                                                    </div>                                                    
+                                                    </div>  
+
+                                                    <div class="row">
+                                                        <div class="control-label col-md-3"></div> 
+                                                        <div class="col-md-6">
+                                                            <label>
+                                                            {{ Form::checkbox('app_export', '1', (Setting::key('app_export')->first()->value == '1')) }} Exportar prospectos
+                                                        </label>
+                                                        </div>
+                                                    </div>  
+
+                                                                                                     
 
                                                 </div>
                                             </div>

@@ -117,11 +117,20 @@
                                     @endforeach
                                 </tbody>
                             </table>
-                            @if(Auth::user()->isSuspended())
-                            <input type="hidden" id="export" value="0"/>
-                            @else
-                            <input type="hidden" id="export" value="1"/>
+                            @if(Setting::key('app_export')->first()->value == 1)
+                                @if(!Auth::user()->isSuspended())
+                                    <input type="hidden" id="export" value="1"/>
+                                @endif
+                                @else
+                                <input type="hidden" id="export" value="0"/>
                             @endif
+
+
+                            
+                            
+                            
+                            
+                            
                 
                         </div>
                     </div>
