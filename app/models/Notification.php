@@ -27,7 +27,7 @@ class Notification extends Model {
                     $user = User::find($notification->user_id);
 
                     if($user->notif_email==1){
-                        $data = ['name' => $prospect->name, 'email' => $prospect->email, 'phone' => $prospect->phone];
+                        $data = ['id' => $user->id, 'name' => $prospect->name, 'email' => $prospect->email, 'phone' => $prospect->phone];
                         Mail::queue('emails.notify.new-prospect', $data, function($message) use ($user)
                         {
                             $message->from(Setting::key('app_mail')->first()->value, Setting::key('app_name')->first()->value);
