@@ -127,6 +127,28 @@
                                                 </div>
 
 
+                                                <div class="row">
+                                                    <div class="control-label col-md-3">Tipo:</div> 
+                                                    <div class="col-md-6">
+                                                        <div class="skin-section">
+                                                                <div>
+                                                                    <label>
+                                                                        <input type="radio" value="user" name="type"
+                                                                        @if($user->type =='user') checked @endif>Usuario
+                                                                    </label>
+                                                                </div>
+                                                                
+                                                                <div>
+                                                                    <label>
+                                                                        <input type="radio" value="admin" name="type"
+                                                                        @if($user->type =='admin') checked @endif>Administrador
+                                                                    </label> 
+                                                                </div>                                                               
+                                                            </div>
+                                                    </div>
+                                                </div>
+
+
 
                                             </div>
                                         </div>
