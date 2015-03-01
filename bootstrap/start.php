@@ -28,7 +28,9 @@ $env = $app->detectEnvironment(array(
 
 	'local' => array('ielijose', 'ielijose-laptop'),
 	'production' => array('ielijose-server', 'aws3031.alojamientowebseguro.com'),
-
+	'dineroysalud' => ['dineroysalud.net'],
+	'sistemadeprospeccion' => ['sistemadeprospeccion.com'],
+	
 ));
 
 
