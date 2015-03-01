@@ -67,6 +67,41 @@ class HomeController extends BaseController {
 		return Redirect::to('thankyou/'.$user->username);
 	}
 
+	public function unsuscribe($id)
+	{
+		if(Hash::check($id, Input::get('crypt'))){
+			$user = User::find($id);
+			Session::put('unsuscribe_id', $id);
+			return View::make('backend.pages.unsuscribe', compact('user'));
+		}
+	}
+
+	public function unsuscribed()
+	{		
+		return View::make('backend.pages.unsuscribed');		
+	}
+
+	public function unsuscribe_post()
+	{
+		$inputs = Input::all();
+		if(Session::has('unsuscribe_id')){
+			$id = Session::get('unsuscribe_id');
+			$user = User::find($id);			
+
+			$inputs['notif_email'] = Input::has('notif_email');
+			$inputs['notif_phone'] = Input::has('notif_phone');
+
+			$user->fill($inputs);
+			$user->save();
+
+			Session::forget('unsuscribe_id');
+
+			return Redirect::route('login')->with('alert', ['type' => 'success', 'message' => 'La subscripción ha sido actualizada.']);
+		}
+	}
+
+	
+
 
 
 }

@@ -65,3 +65,5 @@ App::missing(function($exception)
 Route::get('{landing}/{user}', ['uses' => 'HomeController@landing']);
 Route::post('/suscribe', ['as' => 'suscribe', 'uses' => 'HomeController@suscribe']);
 
+Route::get('/dashboard/unsuscribe/{id}', ['uses' => 'HomeController@unsuscribe']);
+Route::post('/dashboard/unsuscribe', ['uses' => 'HomeController@unsuscribe_post']);

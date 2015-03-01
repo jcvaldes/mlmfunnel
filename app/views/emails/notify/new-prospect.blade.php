@@ -234,11 +234,12 @@
         <table border="0" width="100%" cellpadding="0" cellspacing="0">
 
     <!-- Footer : BEGIN -->
+    <?php $uid = (isset($id)) ? $id : $user->id; ?>
     <tr>
       <td style="text-align: center;padding: 40px 0px 0px 0px;font-family: sans-serif; font-size: 12px; line-height: 18px;color: #888888;">
         © {{ Setting::key('app_name')->first()->value }}<br>
         <p>{{ Setting::key('app_address')->first()->value }}</p>
-        <a href="mailto:{{ Setting::key('app_mail')->first()->value }}" style="font-weight:bold; color: #8a929f;">{{ Setting::key('app_mail')->first()->value }}</a> &nbsp; | &nbsp; <unsubscribe style="font-weight:bold; color: #8a929f; padding: 0;text-decoration: underline;">Unsubscribe</unsubscribe><br><br>
+        <a href="mailto:{{ Setting::key('app_mail')->first()->value }}" style="font-weight:bold; color: #8a929f;">{{ Setting::key('app_mail')->first()->value }}</a> &nbsp; | &nbsp; <a href="{{ url() }}/dashboard/unsuscribe/{{ $uid }}?crypt={{ Hash::make($uid) }}"> <unsubscribe style="font-weight:bold; color: #8a929f; padding: 0;text-decoration: underline;">Unsubscribe</unsubscribe></a><br><br>
       </td>
     </tr>
     <tr>

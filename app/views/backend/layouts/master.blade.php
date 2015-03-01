@@ -9,9 +9,9 @@
     <meta charset="utf-8">
 
     @if(Auth::user()->type == 'admin')
-        <title>Administrador - BackOffice MLMfunnels</title>
+        <title>Administrador - BackOffice {{ Setting::key('app_name')->first()->value }}</title>
     @elseif(Auth::user()->type == 'user')
-        <title>Usuario - BackOffice MLMfunnels</title>
+        <title>Usuario - BackOffice {{ Setting::key('app_name')->first()->value }}</title>
     @endif
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
