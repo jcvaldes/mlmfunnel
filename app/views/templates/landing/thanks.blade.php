@@ -6,7 +6,7 @@
     
     <link rel="shortcut icon" href="https://nodo.s3.amazonaws.com/assets/images/nodo/favicon.ico" type="image/x-icon">
     <link rel="icon" href="https://nodo.s3.amazonaws.com/assets/images/nodo/favicon.ico" type="image/x-icon">
-    <title>{{ $user->full_name }} :: MLMfunnels</title>
+    <title>{{ $user->full_name }} </title>
     <meta class="metaTagTop" name="description" content="">
     <meta class="metaTagTop" name="keywords" content="mlmfunnel, landing page, web site">
     <meta class="metaTagTop" name="author" content="MLMfunnel">
@@ -120,14 +120,14 @@
                             <div style="margin-top: 10px; outline: medium none; cursor: pointer;" class="de elHeadlineWrapper de-editable" id="tmp_headline1-77834" data-de-type="headline" data-de-editing="false" data-title="main headline" data-ce="true" data-trigger="none" data-animate="fade" data-delay="500">
 
                                 <div class="ne elHeadline elMargin0 elBGStyle0 hsTextShadow0 lh2 hsSize4 elFont_global" style="text-align: center; color: rgb(51, 102, 169);" data-bold="inherit" contenteditable="false">
-                                    <b>¡Suscripción Exitosa!</b>
+                                    <b>Â¡SuscripciÃ³n Exitosa!</b>
                                     <br>
                                 </div>
 
                             </div>
                             <div style="margin-top: 0px; outline: medium none; cursor: pointer;" class="de elHeadlineWrapper de-editable" id="headline-76690" data-de-type="headline" data-de-editing="false" data-title="sub text" data-ce="true" data-trigger="none" data-animate="fade" data-delay="500">
 
-                                <div class="ne elHeadline elMargin0 elBGStyle0 hsTextShadow0 lh2 elFont_opensans hsSize27" style="text-align: center;" data-bold="inherit" contenteditable="false">En las próximas horas me pondré en contacto contigo
+                                <div class="ne elHeadline elMargin0 elBGStyle0 hsTextShadow0 lh2 elFont_opensans hsSize27" style="text-align: center;" data-bold="inherit" contenteditable="false">En las prÃ³ximas horas me pondrÃ© en contacto contigo
                                     <br>
                                 </div>
 
@@ -135,7 +135,7 @@
                             <div style="margin-top: 20px; outline: medium none; cursor: pointer;" class="de elTextBlockWrapper de-editable elMargin0" id="tmp_textblock-40640" data-de-type="textblock" data-de-editing="false" data-title="text block" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500">
 
                                 <div class="elTextblock">
-                                    <p>De todas formas, aquí debajo te dejo mis datos para que si lo deseas, puedas contactarme.</p>
+                                    <p>De todas formas, aquÃ­ debajo te dejo mis datos para que si lo deseas, puedas contactarme.</p>
                                 </div>
 
                             </div>
@@ -236,7 +236,7 @@
 
                             <div style="outline: medium none; cursor: pointer;" class="de elHeadlineWrapper de-editable" id="tmp_headline1-94502" data-de-type="headline" data-de-editing="false" data-title="footer text" data-ce="true" data-trigger="none" data-animate="fade" data-delay="500">
 
-                                <div class="ne elHeadline lh3 elMargin0 elBGStyle0 hsTextShadow0 hsSize1" style="text-align: center; color: rgba(64, 64, 64, 0.709804);" data-bold="inherit" contenteditable="false">Copyright 2014 - Your Company - <a href="http://google.com/" id="link-5323-483" class="" target="_self">Disclaimer</a>
+                                <div class="ne elHeadline lh3 elMargin0 elBGStyle0 hsTextShadow0 hsSize1" style="text-align: center; color: rgba(64, 64, 64, 0.709804);" data-bold="inherit" contenteditable="false">Copyright 2014 - SistemasDeProspeccion.com
                                     <br>
                                 </div>
 

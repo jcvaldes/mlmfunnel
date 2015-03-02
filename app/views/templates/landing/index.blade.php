@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="bgCover wf-proximanova-i4-active wf-proximanova-i7-active wf-proximanova-n4-active wf-proximanova-n7-active wf-active wf-proximanova-i3-active wf-proximanova-n3-active" style='background-color: rgb(41, 41, 41); background-image: url("/templates/landing/images/amanecer.jpg");'>
+<html lang="en" class="bgCover wf-proximanova-i4-active wf-proximanova-i7-active wf-proximanova-n4-active wf-proximanova-n7-active wf-active wf-proximanova-i3-active wf-proximanova-n3-active" style='background-color: rgb(41, 41, 41); background-image: url("/templates/landing/images/playa.jpg");'>
 
 <head data-next-url="#" data-this-url="#">
     <meta charset="UTF-8">
-    <title>{{ $user->full_name }} :: MLMfunnels</title>
+    <title>{{ $user->full_name }} </title>
     <meta class="metaTagTop" name="description" content="">
     <meta class="metaTagTop" name="keywords" content="mlmfunnel, landing page, web site">
     <meta class="metaTagTop" name="author" content="MLMfunnel">
@@ -91,7 +91,7 @@
                     <div id="col-left-871" class="col-md-6 innerContent col_left" data-col="left" data-trigger="none" data-animate="fade" data-delay="500" data-title="Left column" style="outline: none;">
                         <div class="col-inner bgCover  noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin">
                             <div class="de elHeadlineWrapper de-editable" id="tmp_headline1-43924" data-de-type="headline" data-de-editing="false" data-title="headline" data-ce="true" data-trigger="none" data-animate="fade" data-delay="500" style="display: block; outline: medium none; cursor: pointer;">
-                                <div class="ne elHeadline lh3 elMargin0 elBGStyle0 hsTextShadow0 hsSize2" style="color: rgb(203, 212, 27); text-align: left;" data-bold="inherit" contenteditable="false"><b>¡ATENCIÓN! Oportunidad De Negocio</b>
+                                <div class="ne elHeadline lh3 elMargin0 elBGStyle0 hsTextShadow0 hsSize2" style="color: rgb(203, 212, 27); text-align: left;" data-bold="inherit" contenteditable="false"><b>¡Empodera Tu Negocio De Melaleuca!</b>
                                 </div>
 
                             </div>
@@ -116,13 +116,13 @@
                 <div style="outline: none;" class="row bgCover  noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin" id="row-950710000" data-trigger="none" data-animate="fade" data-delay="500" data-title="2 column row">
                     <div style="outline: none;" id="col-left-994" class="col-md-6 innerContent col_left" data-col="left" data-trigger="none" data-animate="fade" data-delay="500" data-title="Left column">
                         <div class="col-inner bgCover  noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin">
-                            <div data-youtube-controls="no" data-youtube-autoplay="yes" data-youtube-url="https://www.youtube.com/watch?v=JjBF1Faj-H4" data-video-type="youtube" class="de elVideoWrapper de-video-block elVideoWidth100 elMargin0 elVideoSkin1 de-editable" id="tmp_video-25090" data-de-type="video" data-de-editing="false" data-title="video" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="outline: medium none; cursor: pointer;">
+                            <div data-youtube-controls="no" data-youtube-autoplay="yes" data-youtube-url="https://www.youtube.com/watch?v=0ExuJGeEHW8" data-video-type="youtube" class="de elVideoWrapper de-video-block elVideoWidth100 elMargin0 elVideoSkin1 de-editable" id="tmp_video-25090" data-de-type="video" data-de-editing="false" data-title="video" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="outline: medium none; cursor: pointer;">
                                 <div class="elVideoplaceholder">
                                     <div class="elVideoplaceholder_inner">
                                     </div>
                                 </div>
                                 <div class="elVideo" style="display: none;">
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/JjBF1Faj-H4?autoplay=1&amp;modestbranding=1&amp;controls=0&amp;showinfo=0&amp;rel=0&amp;hd=1" frameborder="0" allowfullscreen></iframe>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/0ExuJGeEHW8?autoplay=1&amp;modestbranding=1&amp;controls=0&amp;showinfo=0&amp;rel=0&amp;hd=1" frameborder="0" allowfullscreen></iframe>
                                 </div>
 
                             </div>
@@ -181,12 +181,12 @@
                     <div style="outline: none;" id="col-right-474" class="col-md-6 innerContent col_right" data-col="right" data-trigger="none" data-animate="fade" data-delay="500" data-title="Right column">
                         <div style="background-color: rgba(0, 0, 0, 0.64); padding: 40px;" class="col-inner bgCover  noBorder borderSolid border3px cornersAll P0-top P0-bottom P0H noTopMargin radius10 shadow40">
                             <div style="outline: medium none; cursor: pointer;" class="de elHeadlineWrapper de-editable" id="tmp_headline1-86070" data-de-type="headline" data-de-editing="false" data-title="headline" data-ce="true" data-trigger="none" data-animate="fade" data-delay="500">
-                                <div class="ne elHeadline hsSize3 elMargin0 elBGStyle0 lh4 hsTextShadow2" style="color: rgb(255, 255, 255); text-align: center;" data-bold="inherit" contenteditable="false"><b>¡Suscríbete Gratis y Descubre Esta Gran Oportunidad!<br></b>
+                                <div class="ne elHeadline hsSize3 elMargin0 elBGStyle0 lh4 hsTextShadow2" style="color: rgb(255, 255, 255); text-align: center;" data-bold="inherit" contenteditable="false"><b>"Solicita Tu Licencia y Empieza a Generar Prospectos Hacia Tu Negocio Hoy Mismo"<br></b>
                                 </div>
 
                             </div>
                             <div style="margin-top: 10px; outline: medium none; cursor: pointer;" class="de elHeadlineWrapper de-editable" id="headline-76279" data-de-type="headline" data-de-editing="false" data-title="headline" data-ce="true" data-trigger="none" data-animate="fade" data-delay="500">
-                                <div class="ne elHeadline elMargin0 elBGStyle0 lh4 hsTextShadow2 hsSize21" style="color: rgba(233, 201, 55, 0.89); text-align: center;" data-bold="inherit" contenteditable="false"><b>Estás a punto de descubrir un sistema que te permitirá generar ingresos residuales con tan sólo "Cambiar de tienda"<br></b>
+                                <div class="ne elHeadline elMargin0 elBGStyle0 lh4 hsTextShadow2 hsSize21" style="color: rgba(233, 201, 55, 0.89); text-align: center;" data-bold="inherit" contenteditable="false"><b>Estás a un sólo paso de tener en tus manos esta poderosa herramienta que hará crecer tu negocio de manera IMPACTANTE.<br></b>
                                 </div>
 
                             </div>
@@ -241,13 +241,13 @@
                         <div class="col-inner bgCover  noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin">
                             <div style="display: block; outline: medium none; cursor: pointer;" class="de elHeadlineWrapper de-editable" id="tmp_headline1-78501" data-de-type="headline" data-de-editing="false" data-title="headline" data-ce="true" data-trigger="none" data-animate="fade" data-delay="500">
                                 <div class="ne elHeadline lh3 elMargin0 elBGStyle0 hsSize27 hsTextShadow3" style="text-align: center; color: rgb(255, 255, 255);" data-bold="inherit" contenteditable="false">
-                                    <b>Un Negocio Sencillo</b>
+                                    <b>Un Sistema Sencillo</b>
                                     <br>
                                 </div>
 
                             </div>
                             <div style="margin-top: 10px; outline: medium none; cursor: pointer;" class="de elHeadlineWrapper de-editable" id="headline-20748" data-de-type="headline" data-de-editing="false" data-title="headline" data-ce="true" data-trigger="none" data-animate="fade" data-delay="500">
-                                <div class="ne elHeadline lh3 elMargin0 elBGStyle0 hsTextShadow3 elHeadlineIcon_asterisk hsSize18" style="text-align: center; color: rgba(255, 255, 255, 0.71);" data-bold="inherit" contenteditable="false">Puedes empezar hoy mismo con tan sólo cambiar de tienda y comprar lo que necesitas a un menor precio
+                                <div class="ne elHeadline lh3 elMargin0 elBGStyle0 hsTextShadow3 elHeadlineIcon_asterisk hsSize18" style="text-align: center; color: rgba(255, 255, 255, 0.71);" data-bold="inherit" contenteditable="false">Puedes empezar hoy mismo y no necesitas conocimientos técnicos de ninguna clase
                                     <br>
                                 </div>
 
@@ -258,13 +258,13 @@
                         <div class="col-inner bgCover  noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin">
                             <div style="display: block; outline: medium none; cursor: pointer;" class="de elHeadlineWrapper de-editable" id="headline-77219" data-de-type="headline" data-de-editing="false" data-title="headline" data-ce="true" data-trigger="none" data-animate="fade" data-delay="500">
                                 <div class="ne elHeadline lh3 elMargin0 elBGStyle0 hsSize27 hsTextShadow3" style="text-align: center; color: rgb(255, 255, 255);" data-bold="inherit" contenteditable="false">
-                                    <b>Un Negocio Rentable</b>
+                                    <b>Un Sistema Eficiente</b>
                                     <br>
                                 </div>
 
                             </div>
                             <div style="margin-top: 10px; outline: medium none; cursor: pointer;" class="de elHeadlineWrapper de-editable" id="headline-28693" data-de-type="headline" data-de-editing="false" data-title="headline" data-ce="true" data-trigger="none" data-animate="fade" data-delay="500">
-                                <div class="ne elHeadline lh3 elMargin0 elBGStyle0 hsTextShadow3 elHeadlineIcon_asterisk hsSize18" style="text-align: center; color: rgba(255, 255, 255, 0.71);" data-bold="inherit" contenteditable="false">Respaldado por productos de Alta Calidad y de consumo masivo
+                                <div class="ne elHeadline lh3 elMargin0 elBGStyle0 hsTextShadow3 elHeadlineIcon_asterisk hsSize18" style="text-align: center; color: rgba(255, 255, 255, 0.71);" data-bold="inherit" contenteditable="false">Trabajando para ti las 24 hs. del día para generarte nuevos prospectos
                                     <br>
                                 </div>
 
@@ -275,13 +275,13 @@
                         <div class="col-inner bgCover  noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin">
                             <div style="display: block; outline: medium none; cursor: pointer;" class="de elHeadlineWrapper de-editable" id="headline-58837" data-de-type="headline" data-de-editing="false" data-title="headline" data-ce="true" data-trigger="none" data-animate="fade" data-delay="500">
                                 <div class="ne elHeadline lh3 elMargin0 elBGStyle0 hsSize27 hsTextShadow3" style="text-align: center; color: rgb(255, 255, 255);" data-bold="inherit" contenteditable="false">
-                                    <b>Un Negocio Que Te Cuida</b>
+                                    <b>Un Sistema Económico</b>
                                     <br>
                                 </div>
 
                             </div>
                             <div style="margin-top: 10px; outline: medium none; cursor: pointer;" class="de elHeadlineWrapper de-editable" id="headline-63395" data-de-type="headline" data-de-editing="false" data-title="headline" data-ce="true" data-trigger="none" data-animate="fade" data-delay="500">
-                                <div class="ne elHeadline lh3 elMargin0 elBGStyle0 hsTextShadow3 elHeadlineIcon_asterisk hsSize18" style="text-align: center; color: rgba(255, 255, 255, 0.71);" data-bold="inherit" contenteditable="false">Nuestros productos potencian tu bienestar y tu salud y están libres de sustancias tóxicas
+                                <div class="ne elHeadline lh3 elMargin0 elBGStyle0 hsTextShadow3 elHeadlineIcon_asterisk hsSize18" style="text-align: center; color: rgba(255, 255, 255, 0.71);" data-bold="inherit" contenteditable="false">Los costos tan bajos del sistema aseguran un ALTO retorno a la inversión cada mes. ¡Garantizado!
                                     <br>
                                 </div>
 
