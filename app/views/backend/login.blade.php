@@ -75,7 +75,7 @@
                         <div class="login-links">
                             <a href="/auth/forgot">Olvidastes tu Password?</a>
                             <br>
-                            <a href="http://dineroysalud.net/landing/agustinromero">No tienes una cuenta? <strong>Registrate</strong></a>
+                            <a href="http://sistemasdeprospeccion.com/landing/rolandorodas">No tienes una cuenta? <strong>Registrate</strong></a>
                         </div>
                     </div>
                 </div>
