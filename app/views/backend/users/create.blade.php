@@ -88,6 +88,15 @@
                                                         </div>
                                                     </div>
 
+                                                    <div class="row">
+                                                        <div class="control-label col-md-3"></div> 
+                                                        <div class="col-md-6">
+                                                            <label>
+                                                            {{ Form::checkbox('notify', '1', 0) }} Enviar Notifiacion Por Email
+                                                        </label>
+                                                        </div>
+                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
