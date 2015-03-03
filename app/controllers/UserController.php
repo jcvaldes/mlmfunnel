@@ -49,6 +49,34 @@ class UserController extends BaseController {
 		return View::make('backend.users.index', compact('users'));
 	}
 
+	public function create()
+	{
+		return View::make('backend.users.create');
+	}
+
+	public function store()
+	{
+		$inputs = Input::all();
+		$rules = User::$rules;
+		$messages = User::$messages;
+
+		//dd($inputs);
+		
+		$rules['password'] = $rules['password'] . '|confirmed';
+		$rules['password_confirmation'] = 'required';
+		unset($rules['description']);
+
+		$v = Validator::make($inputs, $rules, $messages);
+		
+		if ($v->passes())
+		{
+			$user = User::create($inputs);
+			return Redirect::to('/dashboard/user/' . $user->id);
+		}else{
+			return Redirect::back()->withInput()->withErrors($v->messages());
+		}		
+	}
+
 	
 
 

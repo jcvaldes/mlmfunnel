@@ -18,11 +18,13 @@
 
 <div id="main-content">
     @include('backend.partials.alert')    
+
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading bg-blue">
                     <h3 class="panel-title"><strong>Listado</strong> de usuarios</h3>
+                    <a href="/dashboard/user/create" class="btn btn-success col-md-offset-4">Crear Usuario</a>
                 </div>
                 <div class="panel-body">
                     <div class="row">
