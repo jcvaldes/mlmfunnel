@@ -26,7 +26,7 @@ class HomeController extends BaseController {
 		$user = User::username($user)->firstOrFail();
 
 		if($user->isSuspended()){
-			return Redirect::route('login');
+			return Redirect::to('http://dineroysalud.net/landing/agustinromero');
 		}
 
 		switch ($link) {
