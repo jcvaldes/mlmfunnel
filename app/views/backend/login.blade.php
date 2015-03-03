@@ -6,9 +6,9 @@
 
 <head>       
     <meta charset="utf-8">
-    <title>Acceder :: MLMfunnels</title>
+    <title>Acceder :: {{ Setting::key('app_name')->first()->value }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta content="" name="description" />
+    <meta content="{{ Setting::key('app_name')->first()->value }}" name="description" />
     <meta content="themes-lab" name="author" />
     <link rel="shortcut icon" href="assets/img/favicon.png">
     <!-- END META SECTION -->
@@ -75,7 +75,7 @@
                         <div class="login-links">
                             <a href="/auth/forgot">Olvidastes tu Password?</a>
                             <br>
-                            <a href="/auth/register">No tienes una cuenta? <strong>Registrate</strong></a>
+                            <a href="http://sistemasdeprospeccion.com/landing/rolandorodas">No tienes una cuenta? <strong>Registrate</strong></a>
                         </div>
                     </div>
                 </div>
@@ -98,8 +98,6 @@
     <script src="{{ asset('assets/plugins/bootstrap-loading/lada.min.js') }}"></script>
     <script src="{{ asset('assets/js/account.js') }}"></script>
     <!-- END PAGE LEVEL SCRIPTS -->
-
-    <script>
 
 </body>
 
