@@ -92,7 +92,7 @@
                                                         <div class="control-label col-md-3"></div> 
                                                         <div class="col-md-6">
                                                             <label>
-                                                            {{ Form::checkbox('notify', '1', 0) }} Enviar Notifiacion Por Email
+                                                            {{ Form::checkbox('notify', '1', 0) }} Enviar Notificacion Por Email
                                                         </label>
                                                         </div>
                                                     </div>
