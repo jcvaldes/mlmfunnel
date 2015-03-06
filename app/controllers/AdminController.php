@@ -74,7 +74,7 @@ class AdminController extends BaseController {
     public function settings()
     {
         return View::make('backend.pages.settings');
-    }
+    }    
 
     public function settings_post()
     {
@@ -88,5 +88,27 @@ class AdminController extends BaseController {
             $setting->save();
         }
         return Redirect::to('/dashboard/settings')->with('alert', ['type' => 'success', 'message' => 'Configuración guardada.']);
+    }
+
+    public function emails()
+    {
+        return View::make('backend.pages.emails');
+    }
+
+    public function emails_edit($key)
+    {
+        return View::make('backend.pages.emails-edit')->with('key', $key);
+    }
+
+    public function emails_post()
+    {
+        $inputs = Input::all();
+
+        foreach ($inputs as $key => $value) {
+            $setting = Setting::firstOrNew(['key' => $key]);
+            $setting->value = $value;
+            $setting->save();
+        }
+        return Redirect::to('/dashboard/emails')->with('alert', ['type' => 'success', 'message' => 'Personalización guardada.']);
     }
 }

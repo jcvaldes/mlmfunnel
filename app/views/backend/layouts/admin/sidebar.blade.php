@@ -14,6 +14,10 @@
 
             <li class="<?= Request::is('*settings*') ? 'current' : '' ?>">
                 <a href="/dashboard/settings"><i class="fa fa-gear"></i><span class="sidebar-text">Configuración</span></a>
+            </li>
+
+            <li class="<?= Request::is('*emails*') ? 'current' : '' ?>">
+                <a href="/dashboard/emails"><i class="fa fa-envelope"></i><span class="sidebar-text">Emails</span></a>
             </li>             
                         
             <br>

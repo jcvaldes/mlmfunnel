@@ -8,6 +8,11 @@ Route::group(array('before' => 'auth', 'prefix' => 'dashboard'), function()
 	Route::get('/settings', ['uses' => 'AdminController@settings']);
 	Route::post('/settings', ['uses' => 'AdminController@settings_post']);
 
+	Route::get('/emails', ['uses' => 'AdminController@emails']);
+	Route::get('/emails/{key}', ['uses' => 'AdminController@emails_edit']);
+	Route::post('/emails', ['uses' => 'AdminController@emails_post']);
+
+
 	/* Landing */
 	Route::resource('user', 'UserController');
 
