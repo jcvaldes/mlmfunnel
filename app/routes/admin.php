@@ -2,7 +2,7 @@
 
 Route::group(array('before' => 'auth', 'prefix' => 'dashboard'), function()
 {
-	Route::get('/', ['uses' => 'UserController@dashboard']);
+	Route::get('/', ['uses' => 'AdminController@dashboard']);
 	Route::get('/stats/{page}', ['uses' => 'UserController@dashboard_stats']);
 
 	Route::get('/settings', ['uses' => 'AdminController@settings']);
