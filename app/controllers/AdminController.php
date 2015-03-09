@@ -123,4 +123,11 @@ class AdminController extends BaseController {
         }
         return Redirect::to('/dashboard/emails')->with('alert', ['type' => 'success', 'message' => 'Personalización guardada.']);
     }
+
+    public function emails_preview($key)
+    {
+        return View::make('backend.pages.emails-preview')->with('key', $key);
+    }
+
+    
 }

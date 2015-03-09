@@ -12,6 +12,8 @@ Route::group(array('before' => 'auth', 'prefix' => 'dashboard'), function()
 	Route::get('/emails/{key}', ['uses' => 'AdminController@emails_edit']);
 	Route::post('/emails', ['uses' => 'AdminController@emails_post']);
 
+	Route::get('/emails/{key}/preview', ['uses' => 'AdminController@emails_preview']);
+
 
 	/* Landing */
 	Route::resource('user', 'UserController');

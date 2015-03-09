@@ -5,6 +5,16 @@
 <link rel="stylesheet" href="{{ asset('/assets/plugins/dropzone/dropzone.css') }}">
 <link rel="stylesheet" href="{{ asset('/assets/plugins/jcrop/jquery.Jcrop.min.css') }}">
 <link rel="stylesheet" href="{{ asset('/assets/css/profile.min.css') }}">
+<style>
+    .media,
+    .forum-title{
+        margin-top: 0px;
+    }
+
+    .c-blue{
+        padding-top: 10px;
+    }
+</style>
 @stop
 
 @section('content')
@@ -29,6 +39,8 @@
                                 <div class="forum-title">
                                     <div class="c-blue pull-left"><strong>Notificación de nuevo prospecto creado.</strong>
                                     </div>
+
+                                    <a href="/dashboard/emails/email-new-prospect/preview" class="btn btn-primary pull-right">Vista previa</a>
                                 </div>
                                 
                             </div>
@@ -44,6 +56,7 @@
                                 <div class="forum-title">
                                     <div class="c-blue pull-left"><strong>Email de bienvenida con datos de acceso a nueva cuenta creada.</strong>
                                     </div>
+                                    <a href="/dashboard/emails/email-welcome/preview" class="btn btn-primary pull-right">Vista previa</a>
                                 </div>
                                 
                             </div>
@@ -59,6 +72,7 @@
                                 <div class="forum-title">
                                     <div class="c-blue pull-left"><strong>Notificación de fecha próxima a suspensión de cuenta.</strong>
                                     </div>
+                                    <a href="/dashboard/emails/email-next-suspension/preview" class="btn btn-primary pull-right">Vista previa</a>
                                 </div>
                                 
                             </div>
@@ -74,6 +88,7 @@
                                 <div class="forum-title">
                                     <div class="c-blue pull-left"><strong>Notificación de suspensión de cuenta.</strong>
                                     </div>
+                                    <a href="/dashboard/emails/email-suspension/preview" class="btn btn-primary pull-right">Vista previa</a>
                                 </div>
                                 
                             </div>
@@ -88,6 +103,7 @@
                                 <div class="forum-title">
                                     <div class="c-blue pull-left"><strong>Notificación de fecha próxima a desactivación de cuenta.</strong>
                                     </div>
+                                    <a href="/dashboard/emails/email-next-desactivate/preview" class="btn btn-primary pull-right">Vista previa</a>
                                 </div>
                                 
                             </div>
@@ -102,6 +118,7 @@
                                 <div class="forum-title">
                                     <div class="c-blue pull-left"><strong>Notificación de desactivación de cuenta.</strong>
                                     </div>
+                                    <a href="/dashboard/emails/email-desactivate/preview" class="btn btn-primary pull-right">Vista previa</a>
                                 </div>
                                 
                             </div>
