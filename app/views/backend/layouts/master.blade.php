@@ -17,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="" name="description" />
     <meta content="themes-lab" name="author" />
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="/favicon.ico">
     <!-- END META SECTION -->
     <!-- BEGIN MANDATORY STYLE -->
     <link href="{{ asset('/assets/css/icons/icons.min.css') }}" rel="stylesheet">

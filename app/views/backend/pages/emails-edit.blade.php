@@ -34,10 +34,10 @@
                             <h4 class="m-l-10">Variables de usuario:</h4>
                             <p class="m-l-10" style="margin-bottom:27px">Utiliza los botones de abajo para personalizar tu email.</p>     
 
-                            <span class="btn btn-md btn-info col-md-5 m-5 vars" data-code="$user->full_name">Nombre</span>
-                            <span class="btn btn-md btn-info col-md-5 m-5 vars" data-code="$user->email">Email</span>
-                            <span class="btn btn-md btn-info col-md-5 m-5 vars" data-code="$user->phone">Teléfono</span>
-                            <span class="btn btn-md btn-info col-md-5 m-5 vars" data-code="$user->getUrl()">URL</span>
+                            <span class="btn btn-md btn-info col-md-5 m-5 vars" data-code="name">Nombre</span>
+                            <span class="btn btn-md btn-info col-md-5 m-5 vars" data-code="email">Email</span>
+                            <span class="btn btn-md btn-info col-md-5 m-5 vars" data-code="phone">Teléfono</span>
+                            <span class="btn btn-md btn-info col-md-5 m-5 vars" data-code="url">URL</span>
 
                         </div>
                     </div>
@@ -48,9 +48,7 @@
                         </div>
                     </div>
                 </form>
-                </div>
-
-               
+                </div>              
 
             </div>
         </div>
@@ -72,7 +70,7 @@
             });
 
             $vars.on("click", function(){
-                var code = "\{\{ " + $(this).data('code') + " \}\}";
+                var code = "%" + $(this).data('code') + "%";
                 if(typeof(prevFocus) != "undefined" && prevFocus.attr('id') == 'title') {
                     insertAtCaret('title', code);
                     //$title.val($title.val() + code);

@@ -126,7 +126,23 @@ class AdminController extends BaseController {
 
     public function emails_preview($key)
     {
-        return View::make('backend.pages.emails-preview')->with('key', $key);
+        $user = Auth::user();
+        $title = Setting::key($key.':title')->first()->value;
+        $body = Setting::key($key.':body')->first()->value;
+
+        $title = str_replace('%name%', $user->full_name, $title);
+        $title = str_replace('%email%', $user->email, $title);
+        $title = str_replace('%phone%', $user->phone, $title);
+        $title = str_replace('%url%', Setting::key('app_url')->first()->value, $title);
+
+        $body = str_replace('%name%', $user->full_name, $body);
+        $body = str_replace('%email%', $user->email, $body);
+        $body = str_replace('%phone%', $user->phone, $body);
+        $body = str_replace('%url%', Setting::key('app_url')->first()->value, $body);
+
+        $body = nl2br($body);
+
+        return View::make('emails.notify.layout', ['title' => $title, 'body' => $body, 'id' => $user->id]);
     }
 
     

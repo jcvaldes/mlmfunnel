@@ -4,7 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="initial-scale=1.0"> <!-- So that mobile webkit will display zoomed in -->
   <meta name="format-detection" content="telephone=no"> <!-- disable auto telephone linking in iOS -->
-  <title>{{ Setting::key($key.':title')->first()->value }}</title>
+  <title>{{ $title }}</title>
   <style type="text/css">
 
     a {color: #3686be;}
@@ -212,10 +212,13 @@
           <!-- Full Width, Fluid Column : BEGIN -->
           <tr>
             <td style="padding: 1px 40px 20px 40px; font-family: sans-serif; font-size: 16px; line-height: 27px; color: #333;">
-            	<h3 style="font-weight: 600; font-size: 25px;">{{ Setting::key($key.':title')->first()->value }}</h3>
+            	<h3 style="font-weight: 600; font-size: 25px;">
+                {{ $title }}
+              </h3>
+
               <hr>
             	<p>
-            		{{ Setting::key($key.':body')->first()->value }}
+            		{{ $body }}
             	</p>  
 
             	<!--UPDATE-->
@@ -234,7 +237,7 @@
         <table border="0" width="100%" cellpadding="0" cellspacing="0">
 
     <!-- Footer : BEGIN -->
-    <?php $uid = (isset($id)) ? $id : (isset($user->id)) ? $user->id : 0; ?>
+    <?php $uid = (isset($id)) ? $id : 0; ?>
     <tr>
       <td style="text-align: center;padding: 40px 0px 0px 0px;font-family: sans-serif; font-size: 12px; line-height: 18px;color: #888888;">
         © {{ Setting::key('app_name')->first()->value }}<br>
