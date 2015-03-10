@@ -15,6 +15,14 @@ Route::group(array('before' => 'auth', 'prefix' => 'dashboard'), function()
 	Route::get('/emails/{key}/preview', ['uses' => 'AdminController@emails_preview']);
 
 
+	/* SMS */
+
+	Route::get('/sms', ['uses' => 'AdminController@sms']);
+	Route::get('/sms/{key}', ['uses' => 'AdminController@sms_edit']);
+	Route::post('/sms', ['uses' => 'AdminController@sms_post']);
+
+	Route::get('/sms/{key}/preview', ['uses' => 'AdminController@sms_preview']);
+
 	/* Landing */
 	Route::resource('user', 'UserController');
 

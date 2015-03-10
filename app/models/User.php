@@ -51,29 +51,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     ];
 
     /* NOTIFY 
-    $key = 'email-new-prospect';
-
-    $title = Setting::key($key.':title')->first()->value;
-    $body = Setting::key($key.':body')->first()->value;
-
-    $title = str_replace('%name%', $user->full_name, $title);
-    $title = str_replace('%email%', $user->email, $title);
-    $title = str_replace('%phone%', $user->phone, $title);
-    $title = str_replace('%url%', Setting::key('app_url')->first()->value, $title);
-
-    $body = str_replace('%name%', $user->full_name, $body);
-    $body = str_replace('%email%', $user->email, $body);
-    $body = str_replace('%phone%', $user->phone, $body);
-    $body = str_replace('%url%', Setting::key('app_url')->first()->value, $body);
-
-    $body = nl2br($body);
-
-    $data = ['title' => $title, 'body' => $body, 'id' => $user->id];
-    Mail::queue('emails.notify.layout', $data, function($message) use ($user)
-    {
-        $message->from(Setting::key('app_mail')->first()->value, Setting::key('app_name')->first()->value);
-        $message->to($user->email, $user->full_name)->subject('Nuevo prospecto! - ' . Setting::key('app_name')->first()->value);
-    });
+    
     :NOTIFY */
 
     public static function boot()
@@ -87,6 +65,32 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
                 $user->password = \Hash::make($user->password);
             }
         });
+
+        static::created(function($user){   
+            $key = 'email-new-prospect';
+
+            $title = Setting::key($key.':title')->first()->value;
+            $body = Setting::key($key.':body')->first()->value;
+
+            $title = str_replace('%name%', $user->full_name, $title);
+            $title = str_replace('%email%', $user->email, $title);
+            $title = str_replace('%phone%', $user->phone, $title);
+            $title = str_replace('%url%', Setting::key('app_url')->first()->value, $title);
+
+            $body = str_replace('%name%', $user->full_name, $body);
+            $body = str_replace('%email%', $user->email, $body);
+            $body = str_replace('%phone%', $user->phone, $body);
+            $body = str_replace('%url%', Setting::key('app_url')->first()->value, $body);
+
+            $body = nl2br($body);
+
+            $data = ['title' => $title, 'body' => $body, 'id' => $user->id];
+            Mail::queue('emails.notify.layout', $data, function($message) use ($user, $title)
+            {
+                $message->from(Setting::key('app_mail')->first()->value, Setting::key('app_name')->first()->value);
+                $message->to($user->email, $user->full_name)->subject($title);
+            });
+        }); 
         
         static::deleting(function($user)
         {   

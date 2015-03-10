@@ -102,6 +102,8 @@ class AdminController extends BaseController {
         return Redirect::to('/dashboard/settings')->with('alert', ['type' => 'success', 'message' => 'Configuración guardada.']);
     }
 
+    /* EMAILS */
+
     public function emails()
     {
         return View::make('backend.pages.emails');
@@ -121,7 +123,7 @@ class AdminController extends BaseController {
             $setting->value = $value;
             $setting->save();
         }
-        return Redirect::to('/dashboard/emails')->with('alert', ['type' => 'success', 'message' => 'Personalización guardada.']);
+        return Redirect::to('/dashboard/settings#notifications')->with('alert', ['type' => 'success', 'message' => 'Personalización guardada.']);
     }
 
     public function emails_preview($key)
@@ -143,6 +145,44 @@ class AdminController extends BaseController {
         $body = nl2br($body);
 
         return View::make('emails.notify.layout', ['title' => $title, 'body' => $body, 'id' => $user->id]);
+    }
+
+    /* SMS */
+
+    public function sms()
+    {
+        return View::make('backend.pages.sms');
+    }
+
+    public function sms_edit($key)
+    {
+        return View::make('backend.pages.sms-edit')->with('key', $key);
+    }
+
+    public function sms_post()
+    {
+        $inputs = Input::all();
+
+        foreach ($inputs as $key => $value) {
+            $setting = Setting::firstOrNew(['key' => $key]);
+            $setting->value = $value;
+            $setting->save();
+        }
+        return Redirect::to('/dashboard/settings#notifications')->with('alert', ['type' => 'success', 'message' => 'Personalización guardada.']);
+    }
+
+    public function sms_preview($key)
+    {
+        $user = Auth::user();
+        $text = Setting::key($key.':text')->first()->value;
+
+        $text = str_replace('%name%', $user->full_name, $text);
+        $text = str_replace('%email%', $user->email, $text);
+        $text = str_replace('%phone%', $user->phone, $text);
+        $text = str_replace('%url%', Setting::key('app_url')->first()->value, $text);
+
+
+        return View::make('emails.notify.layout-sms', ['text' => $text, 'id' => $user->id]);
     }
 
     

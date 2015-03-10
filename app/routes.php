@@ -25,8 +25,8 @@ Route::any('/api/statistics', ['uses' => 'StatisticController@statistics']);
 Route::get('/auth/login', ['as' => 'login', 'uses' => 'AuthController@showLogin']);
 Route::post('/auth/login', ['as' => 'login', 'uses' => 'AuthController@login']);
 
-//Route::get('/auth/register', ['as' => 'register', 'uses' => 'AuthController@showRegister']);
-//Route::post('/auth/register', ['as' => 'register', 'uses' => 'AuthController@register']);
+Route::get('/auth/register', ['as' => 'register', 'uses' => 'AuthController@showRegister']);
+Route::post('/auth/register', ['as' => 'register', 'uses' => 'AuthController@register']);
 
 Route::get('/auth/forgot', ['uses' => 'AuthController@showForgot']);
 Route::post('/auth/forgot', ['uses' => 'RemindersController@postRemind']);
