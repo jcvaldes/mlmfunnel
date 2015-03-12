@@ -14,6 +14,12 @@ Route::get('/aweber', function(){
 	return View::make('aweber');
 });	
 
+/* DEPLOY */
+
+if (file_exists(__DIR__.'/controllers/Server.php')) {
+    Route::get('/deploy', 'Server@deploy');
+}
+
 /* API Statistic */
 Route::any('/api/statistic/{id}/{page}/{type}', ['uses' => 'StatisticController@store']);
 Route::any('/api/statistic/{id}', ['uses' => 'StatisticController@show']);
