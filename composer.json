@@ -12,7 +12,8 @@
 		"intervention/image": "2.*",
 		"ielijose/clickatell": "dev-master",
 		"ielijose/heywire": "dev-master",
-		"yangqi/htmldom": "dev-master"
+		"yangqi/htmldom": "dev-master",
+		"paypal/rest-api-sdk-php": "*"
 	},
 	"autoload": {
 		"classmap": [

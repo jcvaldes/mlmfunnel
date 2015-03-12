@@ -1,5 +1,5 @@
 <?php
-/*return array(
+return array(
 	'driver' => 'sendmail',
 	'host' => 'smtp.gmail.com',
 	'port' => 465,
@@ -11,7 +11,7 @@
 	'sendmail' => '/usr/sbin/sendmail -bs',
 	'pretend' => false,
 );
- */
+/* 
  return array(
 	'driver' => 'smtp',
 	'host' => 'smtp.sendgrid.net',
@@ -20,4 +20,4 @@
 	'encryption' => 'tls',
 	'username' => 'ielijose',
 	'password' => '2512368eli',
-);
+);*/
