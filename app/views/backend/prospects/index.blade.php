@@ -37,8 +37,6 @@
                                 <div class="col-md-2">
                                     <select class="form-control filter" id="filter-page">
                                         <option value="landing">Landing</option>
-                                        <option value="herbalife">Herbalife</option>
-                                        <option value="sugar">Sugar</option>
                                     </select>
                                 </div>
 
