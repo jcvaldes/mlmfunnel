@@ -12,7 +12,7 @@ class Server extends BaseController {
 				echo nl2br($line.PHP_EOL);
 			});
 		}catch(Exception $e){
-			$i = (Input::has('intent')) ? Input::get('intent') ? 0;
+			$i = (Input::has('intent')) ? Input::get('intent') : 0;
 			$i++;
 			echo "<script>location.href = '/deploy?intent=".$i."';</script>";
 		}		
