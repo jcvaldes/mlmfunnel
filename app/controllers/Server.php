@@ -8,7 +8,7 @@ class Server extends BaseController {
 			'cd /home/dineroysalud/public_html/',
 			'git pull origin master'
 		), function($line){
-			echo $line.PHP_EOL;
+			echo nl2br($line.PHP_EOL);
 		});
 		
 	}
