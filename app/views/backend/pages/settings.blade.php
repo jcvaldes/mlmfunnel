@@ -169,7 +169,7 @@
 
 
 
-                        <div class="tab-pane active" id="notifications">
+                        <div class="tab-pane" id="notifications">
                             <div class="row profile">
 
                                 <div class="col-md-12">

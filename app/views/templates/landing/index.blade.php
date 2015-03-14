@@ -3,7 +3,7 @@
 
 <head data-next-url="#" data-this-url="#">
     <meta charset="UTF-8">
-    <title>{{ $user->full_name }} || {{ Setting::key('app_name')->first()->value }}</title>
+    <title>{{ $user->full_name }} :: {{ Setting::key('app_name')->first()->value }}</title>
     <meta class="metaTagTop" name="description" content="">
     <meta class="metaTagTop" name="keywords" content="mlmfunnel, landing page, web site">
     <meta class="metaTagTop" name="author" content="MLMfunnel">
