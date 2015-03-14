@@ -100,7 +100,7 @@ class PaypalController extends BaseController
 
 		//Session::forget('paypal_payment_id');
 
-		if ((Input::has('PayerID')) || (Input::has('token'))) {
+		if ((!Input::has('PayerID')) || (!Input::has('token'))) {
 			return Redirect::route('login')->with('alert', ['type' => 'danger', 'message' => 'Hubo un problema en el pago.']);
 		}
 
