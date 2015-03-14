@@ -16,6 +16,8 @@ Route::group(array('before' => 'active'), function()
 
 	Route::get('/suspended', ['uses' => 'UserController@suspended']);
 
+	Route::get('/payments', ['as' => 'payments', 'uses' => 'UserController@payments']);
+
 	/* Landing */
 	
 

@@ -170,4 +170,14 @@ class UserController extends BaseController {
 		}
 	}
 
+	/* Payments */
+
+	public function payments()
+	{
+		$payments = Auth::user()->payments;
+		//echo $payments->toJson();
+
+		return View::make('backend.payments.index', compact('payments'));
+	}
+
 }

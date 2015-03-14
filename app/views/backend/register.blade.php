@@ -7,7 +7,7 @@
 <head>
     <!-- BEGIN META SECTION -->
     <meta charset="utf-8">
-    <title>Registro :: MLMfunnels</title>
+    <title>Registro :: {{ Setting::key('app_name')->first()->value }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="" name="description" />
     <meta content="themes-lab" name="author" />

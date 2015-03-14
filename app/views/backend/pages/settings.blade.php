@@ -415,6 +415,63 @@
                             </div>
                         </div>
 
+                        <div class="tab-pane" id="integration">
+                            <div class="row profile">
+                                <div class="col-md-12">
+
+                                    <div class="row profile-classic">
+                                        <div class="col-md-12">
+                                            <div class="panel">
+                                                <div class="panel-title line">
+                                                    <div class="caption"><i class="fa fa-dollar c-gray m-r-10"></i> PayPal</div>
+                                                </div>
+                                                <div class="panel-body">
+
+
+                                                    <div class="row">
+                                                        <div class="control-label col-md-3">Client ID:</div>
+                                                        <div class="col-md-6">
+                                                            <input type="text" class="form-control" name="paypal_client-id" value="{{ Setting::key('paypal_client-id')->first()->value }}">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="control-label col-md-3">Secret:</div>
+                                                        <div class="col-md-6">
+                                                            <input type="text" class="form-control" name="paypal_secret" value="{{ Setting::key('paypal_secret')->first()->value }}">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="control-label col-md-3"></div>
+                                                        <div class="col-md-6">
+                                                            <label>
+                                                                {{ Form::radio('paypal_mode', 'sandbox', (Setting::key('paypal_mode')->first()->value == 'sandbox')) }} Sandbox
+                                                            </label>
+
+                                                            <label>
+                                                                {{ Form::radio('paypal_mode', 'live', (Setting::key('paypal_mode')->first()->value == 'live')) }} Live
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-12">
+                                        <div class="align-center">
+                                            <button class="btn btn-primary m-r-20 save-profile">Guardar</button>
+                                            <a href="/" class="btn btn-default">Cancelar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
                 <!--END TABS-->

@@ -73,3 +73,16 @@ Route::post('/suscribe', ['as' => 'suscribe', 'uses' => 'HomeController@suscribe
 
 Route::get('/dashboard/unsuscribe/{id}', ['uses' => 'HomeController@unsuscribe']);
 Route::post('/dashboard/unsuscribe', ['uses' => 'HomeController@unsuscribe_post']);
+
+/* PayPal */
+
+Route::get('payment', array(
+    'as' => 'payment',
+    'uses' => 'PaypalController@postPayment',
+));
+
+// this is after make the payment, PayPal redirect back to your site
+Route::get('dashboard/payment/status', array(
+    'as' => 'payment.status',
+    'uses' => 'PaypalController@getPaymentStatus',
+));

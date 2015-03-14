@@ -16,7 +16,11 @@ class AuthController extends BaseController {
 		if(Auth::user()){
 			return Redirect::to('/dashboard');
 		}else{
-			return View::make('backend.register');
+			if(Session::has('payment')){
+				return View::make('backend.register');
+			}else{
+				return Redirect::route('login');
+			}			
 		}		
 	}
 
@@ -65,6 +69,9 @@ class AuthController extends BaseController {
 
 	public function register()
 	{
+		if(!Session::has('payment'))
+			return Redirect::route('login');
+
 		$inputs = Input::all();
 		$rules = User::$rules;
 		$messages = User::$messages;
@@ -79,8 +86,19 @@ class AuthController extends BaseController {
 		
 		if ($v->passes())
 		{
-			$user = User::create($inputs);
-			Auth::loginUsingId($user->id);
+			$user = User::create($inputs);			
+
+			$data = json_decode(Session::get('payment'),true);
+			$data['user_id'] = $user->id;
+			$data['ip'] = Request::getClientIp();
+
+			$payment = new Payment($data);
+
+			if($payment->save()){
+				Session::forget('payment');
+			}
+
+			Auth::loginUsingId($user->id);			
 			return Redirect::to('/dashboard/');
 		}else{
 			return Redirect::back()->withInput()->withErrors($v->messages());

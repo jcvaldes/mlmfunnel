@@ -17,6 +17,10 @@
                 <a href="/dashboard/profile"><i class="glyph-icon flaticon-account"></i><span class="sidebar-text">Mi perfil</span></a>
             </li> 
 
+            <li class="<?= Request::is('*payments*') ? 'current' : '' ?>">
+                <a href="{{ URL::route('payments') }}"><i class="fa fa-dollar"></i><span class="sidebar-text">Facturación</span></a>
+            </li> 
+
 
             
             <!--<li class="<?= Request::is('user*') ? 'current' : '' ?>">

@@ -85,11 +85,16 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
             $body = nl2br($body);
 
             $data = ['title' => $title, 'body' => $body, 'id' => $user->id];
-            Mail::queue('emails.notify.layout', $data, function($message) use ($user, $title)
-            {
-                $message->from(Setting::key('app_mail')->first()->value, Setting::key('app_name')->first()->value);
-                $message->to($user->email, $user->full_name)->subject($title);
-            });
+            try{
+                Mail::queue('emails.notify.layout', $data, function($message) use ($user, $title)
+                {
+                    $message->from(Setting::key('app_mail')->first()->value, Setting::key('app_name')->first()->value);
+                    $message->to($user->email, $user->full_name)->subject($title);
+                });
+            }catch(Exception $e){
+
+            }
+            
         }); 
         
         static::deleting(function($user)
@@ -110,6 +115,12 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
                 Croppa::delete($user->picture);               
             }            
         });
+    }
+    /* Relationships */
+
+    public function payments()
+    {
+        return $this->hasMany('Payment');
     }
 
     /* Scopes */       
