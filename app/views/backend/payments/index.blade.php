@@ -22,7 +22,7 @@
                 <h3><strong>Facturación</strong></h3>
             </div>
             <div class="m-t-10 no-print col-md-6 text-right"> 
-                <button type="button" class="btn btn-primary m-r-10 m-b-10"><i class="fa fa-dollar m-r-10"></i> Pagar Mensualidad</button>
+                <a href="{{ URL::route('payments.subscription') }}" class="btn btn-primary m-r-10 m-b-10"><i class="fa fa-dollar m-r-10"></i> Pagar Mensualidad</a>
                 <button type="button" class="btn btn-white m-r-10 m-b-10" onclick="window.print();"><i class="fa fa-print m-r-10"></i> Imprimir</button>                
             </div>
 

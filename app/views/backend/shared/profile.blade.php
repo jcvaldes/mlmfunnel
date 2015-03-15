@@ -49,6 +49,16 @@
 
                                                         <h1>{{ $user->full_name }}</h1>  
 
+                                                        @if(!Auth::user()->isAdmin())
+
+                                                        <div class="m-t-10"></div>
+
+                                                        <ul class="list-unstyled list-inline">
+                                                            <li class="m-r-20"><i class="fa fa-calendar p-r-5 c-red"></i> {{ $user->getExpirationDate() }}</li>
+                                                        </ul>
+
+                                                        @endif
+
                                                     </div>
                                                 </div>
                                             </div>

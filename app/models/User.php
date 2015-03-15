@@ -200,5 +200,10 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     {
         return ($this->status == 'suspended');
     }
+
+    public function getExpirationDate()
+    {
+        return "";
+    }
     
 }

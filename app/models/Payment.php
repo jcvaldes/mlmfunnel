@@ -36,8 +36,8 @@ class Payment extends Model {
     }
 
     /* Function */
-    public function getId(){
-        return explode('-', $this->paymentid)[1];
+    public function getId(){        
+        return (isset($this->paymentid)) ? @explode('-', $this->paymentid)[1] : "";
     }
 
     public function getStatus()

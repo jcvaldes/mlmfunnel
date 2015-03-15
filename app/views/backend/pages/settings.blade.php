@@ -456,6 +456,21 @@
                                                     </div>
 
 
+                                                    <div class="row">
+                                                        <div class="control-label col-md-3">Costo registro:</div>
+                                                        <div class="col-md-6">
+                                                            <input type="text" class="form-control" name="payment_register-cost" value="{{ Setting::key('payment_register-cost')->first()->value }}">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="control-label col-md-3">Costo mensualidad:</div>
+                                                        <div class="col-md-6">
+                                                            <input type="text" class="form-control" name="payment_subscription-cost" value="{{ Setting::key('payment_subscription-cost')->first()->value }}">
+                                                        </div>
+                                                    </div>
+
+
 
                                                 </div>
                                             </div>

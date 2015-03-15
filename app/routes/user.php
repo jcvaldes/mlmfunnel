@@ -17,6 +17,9 @@ Route::group(array('before' => 'active'), function()
 	Route::get('/suspended', ['uses' => 'UserController@suspended']);
 
 	Route::get('/payments', ['as' => 'payments', 'uses' => 'UserController@payments']);
+	Route::get('/payments/subscription', ['as' => 'payments.subscription', 'uses' => 'PaypalController@payments_subscription']);
+	Route::get('/payments/subscription/status', ['as' => 'payment.subscription.status', 'uses' => 'PaypalController@payments_subscription_status']);
+	
 
 	/* Landing */
 	
