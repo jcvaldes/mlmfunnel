@@ -78,8 +78,6 @@ class UserController extends BaseController {
 	}
 
 	
-
-
 	public function show($id)
 	{
 		$user = User::findOrFail($id);

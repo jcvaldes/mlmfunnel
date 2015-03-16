@@ -242,6 +242,7 @@ class PaypalController extends BaseController
 			$p = new \Payment($data);
 
 			if($p->save()){
+				Auth::user()->renewSubscription();
 				$alert = ['type' => 'success', 'message' => 'La subscripción ha sido actualizada.'];
 			}else{
 				$alert = ['type' => 'danger', 'message' => 'Ocurrio un error en el pago.'];

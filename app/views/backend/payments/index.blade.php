@@ -18,10 +18,11 @@
 
 <div id="main-content">
     @include('backend.partials.alert')    
-            <div class="page-title col-md-6">
+            <div class="page-title col-md-4">
                 <h3><strong>Facturación</strong></h3>
             </div>
-            <div class="m-t-10 no-print col-md-6 text-right"> 
+            <div class="m-t-10 no-print col-md-8 text-right"> 
+                <span class="btn btn-info m-r-10 m-b-10"><i class="fa fa-calendar m-r-10"></i> <strong>Vence el: {{ Auth::user()->getSubscriptionEnds() }}</strong></span>
                 <a href="{{ URL::route('payments.subscription') }}" class="btn btn-primary m-r-10 m-b-10"><i class="fa fa-dollar m-r-10"></i> Pagar Mensualidad</a>
                 <button type="button" class="btn btn-white m-r-10 m-b-10" onclick="window.print();"><i class="fa fa-print m-r-10"></i> Imprimir</button>                
             </div>
@@ -38,26 +39,41 @@
                                                 <th style="min-width:70px"><strong>ID</strong></th>
                                                 <th><strong>Fecha</strong></th>
                                                 <th><strong>Token</strong></th>
-                                                <th><strong>Descripción</strong></th>
-                                                <th><strong>Total</strong></th>                                                
-                                                <th class="text-center"><strong>Status</strong></th>                                               
+                                                <th><strong>Descripción</strong></th>                                                
+                                                <th class="text-center"><strong>Status</strong></th>
+                                                <th><strong>Total</strong></th>
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            <?php $total = 0; ?>
                                             @foreach($payments as $payment)
+                                            @if($payment->status == 'approved')
+                                                <?php $total += $payment->total; ?>
+                                            @endif
                                             <tr>
                                                 <td>{{ $payment->getId() }}</td>
                                                 <td>{{ $payment->getComputerDate() }}</td>
                                                 <td>{{ $payment->token }}</td>
                                                 <td>{{ $payment->description }}</td>
-                                                <td>${{ $payment->total }}</td>
-                                                
+
                                                 <td class="text-center">
                                                     {{ $payment->getStatus() }}                                                    
                                                 </td>
-                                                
+
+                                                @if($payment->status == 'approved')
+                                                    <td>${{ $payment->total }}</td>
+                                                @else
+                                                    <td style="text-decoration:line-through">${{ $payment->total }}</td>
+                                                @endif                                                
                                             </tr>
                                             @endforeach
+                                            @if(count($payments))
+                                            <tr>
+                                                <td colspan="4"></td>
+                                                <td class="text-right"><strong>Total: </strong></td>
+                                                <td>${{ $total }}</td>
+                                            </tr>
+                                            @endif
                                             
                                         </tbody>
                                     </table>

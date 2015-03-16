@@ -86,7 +86,7 @@ class AuthController extends BaseController {
 		
 		if ($v->passes())
 		{
-			$user = User::create($inputs);			
+			$user = User::create($inputs);
 
 			$data = json_decode(Session::get('payment'),true);
 			$data['user_id'] = $user->id;
