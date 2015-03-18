@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddStatusUserTable extends Migration {
+class ModifyStatusUsersColumn extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -11,11 +11,12 @@ class AddStatusUserTable extends Migration {
 	 * @return void
 	 */
 	public function up()
-	{
+	{				
 		Schema::table('users', function($table)
 		{
-			$table->enum('status', ['active', 'suspended', 'inactive'])->default('active');
-		});
+			$table->enum('status', ['active', 'belated', 'suspended', 'inactive'])->default('active');
+		});	
+
 	}
 
 	/**
@@ -30,5 +31,4 @@ class AddStatusUserTable extends Migration {
 			$table->dropColumn('status');
 		});
 	}
-
 }
