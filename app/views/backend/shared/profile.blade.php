@@ -54,7 +54,7 @@
                                                         <div class="m-t-10"></div>
 
                                                         <ul class="list-unstyled list-inline">
-                                                            <li class="m-r-20"><i class="fa fa-calendar p-r-5 c-red"></i> {{ $user->getExpirationDate() }}</li>
+                                                            <li class="m-r-20"><i class="fa fa-calendar p-r-5 c-red"></i> {{ $user->getSubscriptionEnds() }}</li>
                                                         </ul>
 
                                                         @endif

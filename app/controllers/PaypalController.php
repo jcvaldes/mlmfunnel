@@ -252,3 +252,122 @@ class PaypalController extends BaseController
 		}
 	}
 }
+
+/* 
+
+$plan = new Plan();
+		$plan->setName($description)
+		->setDescription($description)
+		->setType('fixed');
+
+		$paymentDefinition = new PaymentDefinition();
+
+		$paymentDefinition->setName('Mensualidad')
+		->setType('REGULAR')
+		->setFrequency('Month')
+		->setFrequencyInterval("1")
+		->setCycles("12")
+		->setAmount(new Currency(array('value' => Setting::key('payment_subscription-cost')->first()->value, 'currency' => 'USD')));
+
+		
+		$merchantPreferences = new MerchantPreferences();
+
+
+		$merchantPreferences->setReturnUrl(URL::route('payment.subscription.status'))
+		->setCancelUrl(URL::route('payment.subscription.status'))
+		->setAutoBillAmount("yes")
+		->setInitialFailAmountAction("CONTINUE")
+		->setMaxFailAttempts("0");
+
+
+		$plan->setPaymentDefinitions(array($paymentDefinition));
+		$plan->setMerchantPreferences($merchantPreferences);
+		
+		$request = clone $plan;
+
+		try {
+			$output = $plan->create($this->_api_context);
+		} catch (Exception $ex) {
+			//ResultPrinter::printError("Created Plan", "Plan", null, $request, $ex);
+			exit(1);
+		}
+
+		echo $request;
+
+		return $output;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		$agreement = new Agreement();
+
+		$agreement->setName('Base Agreement')
+		->setDescription('Basic Agreement')
+		->setStartDate('2015-06-17T9:45:04Z');
+
+		$plan = new Plan();
+		$plan->setId("P-05B97065EM4414440ES3TRQQ");
+		$agreement->setPlan($plan);
+
+		$payer = new Payer();
+		$payer->setPaymentMethod('paypal');
+		$agreement->setPayer($payer);
+
+
+		$request = clone $agreement;
+
+		
+
+		$agreement = $agreement->create($this->_api_context);
+
+
+
+		$approvalUrl = $agreement->getApprovalLink();
+
+		echo $request;
+
+		return $agreement;
+
+
+
+
+
+
+
+
+
+
+		$plan = new Plan();
+		$plan->setName("Mensualidad")
+		->setDescription($description)
+		->setType('fixed');
+
+		$paymentDefinition = new PaymentDefinition();
+
+		$paymentDefinition->setName('Mensualidad')
+		->setType('REGULAR')
+		->setFrequency('Month')
+		->setFrequencyInterval("1")
+		->setCycles("12")
+		->setAmount(new Currency(array('value' => Setting::key('payment_subscription-cost')->first()->value, 'currency' => 'USD')));
+		
+
+		$plan->setPaymentDefinitions(array($paymentDefinition));
+
+
+*/

@@ -13,7 +13,8 @@
 		"ielijose/clickatell": "dev-master",
 		"ielijose/heywire": "dev-master",
 		"yangqi/htmldom": "dev-master",
-		"paypal/rest-api-sdk-php": "*"
+		"paypal/rest-api-sdk-php": "*",
+		"indatus/dispatcher" : "~1.4"
 	},
 	"autoload": {
 		"classmap": [

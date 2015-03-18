@@ -134,9 +134,33 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         return $query->where('username', $username);
     }
 
-     public function scopeClient($query)
+    public function scopeClient($query)
     {
         return $query->where('type', 'user');
+    }
+
+    public function scopeActive($query)
+    {
+        $now = Carbon::now();
+        return $query->where('status', 'active')->where('type', 'user')->where('subscription_ends_at', '>', $now);
+    }
+
+    public function scopeBelated($query)
+    {
+        $now = Carbon::now();
+        return $query->where('status', 'active')->where('type', 'user')->where('subscription_ends_at', '<', $now);
+    }
+
+    public function scopeSuspended($query)
+    {
+        $mesPasado = Carbon::now()->subMonth();
+        return $query->where('status', 'belated')->where('type', 'user')->where('subscription_ends_at', '<', $mesPasado);
+    }
+
+    public function scopeInactive($query)
+    {
+        $hace3meses = Carbon::now()->subMonths(3);
+        return $query->where('status', 'suspended')->where('type', 'user')->where('subscription_ends_at', '<', $hace3meses);
     }
 
     /* functions */
@@ -177,14 +201,24 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
                 return '<span class="label label-success">Activo</span>';
                 break;
 
+            case 'belated':
+                return '<span class="label label-warning">Atrasado</span>';
+                break;
+
             case 'suspended':
-                return '<span class="label label-warning">Suspendido</span>';
+                return '<span class="label label-danger">Suspendido</span>';
                 break;
 
             case 'inactive':
                 return '<span class="label label-default">Inactivo</span>';
                 break;          
         }
+    }
+
+    public function setStatus($status)
+    {
+        $this->status = $status;
+        return $this->save();
     }
 
     public function getType()
@@ -220,5 +254,37 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     {
         $date = date_create($this->subscription_ends_at);
         return date_format($date, 'd/m/Y');
+    }
+
+    public function dateActive()
+    {
+        $now = Carbon::now();
+        $end = Carbon::createFromTimestamp(strtotime($this->subscription_ends_at));
+
+        return ($now < $end) ? true : 0; 
+    }
+
+    public function dateBelated()
+    {
+        $now = Carbon::now();
+        $end = Carbon::createFromTimestamp(strtotime($this->subscription_ends_at));
+
+        return ($end < $now) ? true : 0; 
+    }
+
+    public function dateSuspended()
+    {
+        $now = Carbon::now()->subMonth();
+        $end = Carbon::createFromTimestamp(strtotime($this->subscription_ends_at));
+
+        return ($end < $now) ? true : 0; 
+    }
+
+    public function dateInactive()
+    {
+        $now = Carbon::now()->subMonths(3);
+        $end = Carbon::createFromTimestamp(strtotime($this->subscription_ends_at));
+
+        return ($end < $now) ? true : 0; 
     }
 }
