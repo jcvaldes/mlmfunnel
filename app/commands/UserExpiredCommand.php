@@ -41,9 +41,7 @@ class UserExpiredCommand extends ScheduledCommand {
 	public function schedule(Schedulable $scheduler)
 	{
 		return $scheduler
-            ->daily()
-            ->hours(0)
-            ->minutes(1);
+            ->daily();
 	}
 
 	/**
