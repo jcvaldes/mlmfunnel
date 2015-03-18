@@ -15,6 +15,8 @@ Route::group(array('before' => 'auth', 'prefix' => 'dashboard'), function()
 	Route::get('/emails/{key}/preview', ['uses' => 'AdminController@emails_preview']);
 
 
+	Route::get('/users-status/{status}', ['as' => 'users-status', 'uses' => 'UserController@status']);
+
 	/* SMS */
 
 	Route::get('/sms', ['uses' => 'AdminController@sms']);

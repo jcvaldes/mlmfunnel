@@ -178,4 +178,12 @@ class UserController extends BaseController {
 		return View::make('backend.payments.index', compact('payments'));
 	}
 
+	/* STATUS */
+
+	public function status($status)
+	{
+		$users = User::where('status', $status)->orderBy('subscription_ends_at', 'DESC')->get();
+
+		return View::make('backend.users.status', compact('users'))->with('status', $status);
+	}
 }

@@ -23,7 +23,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="stat-num">{{ $data['clients'] }}</div>
-                                <a href="#"><h3>Clientes</h3></a>
+                                <a href="/dashboard/user"><h3>Usuarios</h3></a>
                             </div>
                         </div>
                     </div>
@@ -38,7 +38,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="stat-num">{{ $data['older'] }}</div>
-                                <a href="#"><h3>Atrasados</h3></a>
+                                <a href="{{ URL::Route('users-status','belated')}}"><h3>Atrasados</h3></a>
 
                             </div>
                         </div>
@@ -52,7 +52,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="stat-num">{{ $data['suspended'] }}</div>
-                                <a href="#"><h3>Suspendidos</h3></a>
+                                <a href="{{ URL::Route('users-status','suspended')}}"><h3>Suspendidos</h3></a>
                             </div>
                         </div>
                     </div>
@@ -66,7 +66,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="stat-num">{{ $data['inactive'] }}</div>
-                                <a href="#"><h3>Desactivados</h3></a>
+                                <a href="{{ URL::Route('users-status','inactive')}}"><h3>Desactivados</h3></a>
                             </div>
                         </div>
                     </div>
