@@ -7,8 +7,7 @@ class Server extends BaseController {
 		try{
 			SSH::into('production')->run(array(
 				'cd /home/dineroysalud/public_html/',
-				'git pull origin master',
-				'php composer.phar update'
+				'git pull origin master',				
 				), function($line){
 				echo nl2br($line.PHP_EOL);
 			});
