@@ -15,7 +15,7 @@ class ModifyStatusUsersColumn extends Migration {
 		Schema::table('users', function($table)
 		{
 			$table->dropColumn('status');
-			$table->enum('status', ['active', 'belated', 'suspended', 'inactive'])->default('active');
+			
 		});	
 
 	}
@@ -29,7 +29,7 @@ class ModifyStatusUsersColumn extends Migration {
 	{
 		Schema::table('users', function($table)
 		{
-			$table->dropColumn('status');
+			$table->enum('status', ['active', 'belated', 'suspended', 'inactive'])->default('active');
 		});
 	}
 }
