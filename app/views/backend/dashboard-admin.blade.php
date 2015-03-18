@@ -17,13 +17,13 @@
 
             <div class="col-lg-3 col-md-3 col-sm-3">
                 <div class="panel no-bd bd-9 panel-stat">
-                    <div class="panel-body bg-dark">
+                    <div class="panel-body bg-green">
                         <div class="icon"><i class="glyph-icon flaticon-visitors"></i>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="stat-num">{{ $data['clients'] }}</div>
-                                <a href="/dashboard/user"><h3>Usuarios</h3></a>
+                                <div class="stat-num">{{ $data['active'] }}</div>
+                                <a href="{{ URL::Route('users-status','active')}}"><h3>Activos</h3></a>
                             </div>
                         </div>
                     </div>
@@ -32,12 +32,12 @@
 
             <div class="col-lg-3 col-md-3 col-sm-3">
                 <div class="panel no-bd bd-9 panel-stat">
-                    <div class="panel-body bg-blue">
+                    <div class="panel-body bg-orange">
                         <div class="icon"><i class="fa fa-calendar"></i>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="stat-num">{{ $data['older'] }}</div>
+                                <div class="stat-num">{{ $data['belated'] }}</div>
                                 <a href="{{ URL::Route('users-status','belated')}}"><h3>Atrasados</h3></a>
 
                             </div>
@@ -47,7 +47,7 @@
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3">
                 <div class="panel no-bd bd-9 panel-stat">
-                    <div class="panel-body bg-green">
+                    <div class="panel-body bg-red">
                         <div class="icon"><i class="fa fa-anchor"></i></div>
                         <div class="row">
                             <div class="col-md-12">
@@ -60,12 +60,12 @@
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3">
                 <div class="panel no-bd bd-9 panel-stat">
-                    <div class="panel-body bg-red">
+                    <div class="panel-body bg-gray">
                         <div class="icon"><i class="fa fa-minus"></i>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="stat-num">{{ $data['inactive'] }}</div>
+                                <div class="stat-num" style="color:white">{{ $data['inactive'] }}</div>
                                 <a href="{{ URL::Route('users-status','inactive')}}"><h3>Desactivados</h3></a>
                             </div>
                         </div>

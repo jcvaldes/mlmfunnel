@@ -6,9 +6,9 @@ class AdminController extends BaseController {
     {
         $data = [];
 
-        $data['clients'] = User::all()->count();
-        $data['older'] = 0;
-        $data['suspended'] = User::where('status', 'suspended')->get()->count();
+        $data['active'] =   User::where('status', 'active')->get()->count();
+        $data['belated'] =  User::where('status', 'belated')->get()->count();
+        $data['suspended'] =User::where('status', 'suspended')->get()->count();
         $data['inactive'] = User::where('status', 'inactive')->get()->count();
 
         return View::make('backend.dashboard-admin', compact('data'));

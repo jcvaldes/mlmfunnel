@@ -19,7 +19,9 @@
 <div id="main-content">
     @include('backend.partials.alert')    
             <div class="page-title col-md-12">
-                @if($status == 'belated')
+                @if($status == 'active')
+                    <h3><strong>Activos</strong></h3>
+                @elseif($status == 'belated')
                     <h3><strong>Atrasados</strong></h3>
                 @elseif($status == 'suspended')
                     <h3><strong>Suspendidos</strong></h3>
