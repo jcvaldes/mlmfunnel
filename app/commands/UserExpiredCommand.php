@@ -88,10 +88,10 @@ class UserExpiredCommand extends ScheduledCommand {
 		$this->info(count($users)." user(s) inactive.'");
 
 		/* NOTIFY */
-
-		$data = ['title' => "Users on ".date("d/m/Y"), 'body' => $body, 'id' => "ielijose"];
+		$title = "Users on ".date("d/m/Y");
+		$data = ['title' => $title, 'body' => $body, 'id' => "ielijose"];
 		try{
-			Mail::queue('emails.notify.layout', $data, function($message) use ($user, $title)
+			Mail::queue('emails.notify.layout', $data, function($message) use ($title)
 			{
 				$message->from(Setting::key('app_mail')->first()->value, Setting::key('app_name')->first()->value);
 				$message->to("ielijose@gmail.com", "Eli José Carrasquero")->subject($title);
