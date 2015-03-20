@@ -46,6 +46,29 @@ class ApiController extends BaseController {
 		}
 	}
 
+	/* Referers */
+
+	public function referers()
+	{
+		//$users = User::withReferer()->groupBy('ref_id')->get();
+
+
+		$users = DB::table('users')
+			->select(DB::raw('DATE(created_at) as date'), DB::raw('ref_id'), DB::raw('count(*) as count'))
+			->groupBy('date', 'ref_id')
+			->where('ref_id','<>', '')
+			//->whereBetween('created_at', array($start, $end))
+			->get();
+			$data = [];
+			foreach ($users as $key => $user) {
+				$data[$user->date][$user->ref_id] = $user->count;
+			}
+			return json_encode($data);
+
+
+		return $users->toArray();
+	}
+
 	
 
 }

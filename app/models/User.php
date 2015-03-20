@@ -24,7 +24,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
      */
     protected $hidden = array('password', 'remember_token');
 
-    protected $fillable = ['full_name', 'phone', 'picture', 'description', 'email', 'password', 'type', 'username', 'status', 'notif_email', 'notif_phone', 'subscription_ends_at'];
+    protected $fillable = ['full_name', 'phone', 'picture', 'description', 'email', 'password', 'type', 'username', 'status', 'notif_email', 'notif_phone', 'subscription_ends_at', 'ref_id'];
 
     public static $rules = [
     'full_name' => 'required',
@@ -163,6 +163,11 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         return $query->where('status', 'suspended')->where('type', 'user')->where('subscription_ends_at', '<', $hace3meses);
     }
 
+    public function scopeWithReferer($query)
+    {
+        return $query->where('ref_id', '<>', '');
+    }
+
     /* functions */
 
 	public function name(){
@@ -247,6 +252,9 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     public function renewSubscription()
     {
         $this->subscription_ends_at = Carbon::createFromTimestamp(strtotime($this->subscription_ends_at))->addMonth();
+        if(!$this->dateBelated()){
+            $this->status = 'active';
+        }
         return $this->save();
     }
 

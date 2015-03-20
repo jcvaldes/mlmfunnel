@@ -20,10 +20,9 @@ if (file_exists(__DIR__.'/controllers/Server.php')) {
     Route::get('/deploy', 'Server@deploy');
 }
 
-/* API Statistic */
-Route::any('/api/statistic/{id}/{page}/{type}', ['uses' => 'StatisticController@store']);
-Route::any('/api/statistic/{id}', ['uses' => 'StatisticController@show']);
-Route::any('/api/statistics', ['uses' => 'StatisticController@statistics']);
+/* API */
+
+require (__DIR__ . '/routes/api.php');
 
 /* -------------------------------------------------- */
 /* Auth Links */

@@ -28,6 +28,10 @@ class PaypalController extends BaseController
 	{
 		$description = 'Registro ' . Setting::key('app_name')->first()->value;
 
+		if(Input::has('ref')){
+			Session::put('ref', Input::get('ref'));			
+		}
+
 		$payer = new Payer();
 		$payer->setPaymentMethod('paypal');
 
@@ -115,6 +119,12 @@ class PaypalController extends BaseController
 			$data['total'] = Setting::key('payment_register-cost')->first()->value;
 			$data['status'] = 'approved';
 			$data['description'] = $description;
+
+			if(Session::has('ref')){
+				$data['ref_id'] = Session::get('ref');
+				Session::forget('ref');
+			}
+			
 
 			Session::put('payment', json_encode($data));
 			return Redirect::route('register');
