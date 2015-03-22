@@ -43,12 +43,12 @@ class StatisticController extends BaseController {
 		$end = (Input::get('end')) ? Input::get('end') : Carbon::now();
 
 
-		$property = Property::find($id);
+		$property = User::find($id);
 		if(isset($property->id)){
 			$statistics = DB::table('statistics')
-			->select(DB::raw('DATE(created_at) as date'), DB::raw('property_id, type'), DB::raw('count(*) as views'))
+			->select(DB::raw('DATE(created_at) as date'), DB::raw('user_id, type'), DB::raw('count(*) as views'))
 			->groupBy('date', 'type')
-			->where('property_id', $id)
+			->where('user_id', $id)
 			->whereBetween('created_at', array($start, $end))
 			->get();
 			$data = [];

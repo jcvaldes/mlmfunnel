@@ -2,30 +2,17 @@
 
 class ApiController extends BaseController {
 
-	/*
-	|--------------------------------------------------------------------------
-	| Default Home Controller
-	|--------------------------------------------------------------------------
-	|
-	| You may wish to use controllers instead of, or in addition to, Closure
-	| based routes. That's great! Here is an example controller method to
-	| get you started. To route to this controller, just add the route:
-	|
-	|	Route::get('/', 'HomeController@showWelcome');
-	|
-	*/
-
 	public function prospect($id)
-	{		
-		$prospect = Prospect::findOrFail($id);	
-		return $prospect->toJson();	
+	{
+		$prospect = Prospect::findOrFail($id);
+		return $prospect->toJson();
 	}
 
 	public function prospect_edit($id)
-	{		
+	{
 		$inputs = Input::all();
 		//echo json_encode($inputs); exit;
-		$prospect = Prospect::findOrFail($id);	
+		$prospect = Prospect::findOrFail($id);
 		$prospect->fill($inputs);
 		if($prospect->save()){
 			$prospect->error = false;
@@ -37,8 +24,8 @@ class ApiController extends BaseController {
 	}
 
 	public function prospect_delete($id)
-	{		
-		
+	{
+
 		if(Prospect::destroy($id)){
 			return json_encode(["error" => false, "message" => "Prospecto eliminado."]);
 		}else{
@@ -50,25 +37,39 @@ class ApiController extends BaseController {
 
 	public function referers()
 	{
-		//$users = User::withReferer()->groupBy('ref_id')->get();
-
-
 		$users = DB::table('users')
-			->select(DB::raw('DATE(created_at) as date'), DB::raw('ref_id'), DB::raw('count(*) as count'))
-			->groupBy('date', 'ref_id')
+			->select('full_name','ref_id', DB::raw('count(*) as count'))
+			->groupBy('ref_id')
 			->where('ref_id','<>', '')
 			//->whereBetween('created_at', array($start, $end))
 			->get();
 			$data = [];
 			foreach ($users as $key => $user) {
-				$data[$user->date][$user->ref_id] = $user->count;
+				$data[$user->ref_id]['count'] = $user->count;
+
+                if(empty($data[$user->ref_id]['items']))
+                    $data[$user->ref_id]['items'] = [];
+                array_push($data[$user->ref_id]['items'], ["name" => $user->full_name]);
 			}
-			return json_encode($data);
-
-
-		return $users->toArray();
+            $json = [];
+            foreach($data as $key => $value){
+                array_push($json, ['ref_id' => $key, 'count' => $value['count'], 'items' => $value['items']]);
+            }
+			return json_encode($json);
 	}
 
+	public function referer($id)
+	{
+		$users = DB::table('users')
+			->select('full_name','ref_id', DB::raw('count(*) as count'))
+			->groupBy('ref_id')
+			->where('ref_id', $id)
+			->first();
 	
+		if(isset($users)){
+			return json_encode(['id' => $users->ref_id, 'count' => $users->count]);
+		}else{
 
+		}
+	}
 }
