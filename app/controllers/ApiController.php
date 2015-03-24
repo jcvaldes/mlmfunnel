@@ -37,6 +37,7 @@ class ApiController extends BaseController {
 
 	public function referers()
 	{
+		header('Access-Control-Allow-Origin: *');
 		$users = DB::table('users')
 			->select('full_name','ref_id', DB::raw('count(*) as count'))
 			->groupBy('ref_id')
@@ -60,6 +61,7 @@ class ApiController extends BaseController {
 
 	public function referer($id)
 	{
+		header('Access-Control-Allow-Origin: *');
 		$users = DB::table('users')
 			->select('full_name','ref_id', DB::raw('count(*) as count'))
 			->groupBy('ref_id')
