@@ -264,6 +264,12 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         return date_format($date, 'd/m/Y');
     }
 
+    public function getCreatedAt()
+    {
+        $date = date_create($this->created_at);
+        return date_format($date, 'd/m/Y');
+    }
+
     public function dateActive()
     {
         $now = Carbon::now();

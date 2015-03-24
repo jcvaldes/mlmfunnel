@@ -62,14 +62,18 @@ class ApiController extends BaseController {
 	public function referer($id)
 	{
 		header('Access-Control-Allow-Origin: *');
-		$users = DB::table('users')
-			->select('full_name','ref_id', DB::raw('count(*) as count'))
-			->groupBy('ref_id')
-			->where('ref_id', $id)
-			->first();
+		
+		$users = User::withReferer($id)->get();
+		
 	
 		if(isset($users)){
-			return json_encode(['id' => $users->ref_id, 'count' => $users->count]);
+			$list = [];
+			if($users->count()>0){
+				foreach ($users as $key => $user) {
+					array_push($list, ['name' => $user->full_name, 'phone' => $user->phone, 'email' => $user->email, 'created_at'=> $user->getCreatedAt()]);
+				}
+			}
+			return json_encode(['id' => $id, 'count' => $users->count(), 'list' => $list]);
 		}else{
 			return json_encode(['id' => $id, 'count' => 0]);
 		}
