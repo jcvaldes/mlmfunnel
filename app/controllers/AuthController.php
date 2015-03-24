@@ -78,7 +78,11 @@ class AuthController extends BaseController {
 		$rules = User::$rules;
 		$messages = User::$messages;
 
-		$inputs['ref_id'] = $data['ref_id'];
+		try{
+			$inputs['ref_id'] = $data['ref_id'];
+		}catch(Exception $e){
+			$inputs['ref_id'] = '';
+		}		
 
 		//dd($inputs);
 		
