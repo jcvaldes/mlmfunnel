@@ -38,32 +38,42 @@ class ApiController extends BaseController {
 	public function referers()
 	{
 		header('Access-Control-Allow-Origin: *');
-		$users = DB::table('users')
-			->select('full_name','ref_id', DB::raw('count(*) as count'))
+		$userss = DB::table('users')
+			->select('ref_id')
 			->groupBy('ref_id')
 			->where('ref_id','<>', '')
 			//->whereBetween('created_at', array($start, $end))
 			->get();
 			$data = [];
-			foreach ($users as $key => $user) {
-				$data[$user->ref_id]['count'] = $user->count;
+			foreach ($userss as $key => $u) {
+				
 
-                if(empty($data[$user->ref_id]['items']))
-                    $data[$user->ref_id]['items'] = [];
-                array_push($data[$user->ref_id]['items'], ["name" => $user->full_name]);
+				$users = User::where('ref_id',$u->ref_id)->get();
+
+
+				if(isset($users)){
+					$list = [];
+					if($users->count()>0){
+						foreach ($users as $key => $user) {
+							array_push($list, ['name' => $user->full_name, 'phone' => $user->phone, 'email' => $user->email, 'created_at'=> $user->getCreatedAt()]);
+						}
+						array_push($data, ['id' => $user->ref_id, 'count' => $users->count(), 'list' => $list]);
+					}
+					 
+				}
+
+
+
 			}
-            $json = [];
-            foreach($data as $key => $value){
-                array_push($json, ['ref_id' => $key, 'count' => $value['count'], 'items' => $value['items']]);
-            }
-			return json_encode($json);
+            
+			return json_encode($data);
 	}
 
 	public function referer($id)
 	{
 		header('Access-Control-Allow-Origin: *');
 		
-		$users = User::withReferer($id)->get();
+		$users = User::where('ref_id',$id)->get();
 		
 	
 		if(isset($users)){
