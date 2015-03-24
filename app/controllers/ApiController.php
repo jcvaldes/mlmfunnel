@@ -71,7 +71,7 @@ class ApiController extends BaseController {
 		if(isset($users)){
 			return json_encode(['id' => $users->ref_id, 'count' => $users->count]);
 		}else{
-
+			return json_encode(['id' => $id, 'count' => 0]);
 		}
 	}
 }
