@@ -17,7 +17,7 @@ class Server extends BaseController {
 				}
 			});
 		}catch(Exception $e){
-			return View::make('deploy.index'));
+			return View::make('deploy.index');
 		}
 
 	}
