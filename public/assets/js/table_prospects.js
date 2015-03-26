@@ -44,6 +44,10 @@ $(function () {
             var end = moment(opt.end);
             var current = moment(aData[4]);
 
+            if((!moment(opt.start).isValid()) && (!moment(opt.end).isValid())){
+                return true;
+            }
+
             if(moment(opt.start).isValid()){
                 $("#start").datepicker('update', new Date(opt.start));
             }
@@ -108,9 +112,9 @@ $(function () {
     })
 
     $("#show-all").on("click", function(){
-
-        oTable.fnResetAllFilters();
-
+        opt.start = null;
+        opt.end = null;
+        oTable.fnFilter();
     })
 
     $("#start").datepicker().on("changeDate", function(e){

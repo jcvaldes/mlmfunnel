@@ -81,7 +81,7 @@
                                     <button class="btn btn-lg btn-info m-10 col-md-2 filter-range" id="filter-day">Hoy</button>
                                     <button class="btn btn-lg btn-info m-10 col-md-3 filter-range" id="filter-week">Semana</button>
                                     <button class="btn btn-lg btn-info m-10 col-md-2 filter-range" id="filter-month">Mes</button>
-                                    <button class="btn btn-lg btn-primary m-10 col-md-3 filter-range" id="show-all">Todos</button>
+                                    <button class="btn btn-lg btn-info m-10 col-md-3 filter-range" id="show-all">Todos</button>
                                 </div>
 
                                 <div class="col-md-12"><hr></div>
@@ -112,7 +112,7 @@
                                         <td class="hidden-sm hidden-xs">{{ $prospect->email }} </td>
                                         <td class="hidden-sm hidden-xs">{{ $prospect->phone }}</td>
                                         <td class="hidden-sm hidden-xs">{{ $prospect->type }}</td>
-                                        <th class="hidden-sm hidden-xs" style="text-align:center">{{ $prospect->getComputerDate() }}</th>
+                                        <th class="hidden-sm hidden-xs" style="text-align:center">{{ $prospect->getCreatedAt() }}</th>
                                         <td class="hidden-sm hidden-xs" style="text-align:center">
                                             <button totle="Editar" class="btn btn-info edit-prospect" data-id="{{ $prospect->id }}"><i class="fa fa-edit"></i></button>
                                             <button totle="Eliminar" class="btn btn-danger delete-prospect" data-id="{{ $prospect->id }}"><i class="fa fa-trash-o"></i></button>

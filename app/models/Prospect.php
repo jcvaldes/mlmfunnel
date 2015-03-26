@@ -32,25 +32,25 @@ class Prospect extends Model {
             $p = Prospect::owner($prospect->user_id)->type($prospect->type)->email($prospect->email)->get();
             return ($p->count() == 0);
         });
-        
+
         static::created(function($prospect)
-        {   
+        {
 
             /* Notification */
             $n = new Notification([
-                'notification' => 'Se ha registrado un prospecto.', 
-                'type' => 'new_prospect', 
+                'notification' => 'Se ha registrado un prospecto.',
+                'type' => 'new_prospect',
                 'type_id' => $prospect->id,
                 'user_id' => $prospect->user->id
                 ]);
             $n->save();
 
-        }); 
-        
+        });
+
     }
-  
+
     /* Scopes */
-    
+
     public function scopeCurrent($query)
     {
         return $query->where('user_id', Auth::user()->id);
@@ -78,9 +78,9 @@ class Prospect extends Model {
         }
         return $query->whereBetween('created_at', array($start, $end));
     }
-    
+
     /* Relationships */
-    
+
     public function user()
     {
         return $this->belongsTo('User');
@@ -89,7 +89,13 @@ class Prospect extends Model {
     /* Function */
     public function getComputerDate(){
         return explode(' ', $this->created_at)[0];
-    }    
+    }
+
+    public function getCreatedAt()
+    {
+        $date = date_create($this->created_at);
+        return date_format($date, 'd/m/Y');
+    }
 
     public function getHumanDate()
     {
