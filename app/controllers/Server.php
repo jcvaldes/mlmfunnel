@@ -2,7 +2,7 @@
 
 class Server extends BaseController {
 
-	public function deploy() {
+	public function deploy($intent = 0) {
 
 		try{
 			SSH::into('production')->run(array(
@@ -12,7 +12,9 @@ class Server extends BaseController {
 				echo nl2br($line.PHP_EOL);
 			});
 		}catch(Exception $e){
-			$this->deploy();
+			$intent = $intent +1;
+			echo "Reintento #" . $intent . "<br>";
+			$this->deploy($intent);
 		}
 
 	}
