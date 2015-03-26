@@ -12,22 +12,22 @@ $(function () {
     }else{
         opt.sDom = "<'row'<'col-md-6'f>r>t<'row'<'col-md-6'i><'spcol-md-6an6'p>>";
     }
-    
+
     opt.oTableTools = {
         "sSwfPath": "/assets/plugins/datatables/swf/copy_csv_xls_pdf.swf",
         "aButtons": ["csv", "pdf"]
     };
     opt.order = [[ 4, "desc" ]]
-    opt.columnDefs = [            
+    opt.columnDefs = [
     {
         "targets": [ 3 ],
         "visible": false
-    }            
+    }
     ];
     opt.language = {"sProcessing":     "Procesando...", "sLengthMenu":     "Mostrar _MENU_ registros", "sZeroRecords":    "No se encontraron resultados", "sEmptyTable":     "Ningún dato disponible en esta tabla", "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros", "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros", "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)", "sInfoPostFix":    "", "sSearch":         "Buscar: ", "sUrl":            "", "sInfoThousands":  ",", "sLoadingRecords": "Cargando...", "oPaginate": {"sFirst":    "Primero", "sLast":     "Último", "sNext":     "Siguiente", "sPrevious": "Anterior"}, "oAria": {"sSortAscending":  ": Activar para ordenar la columna de manera ascendente", "sSortDescending": ": Activar para ordenar la columna de manera descendente"} };
 
     $.fn.dataTable.ext.search.push(
-        function( settings, data, dataIndex ) {            
+        function( settings, data, dataIndex ) {
             var letra = opt.word;
             var page = $('#filter-page').val();
 
@@ -67,15 +67,15 @@ $(function () {
         oTable.fnFilter(opt.word);
     })
 
-    $('.filter').change( function() { 
+    $('.filter').change( function() {
         if($(this).val() == 'false'){
             oTable.fnFilter( $('#filter-page').val() );
         }else{
             oTable.fnFilter( $(this).val() );
-        }        
+        }
     });
 
-    
+
 
     $("#filter-date").on("click", function(){
         opt.start = moment($('#start').data('date')).format("YYYY-MM-DD");
@@ -103,10 +103,15 @@ $(function () {
 
     $("#filter-month").on("click", function(){
         opt.start = moment().startOf('month').format("YYYY-MM-DD");
-        opt.end = moment().format("YYYY-MM-DD");        
+        opt.end = moment().format("YYYY-MM-DD");
         oTable.fnFilter();
     })
 
+    $("#show-all").on("click", function(){
+
+        oTable.fnResetAllFilters();
+
+    })
 
     $("#start").datepicker().on("changeDate", function(e){
         opt.start = moment(e.date);
@@ -174,14 +179,14 @@ $(function () {
         console.log(row);
 
 
-        
+
         $.post('/api/prospect/'+$("#id").val()+'/edit', data, function(data, textStatus, xhr) {
             var p
             var tr = row.closest('tr');
             tr.children().eq(0).text(data.name);
             tr.children().eq(1).text(data.email);
             tr.children().eq(2).text(data.phone);
-            
+
 
 
             if(!data.error){
@@ -214,7 +219,7 @@ $(document).on("click", ".delete-prospect", function(){
     if(confirm("Desea eliminar este prospecto?\nNo se puede revertir el proceso.")){
         row = $(this);
 
-        $.post('/api/prospect/'+id+'/delete', function(data, textStatus, xhr) {     
+        $.post('/api/prospect/'+id+'/delete', function(data, textStatus, xhr) {
 
 
             if(!data.error){

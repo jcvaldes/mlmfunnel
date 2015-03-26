@@ -1,7 +1,7 @@
 @extends('backend.layouts.master')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('/assets/plugins/magnific/magnific-popup.css') }}">    
+<link rel="stylesheet" href="{{ asset('/assets/plugins/magnific/magnific-popup.css') }}">
 
 <link href="{{ asset('/assets/plugins/datetimepicker/jquery.datetimepicker.css') }}" rel="stylesheet">
 <link href="{{ asset('/assets/plugins/pickadate/themes/default.css') }}" rel="stylesheet">
@@ -17,14 +17,14 @@
 @section('content')
 
 <div id="main-content">
-    @include('backend.partials.alert')    
+    @include('backend.partials.alert')
             <div class="page-title col-md-4">
                 <h3><strong>Facturación</strong></h3>
             </div>
-            <div class="m-t-10 no-print col-md-8 text-right"> 
+            <div class="m-t-10 no-print col-md-8 text-right">
                 <span class="btn btn-info m-r-10 m-b-10"><i class="fa fa-calendar m-r-10"></i> <strong>Vence el: {{ Auth::user()->getSubscriptionEnds() }}</strong></span>
                 <a href="{{ URL::route('payments.subscription') }}" class="btn btn-primary m-r-10 m-b-10"><i class="fa fa-dollar m-r-10"></i> Pagar Mensualidad</a>
-                <button type="button" class="btn btn-white m-r-10 m-b-10" onclick="window.print();"><i class="fa fa-print m-r-10"></i> Imprimir</button>                
+                <button type="button" class="btn btn-white m-r-10 m-b-10" onclick="window.print();"><i class="fa fa-print m-r-10"></i> Imprimir</button>
             </div>
 
             <div class="row">
@@ -39,17 +39,13 @@
                                                 <th style="min-width:70px"><strong>ID</strong></th>
                                                 <th><strong>Fecha</strong></th>
                                                 <th><strong>Token</strong></th>
-                                                <th><strong>Descripción</strong></th>                                                
+                                                <th><strong>Descripción</strong></th>
                                                 <th class="text-center"><strong>Status</strong></th>
                                                 <th><strong>Total</strong></th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php $total = 0; ?>
                                             @foreach($payments as $payment)
-                                            @if($payment->status == 'approved')
-                                                <?php $total += $payment->total; ?>
-                                            @endif
                                             <tr>
                                                 <td>{{ $payment->getId() }}</td>
                                                 <td>{{ $payment->getComputerDate() }}</td>
@@ -57,24 +53,17 @@
                                                 <td>{{ $payment->description }}</td>
 
                                                 <td class="text-center">
-                                                    {{ $payment->getStatus() }}                                                    
+                                                    {{ $payment->getStatus() }}
                                                 </td>
 
                                                 @if($payment->status == 'approved')
                                                     <td>${{ $payment->total }}</td>
                                                 @else
                                                     <td style="text-decoration:line-through">${{ $payment->total }}</td>
-                                                @endif                                                
+                                                @endif
                                             </tr>
                                             @endforeach
-                                            @if(count($payments))
-                                            <tr>
-                                                <td colspan="4"></td>
-                                                <td class="text-right"><strong>Total: </strong></td>
-                                                <td>${{ $total }}</td>
-                                            </tr>
-                                            @endif
-                                            
+
                                         </tbody>
                                     </table>
                                 </div>
@@ -115,7 +104,7 @@
                             <input type="text" class="form-control" id="email" name="email" placeholder="">
                         </div>
                     </div>
-                </div>                
+                </div>
             </div>
             <div class="modal-footer text-center">
                 <input type="hidden" id="id" value=""/>
@@ -139,7 +128,7 @@
 <script src="{{ asset('/assets/plugins/datatables/dataTables.bootstrap.js') }}"></script>
 <script src="{{ asset('/assets/plugins/datatables/dataTables.tableTools.js') }}"></script>
 <script src="{{ asset('/assets/plugins/datatables/table.editable.js') }}"></script>
-<script src="{{ asset('/assets/js/table_prospects.js') }}"></script> 
+<script src="{{ asset('/assets/js/table_prospects.js') }}"></script>
 
 <script src="{{ asset('/assets/plugins/jnotify/jNotify.jquery.min.js') }}"></script>
 <script src="{{ asset('/assets/js/notifications.js') }}"></script>

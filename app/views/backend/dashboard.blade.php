@@ -80,23 +80,18 @@
     </div>
     @endif
 
-
     <div class="row m-t-10">
         <div class="col-md-12">
             <div class="tabcordion">
-                <ul id="myTab" class="nav nav-tabs nav-dark">
-                    <li class="active"><a href="#products" data-toggle="tab">Estadísticas</a></li>
-                </ul>
                 <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade active in" id="products">
                      <div class="row p-20">
                          <div class="row">
                             <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-                                <h2>Hola {{ Auth::user()->name() }}! Bienvenido al BackOffice de MLMfunnels.</h2>
-                            </div>                  
+                                <h2><strong>¡Hola {{ Auth::user()->name() }}!</strong> Bienvenido a {{ Setting::key('app_name')->first()->value }} </h2>
+                            </div>
                         </div>
 
-                        
                         <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
                             @if(Input::has('start'))
                             <div class="pull-left">
@@ -124,7 +119,7 @@
                                         <td class="text-center">{{ $landing['prospect'] }}</td>
                                         <td class="text-center c-green"><strong>{{ $landing['convertion'] }}%</strong></td>
 
-                                        <td class="text-center "> 
+                                        <td class="text-center ">
                                             <a href="/dashboard/stats/landing" class="edit btn btn-sm btn-default"><i class="fa fa-dashboard"></i> Estadísticas</a>
                                         </td>
                                     </tr>
@@ -134,7 +129,7 @@
                         </div>
 
                     </div>
-                </div>                            
+                </div>
             </div>
 
 
@@ -162,7 +157,7 @@
                             <div class="graph-info p-r-10">
                                 <a href="javascript:void(0)" class="btn bg-blue">Visitas</a>
 
-                                <a href="javascript:void(0)" class="btn bg-purple filter">Filtrar</a> 
+                                <a href="javascript:void(0)" class="btn bg-purple filter">Filtrar</a>
                                 <button href="#" id="bars" class="btn" disabled>
                                     <span></span>
                                 </button>
@@ -184,9 +179,9 @@
             </div>
         </div>
     </div>
-</div> 
+</div>
 
-    {{--<div class="row">        
+    {{--<div class="row">
         <div class="col-lg-12 m-b-20">
             <div class="modal fade" id="event-modal">
                 <div class="modal-dialog">
@@ -272,7 +267,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                     <h4 class="modal-title" id="myModalLabel"><strong>Filtrar estadisticas</strong> </h4>
                 </div>
-                <div class="modal-body ">   
+                <div class="modal-body ">
 
                     <div class="row">
                         <div class="col-md-6" align="center">
@@ -283,10 +278,10 @@
                         <div class="col-md-6" align="center">
                             <h3>Hasta:</h3>
                             <div class="datepicker end" data-inline="true" data-date-format="yyyy-mm-dd"></div>
-                        </div>                    
-                    </div> 
+                        </div>
+                    </div>
 
-                </div>        
+                </div>
                 <div class="modal-footer text-center">
                     <button type="button" class="btn btn-primary" data-dismiss="modal" id="filter-action">Filtrar</button>
                 </div>
@@ -327,7 +322,6 @@ $(document).on("ready", function(){
     $(".filter").on("click", function(){
         $("#modal-filter").modal();
     });
-
 
     $('#filter-action').on('click', function (e) {
         var d = new Date();

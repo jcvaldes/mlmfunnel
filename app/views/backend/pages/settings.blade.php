@@ -98,46 +98,11 @@
                                         </div>
                                     </div>
 
-
                                     <div class="row profile-classic">
                                         <div class="col-md-12">
                                             <div class="panel">
                                                 <div class="panel-title line">
-                                                    <div class="caption"><i class="fa fa-facebook c-gray m-r-10"></i> Redes Sociales</div>
-                                                </div>
-                                                <div class="panel-body">
-
-                                                    <div class="row">
-                                                        <div class="control-label col-md-3">Twitter:</div>
-                                                        <div class="col-md-6">
-                                                            <input type="text" class="form-control" name="app_twitter" value="{{ Setting::key('app_twitter')->first()->value }}">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="row">
-                                                        <div class="control-label col-md-3">Facebook:</div>
-                                                        <div class="col-md-6">
-                                                            <input type="text" class="form-control" name="app_facebook" value="{{ Setting::key('app_facebook')->first()->value }}">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="row">
-                                                        <div class="control-label col-md-3">Google+:</div>
-                                                        <div class="col-md-6">
-                                                            <input type="text" class="form-control" name="app_google" value="{{ Setting::key('app_google')->first()->value }}">
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row profile-classic">
-                                        <div class="col-md-12">
-                                            <div class="panel">
-                                                <div class="panel-title line">
-                                                    <div class="caption"><i class="fa fa-bell c-gray m-r-10"></i> Notificaciones:</div>
+                                                    <div class="caption"><i class="fa fa-bell c-gray m-r-10"></i> Notificaciones: <br><small class="p-l-40">Envio de SMS</small></div>
                                                 </div>
                                                 <div class="panel-body">
                                                     <div class="row-fluid col-md-6">
@@ -455,18 +420,28 @@
                                                         </div>
                                                     </div>
 
-
                                                     <div class="row">
                                                         <div class="control-label col-md-3">Costo registro:</div>
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-2">
                                                             <input type="text" class="form-control" name="payment_register-cost" value="{{ Setting::key('payment_register-cost')->first()->value }}">
+                                                        </div>
+
+                                                        <div class="control-label col-md-2">Comisión:</div>
+                                                        <div class="col-md-2">
+                                                            <input type="text" class="form-control" name="payment_register-commission" value="{{ Setting::key('payment_register-commission')->first()->value }}">
                                                         </div>
                                                     </div>
 
+
                                                     <div class="row">
                                                         <div class="control-label col-md-3">Costo mensualidad:</div>
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-2">
                                                             <input type="text" class="form-control" name="payment_subscription-cost" value="{{ Setting::key('payment_subscription-cost')->first()->value }}">
+                                                        </div>
+
+                                                        <div class="control-label col-md-2">Comisión:</div>
+                                                        <div class="col-md-2">
+                                                            <input type="text" class="form-control" name="payment_subscription-commission" value="{{ Setting::key('payment_subscription-commission')->first()->value }}">
                                                         </div>
                                                     </div>
 

@@ -14,6 +14,10 @@ class UserController extends BaseController {
 		$data['prospect'] = Prospect::current()->dates($start, $end)->get()->count();
 		$data['convertion'] = ($data['unique']==0) ? 0 : ($data['prospect'] / $data['unique']) * 100;
 
+		if(is_float($data['convertion'])){
+			$data['convertion'] = number_format($data['convertion'], 2, '.', '');
+		}
+
 		$landing = Statistic::stats('landing', $start, $end);
 
 		return View::make('backend.dashboard', compact('data', 'landing'));
@@ -61,23 +65,23 @@ class UserController extends BaseController {
 		$messages = User::$messages;
 
 		//dd($inputs);
-		
+
 		$rules['password'] = $rules['password'] . '|confirmed';
 		$rules['password_confirmation'] = 'required';
 		unset($rules['description']);
 
 		$v = Validator::make($inputs, $rules, $messages);
-		
+
 		if ($v->passes())
 		{
 			$user = User::create($inputs);
 			return Redirect::to('/dashboard/user/' . $user->id);
 		}else{
 			return Redirect::back()->withInput()->withErrors($v->messages());
-		}		
+		}
 	}
 
-	
+
 	public function show($id)
 	{
 		$user = User::findOrFail($id);
@@ -100,15 +104,15 @@ class UserController extends BaseController {
 			unset($rules['password_confirmation']);
 			unset($inputs['password_confirmation']);
 		}else{
-			$rules['password'] .= '|confirmed';			
+			$rules['password'] .= '|confirmed';
 		}
 
 		unset($rules['type']);
 		unset($rules['username']);
 		$rules['email'] .= ',email,' . $id;
-		
+
 		$v = Validator::make($inputs, $rules, $messages);
-		
+
 		if ($v->passes())
 		{
 			$user = User::find($id);
@@ -116,7 +120,7 @@ class UserController extends BaseController {
 			if ($user->save()){
 				return Redirect::to('/dashboard/user/' . $id)->with('alert', ['type' => 'success', 'message' => 'El usuario se ha actualizado.']);
 			}
-			
+
 		}
 		return Redirect::back()->withInput()->withErrors($v->messages());
 	}
@@ -133,7 +137,7 @@ class UserController extends BaseController {
 		User::destroy($id);
 		return Redirect::to('/dashboard/user');
 	}
-	
+
 
 	public function page_setup()
 	{
@@ -149,7 +153,7 @@ class UserController extends BaseController {
 			$aweberlist = new AweberList($form);
 			if ($aweberlist->save())
 			{
-				return Redirect::to('/dashboard/landing')->with('alert', ['type' => 'success', 'message' => 'Cambios guardados con exito.']);;			
+				return Redirect::to('/dashboard/landing')->with('alert', ['type' => 'success', 'message' => 'Cambios guardados con exito.']);;
 			}
 
 			//dd($form);
@@ -162,7 +166,7 @@ class UserController extends BaseController {
 		$list = AweberList::current()->page($page)->first();
 		if (AweberList::destroy($list->id))
 		{
-			return Redirect::to('/dashboard/landing')->with('alert', ['type' => 'warning', 'message' => 'Lista eliminada.']);			
+			return Redirect::to('/dashboard/landing')->with('alert', ['type' => 'warning', 'message' => 'Lista eliminada.']);
 		}else{
 			return Redirect::to('/dashboard/landing')->with('alert', ['type' => 'danger', 'message' => 'Ocurrio un error, intenta mas tarde.']);
 		}

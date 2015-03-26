@@ -62,8 +62,6 @@ class ApiController extends BaseController {
 					 
 				}
 
-
-
 			}
             
 			return json_encode($data);

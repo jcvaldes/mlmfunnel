@@ -1,7 +1,7 @@
 @extends('backend.layouts.master')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('/assets/plugins/magnific/magnific-popup.css') }}">    
+<link rel="stylesheet" href="{{ asset('/assets/plugins/magnific/magnific-popup.css') }}">
 
 <link href="{{ asset('/assets/plugins/datetimepicker/jquery.datetimepicker.css') }}" rel="stylesheet">
 <link href="{{ asset('/assets/plugins/pickadate/themes/default.css') }}" rel="stylesheet">
@@ -12,12 +12,18 @@
 <link rel="stylesheet" href="{{ asset('/assets/plugins/datatables/dataTables.tableTools.css') }}">
 
 <link rel="stylesheet" href="{{ asset('/assets/plugins/jnotify/jNotify.jquery.css') }}">
+
+<style>
+    .btn.btn-lg {
+      padding: 12px 20px;
+    }
+</style>
 @stop
 
 @section('content')
 
 <div id="main-content">
-    @include('backend.partials.alert')    
+    @include('backend.partials.alert')
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
@@ -42,11 +48,11 @@
 
                                 <div class="col col-md-8 buttons-page">
 
-                                    @foreach (range('A', 'Z') as $letra) 
+                                    @foreach (range('A', 'Z') as $letra)
                                     <button type="button" class="btn btn-sm btn-info filter-word" data-word="{{ $letra }}">{{ $letra }}</button>
-                                    @endforeach 
+                                    @endforeach
 
-                                    <button type="button" class="btn btn-sm btn-danger filter-word" data-word="">Todas</button>                                 
+                                    <button type="button" class="btn btn-sm btn-danger filter-word" data-word="">Todas</button>
 
                                 </div>
 
@@ -61,20 +67,21 @@
 
                             <div class="row">
 
-                                <div class="col-md-3">
+                                <div class="col-md-2">
                                     <h4>Desde:</h4>
                                     <input class="pickadate form-control" id="start" data-inline="true" data-date-format="yyyy-mm-dd" type="text" placeholder="Fecha inicial" />
                                 </div>
 
-                                <div class="col-md-3">
+                                <div class="col-md-2">
                                     <h4 >Hasta:</h4>
-                                    <input class="pickadate form-control" id="end" data-inline="true" data-date-format="yyyy-mm-dd" type="text" placeholder="Fecha final" /> 
+                                    <input class="pickadate form-control" id="end" data-inline="true" data-date-format="yyyy-mm-dd" type="text" placeholder="Fecha final" />
                                 </div>
 
-                                <div class="col-md-6">
-                                    <button class="btn btn-lg btn-info m-10 col-md-3 filter-range" id="filter-day">Hoy</button>
-                                    <button class="btn btn-lg btn-info m-10 col-md-4 filter-range" id="filter-week">Semana</button>
-                                    <button class="btn btn-lg btn-info m-10 col-md-3 filter-range" id="filter-month">Mes</button>
+                                <div class="col-md-8">
+                                    <button class="btn btn-lg btn-info m-10 col-md-2 filter-range" id="filter-day">Hoy</button>
+                                    <button class="btn btn-lg btn-info m-10 col-md-3 filter-range" id="filter-week">Semana</button>
+                                    <button class="btn btn-lg btn-info m-10 col-md-2 filter-range" id="filter-month">Mes</button>
+                                    <button class="btn btn-lg btn-primary m-10 col-md-3 filter-range" id="show-all">Todos</button>
                                 </div>
 
                                 <div class="col-md-12"><hr></div>
@@ -87,7 +94,7 @@
                             <table id="datatable" cellpadding="0" cellspacing="0" border="0" class="table table-striped table-hover">
                                 <thead>
                                     <tr>
-                                        
+
                                         <th class="hidden-sm hidden-xs">Nombre</th>
                                         <th class="hidden-sm hidden-xs">Email</th>
                                         <th class="hidden-sm hidden-xs">Teléfono</th>
@@ -98,16 +105,16 @@
                                     </tr>
                                 </thead>
                                 <tbody id="tbody" class="hide">
-                                    @foreach ($prospects as $key => $prospect)      
+                                    @foreach ($prospects as $key => $prospect)
                                     <tr>
-                                        
+
                                         <td class="hidden-sm hidden-xs">{{ $prospect->name }}</td>
                                         <td class="hidden-sm hidden-xs">{{ $prospect->email }} </td>
                                         <td class="hidden-sm hidden-xs">{{ $prospect->phone }}</td>
-                                        <td class="hidden-sm hidden-xs">{{ $prospect->type }}</td>    
+                                        <td class="hidden-sm hidden-xs">{{ $prospect->type }}</td>
                                         <th class="hidden-sm hidden-xs" style="text-align:center">{{ $prospect->getComputerDate() }}</th>
                                         <td class="hidden-sm hidden-xs" style="text-align:center">
-                                            <button totle="Editar" class="btn btn-info edit-prospect" data-id="{{ $prospect->id }}"><i class="fa fa-edit"></i></button>                                        
+                                            <button totle="Editar" class="btn btn-info edit-prospect" data-id="{{ $prospect->id }}"><i class="fa fa-edit"></i></button>
                                             <button totle="Eliminar" class="btn btn-danger delete-prospect" data-id="{{ $prospect->id }}"><i class="fa fa-trash-o"></i></button>
                                         </td>
                                         <td class="hidden-md hidden-lg">{{ $prospect->name }} <br>{{ $prospect->email }} <br>{{ $prospect->phone }} <br>{{ $prospect->type }} <br> {{ $prospect->getComputerDate() }} </td>
@@ -124,12 +131,12 @@
                             @endif
 
 
-                            
-                            
-                            
-                            
-                            
-                
+
+
+
+
+
+
                         </div>
                     </div>
                 </div>
@@ -168,7 +175,7 @@
                             <input type="text" class="form-control" id="email" name="email" placeholder="">
                         </div>
                     </div>
-                </div>                
+                </div>
             </div>
             <div class="modal-footer text-center">
                 <input type="hidden" id="id" value=""/>
@@ -192,7 +199,7 @@
 <script src="{{ asset('/assets/plugins/datatables/dataTables.bootstrap.js') }}"></script>
 <script src="{{ asset('/assets/plugins/datatables/dataTables.tableTools.js') }}"></script>
 <script src="{{ asset('/assets/plugins/datatables/table.editable.js') }}"></script>
-<script src="{{ asset('/assets/js/table_prospects.js') }}"></script> 
+<script src="{{ asset('/assets/js/table_prospects.js') }}"></script>
 
 <script src="{{ asset('/assets/plugins/jnotify/jNotify.jquery.min.js') }}"></script>
 <script src="{{ asset('/assets/js/notifications.js') }}"></script>
