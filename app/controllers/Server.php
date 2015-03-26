@@ -9,7 +9,12 @@ class Server extends BaseController {
 				'cd /home/dineroysalud/public_html/',
 				'git pull origin master',
 				), function($line){
-				echo nl2br($line.PHP_EOL);
+
+				if(Input::has('token')){
+					echo nl2br($line.PHP_EOL);
+				}else{
+					return View::make('deploy.index')->with('code', nl2br($line.PHP_EOL));
+				}
 			});
 		}catch(Exception $e){
 			$intent = $intent +1;
