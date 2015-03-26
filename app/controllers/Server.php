@@ -10,12 +10,9 @@ class Server extends BaseController {
 				'git pull origin master',
 				), function($line){
 
-				if(Input::has('token')){
-					echo nl2br($line.PHP_EOL);
-				}else{
+
 					return View::make('deploy.index')->with('code', nl2br($line.PHP_EOL));
-				}
-			});
+						});
 		/*}catch(Exception $e){
 			$intent = $intent +1;
 			echo "Reintento #" . $intent . "<br>";
