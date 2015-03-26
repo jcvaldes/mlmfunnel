@@ -3,7 +3,7 @@
 class Server extends BaseController {
 
 	public function deploy($intent = 0) {
-
+		return View::make('deploy.index');
 		//try{
 			SSH::into('production')->run(array(
 				'cd /home/dineroysalud/public_html/',
@@ -11,7 +11,7 @@ class Server extends BaseController {
 				), function($line){
 
 
-					return View::make('deploy.index')->with('code', nl2br($line.PHP_EOL));
+
 						});
 		/*}catch(Exception $e){
 			$intent = $intent +1;
