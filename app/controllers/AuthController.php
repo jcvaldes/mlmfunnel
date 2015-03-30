@@ -8,7 +8,7 @@ class AuthController extends BaseController {
 			return Redirect::to('/dashboard');
 		}else{
 			return View::make('backend.login');
-		}		
+		}
 	}
 
 	public function showRegister()
@@ -20,8 +20,8 @@ class AuthController extends BaseController {
 				return View::make('backend.register');
 			}else{
 				return Redirect::route('login');
-			}			
-		}		
+			}
+		}
 	}
 
 	public function showForgot()
@@ -30,14 +30,14 @@ class AuthController extends BaseController {
 			return Redirect::to('/dashboard');
 		}else{
 			return View::make('backend.forgot');
-		}		
-	}	
+		}
+	}
 
 	public function login()
 	{
 		$rules = array(
 			'email'    => 'required|email',
-			'password' => 'required' 
+			'password' => 'required'
 		);
 		$messages = [
 	        'email_login.required' => 'El correo es obligatorio.',
@@ -52,7 +52,7 @@ class AuthController extends BaseController {
 			$userdata = array(
 				'email' 	=> Input::get('email'),
 				'password' 	=>Input::get('password')
-			);		
+			);
 
 			if ($r = Auth::attempt($userdata)) {
 				if(Auth::user()->status == 'suspended'){
@@ -60,12 +60,12 @@ class AuthController extends BaseController {
 				}else{
 					return Redirect::to('/dashboard');
 				}
-				
+
 			} else {
 				return Redirect::to('/auth/login')->with('alert', ['type' => 'danger', 'message' => 'Credenciales invalidas']);
 			}
 		}
-	}	
+	}
 
 	public function register()
 	{
@@ -82,22 +82,23 @@ class AuthController extends BaseController {
 			$inputs['ref_id'] = $data['ref_id'];
 		}catch(Exception $e){
 			$inputs['ref_id'] = '';
-		}		
+		}
 
 		//dd($inputs);
-		
+
 		$rules['password'] = $rules['password'] . '|confirmed';
 		$rules['password_confirmation'] = 'required';
 		unset($rules['description']);
 
 		$v = Validator::make($inputs, $rules, $messages);
-		
+
 		if ($v->passes())
 		{
 			$user = User::create($inputs);
-			
+
 			$data['user_id'] = $user->id;
 			$data['ip'] = Request::getClientIp();
+			$data['commission'] = Setting::key('payment_register-commission')->first()->value;
 
 			$payment = new Payment($data);
 
@@ -105,11 +106,11 @@ class AuthController extends BaseController {
 				Session::forget('payment');
 			}
 
-			Auth::loginUsingId($user->id);			
+			Auth::loginUsingId($user->id);
 			return Redirect::to('/dashboard/');
 		}else{
 			return Redirect::back()->withInput()->withErrors($v->messages());
-		}		
+		}
 	}
 
 	public function logout()

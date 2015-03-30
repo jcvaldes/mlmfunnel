@@ -46,7 +46,7 @@ class ApiController extends BaseController {
 			->get();
 			$data = [];
 			foreach ($userss as $key => $u) {
-				
+
 
 				$users = User::where('ref_id',$u->ref_id)->get();
 
@@ -59,29 +59,36 @@ class ApiController extends BaseController {
 						}
 						array_push($data, ['id' => $user->ref_id, 'count' => $users->count(), 'list' => $list]);
 					}
-					 
+
 				}
 
 			}
-            
+
 			return json_encode($data);
 	}
 
 	public function referer($id)
 	{
 		header('Access-Control-Allow-Origin: *');
-		
+
 		$users = User::where('ref_id',$id)->get();
-		
-	
+
 		if(isset($users)){
 			$list = [];
+			$commission = 0;
 			if($users->count()>0){
 				foreach ($users as $key => $user) {
-					array_push($list, ['name' => $user->full_name, 'phone' => $user->phone, 'email' => $user->email, 'created_at'=> $user->getCreatedAt()]);
+					$payments = $user->getPayments();
+
+					foreach ($payments as $key => $payment) {
+						$payment->created_at_format = $payment->created_at->format('d/m/Y');
+						$commission = $commission + $payment->commission;
+						unset($payment->created_at);
+					}
+					array_push($list, ['name' => $user->full_name, 'phone' => $user->phone, 'email' => $user->email, 'created_at'=> $user->getCreatedAt(), 'payments' => $payments]);
 				}
 			}
-			return json_encode(['id' => $id, 'count' => $users->count(), 'list' => $list]);
+			return json_encode(['id' => $id, 'count' => $users->count(), 'list' => $list, 'commission' => $commission]);
 		}else{
 			return json_encode(['id' => $id, 'count' => 0]);
 		}

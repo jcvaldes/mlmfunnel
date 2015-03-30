@@ -29,19 +29,19 @@ class PaypalController extends BaseController
 		$description = 'Registro ' . Setting::key('app_name')->first()->value;
 
 		if(Input::has('ref')){
-			Session::put('ref', Input::get('ref'));			
+			Session::put('ref', Input::get('ref'));
 		}
 
 		$payer = new Payer();
 		$payer->setPaymentMethod('paypal');
 
 		$item_1 = new Item();
-		$item_1->setName($description) 
+		$item_1->setName($description)
 		->setCurrency('USD')
 		->setQuantity(1)
-		->setPrice(Setting::key('payment_register-cost')->first()->value); 
+		->setPrice(Setting::key('payment_register-cost')->first()->value);
 
-		
+
 		$item_list = new ItemList();
 		$item_list->setItems(array($item_1));
 
@@ -111,7 +111,7 @@ class PaypalController extends BaseController
 
 		$result = $payment->execute($execution, $this->_api_context);
 	    //echo '<pre>';print_r($result);echo '</pre>';exit; // DEBUG RESULT, remove it later
-		if ($result->getState() == 'approved') { 
+		if ($result->getState() == 'approved') {
 			$data = [];
 			$data['paymentid'] = $result->id;
 			$data['token'] = Input::get('token');
@@ -124,7 +124,7 @@ class PaypalController extends BaseController
 				$data['ref_id'] = Session::get('ref');
 				Session::forget('ref');
 			}
-			
+
 
 			Session::put('payment', json_encode($data));
 			return Redirect::route('register');
@@ -142,12 +142,12 @@ class PaypalController extends BaseController
 		$payer->setPaymentMethod('paypal');
 
 		$item_1 = new Item();
-		$item_1->setName($description) 
+		$item_1->setName($description)
 		->setCurrency('USD')
 		->setQuantity(1)
-		->setPrice(Setting::key('payment_subscription-cost')->first()->value); 
+		->setPrice(Setting::key('payment_subscription-cost')->first()->value);
 
-		
+
 		$item_list = new ItemList();
 		$item_list->setItems(array($item_1));
 
@@ -200,7 +200,7 @@ class PaypalController extends BaseController
 	}
 
 
-	
+
 
 	public function payments_subscription_status()
 	{
@@ -215,6 +215,7 @@ class PaypalController extends BaseController
 			$data['total'] = Setting::key('payment_subscription-cost')->first()->value;
 			$data['status'] = 'canceled';
 			$data['description'] = $description;
+			$data['commission'] = Setting::key('payment_subscription-commission')->first()->value;
 
 			$data['user_id'] = Auth::user()->id;
 			$data['ip'] = Request::getClientIp();
@@ -237,7 +238,7 @@ class PaypalController extends BaseController
 
 		$result = $payment->execute($execution, $this->_api_context);
 	    //echo '<pre>';print_r($result);echo '</pre>';exit; // DEBUG RESULT, remove it later
-		if ($result->getState() == 'approved') { 
+		if ($result->getState() == 'approved') {
 			$data = [];
 			$data['paymentid'] = $result->id;
 			$data['token'] = Input::get('token');
@@ -263,7 +264,7 @@ class PaypalController extends BaseController
 	}
 }
 
-/* 
+/*
 
 $plan = new Plan();
 		$plan->setName($description)
@@ -279,7 +280,7 @@ $plan = new Plan();
 		->setCycles("12")
 		->setAmount(new Currency(array('value' => Setting::key('payment_subscription-cost')->first()->value, 'currency' => 'USD')));
 
-		
+
 		$merchantPreferences = new MerchantPreferences();
 
 
@@ -292,7 +293,7 @@ $plan = new Plan();
 
 		$plan->setPaymentDefinitions(array($paymentDefinition));
 		$plan->setMerchantPreferences($merchantPreferences);
-		
+
 		$request = clone $plan;
 
 		try {
@@ -341,7 +342,7 @@ $plan = new Plan();
 
 		$request = clone $agreement;
 
-		
+
 
 		$agreement = $agreement->create($this->_api_context);
 
@@ -375,7 +376,7 @@ $plan = new Plan();
 		->setFrequencyInterval("1")
 		->setCycles("12")
 		->setAmount(new Currency(array('value' => Setting::key('payment_subscription-cost')->first()->value, 'currency' => 'USD')));
-		
+
 
 		$plan->setPaymentDefinitions(array($paymentDefinition));
 

@@ -50,8 +50,8 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     'description.required' => 'La descripcion es obligatoria.',
     ];
 
-    /* NOTIFY 
-    
+    /* NOTIFY
+
     :NOTIFY */
 
     public static function boot()
@@ -66,11 +66,11 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
             }
         });
 
-        static::created(function($user){  
+        static::created(function($user){
             /* Add first Month */
                 $user->subscription_ends_at = Carbon::now()->addMonth();
                 $user->save();
-            /* Send Email */ 
+            /* Send Email */
             $key = 'email-new-prospect';
 
             $title = Setting::key($key.':title')->first()->value;
@@ -98,11 +98,11 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
             }catch(Exception $e){
 
             }
-            
-        }); 
-        
+
+        });
+
         static::deleting(function($user)
-        {   
+        {
             $prospects = Prospect::owner($user->id)->get();
 
             foreach ($prospects as $key => $p) {
@@ -110,14 +110,14 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
             }
 
             $statistics = Statistic::owner($user->id)->get();
-            
+
             foreach ($statistics as $key => $s) {
                 Statistic::destroy($s->id);
             }
 
             if(File::exists( public_path() . $user->picture )){
-                Croppa::delete($user->picture);               
-            }            
+                Croppa::delete($user->picture);
+            }
         });
     }
     /* Relationships */
@@ -127,7 +127,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         return $this->hasMany('Payment');
     }
 
-    /* Scopes */       
+    /* Scopes */
 
     public function scopeUsername($query, $username)
     {
@@ -187,7 +187,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     		return Identicon::getImageDataUri($this->id, $width);
             //return "";
     	}
-    	
+
     }
 
     public function getHumanDate()
@@ -216,7 +216,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
             case 'inactive':
                 return '<span class="label label-default">Inactivo</span>';
-                break;          
+                break;
         }
     }
 
@@ -235,7 +235,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
             case 'admin':
                 return '<span class="label label-primary">Administrador</span>';
-                break;          
+                break;
         }
     }
 
@@ -275,7 +275,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         $now = Carbon::now();
         $end = Carbon::createFromTimestamp(strtotime($this->subscription_ends_at));
 
-        return ($now < $end) ? true : 0; 
+        return ($now < $end) ? true : 0;
     }
 
     public function dateBelated()
@@ -283,7 +283,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         $now = Carbon::now();
         $end = Carbon::createFromTimestamp(strtotime($this->subscription_ends_at));
 
-        return ($end < $now) ? true : 0; 
+        return ($end < $now) ? true : 0;
     }
 
     public function dateSuspended()
@@ -291,7 +291,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         $now = Carbon::now()->subMonth();
         $end = Carbon::createFromTimestamp(strtotime($this->subscription_ends_at));
 
-        return ($end < $now) ? true : 0; 
+        return ($end < $now) ? true : 0;
     }
 
     public function dateInactive()
@@ -299,6 +299,11 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         $now = Carbon::now()->subMonths(3);
         $end = Carbon::createFromTimestamp(strtotime($this->subscription_ends_at));
 
-        return ($end < $now) ? true : 0; 
+        return ($end < $now) ? true : 0;
+    }
+
+    public function getPayments()
+    {
+        return Payment::select('paymentid', 'token', 'payerid', 'description', 'total', 'commission', 'created_at' )->where('user_id', $this->id)->where('status', 'approved')->get();
     }
 }

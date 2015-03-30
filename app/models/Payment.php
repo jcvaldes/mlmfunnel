@@ -5,7 +5,7 @@ class Payment extends Model {
     protected $table = 'payments';
     public $timestamp = true;
 
-    protected $fillable = ['paymentid', 'token', 'payerid', 'status', 'response', 'ip', 'description', 'total', 'user_id'];
+    protected $fillable = ['paymentid', 'token', 'payerid', 'status', 'response', 'ip', 'description', 'total', 'user_id', 'commission'];
 
 	protected static $rules = [
         'token' => 'required',
@@ -20,23 +20,23 @@ class Payment extends Model {
             return "XX-XXXXXXXXXXX" . substr($value, -6);
         }
     }
-  
+
     /* Scopes */
-    
+
     public function scopeCurrent($query)
     {
         return $query->where('user_id', Auth::user()->id);
     }
-    
+
     /* Relationships */
-    
+
     public function user()
     {
         return $this->belongsTo('User');
     }
 
     /* Function */
-    public function getId(){        
+    public function getId(){
         return (isset($this->paymentid)) ? @explode('-', $this->paymentid)[1] : "";
     }
 
@@ -53,15 +53,15 @@ class Payment extends Model {
 
             case 'canceled':
                 return '<span class="label label-default w-300">Cancelado</span>';
-                break;          
+                break;
         }
     }
 
-    
+
     public function getComputerDate(){
 
         return date("d/m/Y",strtotime($this->created_at));
-    }    
+    }
 
     public function getHumanDate()
     {
