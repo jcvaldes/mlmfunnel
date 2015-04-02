@@ -145,7 +145,7 @@ class PaypalController extends BaseController
 		$item_1->setName($description)
 		->setCurrency('USD')
 		->setQuantity(1)
-		->setPrice(Setting::key('payment_subscription-cost')->first()->value);
+		->setPrice(Auth::user()->subscription_cost);
 
 
 		$item_list = new ItemList();
@@ -153,7 +153,7 @@ class PaypalController extends BaseController
 
 		$amount = new Amount();
 		$amount->setCurrency('USD')
-		->setTotal(Setting::key('payment_subscription-cost')->first()->value);
+		->setTotal(Auth::user()->subscription_cost);
 
 		$transaction = new Transaction();
 		$transaction->setAmount($amount)

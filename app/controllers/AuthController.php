@@ -78,6 +78,8 @@ class AuthController extends BaseController {
 		$rules = User::$rules;
 		$messages = User::$messages;
 
+		$inputs['subscription_cost'] = Setting::key('payment_subscription-cost')->first()->value;
+
 		try{
 			$inputs['ref_id'] = $data['ref_id'];
 		}catch(Exception $e){
