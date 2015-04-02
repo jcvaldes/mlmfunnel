@@ -10,3 +10,4 @@ Thumbs.db
 public/uploads/avatar/*.jpg
 cookies.txt
 /app/config/database.php
+app/config/remote.php
