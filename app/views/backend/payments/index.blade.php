@@ -23,7 +23,37 @@
             </div>
             <div class="m-t-10 no-print col-md-8 text-right">
                 <span class="btn btn-info m-r-10 m-b-10"><i class="fa fa-calendar m-r-10"></i> <strong>Vence el: {{ Auth::user()->getSubscriptionEnds() }}</strong></span>
-                <a href="{{ URL::route('payments.subscription') }}" class="btn btn-primary m-r-10 m-b-10"><i class="fa fa-dollar m-r-10"></i> Pagar Mensualidad</a>
+<?php
+$m_email_paypal = "ielijose-buyer@gmail.com";
+$m_desc_sub = "Subscripción de Prueba";
+//opcional
+$m_moneda = "USD";  $m_monto= "0.01";
+?>
+<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+<input name="cmd" type="hidden" value="_xclick-subscriptions" />
+<input name="business" type="hidden" value="<?= $m_email_paypal?>" />
+<input name="item_name" type="hidden" value="<?= $m_desc_sub?>" />
+<input name="currency_code" type="hidden" value="<?= $m_moneda?>" />
+<input name="no_shipping" type="hidden" value="1" />
+<button type="submit" class="btn btn-primary m-r-10 m-b-10"><i class="fa fa-dollar m-r-10"></i> Pagar Mensualidad</button>
+<input name="no_shipping" type="hidden" value="1" />
+<input name="a3" type="hidden" value="<?= $m_monto?>" />
+<input name="p3" type="hidden" value="1" />
+<input name="t3" type="hidden" Value="M" />
+<input name="src" type="hidden" value="1" />
+<input name="sra" type="hidden" value="1" />
+<input type="hidden" name="custom" value="{{json_encode(array('user_id' => Auth::user()->id))}}">
+
+</form>
+
+
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="display:inline-block;">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="Z2P4YSJ3HG7B4">
+<button type="submit" class="btn btn-primary m-r-10 m-b-10"><i class="fa fa-dollar m-r-10"></i> Pagar Mensualidad</button>
+</form>
+
                 <button type="button" class="btn btn-white m-r-10 m-b-10" onclick="window.print();"><i class="fa fa-print m-r-10"></i> Imprimir</button>
             </div>
 

@@ -12,4 +12,7 @@ Route::any('/statistics', ['uses' => 'StatisticController@statistics']);
 Route::any('/referers', ['uses' => 'ApiController@referers']);
 Route::any('/referer/{id}', ['uses' => 'ApiController@referer']);
 
+Route::any('/ipn', ['uses' => 'ApiController@ipn']);
+Route::any('/ipn_log', ['uses' => 'ApiController@ipn_log']);
+
 });
