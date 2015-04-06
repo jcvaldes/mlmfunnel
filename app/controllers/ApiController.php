@@ -205,7 +205,7 @@ class ApiController extends BaseController
 
             if (DEBUG == true) {
                 //error_log(date('[Y-m-d H:i e] ') . "Verified IPN: $req " . PHP_EOL, 3, LOG_FILE);
-                error_log(date('[Y-m-d H:i e] ') . "Var_Dump " . var_dump($_POST) .PHP_EOL, 3, LOG_FILE);
+                error_log(date('[Y-m-d H:i e] ') . "Print POST " . print_r($_POST) .PHP_EOL, 3, LOG_FILE);
 
             }
         }
