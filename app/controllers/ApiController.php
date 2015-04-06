@@ -231,4 +231,9 @@ class ApiController extends BaseController
 
 
     }
+
+    public function ipn_delete() {
+        define("LOG_FILE", "./ipn.log");
+        unset(LOG_FILE);
+    }
 }
