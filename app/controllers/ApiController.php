@@ -204,8 +204,9 @@ class ApiController extends BaseController
             //$payer_email = $_POST['payer_email'];
 
             if (DEBUG == true) {
+            	$debug_export = var_export($_POST, true);
                 //error_log(date('[Y-m-d H:i e] ') . "Verified IPN: $req " . PHP_EOL, 3, LOG_FILE);
-                error_log(date('[Y-m-d H:i e] ') . "Print POST " . print_r($_POST) .PHP_EOL, 3, LOG_FILE);
+                error_log(date('[Y-m-d H:i e] ') . "Print POST " . $debug_export .PHP_EOL, 3, LOG_FILE);
 
             }
         }
