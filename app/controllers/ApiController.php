@@ -176,8 +176,8 @@ class ApiController extends BaseController
 
             // Log the entire HTTP response if debug is switched on.
             if (DEBUG == true) {
-                error_log(date('[Y-m-d H:i e] ') . "HTTP request of validation request:" . curl_getinfo($ch, CURLINFO_HEADER_OUT) . " for IPN payload: $req" . PHP_EOL, 3, LOG_FILE);
-                error_log(date('[Y-m-d H:i e] ') . "HTTP response of validation request: $res" . PHP_EOL, 3, LOG_FILE);
+                //error_log(date('[Y-m-d H:i e] ') . "HTTP request of validation request:" . curl_getinfo($ch, CURLINFO_HEADER_OUT) . " for IPN payload: $req" . PHP_EOL, 3, LOG_FILE);
+                //error_log(date('[Y-m-d H:i e] ') . "HTTP response of validation request: $res" . PHP_EOL, 3, LOG_FILE);
             }
             curl_close($ch);
         }
@@ -204,7 +204,8 @@ class ApiController extends BaseController
             //$payer_email = $_POST['payer_email'];
 
             if (DEBUG == true) {
-                error_log(date('[Y-m-d H:i e] ') . "Verified IPN: $req " . PHP_EOL, 3, LOG_FILE);
+                //error_log(date('[Y-m-d H:i e] ') . "Verified IPN: $req " . PHP_EOL, 3, LOG_FILE);
+                var_dump($_POST);
             }
         }
         else if (strcmp($res, "INVALID") == 0) {
