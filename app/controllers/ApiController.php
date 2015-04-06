@@ -98,7 +98,7 @@ class ApiController extends BaseController
 
         // Set to 0 once you're ready to go live
         define("USE_SANDBOX", 1);
-        define("LOG_FILE", "./app/storage/logs/ipn.log");
+        define("LOG_FILE", "./ipn.log");
 
         // Read POST data
         // reading posted data directly from $_POST causes serialization
@@ -218,7 +218,7 @@ class ApiController extends BaseController
     }
 
     public function ipn_log() {
-        define("LOG_FILE", "./app/storage/logs/ipn.log");
+        define("LOG_FILE", "./ipn.log");
 
         $lines = file(LOG_FILE);
 
