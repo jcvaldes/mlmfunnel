@@ -90,19 +90,10 @@ class ApiController extends BaseController
     /* IPN */
 
     public function ipn() {
-
-        // CONFIG: Enable debug mode. This means we'll log requests into 'ipn.log' in the same directory.
-        // Especially useful if you encounter network errors or other intermittent problems with IPN (validation).
-        // Set this to 0 once you go live or don't require logging.
         define("DEBUG", 1);
-
-        // Set to 0 once you're ready to go live
         define("USE_SANDBOX", 0);
         define("LOG_FILE", "./ipn.log");
 
-        // Read POST data
-        // reading posted data directly from $_POST causes serialization
-        // issues with array data in POST. Reading raw POST data from input stream instead.
         $raw_post_data = file_get_contents('php://input');
         $raw_post_array = explode('&', $raw_post_data);
         $myPost = array();
@@ -126,8 +117,6 @@ class ApiController extends BaseController
             $req.= "&$key=$value";
         }
 
-        // Post IPN data back to PayPal to validate the IPN data is genuine
-        // Without this step anyone can fake IPN data
         if (USE_SANDBOX == true) {
             $paypal_url = "https://www.sandbox.paypal.com/cgi-bin/webscr";
         }
@@ -151,20 +140,11 @@ class ApiController extends BaseController
         }
 
         // CONFIG: Optional proxy configuration
-        //curl_setopt($ch, CURLOPT_PROXY, $proxy);
-        //curl_setopt($ch, CURLOPT_HTTPPROXYTUNNEL, 1);
-        // Set TCP timeout to 30 seconds
         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 30);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Connection: Close'));
 
-        // CONFIG: Please download 'cacert.pem' from "http://curl.haxx.se/docs/caextract.html" and set the directory path
-        // of the certificate as shown below. Ensure the file is readable by the webserver.
-        // This is mandatory for some environments.
-        //$cert = __DIR__ . "./cacert.pem";
-        //curl_setopt($ch, CURLOPT_CAINFO, $cert);
         $res = curl_exec($ch);
         if (curl_errno($ch) != 0)
-         // cURL error
         {
             if (DEBUG == true) {
                 error_log(date('[Y-m-d H:i e] ') . "Can't connect to PayPal to validate IPN message: " . curl_error($ch) . PHP_EOL . "\n", 3, LOG_FILE);
@@ -183,7 +163,6 @@ class ApiController extends BaseController
         }
 
         // Inspect IPN validation result and act accordingly
-        // Split response headers and payload, a better way for strcmp
         $tokens = explode("\r\n\r\n", trim($res));
         $res = trim(end($tokens));
         if (strcmp($res, "VERIFIED") == 0) {
@@ -203,6 +182,10 @@ class ApiController extends BaseController
             //$receiver_email = $_POST['receiver_email'];
             //$payer_email = $_POST['payer_email'];
 
+
+
+
+
             if (DEBUG == true) {
             	$debug_export = var_export($_POST, true);
                 //error_log(date('[Y-m-d H:i e] ') . "Verified IPN: $req " . PHP_EOL, 3, LOG_FILE);
@@ -220,20 +203,6 @@ class ApiController extends BaseController
         }
     }
 
-    public function ipn_log() {
-        define("LOG_FILE", "./ipn.log");
-
-        $lines = file(LOG_FILE);
-
-        foreach ($lines as $line) {
-        	if(strlen($line)>0){
-        		echo ($line."<hr>");
-        	}
-
-        }
-
-
-    }
 
     public function ipn_delete() {
         define("LOG_FILE", "./ipn.log");

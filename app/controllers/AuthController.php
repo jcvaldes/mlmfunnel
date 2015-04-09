@@ -16,7 +16,7 @@ class AuthController extends BaseController {
 		if(Auth::user()){
 			return Redirect::to('/dashboard');
 		}else{
-			if(Session::has('payment')){
+			if(Session::has('register')){
 				return View::make('backend.register');
 			}else{
 				return Redirect::route('login');
@@ -69,10 +69,10 @@ class AuthController extends BaseController {
 
 	public function register()
 	{
-		if(!Session::has('payment'))
+		if(!Session::has('register'))
 			return Redirect::route('login');
 
-		$data = json_decode(Session::get('payment'),true);
+		//$data = json_decode(Session::get('payment'),true);
 
 		$inputs = Input::all();
 		$rules = User::$rules;
@@ -80,13 +80,8 @@ class AuthController extends BaseController {
 
 		$inputs['subscription_cost'] = Setting::key('payment_subscription-cost')->first()->value;
 
-		try{
-			$inputs['ref_id'] = $data['ref_id'];
-		}catch(Exception $e){
-			$inputs['ref_id'] = '';
-		}
-
-		//dd($inputs);
+		$inputs['ref_id'] = (Input::has('ref')) ? Input::get('ref') : '';
+		$inputs['uniqid'] = Session::get('uniqid');
 
 		$rules['password'] = $rules['password'] . '|confirmed';
 		$rules['password_confirmation'] = 'required';
@@ -97,16 +92,9 @@ class AuthController extends BaseController {
 		if ($v->passes())
 		{
 			$user = User::create($inputs);
-
-			$data['user_id'] = $user->id;
-			$data['ip'] = Request::getClientIp();
-			$data['commission'] = Setting::key('payment_register-commission')->first()->value;
-
-			$payment = new Payment($data);
-
-			if($payment->save()){
-				Session::forget('payment');
-			}
+			
+			Session::forget('register');
+			Session::forget('uniqid');			
 
 			Auth::loginUsingId($user->id);
 			return Redirect::to('/dashboard/');

@@ -3,16 +3,16 @@
 if(!isset(Auth::user()->id)){
 	Route::get('/dashboard', function(){
 		return Redirect::to('/auth/login');
-	});	
+	});
 }
 
 Route::get('/', function(){
 	return Redirect::to('/auth/login');
-});	
+});
 
 Route::get('/aweber', function(){
 	return View::make('aweber');
-});	
+});
 
 /* DEPLOY */
 
@@ -21,49 +21,29 @@ if (file_exists(__DIR__.'/controllers/Server.php')) {
 }
 
 /* API */
-
 require (__DIR__ . '/routes/api.php');
+/* :API */
 
-/* -------------------------------------------------- */
-/* Auth Links */
+/* AUTH */
+require (__DIR__ . '/routes/auth.php');
+/* :AUTH */
 
-Route::get('/auth/login', ['as' => 'login', 'uses' => 'AuthController@showLogin']);
-Route::post('/auth/login', ['as' => 'login', 'uses' => 'AuthController@login']);
-
-Route::get('/auth/register', ['as' => 'register', 'uses' => 'AuthController@showRegister']);
-Route::post('/auth/register', ['as' => 'register', 'uses' => 'AuthController@register']);
-
-Route::get('/auth/forgot', ['uses' => 'AuthController@showForgot']);
-Route::post('/auth/forgot', ['uses' => 'RemindersController@postRemind']);
-
-Route::get('/auth/forgot/{token}', ['uses' => 'RemindersController@getReset']);
-Route::post('/auth/forgot/reset', ['uses' => 'RemindersController@postReset']);
-
-Route::get('/auth/logout', ['uses' => 'AuthController@logout']);
-
-/* :Auth Links */
-/* -------------------------------------------------- */
-
-// Paneles
+/* Dashboard */
 Route::group(['before' => 'auth'], function () {
 
 	if(Auth::user()){
 		require (__DIR__ . '/routes/' . Auth::user()->type . '.php');
 		require (__DIR__ . '/routes/shared.php');
-	}   
+	}
 
 });
 
-// Error Handle
+/* Subscription */
+Route::group(['prefix' => 'subscription'], function(){
+    Route::get('/prepare', ['as' => 'prepare', 'uses' => 'SubscriptionController@prepare']);
+    Route::get('/process', ['as' => 'process', 'uses' => 'SubscriptionController@process']);
+    Route::get('/cancel', ['as' => 'cancel', 'uses' => 'SubscriptionController@cancel']);
 
-App::missing(function($exception)
-{
-	if(Auth::user()){
-		//return Redirect::to('/panel')->with('alert', ['type' => 'danger', 'message' => 'Ocurrio un extraño error, intenta de nuevo.']);
-	}else{
-		//return Redirect::to('/auth/login')->with('alert', ['type' => 'danger', 'message' => 'Ocurrio un extraño error, intenta de nuevo.']);
-	}
-    
 });
 
 /* Funnel */
@@ -75,7 +55,7 @@ Route::post('/dashboard/unsuscribe', ['uses' => 'HomeController@unsuscribe_post'
 
 /* PayPal */
 
-Route::get('payment', array(
+Route::get('subscription/payment', array(
     'as' => 'payment',
     'uses' => 'PaypalController@postPayment',
 ));
@@ -85,3 +65,14 @@ Route::get('dashboard/payment/status', array(
     'as' => 'payment.status',
     'uses' => 'PaypalController@getPaymentStatus',
 ));
+
+/* Error Handle */
+
+App::missing(function($exception)
+{
+    if(Auth::user()){
+        //return Redirect::to('/panel')->with('alert', ['type' => 'danger', 'message' => 'Ocurrio un extraño error, intenta de nuevo.']);
+    }else{
+        //return Redirect::to('/auth/login')->with('alert', ['type' => 'danger', 'message' => 'Ocurrio un extraño error, intenta de nuevo.']);
+    }
+});
