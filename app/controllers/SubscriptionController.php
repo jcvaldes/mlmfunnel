@@ -13,9 +13,9 @@ class SubscriptionController extends \BaseController {
 			Session::put('ref', Input::get('ref'));
 		}
 
-		//$uniqid = Hash::make(uniqid());
+		$uniqid = Hash::make(uniqid());
 
-		$uniqid = '$2y$10$.7JI0Pb9uU6Yt1Iny2LyeOsdO.JjQ7XU.4yrlEkKkc2Z1bv3LYZAa';
+		//$uniqid = '$2y$10$.7JI0Pb9uU6Yt1Iny2LyeOsdO.JjQ7XU.4yrlEkKkc2Z1bv3LYZAa';
 		Session::put('uniqid', $uniqid);
 
 		return View::make('frontend.pricing')->with('uniqid', $uniqid);
@@ -51,7 +51,7 @@ class SubscriptionController extends \BaseController {
 		}else{
 			Session::put('register', $uniqid);
 		}
-		
+
 		return Redirect::route('register');
 	}
 
