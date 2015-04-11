@@ -168,8 +168,10 @@ class ApiController extends BaseController
                 error_log(date('[Y-m-d H:i e] ') . "Print POST " . $debug_export . PHP_EOL, 3, LOG_FILE);
             }
 
-            if ($_POST['txn_type'] == 'subscr_signup') { // Register
+            error_log(">>>>> " . $_POST['txn_type'] . PHP_EOL, 3, LOG_FILE);
 
+            if ($_POST['txn_type'] == 'subscr_signup') { // Register
+                error_log(">>>>> >>>>>> Entro" . $_POST['txn_type'] . PHP_EOL, 3, LOG_FILE);
                 $data = [];
                 $data['type'] = 'subscr_signup';
 
@@ -202,6 +204,7 @@ class ApiController extends BaseController
             }
             else if ($_POST['txn_type'] == 'subscr_payment') { //Subscription Monthly
                 $data = [];
+                error_log(">>>>> >>>>>> Entro" . $_POST['txn_type'] . PHP_EOL, 3, LOG_FILE);
                 $data['type'] = 'subscr_payment';
 
                 $data['subscription_id'] =  $_POST['subscr_id'];
