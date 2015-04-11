@@ -194,6 +194,8 @@ class ApiController extends BaseController
                 $payment = new Payment($data);
                 if(!$payment->save()){
                     error_log(date('[Y-m-d H:i e] ') . "Error: " . $payment->getErrors() . PHP_EOL, 3, LOG_FILE);
+                }else{
+                    error_log(date('[Y-m-d H:i e] ') . ">>>> Register Saved. " . PHP_EOL, 3, LOG_FILE);
                 }
 
 
@@ -226,6 +228,7 @@ class ApiController extends BaseController
                     if($user){
                         $user->renewSubscription();
                     }
+                    error_log(date('[Y-m-d H:i e] ') . ">>>> Subscription Saved. " . PHP_EOL, 3, LOG_FILE);
                 }else{
                     error_log(date('[Y-m-d H:i e] ') . "Error: 2 " . $payment->getErrors() . PHP_EOL, 3, LOG_FILE);
                 }
