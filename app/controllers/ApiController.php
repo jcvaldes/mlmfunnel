@@ -201,6 +201,11 @@ class ApiController extends BaseController
                 }
             }
             else if ($_POST['txn_type'] == 'subscr_payment') { //Subscription Monthly
+                $p = Payment::txn($_POST['txn_id'])->first()->get();
+                if(isset($p)){
+                    return;
+                }
+
                 $data = [];
                 error_log(">>>>> >>>>>> Entro" . $_POST['txn_type'] . PHP_EOL, 3, LOG_FILE);
                 $data['type'] = 'subscr_payment';
@@ -209,6 +214,7 @@ class ApiController extends BaseController
                 $data['payment_date'] =     $_POST['payment_date'];
                 $data['ipn_track_id'] =     $_POST['ipn_track_id'];
                 $data['verify_sign'] =      $_POST['verify_sign'];
+                $data['txn_id'] =           $_POST['txn_id'];
                 $data['user_uniqid'] =      $_POST['custom'];
 
                 $data['payerid'] =          $_POST['payer_id'];
