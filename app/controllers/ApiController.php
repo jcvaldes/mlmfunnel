@@ -167,7 +167,7 @@ class ApiController extends BaseController
                 $data['type'] = 'subscr_signup';
 
                 $data['subscription_id'] =  Input::get('subscr_id');
-                $data['payment_date'] =Input::get('subscr_date');
+                $data['payment_date'] =     Input::get('subscr_date');
                 $data['ipn_track_id'] =     Input::get('ipn_track_id');
                 $data['verify_sign'] =      Input::get('verify_sign');
                 $data['user_uniqid'] =      Input::get('custom');
@@ -177,8 +177,8 @@ class ApiController extends BaseController
                 $data['payer_email'] =      Input::get('payer_email');
                 $data['receiver_email'] =      Input::get('receiver_email');
 
-                $data['description'] =      Input::get('item_name');
-                $data['total'] =            Input::get('mc_gross');
+                $data['description'] =      'Registro ' . Setting::key('app_name')->first()->value;
+                $data['total'] =            Input::get('mc_amount1');
 
                 $data['status'] = 'approved';
                 $data['ip'] = Request::getClientIp();
@@ -192,7 +192,7 @@ class ApiController extends BaseController
                 $data['type'] = 'subscr_payment';
 
                 $data['subscription_id'] =  Input::get('subscr_id');
-                $data['payment_date'] =Input::get('payment_date');
+                $data['payment_date'] =     Input::get('payment_date');
                 $data['ipn_track_id'] =     Input::get('ipn_track_id');
                 $data['verify_sign'] =      Input::get('verify_sign');
                 $data['user_uniqid'] =      Input::get('custom');
@@ -210,7 +210,12 @@ class ApiController extends BaseController
                 $data['commission'] = Setting::key('payment_subscription-commission')->first()->value;
 
                 $payment = new Payment($data);
-                $payment->save();
+                if($payment->save()){
+                    $user = User::where('uniqid', Input::get('custom'))->first()->get();
+                    if($user){
+                        $user->renewSubscription();
+                    }
+                }
             }
 
             if (DEBUG == true) {

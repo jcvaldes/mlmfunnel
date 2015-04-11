@@ -22,43 +22,7 @@
                 <h3><strong>Facturación</strong></h3>
             </div>
             <div class="m-t-10 no-print col-md-8 text-right">
-                <span class="btn btn-info m-r-10 m-b-10"><i class="fa fa-calendar m-r-10"></i> <strong>Vence el: {{ Auth::user()->getSubscriptionEnds() }}</strong></span>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" style="display:inline-block;">
-        <input name="cmd" type="hidden" value="_xclick-subscriptions" />
-        <input name="business" type="hidden" value="jcvaldes_ing@hotmail.com" />
-        <input name="item_name" type="hidden" value="Subscripcion de Prueba" />
-        <input name="currency_code" type="hidden" value="USD" />
-        <input name="no_shipping" type="hidden" value="1" />
-        <button type="submit" class="btn btn-primary m-r-10 m-b-10"><i class="fa fa-dollar m-r-10"></i> Pagar Mensualidad</button>
-        <input name="no_shipping" type="hidden" value="1" />
-<!--
-        <input name="a1" type="hidden" value="0" />
-        <input name="p1" type="hidden" value="1" />
-        <input name="t1" type="hidden" Value="M" />
-
-        array (size=7)
-  'tx' => string '16J19853GV4692052' (length=17)
-  'st' => string 'Completed' (length=9)
-  'amt' => string '0.01' (length=4)
-  'cc' => string 'USD' (length=3)
-  'cm' => string '3' (length=1)
-  'item_number' => string '' (length=0)
-  'sig' => string 'Jwkz7VQMfO2agz/EtEa0oduLYSV4dxA+RLk7Y4olVIRHgc9VO2oR8Yz4ugH0smsT/cMTPt6Ccaupiaq6Jca4L/dozKxHf0iYCdJ/YQNs7ddMp0oUe44U5UzEFzEj6b7HgKuMte4djUdkXBRLdkYJ1TjtHlTsRKsfzrF+A0WTQdE=' (length=172)
-
--->
-        <input name="a3" type="hidden" value="0.01" />
-        <input name="p3" type="hidden" value="1" />
-        <input name="t3" type="hidden" Value="M" />
-        <input name="src" type="hidden" value="1" />
-        <input name="sra" type="hidden" value="1" />
-
-        <input type="hidden" name="return" value="http://localhost:8006/dashboard/post">
-        <input type="hidden" name="rm" value="0">
-        <input type="hidden" name="custom" value="{{ Auth::user()->id }}">
-
-        </form>
-
-
+                <span class="btn btn-info m-r-10 m-b-10"><i class="fa fa-calendar m-r-10"></i> <strong>Vence el: {{Auth::user()->getSubscriptionEnds()}}</strong></span>
                 <button type="button" class="btn btn-white m-r-10 m-b-10" onclick="window.print();"><i class="fa fa-print m-r-10"></i> Imprimir</button>
             </div>
 
@@ -73,7 +37,6 @@
                                             <tr>
                                                 <th style="min-width:70px"><strong>ID</strong></th>
                                                 <th><strong>Fecha</strong></th>
-                                                <th><strong>Token</strong></th>
                                                 <th><strong>Descripción</strong></th>
                                                 <th class="text-center"><strong>Status</strong></th>
                                                 <th><strong>Total</strong></th>
@@ -84,7 +47,6 @@
                                             <tr>
                                                 <td>{{ $payment->getId() }}</td>
                                                 <td>{{ $payment->getComputerDate() }}</td>
-                                                <td>{{ $payment->token }}</td>
                                                 <td>{{ $payment->description }}</td>
 
                                                 <td class="text-center">

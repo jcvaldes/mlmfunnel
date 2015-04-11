@@ -7,6 +7,8 @@ class Payment extends Model {
 
     protected $fillable = ['type', 'subscription_id', 'payment_date', 'ipn_track_id', 'verify_sign', 'user_uniqid', 'payerid', 'payer_name', 'payer_email', 'receiver_email', 'description', 'total', 'status', 'ip', 'commission'];
 
+    protected $hidden = ['user_uniqid', 'verify_sign'];
+
 	protected static $rules = [
         'subscription_id' => 'required',
 		'ip' => 'required',
@@ -24,7 +26,11 @@ class Payment extends Model {
 
     public function scopeCurrent($query)
     {
-        return $query->where('user_id', Auth::user()->id);
+        if(Auth::user()->uniqid){
+            return $query->where('user_uniqid', Auth::user()->uniqid);
+        }else{
+            return false;
+        }
     }
 
     /* Relationships */
@@ -36,7 +42,7 @@ class Payment extends Model {
 
     /* Function */
     public function getId(){
-        return (isset($this->paymentid)) ? @explode('-', $this->paymentid)[1] : "";
+        return $this->subscription_id;
     }
 
     public function getStatus()

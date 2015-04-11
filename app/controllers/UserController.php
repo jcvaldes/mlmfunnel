@@ -176,7 +176,8 @@ class UserController extends BaseController {
 
 	public function payments()
 	{
-		$payments = Auth::user()->payments;
+		$payments = Payment::current()->get();
+		//dd($payments->toArray());
 		//echo $payments->toJson();
 
 		return View::make('backend.payments.index', compact('payments'));

@@ -122,10 +122,6 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     }
     /* Relationships */
 
-    public function payments()
-    {
-        return $this->hasMany('Payment');
-    }
 
     /* Scopes */
 
