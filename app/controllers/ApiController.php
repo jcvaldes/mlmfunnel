@@ -200,7 +200,7 @@ class ApiController extends BaseController
 
 
             }
-            else if ($_POST['txn_type') == 'subscr_payment') { //Subscription Monthly
+            else if ($_POST['txn_type'] == 'subscr_payment') { //Subscription Monthly
                 $data = [];
                 $data['type'] = 'subscr_payment';
 
