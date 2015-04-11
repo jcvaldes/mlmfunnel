@@ -193,14 +193,12 @@ class ApiController extends BaseController
                 $data['ip'] = Request::getClientIp();
                 $data['commission'] = Setting::key('payment_register-commission')->first()->value;
 
-                $payment = new Payment($data);
-                if(!$payment->save()){
-                    error_log(date('[Y-m-d H:i e] ') . "Error: " . $payment->getErrors() . PHP_EOL, 3, LOG_FILE);
-                }else{
+                $anypayment = new Payment($data);
+                if($anypayment->save()){
                     error_log(date('[Y-m-d H:i e] ') . ">>>> Register Saved. " . PHP_EOL, 3, LOG_FILE);
+                }else{
+                    error_log(date('[Y-m-d H:i e] ') . "Error: " . $anypayment->getErrors() . PHP_EOL, 3, LOG_FILE);
                 }
-
-
             }
             else if ($_POST['txn_type'] == 'subscr_payment') { //Subscription Monthly
                 $data = [];
@@ -225,15 +223,15 @@ class ApiController extends BaseController
                 $data['ip'] = Request::getClientIp();
                 $data['commission'] = Setting::key('payment_subscription-commission')->first()->value;
 
-                $payment = new Payment($data);
-                if($payment->save()){
+                $anypayment = new Payment($data);
+                if($anypayment->save()){
                     $user = User::where('uniqid', $_POST['custom'])->first()->get();
                     if($user){
                         $user->renewSubscription();
                     }
                     error_log(date('[Y-m-d H:i e] ') . ">>>> Subscription Saved. " . PHP_EOL, 3, LOG_FILE);
                 }else{
-                    error_log(date('[Y-m-d H:i e] ') . "Error: 2 " . $payment->getErrors() . PHP_EOL, 3, LOG_FILE);
+                    error_log(date('[Y-m-d H:i e] ') . "Error: 2 " . $anypayment->getErrors() . PHP_EOL, 3, LOG_FILE);
                 }
             }
 
