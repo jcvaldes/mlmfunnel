@@ -12,6 +12,7 @@ Route::group(['prefix' => 'api'], function () {
 
     /* IPN */
     Route::any('/ipn', ['uses' => 'ApiController@ipn']);
+    Route::any('/ipntest', ['uses' => 'ApiController@ipntest']);
     Route::any('/ipn_log', ['uses' => 'ApiController@ipn_log']);
     Route::any('/ipn_delete', ['uses' => 'ApiController@ipn_delete']);
 
