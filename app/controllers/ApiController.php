@@ -234,6 +234,9 @@ class ApiController extends BaseController
                     $user = User::where('uniqid', $_POST['custom'])->first()->get();
                     if($user){
                         $user->renewSubscription();
+                        error_log(date('[Y-m-d H:i e] ') . ">>>> Subscription RENEWED. " . PHP_EOL, 3, LOG_FILE);
+                    }else{
+                        error_log(date('[Y-m-d H:i e] ') . ">>>> NO USER WITH  " . $_POST['custom'] . PHP_EOL, 3, LOG_FILE);
                     }
                     error_log(date('[Y-m-d H:i e] ') . ">>>> Subscription Saved. " . PHP_EOL, 3, LOG_FILE);
                 }else{
