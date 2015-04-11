@@ -144,8 +144,7 @@ class ApiController extends BaseController
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Connection: Close'));
 
         $res = curl_exec($ch);
-        if (curl_errno($ch) != 0)
-        {
+        if (curl_errno($ch) != 0) {
             if (DEBUG == true) {
                 error_log(date('[Y-m-d H:i e] ') . "Can't connect to PayPal to validate IPN message: " . curl_error($ch) . PHP_EOL . "\n", 3, LOG_FILE);
             }
@@ -153,12 +152,6 @@ class ApiController extends BaseController
             exit;
         }
         else {
-
-            // Log the entire HTTP response if debug is switched on.
-            if (DEBUG == true) {
-                //error_log(date('[Y-m-d H:i e] ') . "HTTP request of validation request:" . curl_getinfo($ch, CURLINFO_HEADER_OUT) . " for IPN payload: $req" . PHP_EOL, 3, LOG_FILE);
-                //error_log(date('[Y-m-d H:i e] ') . "HTTP response of validation request: $res" . PHP_EOL, 3, LOG_FILE);
-            }
             curl_close($ch);
         }
 
@@ -166,31 +159,65 @@ class ApiController extends BaseController
         $tokens = explode("\r\n\r\n", trim($res));
         $res = trim(end($tokens));
         if (strcmp($res, "VERIFIED") == 0) {
+            //receiver_email, payer_name, subscription_date, user_uniqid, ipn_track_id
 
-            // check whether the payment_status is Completed
-            // check that txn_id has not been previously processed
-            // check that receiver_email is your PayPal email
-            // check that payment_amount/payment_currency are correct
-            // process payment and mark item as paid.
-            // assign posted variables to local variables
-            //$item_name = $_POST['item_name'];
-            //$item_number = $_POST['item_number'];
-            //$payment_status = $_POST['payment_status'];
-            //$payment_amount = $_POST['mc_gross'];
-            //$payment_currency = $_POST['mc_currency'];
-            //$txn_id = $_POST['txn_id'];
-            //$receiver_email = $_POST['receiver_email'];
-            //$payer_email = $_POST['payer_email'];
+            if (Input::get('txn_type') == 'subscr_signup') { // Register
 
+                $data = [];
+                $data['type'] = 'subscr_signup';
 
+                $data['subscription_id'] =  Input::get('subscr_id');
+                $data['payment_date'] =Input::get('subscr_date');
+                $data['ipn_track_id'] =     Input::get('ipn_track_id');
+                $data['verify_sign'] =      Input::get('verify_sign');
+                $data['user_uniqid'] =      Input::get('custom');
 
+                $data['payerid'] =          Input::get('payer_id');
+                $data['payer_name'] =       Input::get('payer_business_name');
+                $data['payer_email'] =      Input::get('payer_email');
+                $data['receiver_email'] =      Input::get('receiver_email');
 
+                $data['description'] =      Input::get('item_name');
+                $data['total'] =            Input::get('mc_gross');
+
+                $data['status'] = 'approved';
+                $data['ip'] = Request::getClientIp();
+                $data['commission'] = Setting::key('payment_register-commission')->first()->value;
+
+                $payment = new Payment($data);
+                $payment->save();
+            }
+            else if (Input::get('txn_type') == 'subscr_payment') { //Subscription Monthly
+                $data = [];
+                $data['type'] = 'subscr_payment';
+
+                $data['subscription_id'] =  Input::get('subscr_id');
+                $data['payment_date'] =Input::get('payment_date');
+                $data['ipn_track_id'] =     Input::get('ipn_track_id');
+                $data['verify_sign'] =      Input::get('verify_sign');
+                $data['user_uniqid'] =      Input::get('custom');
+
+                $data['payerid'] =          Input::get('payer_id');
+                $data['payer_name'] =       Input::get('payer_business_name');
+                $data['payer_email'] =      Input::get('payer_email');
+                $data['receiver_email'] =      Input::get('receiver_email');
+
+                $data['description'] =      Input::get('item_name');
+                $data['total'] =            Input::get('mc_gross');
+
+                $data['status'] = 'approved';
+                $data['ip'] = Request::getClientIp();
+                $data['commission'] = Setting::key('payment_subscription-commission')->first()->value;
+
+                $payment = new Payment($data);
+                $payment->save();
+            }
 
             if (DEBUG == true) {
-            	$debug_export = var_export($_POST, true);
-                //error_log(date('[Y-m-d H:i e] ') . "Verified IPN: $req " . PHP_EOL, 3, LOG_FILE);
-                error_log(date('[Y-m-d H:i e] ') . "Print POST " . $debug_export .PHP_EOL, 3, LOG_FILE);
+                $debug_export = var_export($_POST, true);
 
+                //error_log(date('[Y-m-d H:i e] ') . "Verified IPN: $req " . PHP_EOL, 3, LOG_FILE);
+                error_log(date('[Y-m-d H:i e] ') . "Print POST " . $debug_export . PHP_EOL, 3, LOG_FILE);
             }
         }
         else if (strcmp($res, "INVALID") == 0) {
@@ -202,7 +229,6 @@ class ApiController extends BaseController
             }
         }
     }
-
 
     public function ipn_delete() {
         define("LOG_FILE", "./ipn.log");

@@ -394,29 +394,9 @@
 
 
                                                     <div class="row">
-                                                        <div class="control-label col-md-3">Client ID:</div>
+                                                        <div class="control-label col-md-3">Correo PayPal:</div>
                                                         <div class="col-md-6">
-                                                            <input type="text" class="form-control" name="paypal_client-id" value="{{ Setting::key('paypal_client-id')->first()->value }}">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="row">
-                                                        <div class="control-label col-md-3">Secret:</div>
-                                                        <div class="col-md-6">
-                                                            <input type="text" class="form-control" name="paypal_secret" value="{{ Setting::key('paypal_secret')->first()->value }}">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="row">
-                                                        <div class="control-label col-md-3"></div>
-                                                        <div class="col-md-6">
-                                                            <label>
-                                                                {{ Form::radio('paypal_mode', 'sandbox', (Setting::key('paypal_mode')->first()->value == 'sandbox')) }} Sandbox
-                                                            </label>
-
-                                                            <label>
-                                                                {{ Form::radio('paypal_mode', 'live', (Setting::key('paypal_mode')->first()->value == 'live')) }} Live
-                                                            </label>
+                                                            <input type="text" class="form-control" name="paypal_mail" value="{{ Setting::key('paypal_mail')->first()->value }}">
                                                         </div>
                                                     </div>
 

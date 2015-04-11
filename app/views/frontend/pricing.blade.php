@@ -56,19 +56,19 @@
 
                                 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" style="display:inline-block;">
                                     <input name="cmd" type="hidden" value="_xclick-subscriptions" />
-                                    <input name="business" type="hidden" value="jcvaldes_ing@hotmail.com" />
+                                    <input name="business" type="hidden" value="{{ Setting::key('paypal_mail')->first()->value }}" />
                                     <input name="item_name" type="hidden" value="Subscripcion {{ Setting::key('app_name')->first()->value }}" />
                                     <input name="currency_code" type="hidden" value="USD" />
                                     <input name="no_shipping" type="hidden" value="1" />
                                     <button type="submit" class="btn btn-blue"><i class="fa fa-dollar m-r-10"></i> Comprar Ahora</button>
                                     <input name="no_shipping" type="hidden" value="1" />
 
-                                    <input name="a1" type="hidden" value="0.01" />
+                                    <input name="a1" type="hidden" value="{{ Setting::key('payment_register-cost')->first()->value }}" />
                                     <input name="p1" type="hidden" value="1" />
                                     <input name="t1" type="hidden" Value="M" />
 
 
-                                    <input name="a3" type="hidden" value="0.01" />
+                                    <input name="a3" type="hidden" value="{{ Setting::key('payment_subscription-cost')->first()->value }}" />
                                     <input name="p3" type="hidden" value="1" />
                                     <input name="t3" type="hidden" Value="M" />
                                     <input name="src" type="hidden" value="1" />

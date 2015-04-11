@@ -5,13 +5,12 @@ class Payment extends Model {
     protected $table = 'payments';
     public $timestamp = true;
 
-    protected $fillable = ['paymentid', 'token', 'payerid', 'status', 'response', 'ip', 'description', 'total', 'user_id', 'commission'];
+    protected $fillable = ['type', 'subscription_id', 'payment_date', 'ipn_track_id', 'verify_sign', 'user_uniqid', 'payerid', 'payer_name', 'payer_email', 'receiver_email', 'description', 'total', 'status', 'ip', 'commission'];
 
 	protected static $rules = [
-        'token' => 'required',
+        'subscription_id' => 'required',
 		'ip' => 'required',
-        'user_id' => 'required',
-        'status' => 'required',
+        'user_uniqid' => 'required',
     ];
 
     public function getTokenAttribute($value)

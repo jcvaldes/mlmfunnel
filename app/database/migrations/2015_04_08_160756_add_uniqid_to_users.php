@@ -14,7 +14,12 @@ class AddUniqidToUsers extends Migration {
 	{
 		Schema::table('users', function($table)
 		{
-			$table->string('uniqid');
+			if (!Schema::hasColumn('users', 'uniqid'))
+			{
+			    $table->string('uniqid');
+			}
+
+
 		});
 	}
 
