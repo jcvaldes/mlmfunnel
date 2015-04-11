@@ -201,10 +201,10 @@ class ApiController extends BaseController
                 }
             }
             else if ($_POST['txn_type'] == 'subscr_payment') { //Subscription Monthly
-                $p = Payment::txn($_POST['txn_id'])->first()->get();
+               /* $p = Payment::txn($_POST['txn_id'])->first()->get();
                 if(isset($p)){
                     return;
-                }
+                }*/
 
                 $data = [];
                 error_log(">>>>> >>>>>> Entro" . $_POST['txn_type'] . PHP_EOL, 3, LOG_FILE);
