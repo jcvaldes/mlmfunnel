@@ -168,24 +168,24 @@ class ApiController extends BaseController
                 error_log(date('[Y-m-d H:i e] ') . "Print POST " . $debug_export . PHP_EOL, 3, LOG_FILE);
             }
 
-            if (Input::get('txn_type') == 'subscr_signup') { // Register
+            if ($_POST['txn_type'] == 'subscr_signup') { // Register
 
                 $data = [];
                 $data['type'] = 'subscr_signup';
 
-                $data['subscription_id'] =  Input::get('subscr_id');
-                $data['payment_date'] =     Input::get('subscr_date');
-                $data['ipn_track_id'] =     Input::get('ipn_track_id');
-                $data['verify_sign'] =      Input::get('verify_sign');
-                $data['user_uniqid'] =      Input::get('custom');
+                $data['subscription_id'] =  $_POST['subscr_id'];
+                $data['payment_date'] =     $_POST['subscr_date'];
+                $data['ipn_track_id'] =     $_POST['ipn_track_id'];
+                $data['verify_sign'] =      $_POST['verify_sign'];
+                $data['user_uniqid'] =      $_POST['custom'];
 
-                $data['payerid'] =          Input::get('payer_id');
-                $data['payer_name'] =       Input::get('payer_business_name');
-                $data['payer_email'] =      Input::get('payer_email');
-                $data['receiver_email'] =      Input::get('receiver_email');
+                $data['payerid'] =          $_POST['payer_id'];
+                $data['payer_name'] =       $_POST['payer_business_name'];
+                $data['payer_email'] =      $_POST['payer_email'];
+                $data['receiver_email'] =      $_POST['receiver_email'];
 
                 $data['description'] =      'Registro ' . Setting::key('app_name')->first()->value;
-                $data['total'] =            Input::get('mc_amount1');
+                $data['total'] =            $_POST['mc_amount1'];
 
                 $data['status'] = 'approved';
                 $data['ip'] = Request::getClientIp();
@@ -200,23 +200,23 @@ class ApiController extends BaseController
 
 
             }
-            else if (Input::get('txn_type') == 'subscr_payment') { //Subscription Monthly
+            else if ($_POST['txn_type') == 'subscr_payment') { //Subscription Monthly
                 $data = [];
                 $data['type'] = 'subscr_payment';
 
-                $data['subscription_id'] =  Input::get('subscr_id');
-                $data['payment_date'] =     Input::get('payment_date');
-                $data['ipn_track_id'] =     Input::get('ipn_track_id');
-                $data['verify_sign'] =      Input::get('verify_sign');
-                $data['user_uniqid'] =      Input::get('custom');
+                $data['subscription_id'] =  $_POST['subscr_id'];
+                $data['payment_date'] =     $_POST['payment_date'];
+                $data['ipn_track_id'] =     $_POST['ipn_track_id'];
+                $data['verify_sign'] =      $_POST['verify_sign'];
+                $data['user_uniqid'] =      $_POST['custom'];
 
-                $data['payerid'] =          Input::get('payer_id');
-                $data['payer_name'] =       Input::get('payer_business_name');
-                $data['payer_email'] =      Input::get('payer_email');
-                $data['receiver_email'] =      Input::get('receiver_email');
+                $data['payerid'] =          $_POST['payer_id'];
+                $data['payer_name'] =       $_POST['payer_business_name'];
+                $data['payer_email'] =      $_POST['payer_email'];
+                $data['receiver_email'] =      $_POST['receiver_email'];
 
-                $data['description'] =      Input::get('item_name');
-                $data['total'] =            Input::get('mc_gross');
+                $data['description'] =      $_POST['item_name'];
+                $data['total'] =            $_POST['mc_gross'];
 
                 $data['status'] = 'approved';
                 $data['ip'] = Request::getClientIp();
@@ -224,7 +224,7 @@ class ApiController extends BaseController
 
                 $payment = new Payment($data);
                 if($payment->save()){
-                    $user = User::where('uniqid', Input::get('custom'))->first()->get();
+                    $user = User::where('uniqid', $_POST['custom'))->first()->get();
                     if($user){
                         $user->renewSubscription();
                     }
