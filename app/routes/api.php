@@ -14,4 +14,6 @@ Route::group(['prefix' => 'api'], function () {
     Route::any('/ipn', ['uses' => 'ApiController@ipn']);
     Route::any('/ipn_log', ['uses' => 'ApiController@ipn_log']);
     Route::any('/ipn_delete', ['uses' => 'ApiController@ipn_delete']);
+
+    Route::any('/payments', ['uses' => 'ApiController@payments']);
 });

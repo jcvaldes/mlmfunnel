@@ -247,4 +247,9 @@ class ApiController extends BaseController
         define("LOG_FILE", "./ipn.log");
         unlink(LOG_FILE);
     }
+
+    public function payments()
+    {
+        return Payment::all();
+    }
 }
