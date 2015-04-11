@@ -168,18 +168,6 @@ class ApiController extends BaseController
                 error_log(date('[Y-m-d H:i e] ') . "Print POST " . $debug_export . PHP_EOL, 3, LOG_FILE);
             }
 
-            $_POST['txn_type'] = '';
-            $_POST['subscr_id'] = '';
-            $_POST['subscr_date'] = '';
-            $_POST['ipn_track_id'] = '';
-            $_POST['verify_sign'] = '';
-            $_POST['custom'] = '';
-            $_POST['payer_id'] = '';
-            $_POST['payer_business_name'] = '';
-            $_POST['payer_email'] = '';
-            $_POST['receiver_email'] = '';
-            $_POST[''] = '';
-
             error_log(">>>>> " . $_POST['txn_type'] . PHP_EOL, 3, LOG_FILE);
 
             if ($_POST['txn_type'] == 'subscr_signup') { // Register
