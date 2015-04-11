@@ -9,11 +9,11 @@ class Payment extends Model {
 
     protected $hidden = ['user_uniqid', 'verify_sign'];
 
-	protected static $rules = [
+	/*protected static $rules = [
         'subscription_id' => 'required',
 		'ip' => 'required',
         'user_uniqid' => 'required',
-    ];
+    ];*/
 
     public function getTokenAttribute($value)
     {
