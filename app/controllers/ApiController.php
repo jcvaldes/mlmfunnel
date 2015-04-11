@@ -224,7 +224,7 @@ class ApiController extends BaseController
 
                 $payment = new Payment($data);
                 if($payment->save()){
-                    $user = User::where('uniqid', $_POST['custom'))->first()->get();
+                    $user = User::where('uniqid', $_POST['custom'])->first()->get();
                     if($user){
                         $user->renewSubscription();
                     }
