@@ -92,7 +92,6 @@ class AuthController extends BaseController {
 		if ($v->passes())
 		{
 			$user = User::create($inputs);
-			$user->renewSubscription();
 
 			Session::forget('register');
 			Session::forget('uniqid');
