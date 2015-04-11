@@ -161,6 +161,13 @@ class ApiController extends BaseController
         if (strcmp($res, "VERIFIED") == 0) {
             //receiver_email, payer_name, subscription_date, user_uniqid, ipn_track_id
 
+            if (DEBUG == true) {
+                $debug_export = var_export($_POST, true);
+
+                //error_log(date('[Y-m-d H:i e] ') . "Verified IPN: $req " . PHP_EOL, 3, LOG_FILE);
+                error_log(date('[Y-m-d H:i e] ') . "Print POST " . $debug_export . PHP_EOL, 3, LOG_FILE);
+            }
+
             if (Input::get('txn_type') == 'subscr_signup') { // Register
 
                 $data = [];
@@ -185,7 +192,11 @@ class ApiController extends BaseController
                 $data['commission'] = Setting::key('payment_register-commission')->first()->value;
 
                 $payment = new Payment($data);
-                $payment->save();
+                if(!$payment->save()){
+                    error_log(date('[Y-m-d H:i e] ') . "Error: " . $payment->getErrors() . PHP_EOL, 3, LOG_FILE);
+                }
+
+
             }
             else if (Input::get('txn_type') == 'subscr_payment') { //Subscription Monthly
                 $data = [];
@@ -215,15 +226,12 @@ class ApiController extends BaseController
                     if($user){
                         $user->renewSubscription();
                     }
+                }else{
+                    error_log(date('[Y-m-d H:i e] ') . "Error: 2 " . $payment->getErrors() . PHP_EOL, 3, LOG_FILE);
                 }
             }
 
-            if (DEBUG == true) {
-                $debug_export = var_export($_POST, true);
 
-                //error_log(date('[Y-m-d H:i e] ') . "Verified IPN: $req " . PHP_EOL, 3, LOG_FILE);
-                error_log(date('[Y-m-d H:i e] ') . "Print POST " . $debug_export . PHP_EOL, 3, LOG_FILE);
-            }
         }
         else if (strcmp($res, "INVALID") == 0) {
 
