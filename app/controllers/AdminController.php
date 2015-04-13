@@ -44,7 +44,7 @@ class AdminController extends BaseController {
         $img = Intervention::make($avatar);
 
         // determine if the image is portrait or landscape
-        $scalew = $img->width() / $i; 
+        $scalew = $img->width() / $i;
         $scaleh = $img->height() / $h;
 
         $img->resize($i, $img->height()/$scalew);
@@ -54,7 +54,7 @@ class AdminController extends BaseController {
         $user = User::find($id);
         // delete prevoius avatar
         if($user->picture){
-            if(file_exists(public_path() . $user->picture)){                    
+            if(file_exists(public_path() . $user->picture)){
                 File::delete(public_path() . $user->picture);
             }
         }
@@ -66,7 +66,7 @@ class AdminController extends BaseController {
     public function get_avatar($id)
     {
         $avatar = (Session::has('avatar')) ? Session::get('avatar') : User::find($id)->getProfilePicture();
-        return Response::json(['avatar' => $avatar]);        
+        return Response::json(['avatar' => $avatar]);
     }
     #Avatar Rotate
     public function post_avatar_rotate($id)
@@ -86,7 +86,7 @@ class AdminController extends BaseController {
     public function settings()
     {
         return View::make('backend.pages.settings');
-    }    
+    }
 
     public function settings_post()
     {
@@ -111,7 +111,29 @@ class AdminController extends BaseController {
 
     public function emails_edit($key)
     {
-        return View::make('backend.pages.emails-edit')->with('key', $key);
+        switch ($key) {
+            case 'email-new-prospect':
+                $title = 'Notificación de nuevo prospecto creado.';
+                break;
+            case 'email-welcome':
+                $title = 'Email de bienvenida con datos de acceso a nueva cuenta creada.';
+                break;
+            case 'email-next-suspension':
+                $title = 'Notificación de fecha próxima a suspensión de cuenta.';
+                break;
+            case 'email-suspension':
+                $title = 'Notificación de suspensión de cuenta.';
+                break;
+            case 'email-next-desactivate':
+                $title = 'Notificación de fecha próxima a desactivación de cuenta.';
+                break;
+            case 'email-desactivate':
+                $title = 'Notificación de desactivación de cuenta.';
+                break;
+
+        }
+
+        return View::make('backend.pages.emails-edit', ['title' => $title])->with('key', $key);
     }
 
     public function emails_post()
@@ -136,11 +158,13 @@ class AdminController extends BaseController {
         $title = str_replace('%email%', $user->email, $title);
         $title = str_replace('%phone%', $user->phone, $title);
         $title = str_replace('%url%', Setting::key('app_url')->first()->value, $title);
+        $title = str_replace('%system%', Setting::key('app_name')->first()->value, $title);
 
         $body = str_replace('%name%', $user->full_name, $body);
         $body = str_replace('%email%', $user->email, $body);
         $body = str_replace('%phone%', $user->phone, $body);
         $body = str_replace('%url%', Setting::key('app_url')->first()->value, $body);
+        $body = str_replace('%system%', Setting::key('app_name')->first()->value, $body);
 
         $body = nl2br($body);
 
@@ -156,7 +180,28 @@ class AdminController extends BaseController {
 
     public function sms_edit($key)
     {
-        return View::make('backend.pages.sms-edit')->with('key', $key);
+        switch ($key) {
+            case 'sms-new-prospect':
+                $title = 'Notificación de nuevo prospecto creado.';
+                break;
+            case 'sms-welcome':
+                $title = 'Email de bienvenida con datos de acceso a nueva cuenta creada.';
+                break;
+            case 'sms-next-suspension':
+                $title = 'Notificación de fecha próxima a suspensión de cuenta.';
+                break;
+            case 'sms-suspension':
+                $title = 'Notificación de suspensión de cuenta.';
+                break;
+            case 'sms-next-desactivate':
+                $title = 'Notificación de fecha próxima a desactivación de cuenta.';
+                break;
+            case 'sms-desactivate':
+                $title = 'Notificación de desactivación de cuenta.';
+                break;
+        }
+
+        return View::make('backend.pages.sms-edit', ['title' => $title])->with('key', $key);
     }
 
     public function sms_post()
@@ -180,10 +225,10 @@ class AdminController extends BaseController {
         $text = str_replace('%email%', $user->email, $text);
         $text = str_replace('%phone%', $user->phone, $text);
         $text = str_replace('%url%', Setting::key('app_url')->first()->value, $text);
-
+        $text = str_replace('%system%', Setting::key('app_name')->first()->value, $text);
 
         return View::make('emails.notify.layout-sms', ['text' => $text, 'id' => $user->id]);
     }
 
-    
+
 }

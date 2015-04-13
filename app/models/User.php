@@ -80,11 +80,13 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
             $title = str_replace('%email%', $user->email, $title);
             $title = str_replace('%phone%', $user->phone, $title);
             $title = str_replace('%url%', Setting::key('app_url')->first()->value, $title);
+            $title = str_replace('%system%', Setting::key('app_name')->first()->value, $title);
 
             $body = str_replace('%name%', $user->full_name, $body);
             $body = str_replace('%email%', $user->email, $body);
             $body = str_replace('%phone%', $user->phone, $body);
             $body = str_replace('%url%', Setting::key('app_url')->first()->value, $body);
+            $body = str_replace('%system%', Setting::key('app_name')->first()->value, $body);
 
             $body = nl2br($body);
 

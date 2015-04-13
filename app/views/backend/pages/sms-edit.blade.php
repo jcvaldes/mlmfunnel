@@ -16,26 +16,27 @@
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title"><strong>Personalizar Mensaje de texto</strong></h3>
+                    <h3 class="panel-title"><strong>Mensaje de texto:</strong> {{ $title or '' }}</h3>
                 </div>
                 <div class="panel-body">
                 <form action="/dashboard/emails" method="post" class="form-horizontal" role="form" id="settings">
                     <div class="row">
-                        <div class="col-md-8">                          
+                        <div class="col-md-8">
 
-                            <h4 class="m-l-10">Texto: <small>Maximo: 160 caracteres</small></h4>                            
+                            <h4 class="m-l-10">Texto: <small>Maximo: 160 caracteres</small></h4>
                             <textarea name="{{ $key }}:text" id="text" cols="30" rows="10" class="form-control m-l-10">{{ Setting::key($key.':text')->first()->value }}</textarea>
-                            
+
                         </div>
 
                         <div class="col-md-4">
                             <h4 class="m-l-10">Variables de usuario:</h4>
-                            <p class="m-l-10" style="margin-bottom:27px">Utiliza los botones de abajo para personalizar tu email.</p>     
+                            <p class="m-l-10" style="margin-bottom:27px">Utiliza los botones de abajo para personalizar tu email.</p>
 
                             <span class="btn btn-md btn-info col-md-5 m-5 vars" data-code="name">Nombre</span>
                             <span class="btn btn-md btn-info col-md-5 m-5 vars" data-code="email">Email</span>
                             <span class="btn btn-md btn-info col-md-5 m-5 vars" data-code="phone">Teléfono</span>
                             <span class="btn btn-md btn-info col-md-5 m-5 vars" data-code="url">URL</span>
+                            <span class="btn btn-md btn-info col-md-5 m-5 vars" data-code="system">Sistema</span>
 
                         </div>
                     </div>
@@ -46,7 +47,7 @@
                         </div>
                     </div>
                 </form>
-                </div>              
+                </div>
 
             </div>
         </div>
@@ -96,9 +97,9 @@
             var txtarea = document.getElementById(areaId);
             var scrollPos = txtarea.scrollTop;
             var strPos = 0;
-            var br = ((txtarea.selectionStart || txtarea.selectionStart == '0') ? 
+            var br = ((txtarea.selectionStart || txtarea.selectionStart == '0') ?
                 "ff" : (document.selection ? "ie" : false ) );
-            if (br == "ie") { 
+            if (br == "ie") {
                 txtarea.focus();
                 var range = document.selection.createRange();
                 range.moveStart ('character', -txtarea.value.length);
@@ -106,11 +107,11 @@
             }
             else if (br == "ff") strPos = txtarea.selectionStart;
 
-            var front = (txtarea.value).substring(0,strPos);  
-            var back = (txtarea.value).substring(strPos,txtarea.value.length); 
+            var front = (txtarea.value).substring(0,strPos);
+            var back = (txtarea.value).substring(strPos,txtarea.value.length);
             txtarea.value=front+text+back;
             strPos = strPos + text.length;
-            if (br == "ie") { 
+            if (br == "ie") {
                 txtarea.focus();
                 var range = document.selection.createRange();
                 range.moveStart ('character', -txtarea.value.length);
@@ -126,5 +127,5 @@
             txtarea.scrollTop = scrollPos;
         }
     </script>
-    
+
 @stop

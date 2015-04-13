@@ -300,7 +300,7 @@
                                                 <div class="media">
                                                     <div class="media-body c-gray">
                                                         <div class="forum-title">
-                                                            <div class="c-blue pull-left"><strong>Email de bienvenida con datos de acceso a nueva cuenta creada.</strong>
+                                                            <div class="c-blue pull-left"><strong>Mensaje de bienvenida con datos de acceso a nueva cuenta creada.</strong>
                                                             </div>
                                                             <a target="_blank" href="/dashboard/sms/sms-welcome/preview" class="btn btn-primary pull-right">Vista previa</a>
                                                         </div>
