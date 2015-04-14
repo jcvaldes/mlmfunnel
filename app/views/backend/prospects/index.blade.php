@@ -112,7 +112,7 @@
                                         <td class="hidden-sm hidden-xs">{{ $prospect->email }} </td>
                                         <td class="hidden-sm hidden-xs">{{ $prospect->phone }}</td>
                                         <td class="hidden-sm hidden-xs">{{ $prospect->type }}</td>
-                                        <th class="hidden-sm hidden-xs" style="text-align:center">{{ $prospect->getCreatedAt() }}</th>
+                                        <th class="hidden-sm hidden-xs" style="text-align:center">{{ $prospect->getComputerDate() }}</th>
                                         <td class="hidden-sm hidden-xs" style="text-align:center">
                                             <button totle="Editar" class="btn btn-info edit-prospect" data-id="{{ $prospect->id }}"><i class="fa fa-edit"></i></button>
                                             <button totle="Eliminar" class="btn btn-danger delete-prospect" data-id="{{ $prospect->id }}"><i class="fa fa-trash-o"></i></button>

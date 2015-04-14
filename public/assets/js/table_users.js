@@ -13,16 +13,16 @@ $(function () {
         "aButtons": ["csv", "pdf"]
     };
     opt.order = [[ 4, "desc" ]]
-    opt.columnDefs = [            
+    opt.columnDefs = [
     {
         "targets": [ 3 ],
         "visible": false
-    }            
+    }
     ];
     opt.language = {"sProcessing":     "Procesando...", "sLengthMenu":     "Mostrar _MENU_ registros", "sZeroRecords":    "No se encontraron resultados", "sEmptyTable":     "Ningún dato disponible en esta tabla", "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros", "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros", "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)", "sInfoPostFix":    "", "sSearch":         "Buscar: ", "sUrl":            "", "sInfoThousands":  ",", "sLoadingRecords": "Cargando...", "oPaginate": {"sFirst":    "Primero", "sLast":     "Último", "sNext":     "Siguiente", "sPrevious": "Anterior"}, "oAria": {"sSortAscending":  ": Activar para ordenar la columna de manera ascendente", "sSortDescending": ": Activar para ordenar la columna de manera descendente"} };
 
     $.fn.dataTable.ext.search.push(
-        function( settings, data, dataIndex ) {            
+        function( settings, data, dataIndex ) {
             var letra = opt.word;
 
             if (letra == data[0][0] || letra == '' ){
@@ -38,7 +38,9 @@ $(function () {
             var end = moment(opt.end);
             var current = moment(aData[3]);
 
-            //alert(aData[3]);
+            if((!moment(opt.start).isValid()) && (!moment(opt.end).isValid())){
+                return true;
+            }
 
             if(moment(opt.start).isValid()){
                 $("#start").datepicker('update', new Date(opt.start));
@@ -62,7 +64,7 @@ $(function () {
         opt.word = $(this).data('word');
         oTable.fnFilter(opt.word);
     })
-   
+
 
     $("#filter-date").on("click", function(){
         opt.start = moment($('#start').data('date')).format("YYYY-MM-DD");
@@ -81,7 +83,7 @@ $(function () {
         $("#tbody").removeClass('hide');
     });
 
-    
+
     $("#filter-week").on("click", function(){
         opt.start = moment().startOf('week').format("YYYY-MM-DD");
         //opt.start = moment().subtract(1, 'week').format("YYYY-MM-DD");
@@ -91,7 +93,13 @@ $(function () {
 
     $("#filter-month").on("click", function(){
         opt.start = moment().startOf('month').format("YYYY-MM-DD");
-        opt.end = moment().add(1, 'days').format("YYYY-MM-DD");        
+        opt.end = moment().add(1, 'days').format("YYYY-MM-DD");
+        oTable.fnFilter();
+    })
+
+    $("#show-all").on("click", function(){
+        opt.start = null;
+        opt.end = null;
         oTable.fnFilter();
     })
 
@@ -159,7 +167,7 @@ $(function () {
         data.email = $("#email").val();
 
         console.log(row);
-        
+
         $.post('/api/prospect/'+$("#id").val()+'/edit', data, function(data, textStatus, xhr) {
             var p
             var tr = row.closest('tr');
@@ -197,7 +205,7 @@ $(document).on("click", ".delete-prospect", function(){
     if(confirm("Desea eliminar este prospecto?\nNo se puede revertir el proceso.")){
         row = $(this);
 
-        $.post('/api/prospect/'+id+'/delete', function(data, textStatus, xhr) {     
+        $.post('/api/prospect/'+id+'/delete', function(data, textStatus, xhr) {
 
 
             if(!data.error){
