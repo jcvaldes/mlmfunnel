@@ -5,11 +5,11 @@ if(!isset(Auth::user()->id)){
 		return Redirect::to('/auth/login');
 	});
 }
-/*
+
 Route::get('/', function(){
 	return Redirect::to('/auth/login');
 });
-*/
+
 Route::get('/aweber', function(){
 	return View::make('aweber');
 });
