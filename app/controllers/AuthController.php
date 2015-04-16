@@ -1,6 +1,17 @@
 <?php
 
+use Funnel\Mailers\UserMailer as Mailer;
+
 class AuthController extends BaseController {
+
+	protected $mailer;
+
+    public function __construct(Mailer $mailer)
+    {
+        $this->mailer = $mailer;
+    }
+
+    /* Functions */
 
 	public function showLogin()
 	{
@@ -91,7 +102,9 @@ class AuthController extends BaseController {
 
 		if ($v->passes())
 		{
-			$user = User::create($inputs);
+			$user = User::create($inputs); //create
+
+			$this->mailer->welcome($user);// Send Email
 
 			Session::forget('register');
 			Session::forget('uniqid');

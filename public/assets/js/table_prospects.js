@@ -43,7 +43,6 @@ $(function () {
             var start = moment(opt.start);
             var end = moment(opt.end);
             var current = moment(aData[4]);
-            alert(aData[4]);
 
             if((!moment(opt.start).isValid()) && (!moment(opt.end).isValid())){
                 return true;

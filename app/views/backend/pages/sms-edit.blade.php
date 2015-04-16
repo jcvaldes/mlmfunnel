@@ -43,7 +43,7 @@
 
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <a href="/dashboard/settings#notifications" class="btn btn-danger m-10">Cancelar</a>
+                            <a href="/dashboard/notifications" class="btn btn-danger m-10">Cancelar</a>
                             <button type="submit" class="btn btn-primary m-10">Guardar</button>
                         </div>
                     </div>

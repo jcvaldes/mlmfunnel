@@ -45,7 +45,7 @@
     .yshortcuts a {
 			border-bottom: none !important;
     }
-    
+
     /* Media queries for when the viewport is smaller than the default email width but not too narrow. */
     @media screen and (max-device-width: 700px), screen and (max-width:700px) {
 
@@ -57,7 +57,7 @@
 			table[class="fluid"] {
 				width: 100% !important;
 			}
-			
+
       div[class='content-block'] {
         width:auto !important;
         text-align: center;
@@ -92,7 +92,7 @@
 			img[class="force-col-center"] {
 				margin: auto !important;
 			}
-			
+
 			/* Force table cells into rows */
 			td[class="force-col"],
 			td[class="force-col-center"] {
@@ -104,7 +104,7 @@
 			td[class="force-col-center"] {
 				text-align: center !important;
 			}
-			
+
 			/* Force table cells into rows */
 			/* Float a previously stacked image to the left */
 			img[class="col-3-img-l"] {
@@ -116,7 +116,7 @@
 				float: right;
 				margin: 0 0 15px 15px;
 			}
-			
+
 			/* Make bulletproof buttons full width */
 			a[class="button"] {
 				width: 100% !important;
@@ -143,7 +143,7 @@
       }
 
     }
-          
+
   </style>
 </head>
 <body bgcolor="#f4f4f4" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="margin:0; padding:0;-webkit-text-size-adjust:none; -ms-text-size-adjust:none;background: #f4f4f4;">
@@ -156,7 +156,7 @@
     <v:fill type="tile" color="#eeeeee" src="https://assets.digitalocean.com/email/background-fallback.png">
   </v:background>
 <![endif]-->
-<!-- CSS Image background in Outlook : END -->  
+<!-- CSS Image background in Outlook : END -->
   <!-- Logo Left Nav Right + Vertical Padding : BEGIN -->
  <table border="0" width="700" cellpadding="0" cellspacing="0" align="center" class="email-container">
     <tr>
@@ -165,7 +165,7 @@
     <tr>
       <td valign="bottom" style="padding: 20px 0 20px 20px;text-align: left;">
         <a href="{{ url() }}" style="display:inline-block;" target="_blank">
-          <img src="{{ url() . Setting::key('app_logo')->first()->value}}" alt="alt text" border="0">
+          <img src="{{ url() . Setting::key('app_logo')->first()->value}}" alt="{{ Setting::key('app_name')->first()->value}}" border="0">
         </a>
       </td>
       <td valign="bottom" style="padding: 20px 20px 20px 0;text-align: right; font-family: Helvetica, Arial, sans-serif; font-size: 12px;">
@@ -179,19 +179,19 @@
     </tr>
   </table>
   <!-- Logo Left Nav Right + Vertical Padding : END -->
- 
+
   <!-- Email Container : BEGIN -->
   <!-- This table wraps the whole body email within it's width (600px), sets the background color (white) and border (thin, gray, solid) -->
     <table border="0" width="700" cellpadding="0" cellspacing="0" align="center" style="background: #ffffff;border:4px solid #eeeeee;" class="email-container">
-  
+
       <!-- Single Fluid Image, No Crop : BEGIN -->
       <tr>
         <td>
-          
+
         </td>
       </tr>
       <!-- Single Fluid Image, No Crop : END -->
-    
+
       <!-- Full Width, Fluid Column : BEGIN -->
       <tr>
         <td>
@@ -201,13 +201,13 @@
 
         <!-- Logo Left, Nav Right : BEGIN -->
         <table border="0" width="100%" cellpadding="0" cellspacing="0">
-         
+
         <tr>
           <td style="padding: 30px 40px 0 40px; font-family: sans-serif; font-size: 16px; line-height: 27px;">
-            
+
             <p style="color: #333; font-size: 16px;">
           </td>
-        </tr>     
+        </tr>
 
           <!-- Full Width, Fluid Column : BEGIN -->
           <tr>
@@ -219,7 +219,7 @@
               <hr>
             	<p>
             		{{ $body }}
-            	</p>  
+            	</p>
 
             	<!--UPDATE-->
               {{--
