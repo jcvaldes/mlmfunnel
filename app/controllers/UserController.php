@@ -1,6 +1,14 @@
 <?php
 use Carbon\Carbon;
+use Funnel\Mailers\UserMailer as Mailer;
+
 class UserController extends BaseController {
+	protected $mailer;
+
+    public function __construct(Mailer $mailer)
+    {
+        $this->mailer = $mailer;
+    }
 
 	public function dashboard()
 	{
@@ -75,6 +83,11 @@ class UserController extends BaseController {
 		if ($v->passes())
 		{
 			$user = User::create($inputs);
+
+			if(Input::has('notify')){
+				$this->mailer->welcome($user);// Send Email
+			}
+
 			return Redirect::to('/dashboard/user/' . $user->id);
 		}else{
 			return Redirect::back()->withInput()->withErrors($v->messages());
