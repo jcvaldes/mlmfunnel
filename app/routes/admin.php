@@ -26,12 +26,12 @@ Route::group(array('before' => 'auth', 'prefix' => 'dashboard'), function()
 	/* Notifications */
 	Route::get('notifications', ['uses' => 'NotificationController@index']);
 
-	Route::get('/notifications/emails/{key}', ['as' => 'emails', 'uses' => 'NotificationController@emails']);
-	Route::get('/notifications/emails/{key}/preview', ['as' => 'emails-p', 'uses' => 'NotificationController@emails_preview']);
+	Route::get('/notifications/emails/{type}/{key}', ['as' => 'emails', 'uses' => 'NotificationController@emails']);
+	Route::get('/notifications/emails/{type}/{key}/preview', ['as' => 'emails-p', 'uses' => 'NotificationController@emails_preview']);
 	Route::post('/emails', ['uses' => 'NotificationController@emails_post']);
 
-	Route::get('/notifications/sms/{key}', ['as' => 'sms', 'uses' => 'NotificationController@sms']);
-	Route::get('/notifications/sms/{key}/preview', ['as' => 'sms-p', 'uses' => 'NotificationController@sms_preview']);
+	Route::get('/notifications/sms/{type}/{key}', ['as' => 'sms', 'uses' => 'NotificationController@sms']);
+	Route::get('/notifications/sms/{type}/{key}/preview', ['as' => 'sms-p', 'uses' => 'NotificationController@sms_preview']);
 	Route::post('/sms', ['uses' => 'NotificationController@sms_post']);
 
 });

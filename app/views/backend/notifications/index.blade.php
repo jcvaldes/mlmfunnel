@@ -42,8 +42,8 @@
                                                 <div class="forum-title">
                                                     <div class="c-dark pull-left"><strong>Nuevo usuario</strong></div>
                                                     <div class="pull-right">
-                                                        <a href="{{ URL::route('emails', 'admin-new-user') }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
-                                                        <a target="_blank" href="{{ URL::route('emails-p', 'admin-new-user') }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
+                                                        <a href="{{ URL::route('emails', ['key'=>'admin-new-user', 'type'=>'admin']) }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
+                                                        <a target="_blank" href="{{ URL::route('emails-p', ['key'=>'admin-new-user', 'type'=>'admin']) }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -66,8 +66,8 @@
                                                 <div class="forum-title">
                                                     <div class="c-dark pull-left"><strong>Nuevo usuario</strong></div>
                                                     <div class="pull-right">
-                                                        <a href="{{ URL::route('sms', 'admin-new-user') }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
-                                                        <a target="_blank" href="{{ URL::route('sms-p', 'admin-new-user') }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
+                                                        <a href="{{ URL::route('sms', ['key'=>'admin-new-user', 'type'=>'admin']) }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
+                                                        <a target="_blank" href="{{ URL::route('sms-p', ['key'=>'admin-new-user', 'type'=>'admin']) }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -95,8 +95,8 @@
                                                 <div class="forum-title">
                                                     <div class="c-dark pull-left"><strong>Al registrarse</strong></div>
                                                     <div class="pull-right">
-                                                        <a href="{{ URL::route('emails', 'user-register') }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
-                                                        <a target="_blank" href="{{ URL::route('emails-p', 'user-register') }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
+                                                        <a href="{{ URL::route('emails', ['key'=>'user-register', 'type'=>'user']) }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
+                                                        <a target="_blank" href="{{ URL::route('emails-p', ['key'=>'user-register', 'type'=>'user']) }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -109,8 +109,8 @@
                                                 <div class="forum-title">
                                                     <div class="c-dark pull-left"><strong>Proxima suspensión</strong></div>
                                                     <div class="pull-right">
-                                                        <a href="{{ URL::route('emails', 'next-suspension') }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
-                                                        <a target="_blank" href="{{ URL::route('emails-p', 'next-suspension') }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
+                                                        <a href="{{ URL::route('emails', ['key'=>'next-suspension', 'type'=>'user']) }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
+                                                        <a target="_blank" href="{{ URL::route('emails-p', ['key'=>'next-suspension', 'type'=>'user']) }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -123,8 +123,8 @@
                                                 <div class="forum-title">
                                                     <div class="c-dark pull-left"><strong>Suspensión</strong></div>
                                                     <div class="pull-right">
-                                                        <a href="{{ URL::route('emails', 'suspension') }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
-                                                        <a target="_blank" href="{{ URL::route('emails-p', 'suspension') }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
+                                                        <a href="{{ URL::route('emails', ['key'=>'suspension', 'type'=>'user']) }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
+                                                        <a target="_blank" href="{{ URL::route('emails-p', ['key'=>'suspension', 'type'=>'user']) }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -135,10 +135,10 @@
                                         <div class="media">
                                             <div class="media-body c-gray">
                                                 <div class="forum-title">
-                                                    <div class="c-dark pull-left"><strong>Proxima Desactivación</strong></div>
+                                                    <div class="c-dark pull-left"><strong>Proxima desactivación</strong></div>
                                                     <div class="pull-right">
-                                                        <a href="{{ URL::route('emails', 'next-deactivation') }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
-                                                        <a target="_blank" href="{{ URL::route('emails-p', 'next-deactivation') }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
+                                                        <a href="{{ URL::route('emails', ['key'=>'next-deactivation', 'type'=>'user']) }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
+                                                        <a target="_blank" href="{{ URL::route('emails-p', ['key'=>'next-deactivation', 'type'=>'user']) }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -151,8 +151,8 @@
                                                 <div class="forum-title">
                                                     <div class="c-dark pull-left"><strong>Desactivación</strong></div>
                                                     <div class="pull-right">
-                                                        <a href="{{ URL::route('emails', 'deactivation') }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
-                                                        <a target="_blank" href="{{ URL::route('emails-p', 'deactivation') }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
+                                                        <a href="{{ URL::route('emails', ['key'=>'deactivation', 'type'=>'user']) }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
+                                                        <a target="_blank" href="{{ URL::route('emails-p', ['key'=>'deactivation', 'type'=>'user']) }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -165,8 +165,8 @@
                                                 <div class="forum-title">
                                                     <div class="c-dark pull-left"><strong>Reactivación</strong></div>
                                                     <div class="pull-right">
-                                                        <a href="{{ URL::route('emails', 'reactivation') }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
-                                                        <a target="_blank" href="{{ URL::route('emails-p', 'reactivation') }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
+                                                        <a href="{{ URL::route('emails', ['key'=>'reactivation', 'type'=>'user']) }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
+                                                        <a target="_blank" href="{{ URL::route('emails-p', ['key'=>'reactivation', 'type'=>'user']) }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -179,8 +179,8 @@
                                                 <div class="forum-title">
                                                     <div class="c-blue pull-left"><strong>Nuevo Prospecto</strong></div>
                                                     <div class="pull-right">
-                                                        <a href="{{ URL::route('emails', 'new-prospect') }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
-                                                        <a target="_blank" href="{{ URL::route('emails-p', 'new-prospect') }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
+                                                        <a href="{{ URL::route('emails', ['key'=>'new-prospect', 'type'=>'user']) }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
+                                                        <a target="_blank" href="{{ URL::route('emails-p', ['key'=>'new-prospect', 'type'=>'user']) }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -203,8 +203,8 @@
                                                 <div class="forum-title">
                                                     <div class="c-dark pull-left"><strong>Al registrarse</strong></div>
                                                     <div class="pull-right">
-                                                        <a href="{{ URL::route('sms', 'user-register') }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
-                                                        <a target="_blank" href="{{ URL::route('sms-p', 'user-register') }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
+                                                        <a href="{{ URL::route('sms', ['key'=>'user-register', 'type'=>'user']) }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
+                                                        <a target="_blank" href="{{ URL::route('sms-p', ['key'=>'user-register', 'type'=>'user']) }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -217,8 +217,8 @@
                                                 <div class="forum-title">
                                                     <div class="c-dark pull-left"><strong>Proxima suspensión</strong></div>
                                                     <div class="pull-right">
-                                                        <a href="{{ URL::route('sms', 'next-suspension') }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
-                                                        <a target="_blank" href="{{ URL::route('sms-p', 'next-suspension') }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
+                                                        <a href="{{ URL::route('sms', ['key'=>'next-suspension', 'type'=>'user']) }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
+                                                        <a target="_blank" href="{{ URL::route('sms-p', ['key'=>'next-suspension', 'type'=>'user']) }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -231,8 +231,8 @@
                                                 <div class="forum-title">
                                                     <div class="c-dark pull-left"><strong>Suspensión</strong></div>
                                                     <div class="pull-right">
-                                                        <a href="{{ URL::route('sms', 'suspension') }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
-                                                        <a target="_blank" href="{{ URL::route('sms-p', 'suspension') }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
+                                                        <a href="{{ URL::route('sms', ['key'=>'suspension', 'type'=>'user']) }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
+                                                        <a target="_blank" href="{{ URL::route('sms-p', ['key'=>'suspension', 'type'=>'user']) }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -245,8 +245,8 @@
                                                 <div class="forum-title">
                                                     <div class="c-dark pull-left"><strong>Proxima Desactivación</strong></div>
                                                     <div class="pull-right">
-                                                        <a href="{{ URL::route('sms', 'next-deactivation') }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
-                                                        <a target="_blank" href="{{ URL::route('sms-p', 'next-deactivation') }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
+                                                        <a href="{{ URL::route('sms', ['key'=>'next-deactivation', 'type'=>'user']) }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
+                                                        <a target="_blank" href="{{ URL::route('sms-p', ['key'=>'next-deactivation', 'type'=>'user']) }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -259,8 +259,8 @@
                                                 <div class="forum-title">
                                                     <div class="c-dark pull-left"><strong>Desactivación</strong></div>
                                                     <div class="pull-right">
-                                                        <a href="{{ URL::route('sms', 'deactivation') }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
-                                                        <a target="_blank" href="{{ URL::route('sms-p', 'deactivation') }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
+                                                        <a href="{{ URL::route('sms', ['key'=>'deactivation', 'type'=>'user']) }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
+                                                        <a target="_blank" href="{{ URL::route('sms-p', ['key'=>'deactivation', 'type'=>'user']) }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -273,8 +273,8 @@
                                                 <div class="forum-title">
                                                     <div class="c-dark pull-left"><strong>Reactivación</strong></div>
                                                     <div class="pull-right">
-                                                        <a href="{{ URL::route('sms', 'reactivation') }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
-                                                        <a target="_blank" href="{{ URL::route('sms-p', 'reactivation') }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
+                                                        <a href="{{ URL::route('sms', ['key'=>'reactivation', 'type'=>'admin']) }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
+                                                        <a target="_blank" href="{{ URL::route('sms-p', ['key'=>'reactivation', 'type'=>'admin']) }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -287,8 +287,8 @@
                                                 <div class="forum-title">
                                                     <div class="c-blue pull-left"><strong>Nuevo Prospecto</strong></div>
                                                     <div class="pull-right">
-                                                        <a href="{{ URL::route('sms', 'new-prospect') }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
-                                                        <a target="_blank" href="{{ URL::route('sms-p', 'new-prospect') }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
+                                                        <a href="{{ URL::route('sms', ['key'=>'new-prospect', 'type'=>'user']) }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
+                                                        <a target="_blank" href="{{ URL::route('sms-p', ['key'=>'new-prospect', 'type'=>'user']) }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -316,8 +316,8 @@
                                                 <div class="forum-title">
                                                     <div class="c-dark pull-left"><strong>Confirmación</strong></div>
                                                     <div class="pull-right">
-                                                        <a href="{{ URL::route('emails', 'prospect-confirm') }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
-                                                        <a target="_blank" href="{{ URL::route('emails-p', 'prospect-confirm') }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
+                                                        <a href="{{ URL::route('emails', ['key'=>'prospect-confirm', 'type'=>'prospect']) }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
+                                                        <a target="_blank" href="{{ URL::route('emails-p', ['key'=>'prospect-confirm', 'type'=>'prospect']) }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -340,8 +340,8 @@
                                                 <div class="forum-title">
                                                     <div class="c-dark pull-left"><strong>Confirmación</strong></div>
                                                     <div class="pull-right">
-                                                        <a href="{{ URL::route('sms', 'prospect-confirm') }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
-                                                        <a target="_blank" href="{{ URL::route('sms-p', 'prospect-confirm') }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
+                                                        <a href="{{ URL::route('sms', ['key'=>'prospect-confirm', 'type'=>'prospect']) }}" class="btn btn-success btn-sm" title="Editar"> <i class="fa fa-edit"></i> </a>
+                                                        <a target="_blank" href="{{ URL::route('sms-p', ['key'=>'prospect-confirm', 'type'=>'prospect']) }}" class="btn btn-primary btn-sm" title="Vista previa"> <i class="fa fa-external-link-square"></i> </a>
                                                     </div>
                                                 </div>
                                             </div>

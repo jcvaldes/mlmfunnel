@@ -16,32 +16,11 @@ class NotificationController extends BaseController {
 
     /* EMAILS */
 
-    public function emails($key)
+    public function emails($type, $key)
     {
-        $title = '';
-        switch ($key) {
-            case 'email-new-prospect':
-                $title = 'Notificación de nuevo prospecto creado.';
-                break;
-            case 'email-welcome':
-                $title = 'Email de bienvenida con datos de acceso a nueva cuenta creada.';
-                break;
-            case 'email-next-suspension':
-                $title = 'Notificación de fecha próxima a suspensión de cuenta.';
-                break;
-            case 'email-suspension':
-                $title = 'Notificación de suspensión de cuenta.';
-                break;
-            case 'email-next-desactivate':
-                $title = 'Notificación de fecha próxima a desactivación de cuenta.';
-                break;
-            case 'email-desactivate':
-                $title = 'Notificación de desactivación de cuenta.';
-                break;
+        $title = Parser::pageTitle($key);
 
-        }
-
-        return View::make('backend.pages.emails-edit', ['title' => $title])->with('key', $key);
+        return View::make('backend.pages.emails-edit', ['title' => $title, 'type' => $type])->with('key', $key);
     }
 
     public function emails_post()
@@ -53,21 +32,21 @@ class NotificationController extends BaseController {
             $setting->value = $value;
             $setting->save();
         }
-        return Redirect::to('/dashboard/notifications')->with('alert', ['type' => 'success', 'message' => 'Personalización guardada.']);
+        return Redirect::to('/dashboard/notifications#'. Input::get('type'))->with('alert', ['type' => 'success', 'message' => 'Personalización guardada.']);
     }
 
-    public function emails_preview($key)
+    public function emails_preview($type, $key)
     {
         $user = Auth::user();
         $title = Parser::title($user, $key);
         $body = Parser::body($user, $key);
 
-        return View::make('emails.notify.layout', ['title' => $title, 'body' => $body, 'id' => $user->id]);
+        return View::make('emails.notify.layout', ['title' => $title, 'body' => $body, 'id' => $user->id, 'type' => $type]);
     }
 
     /* SMS */
 
-    public function sms($key)
+    public function sms($type, $key)
     {
         $title = '';
         switch ($key) {
@@ -91,7 +70,7 @@ class NotificationController extends BaseController {
                 break;
         }
 
-        return View::make('backend.pages.sms-edit', ['title' => $title])->with('key', $key);
+        return View::make('backend.pages.sms-edit', ['title' => $title, 'type' => $type])->with('key', $key);
     }
 
     public function sms_post()
@@ -106,12 +85,12 @@ class NotificationController extends BaseController {
         return Redirect::to('/dashboard/notifications')->with('alert', ['type' => 'success', 'message' => 'Personalización guardada.']);
     }
 
-    public function sms_preview($key)
+    public function sms_preview($type, $key)
     {
         $user = Auth::user();
         $text = Parser::text($user, $key);
 
-        return View::make('emails.notify.layout-sms', ['text' => $text, 'id' => $user->id]);
+        return View::make('emails.notify.layout-sms', ['text' => $text, 'id' => $user->id, 'type' => $type]);
     }
 
 }

@@ -16,6 +16,13 @@
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
+                    @if($type == 'admin')
+                        <h2>Administrador</h2>
+                    @elseif($type == 'user')
+                        <h2>Usuario</h2>
+                    @elseif($type == 'prospect')
+                        <h2>Prospecto</h2>
+                    @endif
                     <h3 class="panel-title"><strong>Mensaje de texto:</strong> {{ $title or '' }}</h3>
                 </div>
                 <div class="panel-body">
@@ -43,7 +50,11 @@
 
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <a href="/dashboard/notifications" class="btn btn-danger m-10">Cancelar</a>
+                            @if(isset($type))
+                                <a href="/dashboard/notifications#{{ $type }}" class="btn btn-danger m-10">Cancelar</a>
+                            @else
+                                <a href="/dashboard/notifications" class="btn btn-danger m-10">Cancelar</a>
+                            @endif
                             <button type="submit" class="btn btn-primary m-10">Guardar</button>
                         </div>
                     </div>
