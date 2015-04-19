@@ -19,7 +19,6 @@
                     <ul class="nav nav-tabs">
                         <li class="active"><a href="#admin" data-toggle="tab">Administrador</a></li>
                         <li class=""><a href="#user" data-toggle="tab">Usuario</a></li>
-                        <li class=""><a href="#prospect" data-toggle="tab">Prospecto</a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="space20"></div>
@@ -298,10 +297,10 @@
                             </div>
                         </div>
 
-                        <div class="tab-pane" id="prospect"> {{-- Prospecto --}}
+                        {{--<div class="tab-pane" id="prospect"> {{-- Prospecto -}}
                             <div class="row profile">
 
-                                <div class="col-md-6"> {{-- Correos que se envian a los Prospectos. --}}
+                                <div class="col-md-6"> {{-- Correos que se envian a los Prospectos. -}}
                                     <div class="row profile-classic">
                                         <div class="col-md-12">
                                             <div class="panel">
@@ -325,7 +324,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6">{{-- Mensajes de texto que se envian a los Prospectos. --}}
+                                <div class="col-md-6">{{-- Mensajes de texto que se envian a los Prospectos. -}}
                                     <div class="row profile-classic">
                                         <div class="col-md-12">
                                             <div class="panel">
@@ -349,7 +348,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>--}}
 
                     </div>
                 </div>
@@ -357,26 +356,16 @@
             </form>
         </div>
     </div>
-
-
-
-
 </div>
 
 @stop
 
 @section('javascript')
-<script src="{{ asset('/assets/plugins/dropzone/dropzone.min.js') }}"></script>
 <script src="{{ asset('/assets/js/animations.js') }}"></script>
-
-<script src="{{ asset('/assets/plugins/jcrop/jquery.Jcrop.min.js') }}"></script>
 
 <script type="text/javascript">
 $(document).on("ready", function() {
-
-
     /* BUTTONS */
-
     $(".type-btn").on("click", function(){
         var type = $(this).data('type');
 
@@ -388,7 +377,6 @@ $(document).on("ready", function() {
         $("button.btn-warning").removeClass('btn-inwarningfo').addClass('btn-info');
         $(this).removeClass('btn-info').addClass('btn-warning');
     });
-
     /* RELAOD */
     var hash = window.location.hash;
     hash && $('ul.nav a[href="' + hash + '"]').tab('show');
