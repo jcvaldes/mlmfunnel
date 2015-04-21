@@ -129,8 +129,14 @@ class UserController extends BaseController {
 		if ($v->passes())
 		{
 			$user = User::find($id);
+			$old_status = $user->status;
 			$user->fill($inputs);
 			if ($user->save()){
+				/* mailer */
+				if($old_status != $user->status){
+
+				}
+				/* :mailer */
 				return Redirect::to('/dashboard/user/' . $id)->with('alert', ['type' => 'success', 'message' => 'El usuario se ha actualizado.']);
 			}
 

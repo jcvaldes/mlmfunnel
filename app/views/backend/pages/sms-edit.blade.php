@@ -55,6 +55,7 @@
                             @else
                                 <a href="/dashboard/notifications" class="btn btn-danger m-10">Cancelar</a>
                             @endif
+                            <input type="hidden" name="type" value="{{ $type }}">
                             <button type="submit" class="btn btn-primary m-10">Guardar</button>
                         </div>
                     </div>

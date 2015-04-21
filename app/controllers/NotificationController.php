@@ -48,27 +48,7 @@ class NotificationController extends BaseController {
 
     public function sms($type, $key)
     {
-        $title = '';
-        switch ($key) {
-            case 'sms-new-prospect':
-                $title = 'Notificación de nuevo prospecto creado.';
-                break;
-            case 'sms-welcome':
-                $title = 'Email de bienvenida con datos de acceso a nueva cuenta creada.';
-                break;
-            case 'sms-next-suspension':
-                $title = 'Notificación de fecha próxima a suspensión de cuenta.';
-                break;
-            case 'sms-suspension':
-                $title = 'Notificación de suspensión de cuenta.';
-                break;
-            case 'sms-next-desactivate':
-                $title = 'Notificación de fecha próxima a desactivación de cuenta.';
-                break;
-            case 'sms-desactivate':
-                $title = 'Notificación de desactivación de cuenta.';
-                break;
-        }
+        $title = Parser::pageTitle($key);
 
         return View::make('backend.pages.sms-edit', ['title' => $title, 'type' => $type])->with('key', $key);
     }
@@ -82,7 +62,7 @@ class NotificationController extends BaseController {
             $setting->value = $value;
             $setting->save();
         }
-        return Redirect::to('/dashboard/notifications')->with('alert', ['type' => 'success', 'message' => 'Personalización guardada.']);
+        return Redirect::to('/dashboard/notifications#'. Input::get('type'))->with('alert', ['type' => 'success', 'message' => 'Personalización guardada.']);
     }
 
     public function sms_preview($type, $key)

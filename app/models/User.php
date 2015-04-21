@@ -5,6 +5,8 @@ use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
 use Carbon\Carbon;
+use Funnel\Mailers\UserMailer as Mailer;
+use Funnel\Mailers\UserTexter as Texter;
 
 class User extends Eloquent implements UserInterface, RemindableInterface {
 
@@ -59,6 +61,30 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
             if (Hash::needsRehash($user->password))
             {
                 $user->password = \Hash::make($user->password);
+            }
+        });
+
+        static::updating(function($user)
+        {
+            $mailer = new Mailer();
+            $texter = new Texter();
+            $original = $user->getOriginal();
+
+            if ($original['status'] != $user->status)
+            {
+                if($user->status == 'belated'){
+                    $mailer->nextSuspension($user);// Send Email
+                    $texter->nextSuspension($user);// Send Text
+                }else if($user->status == 'suspended'){
+                    $mailer->suspension($user);// Send Email
+                    $texter->suspension($user);// Send Text
+                }else if($user->status == 'inactive'){
+                    $mailer->deactivation($user);// Send Email
+                    $texter->deactivation($user);// Send Text
+                }else if($user->status == 'active'){
+                    $mailer->reactivation($user);// Send Email
+                    $texter->reactivation($user);// Send Text
+                }
             }
         });
 

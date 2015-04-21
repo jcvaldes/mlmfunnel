@@ -2,7 +2,7 @@
 
 use User;
 
-class UserMailer extends Mailer{
+class UserTexter extends Texter{
 
     public function welcome(User $user)
     {
