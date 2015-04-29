@@ -295,6 +295,6 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
     public function getPayments()
     {
-        return Payment::select('subscription_id', 'payerid', 'description', 'total', 'commission', 'created_at' )->where('user_uniqid', $this->uniqid)->where('status', 'approved')->get();
+        return Payment::select('subscription_id', 'payerid', 'description', 'total', 'commission', 'status_pay', 'created_at' )->where('user_uniqid', $this->uniqid)->where('status', 'approved')->get();
     }
 }

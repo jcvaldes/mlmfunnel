@@ -5,7 +5,7 @@ class Payment extends Model {
     protected $table = 'payments';
     public $timestamp = true;
 
-    protected $fillable = ['type', 'subscription_id', 'payment_date', 'ipn_track_id', 'verify_sign', 'user_uniqid', 'payerid', 'payer_name', 'payer_email', 'receiver_email', 'description', 'total', 'status', 'ip', 'commission', 'txn_id'];
+    protected $fillable = ['type', 'subscription_id', 'payment_date', 'ipn_track_id', 'verify_sign', 'user_uniqid', 'payerid', 'payer_name', 'payer_email', 'receiver_email', 'description', 'total', 'status', 'ip', 'commission', 'txn_id', 'status_pay'];
 
     protected $hidden = ['user_uniqid', 'verify_sign'];
 
@@ -36,6 +36,11 @@ class Payment extends Model {
     public function scopeTxn($query, $txn)
     {
         return $query->where('txn_id', $txn);
+    }
+
+    public function scopePending($query)
+    {
+        return $query->where('status_pay', 'pending');
     }
 
     /* Relationships */
