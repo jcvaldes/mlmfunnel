@@ -74,7 +74,9 @@ class ApiController extends BaseController
 
                     foreach ($payments as $key => $payment) {
                         $payment->created_at_format = $payment->created_at->format('d/m/Y');
-                        $commission = $commission + $payment->commission;
+                        if($payment->status_pay == 'pending'){
+                            $commission = $commission + $payment->commission;
+                        }
                         unset($payment->created_at);
                     }
                     array_push($list, ['name' => $user->full_name, 'phone' => $user->phone, 'email' => $user->email, 'created_at' => $user->getCreatedAt(), 'payments' => $payments]);
@@ -264,5 +266,11 @@ class ApiController extends BaseController
     public function payments()
     {
         return Payment::all();
+    }
+
+    public function paid($id)
+    {
+        $payment = Payment::find($id);
+        $payment->paid();
     }
 }

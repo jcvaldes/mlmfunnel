@@ -51,8 +51,14 @@ class Payment extends Model {
     }
 
     /* Function */
+
     public function getId(){
         return $this->subscription_id;
+    }
+
+    public function paid(){
+        $this->status_pay = 'paid';
+        return $this->save();
     }
 
     public function getStatus()
