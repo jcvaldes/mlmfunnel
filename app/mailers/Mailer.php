@@ -16,8 +16,10 @@ abstract class Mailer {
     }
 
     public function sendByKey(User $user, $key){
-        if($user->notif_email == 0)
+        if((isset($user->notif_email)) && ($user->notif_email == 0)){            
             return;
+        }
+            
 
         $title = Parser::title($user, $key);
         $body = Parser::body($user, $key);
