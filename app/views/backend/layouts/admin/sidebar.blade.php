@@ -4,7 +4,7 @@
             <li class="<?= Request::is('*dashboard') ? 'current' : '' ?>">
                 <a href="/dashboard"><i class="fa fa-dashboard"></i><span class="sidebar-text">Dashboard</span></a>
             </li>
-            <li class="<?= Request::is('*user*') ? 'current' : '' ?>">
+            <li class="<?= Request::is('dashboard/user*') ? 'current' : '' ?>">
                 <a href="/dashboard/user"><i class="fa fa-user"></i><span class="sidebar-text">Usuarios</span></a>
             </li>
 
