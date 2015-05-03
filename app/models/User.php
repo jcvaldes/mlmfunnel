@@ -70,7 +70,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
             $texter = new Texter();
             $original = $user->getOriginal();
 
-            if ($original['status'] != $user->status)
+            if ((isset($original['status'])) && ($original['status'] != $user->status))
             {
                 if($user->status == 'belated'){
                     $mailer->nextSuspension($user);// Send Email
