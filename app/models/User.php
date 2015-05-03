@@ -130,6 +130,11 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         return $query->where('type', 'user');
     }
 
+    public function scopeAdmin($query)
+    {
+        return $query->where('type', 'admin');
+    }
+
     public function scopeActive($query)
     {
         $now = Carbon::now();

@@ -28,4 +28,19 @@ abstract class Mailer {
 
         return $this->sendTo($user, $title, $this->layout, $data);
     }
+
+    public function adminNewUser(User $user){
+        $admins = User::admin()->get(); //get all admins 
+
+        $key = 'admin-new-user'; //key of template
+
+        $title = Parser::title($user, $key); // parse data of mail
+        $body = Parser::body($user, $key); // parse data of mail
+        
+
+        foreach ($admins as $key => $admin) {
+            $data = ['title' => $title, 'body' => $body, 'id' => $admin->id];
+            $this->sendTo($admin, $title, $this->layout, $data);
+        }
+    }
 }

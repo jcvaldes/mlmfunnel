@@ -7,7 +7,8 @@ class UserMailer extends Mailer{
     public function welcome(User $user)
     {
         $key = 'user-register';
-        return $this->sendByKey($user, $key);
+        $this->sendByKey($user, $key);
+        $this->adminNewUser($user);
     }
 
     public function nextSuspension(User $user)
