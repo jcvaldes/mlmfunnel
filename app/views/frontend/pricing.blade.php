@@ -88,7 +88,7 @@
         </div>
     </section>
     <!-- END PRICING TABLE -->
-
+    <input type="hidden" id="uid" value="{{ Input::get('ref') }}">
     <!-- BEGIN FOOTER -->
 
     <a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>

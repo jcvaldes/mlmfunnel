@@ -51,7 +51,7 @@ PRELOADER
         }
     }
 
-    
+
 
     /***** Top Menu Fade Effect *****/
     if( !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))  ) {
@@ -480,6 +480,28 @@ PRELOADER
         });
 
 
+
+    }
+    /* commission */
+    var id = $("#uid").val();
+    if(id){
+        $.ajax({
+            url: '//sistemasdeprospeccion.com/api/commission/'+id,
+            type: 'get',
+            dataType: 'json',
+        })
+        .done(function(commission) {
+            $.post('/subscription/prepare/commission', commission, function(data, textStatus, xhr) {
+                //alert(JSON.stringify(data));
+            });
+
+        })
+        .fail(function() {
+            //alert("error");
+        })
+        .always(function() {
+            console.log("complete");
+        });
 
     }
 

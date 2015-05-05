@@ -10,7 +10,19 @@ $(function () {
     opt.sDom = "<'row'<'col-md-6'f><'col-md-6'T>r>t<'row'<'col-md-6'i><'spcol-md-6an6'p>>",
     opt.oTableTools = {
         "sSwfPath": "/assets/plugins/datatables/swf/copy_csv_xls_pdf.swf",
-        "aButtons": ["csv", "pdf"]
+        "aButtons": [
+                {
+                    "sExtends": "csv",
+                    "sButtonText": "CSV",
+                    "mColumns": [0,1,2,4]
+                },
+                {
+                    "sExtends": "pdf",
+                    "sButtonText": "PDF",
+                    "sPdfOrientation": "landscape",
+                    "mColumns": [0,1,2,4]
+                }
+            ]
     };
     opt.order = [[ 4, "desc" ]]
     opt.columnDefs = [

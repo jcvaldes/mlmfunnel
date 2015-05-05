@@ -19,6 +19,14 @@ class SubscriptionController extends \BaseController {
 		return View::make('frontend.pricing')->with('uniqid', $uniqid);
 	}
 
+	public function commission()
+	{
+		if(Session::has('commission_way') && Session::has('commission_value')){
+			Session::put('commission_way', Input::get('commission_way'));
+			Session::put('commission_value', Input::get('commission_value'));
+		}
+	}
+
 	/**
 	 * Show the form for creating a new resource.
 	 * //http://localhost:8006/subscription/process?tx=2BH9400650863970A&st=Completed&amt=0%2e01&cc=USD&cm=%242y%2410%24%2e7JI0Pb9uU6Yt1Iny2LyeOsdO%2eJjQ7XU%2e4yrlEkKkc2Z1bv3LYZAa&item_number=&sig=jwmhMUMm04hBWNcOPOCl2m6x4GkPrjcPEJGBaQtSpj9mrpMaYS%2baAyk3%2bAXXaXF%2fq1OUdLO0ZSSZz3W40%2bUZxc9%2bzDSUBDXPQlsjuWAZ1sRj%2fNTY2FMtb9BmSjEhbagd98Rv2BEtZlvjHz3bnrfWFoppHSwJMjGczGaf2SukO%2fM%3d
