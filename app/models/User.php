@@ -313,7 +313,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         $commission = 0;
 
         if($this->commission_way == 'percent'){
-            $percent = (($total/100) * $this->commission_value)
+            $percent = (($total/100) * $this->commission_value);
             if($total < $percent){
                 $commission = $percent;
             }
