@@ -111,6 +111,8 @@ class AuthController extends BaseController {
 
 			Session::forget('register');
 			Session::forget('uniqid');
+			Session::forget('commission_way');
+			Session::forget('commission_value');
 
 			Auth::loginUsingId($user->id);
 			return Redirect::to('/dashboard/');
