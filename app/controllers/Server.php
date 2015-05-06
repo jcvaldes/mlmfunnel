@@ -36,7 +36,6 @@ class Server extends BaseController {
         if(Input::has('token')){
             return $this->code;
         }else{
-        	echo $this->code;
             return View::make('deploy.index')->with('code', $this->code);
         }
     }
