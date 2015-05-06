@@ -26,7 +26,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
      */
     protected $hidden = array('password', 'remember_token');
 
-    protected $fillable = ['full_name', 'phone', 'picture', 'description', 'email', 'password', 'type', 'username', 'status', 'notif_email', 'notif_phone', 'subscription_ends_at', 'ref_id', 'subscription_cost', 'uniqid'];
+    protected $fillable = ['full_name', 'phone', 'picture', 'description', 'email', 'password', 'type', 'username', 'status', 'notif_email', 'notif_phone', 'subscription_ends_at', 'ref_id', 'subscription_cost', 'uniqid', 'commission_way', 'commission_value'];
 
     public static $rules = [
     'full_name' => 'required',
@@ -123,6 +123,11 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     public function scopeUsername($query, $username)
     {
         return $query->where('username', $username);
+    }
+
+    public function scopeUniqid($query, $uniqid)
+    {
+        return $query->where('uniqid', $uniqid);
     }
 
     public function scopeClient($query)
@@ -301,5 +306,24 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     public function getPayments()
     {
         return Payment::select('id','subscription_id', 'payerid', 'description', 'total', 'commission', 'status_pay', 'created_at' )->where('user_uniqid', $this->uniqid)->where('status', 'approved')->get();
+    }
+
+    public function getCommission($total)
+    {
+        $commission = 0;
+
+        if($this->commission_way == 'percent'){
+            $percent = (($total/100) * $this->commission_value)
+            if($total < $percent){
+                $commission = $percent;
+            }
+
+        }else if($this->commission_way == 'numeric'){
+            if($total < $this->commission_value){
+                $commission = $this->commission_value;
+            }
+        }
+
+        return $commission;
     }
 }

@@ -193,7 +193,14 @@ class ApiController extends BaseController
 
                 $data['status'] = 'approved';
                 $data['ip'] = Request::getClientIp();
+
                 $data['commission'] = Setting::key('payment_register-commission')->first()->value;
+
+                $u = User::uniqid($_POST['custom'])->first();
+
+                if($u){
+                    $data['commission'] = $u->getCommission($data['total']);
+                }
 
                 $anypayment = new Payment($data);
                 if($anypayment->save()){
@@ -230,6 +237,12 @@ class ApiController extends BaseController
                 $data['status'] = 'approved';
                 $data['ip'] = Request::getClientIp();
                 $data['commission'] = Setting::key('payment_subscription-commission')->first()->value;
+
+                $u = User::uniqid($_POST['custom'])->first();
+
+                if($u){
+                    $data['commission'] = $u->getCommission($data['total']);
+                }
 
                 $anypayment = new Payment($data);
                 if($anypayment->save()){

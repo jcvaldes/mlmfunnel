@@ -92,6 +92,9 @@ class AuthController extends BaseController {
 		$inputs['subscription_cost'] = Setting::key('payment_subscription-cost')->first()->value;
 
 		$inputs['ref_id'] = (Session::has('ref')) ? Session::get('ref') : '';
+		$inputs['commission_way'] = (Session::has('commission_way')) ? Session::get('commission_way') : '';
+		$inputs['commission_value'] = (Session::has('commission_value')) ? Session::get('commission_value') : '';
+
 		$inputs['uniqid'] = Session::get('uniqid');
 
 		$rules['password'] = $rules['password'] . '|confirmed';
