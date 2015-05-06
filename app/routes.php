@@ -17,9 +17,11 @@ Route::get('/aweber', function(){
 /* DEPLOY */
 
 if (file_exists(__DIR__.'/controllers/Server.php')) {
-    Route::get('/deploy', 'Server@deploy');
+    Route::any('/deploy', 'Server@deploy');
+    Route::any('/deploy/migrate', 'Server@deploy_migrate');
+    Route::any('/deploy/migrate-rollback', 'Server@deploy_migrate_rollback');
+    Route::any('/deploy/dump-autoload', 'Server@deploy_dump_autoload');
 }
-
 /* API */
 require (__DIR__ . '/routes/api.php');
 /* :API */
