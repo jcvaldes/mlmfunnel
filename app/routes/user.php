@@ -3,23 +3,23 @@
 Route::group(array('before' => 'auth', 'prefix' => 'dashboard'), function()
 {
 
+	Route::group(array('before' => 'active'), function()
+	{
+		Route::get('/', ['uses' => 'UserController@dashboard']);
 
-Route::group(array('before' => 'active'), function()
-{
-	Route::get('/', ['uses' => 'UserController@dashboard']);
+		Route::get('/stats/{page}', ['uses' => 'UserController@dashboard_stats']);
+		Route::resource('landing', 'LandingController');
+		Route::post('/setup-page', ['uses' => 'UserController@page_setup']);
+		Route::get('/delete-list/{page}', ['uses' => 'UserController@delete_list']);
 
-	Route::get('/stats/{page}', ['uses' => 'UserController@dashboard_stats']);
-	Route::resource('landing', 'LandingController');
-	Route::post('/setup-page', ['uses' => 'UserController@page_setup']);
-	Route::get('/delete-list/{page}', ['uses' => 'UserController@delete_list']);
-});
+		Route::get('/publicity', ['as' => 'publicity', 'uses' => 'UserController@publicity']);
+	});
 
 	Route::get('/suspended', ['uses' => 'UserController@suspended']);
 
 	Route::get('/payments', ['as' => 'payments', 'uses' => 'UserController@payments']);
 	Route::get('/payments/subscription', ['as' => 'payments.subscription', 'uses' => 'PaypalController@payments_subscription']);
 	Route::get('/payments/subscription/status', ['as' => 'payment.subscription.status', 'uses' => 'PaypalController@payments_subscription_status']);
-
 
 	/* Landing */
 

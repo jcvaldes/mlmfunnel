@@ -210,4 +210,11 @@ class UserController extends BaseController {
 
 		return View::make('backend.users.status', compact('users'))->with('status', $status);
 	}
+
+	/* Publicity */
+
+	public function publicity()
+	{
+		return View::make('backend.publicity.index');
+	}
 }

@@ -10,25 +10,29 @@
 
             <li class="<?= Request::is('*prospect*') ? 'current' : '' ?>">
                 <a href="/dashboard/prospect"><i class="fa fa-user"></i><span class="sidebar-text">Prospectos</span></a>
-            </li> 
+            </li>
 
 
             <li class="<?= Request::is('*profile*') ? 'current' : '' ?>">
                 <a href="/dashboard/profile"><i class="glyph-icon flaticon-account"></i><span class="sidebar-text">Mi perfil</span></a>
-            </li> 
+            </li>
 
             <li class="<?= Request::is('*payments*') ? 'current' : '' ?>">
                 <a href="{{ URL::route('payments') }}"><i class="fa fa-dollar"></i><span class="sidebar-text">Facturación</span></a>
-            </li> 
+            </li>
+
+            <li class="<?= Request::is('*publicity*') ? 'current' : '' ?>">
+                <a href="{{ URL::route('publicity') }}"><i class="fa fa-file-text"></i><span class="sidebar-text">Publicidad</span></a>
+            </li>
 
 
-            
+
             <!--<li class="<?= Request::is('user*') ? 'current' : '' ?>">
                 <a href="/user"><i class="glyph-icon flaticon-account"></i><span class="sidebar-text">Usuarios</span></a>
-            </li>            
+            </li>
             <li class="<?= Request::is('customer*') ? 'current' : '' ?>">
-                <a href="/customer"><i class="glyph-icon flaticon-ui-elements2"></i><span class="sidebar-text">Clientes</span></a>                
-            </li>            
+                <a href="/customer"><i class="glyph-icon flaticon-ui-elements2"></i><span class="sidebar-text">Clientes</span></a>
+            </li>
             <li class="<?= Request::is('property*') ? 'current' : '' ?>">
                 <a href="/property"><i class="fa fa-home"></i><span class="sidebar-text">Inmuebles</span></a>
             </li> -->
