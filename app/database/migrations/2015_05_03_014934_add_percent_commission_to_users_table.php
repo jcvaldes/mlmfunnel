@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddCommissionToUsersTable extends Migration {
+class AddPercentCommissionToUsersTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,11 +12,7 @@ class AddCommissionToUsersTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::table('users', function($table)
-		{
-			$table->string('commission_way');
-			$table->string('commission_value');
-		});
+
 	}
 
 	/**

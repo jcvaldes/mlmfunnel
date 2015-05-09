@@ -199,7 +199,7 @@ class ApiController extends BaseController
                 $u = User::uniqid($_POST['custom'])->first();
 
                 if($u){
-                    $data['commission'] = $u->getCommission($data['total']);
+                    $data['commission'] = $u->getCommissionR($data['total']);
                 }
 
                 $anypayment = new Payment($data);
@@ -241,7 +241,7 @@ class ApiController extends BaseController
                 $u = User::uniqid($_POST['custom'])->first();
 
                 if($u){
-                    $data['commission'] = $u->getCommission($data['total']);
+                    $data['commission'] = $u->getCommissionS($data['total']);
                 }
 
                 $anypayment = new Payment($data);

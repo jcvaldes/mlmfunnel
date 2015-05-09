@@ -308,20 +308,35 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         return Payment::select('id','subscription_id', 'payerid', 'description', 'total', 'commission', 'status_pay', 'created_at' )->where('user_uniqid', $this->uniqid)->where('status', 'approved')->get();
     }
 
-    public function getCommission($total)
+    public function getCommissionR($total)
     {
-        $commission = 0;
+        $commission = -1;
 
-        if($this->commission_way == 'percent'){
-            $percent = (($total/100) * $this->commission_value);
+        if($this->cr_way == 'percent'){
+            $percent = (($total/100) * $this->cr_value);
             if($total < $percent){
                 $commission = $percent;
             }
 
-        }else if($this->commission_way == 'numeric'){
-            if($total < $this->commission_value){
-                $commission = $this->commission_value;
+        }else if($this->cr_way == 'numeric'){
+            $commission = $this->cr_value;
+        }
+
+        return $commission;
+    }
+
+    public function getCommissionS($total)
+    {
+        $commission = -1;
+
+        if($this->cs_way == 'percent'){
+            $percent = (($total/100) * $this->cs_value);
+            if($total < $percent){
+                $commission = $percent;
             }
+
+        }else if($this->cs_way == 'numeric'){
+            $commission = $this->cs_value;
         }
 
         return $commission;

@@ -21,9 +21,14 @@ class SubscriptionController extends \BaseController {
 
 	public function commission()
 	{
-		if(Input::has('commission_way') && Input::has('commission_value')){
-			Session::put('commission_way', Input::get('commission_way'));
-			Session::put('commission_value', Input::get('commission_value'));
+		if(Input::has('cr_way') && Input::has('cr_value')){
+			Session::put('cr_way', Input::get('cr_way'));
+			Session::put('cr_value', Input::get('cr_value'));
+		}
+
+		if(Input::has('cs_way') && Input::has('cs_value')){
+			Session::put('cs_way', Input::get('cs_way'));
+			Session::put('cs_value', Input::get('cs_value'));
 		}
 	}
 
