@@ -41,8 +41,6 @@ class SubscriptionController extends \BaseController {
 	{
 		$uniqid = Session::get('uniqid');
 
-
-
 		//tx			16J19853GV4692052
 		//st			Completed
 		//amt			0.01
@@ -51,16 +49,16 @@ class SubscriptionController extends \BaseController {
 		//item_number
 		//sig			Jwkz7VQMfO2agz/EtEa0oduLYSV4dxA+RLk7Y4olVIRHgc9VO2oR8Yz4ugH0smsT/cMTPt6Ccaupiaq6Jca4L/dozKxHf0iYCdJ/YQNs7ddMp0oUe44U5UzEFzEj6b7HgKuMte4djUdkXBRLdkYJ1TjtHlTsRKsfzrF+A0WTQdE=
 
-		if ((!Input::has('tx')) || (!Input::has('st')) || (!Input::has('cm')) || (!Input::has('sig'))) {
+		/*if ((!Input::has('tx')) || (!Input::has('st')) || (!Input::has('cm')) || (!Input::has('sig'))) {
 			return Redirect::route('login')->with('alert', ['type' => 'danger', 'message' => 'Hubo un problema en el pago.']);
 		}
 
 		if(Input::get('cm') != $uniqid || Input::get('st') != 'Completed'){
 
 			return Redirect::route('login')->with('alert', ['type' => 'danger', 'message' => 'Hubo un problema en el pago.']);
-		}else{
+		}else{*/
 			Session::put('register', $uniqid);
-		}
+		//}
 
 		return Redirect::route('register');
 	}

@@ -77,7 +77,7 @@
                                     <input type="hidden" name="return" value="{{ url() }}/subscription/process">
                                     <input type="hidden" name="cancel" value="{{ url() }}/subscription/cancel">
                                     <input type="hidden" name="rm" value="2">
-                                    <input type="hidden" name="custom" value="{{ $uniqid }}">
+                                    <input type="hidden" name="custom" value='{{ json_encode(["id" => $uniqid, "system" => "dys"]) }}'>
                                 </form>
                             </li>
                         </ul>
