@@ -143,7 +143,7 @@ class ApiController extends BaseController
         $json = Input::json()->all();
         $_CUSTOM = json_decode($json['custom'], true);
 
-        $p = Payment::txn($json['txn_id'])->first()->get();
+        $p = Payment::txn($json['txn_id'])->first();
         if(isset($p)){
             return;
         }
