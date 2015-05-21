@@ -1,9 +1,10 @@
-
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js sidebar-large lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js sidebar-large lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js sidebar-large lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js sidebar-large"> <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js sidebar-large">
+<!--<![endif]-->
 
 <head>
     <!-- BEGIN META SECTION -->
@@ -37,8 +38,76 @@
     </section>
     <!-- END PRELOADER -->
 
+    <section class="section-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="align-center">
+                        <i class="glyph-icon flaticon-shopping102 fa-5x m-b-20"></i>
+                        <h1 class="slogan">Ya Casi Terminas</h1>
+                        <p>Por favor confirma tu compra con los siguientes datos:</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- BEGIN PRICING TABLE -->
+    <section class="bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="span12 p-t-10 p-b-40">
+                    <div id="testimonials" class="owl-carousel">
+                        <div class="item">
+                            <div class="col-md-6  col-md-offset-3">
+
+
+                                <p class="text-justify">
+                                    <strong></strong>
+                                    <br> Se debitará de tu cuenta el monto de registro que es de: <strong>{{ Setting::key('payment_register-cost')->first()->value }} U$D</strong>
+                                    <br> Y luego cada mes, la suma de: <strong>{{ Setting::key('payment_subscription-cost')->first()->value }} U$D</strong>
+                                    <br>
+                                    <br>
+
+                                    <strong>Nota Importante:</strong>
+                                    <br> Recuerda que puedes cancelar tu membresía cuando quieras, enviándonos un email a <a href="mailto:soporte@sistemasdeprospeccion.com?subject=Cancelación+de+membresia">soporte@sistemasdeprospeccion.com</a>
+
+                                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" class=" p-t-20">
+                                        <input name="cmd" type="hidden" value="_xclick-subscriptions" />
+                                        <input name="business" type="hidden" value="{{ Setting::key('paypal_mail')->first()->value }}" />
+                                        <input name="item_name" type="hidden" value="Subscripcion {{ Setting::key('app_name')->first()->value }}" />
+                                        <input name="currency_code" type="hidden" value="USD" />
+                                        <input name="no_shipping" type="hidden" value="1" />
+                                        <button type="submit" class="btn btn-blue pull-right"><i class="fa fa-dollar m-r-10"></i> Comprar Ahora</button>
+                                        <input name="no_shipping" type="hidden" value="1" />
+
+                                        <input name="a1" type="hidden" value="{{ Setting::key('payment_register-cost')->first()->value }}" />
+                                        <input name="p1" type="hidden" value="1" />
+                                        <input name="t1" type="hidden" Value="M" />
+
+
+                                        <input name="a3" type="hidden" value="{{ Setting::key('payment_subscription-cost')->first()->value }}" />
+                                        <input name="p3" type="hidden" value="1" />
+                                        <input name="t3" type="hidden" Value="M" />
+                                        <input name="src" type="hidden" value="1" />
+                                        <input name="sra" type="hidden" value="1" />
+
+                                        <input type="hidden" name="return" value="{{ url() }}/subscription/process">
+                                        <input type="hidden" name="cancel" value="{{ url() }}/subscription/cancel">
+                                        <input type="hidden" name="rm" value="2">
+                                        <input type="hidden" name="custom" value='{{ json_encode(["id" => $uniqid, "system" => "dys"]) }}'>
+                                    </form>
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BEGIN PRICING TABLE ->
     <section id="section-pricing" class="section appear clearfix">
         <div class="container">
             <div class="row">
@@ -46,39 +115,17 @@
                 <div class="col-sm-4 col-sm-offset-4">
                     <div class="panel panel-default text-center border-blue">
                         <div class="panel-heading tile-hot">
+
+
                             <h3>{{ Setting::key('app_name')->first()->value }}</h3>
-                            <h3 class="panel-title price">${{ Setting::key('payment_subscription-cost')->first()->value }}<span class="price-cents">00</span><span class="price-month">mes</span></h3>
+                            <h3 class="panel-title price"></h3>
                         </div>
                         <ul class="list-group">
                             <li class="list-group-item">Con un registro de ${{ Setting::key('payment_register-cost')->first()->value }}</li>
 
                             <li class="list-group-item m-b-20">
 
-                                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" style="display:inline-block;">
-                                    <input name="cmd" type="hidden" value="_xclick-subscriptions" />
-                                    <input name="business" type="hidden" value="{{ Setting::key('paypal_mail')->first()->value }}" />
-                                    <input name="item_name" type="hidden" value="Subscripcion {{ Setting::key('app_name')->first()->value }}" />
-                                    <input name="currency_code" type="hidden" value="USD" />
-                                    <input name="no_shipping" type="hidden" value="1" />
-                                    <button type="submit" class="btn btn-blue"><i class="fa fa-dollar m-r-10"></i> Comprar Ahora</button>
-                                    <input name="no_shipping" type="hidden" value="1" />
 
-                                    <input name="a1" type="hidden" value="{{ Setting::key('payment_register-cost')->first()->value }}" />
-                                    <input name="p1" type="hidden" value="1" />
-                                    <input name="t1" type="hidden" Value="M" />
-
-
-                                    <input name="a3" type="hidden" value="{{ Setting::key('payment_subscription-cost')->first()->value }}" />
-                                    <input name="p3" type="hidden" value="1" />
-                                    <input name="t3" type="hidden" Value="M" />
-                                    <input name="src" type="hidden" value="1" />
-                                    <input name="sra" type="hidden" value="1" />
-
-                                    <input type="hidden" name="return" value="{{ url() }}/subscription/process">
-                                    <input type="hidden" name="cancel" value="{{ url() }}/subscription/cancel">
-                                    <input type="hidden" name="rm" value="2">
-                                    <input type="hidden" name="custom" value='{{ json_encode(["id" => $uniqid, "system" => "dys"]) }}'>
-                                </form>
                             </li>
                         </ul>
                     </div>
