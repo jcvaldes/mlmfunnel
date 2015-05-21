@@ -20,6 +20,7 @@ class BaseController extends Controller {
         // NewRelic Extension?
         if ( extension_loaded( 'newrelic' ) )
         {
+        	newrelic_set_appname('DYS');
             newrelic_name_transaction( get_class( $this ) );
         }
     }
