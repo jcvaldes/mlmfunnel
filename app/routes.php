@@ -79,3 +79,59 @@ App::missing(function($exception)
         //return Redirect::to('/auth/login')->with('alert', ['type' => 'danger', 'message' => 'Ocurrio un extraño error, intenta de nuevo.']);
     }
 });
+
+
+if (App::environment('production'))
+{
+    App::error(function(Exception $exception, $code)
+    {
+        switch ($code)
+        {
+            case 404:
+
+                if (extension_loaded('newrelic')) {
+                    try
+                    {
+                        newrelic_set_appname('DYS');
+                        newrelic_notice_error (null,$exception);
+                    }
+                    catch(Exception $e){}
+                }
+
+                return Response::view('core.errors.error_404', array(), 404);
+
+            break;
+
+            case 500:
+
+                if (extension_loaded('newrelic')) {
+                    try
+                    {
+                        newrelic_set_appname('DYS');
+                        newrelic_notice_error (null,$exception);
+                    }
+                    catch(Exception $e){}
+                }
+
+                return Response::view('core.errors.error_500', array(), 500);
+
+            break;
+
+            default:
+
+                if (extension_loaded('newrelic')) {
+                    try
+                    {
+                        newrelic_set_appname('DYS');
+                        newrelic_notice_error (null,$exception);
+                    }
+                    catch(Exception $e){}
+                }
+
+                return Response::view('core.errors.error_default', array(), $code);
+
+            break;
+        }
+
+    });
+}
