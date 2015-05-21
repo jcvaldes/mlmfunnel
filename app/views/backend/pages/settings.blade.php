@@ -153,26 +153,16 @@
 
                                                     <div class="row">
                                                         <div class="control-label col-md-3">Costo registro:</div>
-                                                        <div class="col-md-2">
+                                                        <div class="col-md-6">
                                                             <input type="text" class="form-control" name="payment_register-cost" value="{{ Setting::key('payment_register-cost')->first()->value }}">
-                                                        </div>
-
-                                                        <div class="control-label col-md-2">Comisión:</div>
-                                                        <div class="col-md-2">
-                                                            <input type="text" class="form-control" name="payment_register-commission" value="{{ Setting::key('payment_register-commission')->first()->value }}">
                                                         </div>
                                                     </div>
 
 
                                                     <div class="row">
                                                         <div class="control-label col-md-3">Costo mensualidad:</div>
-                                                        <div class="col-md-2">
+                                                        <div class="col-md-6">
                                                             <input type="text" class="form-control" name="payment_subscription-cost" value="{{ Setting::key('payment_subscription-cost')->first()->value }}">
-                                                        </div>
-
-                                                        <div class="control-label col-md-2">Comisión:</div>
-                                                        <div class="col-md-2">
-                                                            <input type="text" class="form-control" name="payment_subscription-commission" value="{{ Setting::key('payment_subscription-commission')->first()->value }}">
                                                         </div>
                                                     </div>
 
