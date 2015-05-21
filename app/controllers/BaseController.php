@@ -15,4 +15,12 @@ class BaseController extends Controller {
 		}
 	}
 
+	public function __construct()
+    {
+        // NewRelic Extension?
+        if ( extension_loaded( 'newrelic' ) )
+        {
+            newrelic_name_transaction( get_class( $this ) );
+        }
+    }
 }

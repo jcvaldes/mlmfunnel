@@ -94,12 +94,9 @@ if (App::environment('production'))
                     {
                         newrelic_set_appname('DYS');
                         newrelic_notice_error (null,$exception);
-                        echo "404";
                     }
                     catch(Exception $e){}
                 }
-
-                return 'core.errors.error_404';
 
             break;
 
@@ -110,12 +107,9 @@ if (App::environment('production'))
                     {
                         newrelic_set_appname('DYS');
                         newrelic_notice_error (null,$exception);
-                        echo "500";
                     }
                     catch(Exception $e){}
                 }
-
-                return 'core.errors.error_500';
 
             break;
 
@@ -126,12 +120,9 @@ if (App::environment('production'))
                     {
                         newrelic_set_appname('DYS');
                         newrelic_notice_error (null,$exception);
-                        echo "def";
                     }
                     catch(Exception $e){}
                 }
-
-                return 'core.errors.error_default';
 
             break;
         }
