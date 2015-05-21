@@ -175,16 +175,16 @@ class ApiController extends BaseController
 
         if($u){
             $data['commission'] = $u->getCommissionS($data['total']);
-        }
 
-        $anypayment = new Payment($data);
-        if($anypayment->save()){
-            $user = User::where('uniqid', $data['user_uniqid'])->first();
-            if($user){
-                $user->renewSubscription();
+            $anypayment = new Payment($data);
+            if($anypayment->save()){
+                $user = User::where('uniqid', $data['user_uniqid'])->first();
+                if($user){
+                    $user->renewSubscription();
+                }else{
+                }
             }else{
             }
-        }else{
         }
     }
 }
