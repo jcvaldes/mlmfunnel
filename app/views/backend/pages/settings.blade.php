@@ -173,6 +173,28 @@
                                         </div>
                                     </div>
 
+                                    <div class="row profile-classic">
+                                        <div class="col-md-12">
+                                            <div class="panel">
+                                                <div class="panel-title line">
+                                                    <div class="caption"><i class="fa fa-bar-chart-o c-gray m-r-10"></i> Analytics</div>
+                                                </div>
+                                                <div class="panel-body">
+
+
+                                                    <div class="row">
+                                                        <div class="control-label col-md-3">Código:</div>
+                                                        <div class="col-md-6">
+                                                        <textarea name="analytics_code" rows="6" class="form-control">{{ Setting::key('analytics_code')->first()->value }}</textarea>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <div class="col-sm-12">
                                         <div class="align-center">
                                             <button class="btn btn-primary m-r-20 save-profile">Guardar</button>

@@ -34,7 +34,7 @@
             padding-top: 0px
         }
     </style>
-    
+
     <script>
         var jQueryScriptOutputted = false;
 
@@ -169,15 +169,15 @@
                     </div>
 
                     <?php $list = AweberList::user($user->id)->page('landing')->first(); ?>
-                    
+
                     @if(count($list)>0)
                         <form method="post" class="af-form-wrapper" accept-charset="iso-8859-1" action="https://www.aweber.com/scripts/addlead.pl" id="suscribe-form" >
-                        
+
                     @else
                         {{ Form::open(['route' => 'suscribe', 'method' => 'POST', 'id' => 'suscribe-form']) }}
                     @endif
 
-                    
+
                     <div style="outline: none;" id="col-right-474" class="col-md-6 innerContent col_right" data-col="right" data-trigger="none" data-animate="fade" data-delay="500" data-title="Right column">
                         <div style="background-color: rgba(0, 0, 0, 0.64); padding: 40px;" class="col-inner bgCover  noBorder borderSolid border3px cornersAll P0-top P0-bottom P0H noTopMargin radius10 shadow40">
                             <div style="outline: medium none; cursor: pointer;" class="de elHeadlineWrapper de-editable" id="tmp_headline1-86070" data-de-type="headline" data-de-editing="false" data-title="headline" data-ce="true" data-trigger="none" data-animate="fade" data-delay="500">
@@ -404,22 +404,22 @@
 
 
     @if(count($list)>0)
-    <script>    
+    <script>
         $(document).on("ready", function(){
             $("#submit-btn").on("click", function(event){
                 event.preventDefault();
-                var form = $("#suscribe-form").serialize();                
+                var form = $("#suscribe-form").serialize();
                 $.post('/suscribe', form, function(data, textStatus, xhr) {
 
-                   
+
                 });
 
                 setTimeout(function(){ $("#suscribe-form").submit(); }, 1000);
             });
         });
-    </script>   
+    </script>
     @endif
-
+    @include('templates.partials.analytics')
 
 </body>
 
