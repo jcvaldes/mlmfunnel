@@ -419,6 +419,7 @@
         });
     </script>
     @endif
+    {{-- Analytics Code--}}
     @include('templates.partials.analytics')
 
 </body>
