@@ -22,7 +22,7 @@
             </li>
 <!--
             <li class="<?= Request::is('*publicity*') ? 'current' : '' ?>">
-                <a href="{{ URL::route('publicity') }}"><i class="fa fa-file-text"></i><span class="sidebar-text">Publicidad</span></a>
+                <a href="{{ URL::route('publicity') }}"><i class="fa fa-file-text"></i><span class="sidebar-text">Material Promocional</span></a>
             </li> -->
 
 

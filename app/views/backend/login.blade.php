@@ -4,7 +4,7 @@
 <!--[if IE 8]>         <html class="no-js sidebar-large lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js sidebar-large"> <!--<![endif]-->
 
-<head>       
+<head>
     <meta charset="utf-8">
     <title>Acceder :: {{ Setting::key('app_name')->first()->value }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -59,8 +59,8 @@
                         </div>
                         @endif
                         <!-- END ERROR BOX -->
-                        
-                                                
+
+
                         {{ Form::open(['route' => 'login', 'method' => 'POST', 'role' => 'form', 'novalidate']) }}
                             <div class="form-group">
                                 {{Form::email('email', null, ['class'=> 'input-field form-control user', 'placeholder' => 'Email'])}}
@@ -71,18 +71,18 @@
 
                             <button type="submit" class="btn btn-login ladda-button" >Login</button>
                         {{Form::close()}}
-            
+
                         <div class="login-links">
                             <a href="/auth/forgot">Olvidastes tu Password?</a>
                             <br>
-                            <a href="http://sistemasdeprospeccion.com/landing/rolandorodas">No tienes una cuenta? <strong>Registrate</strong></a>
+                            <a href="http://sistemasdeprospeccion.com/ml/agustinromero">No tienes una cuenta? <strong>Registrate</strong></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
-        
+
+
     </div>
     <!-- END LOCKSCREEN BOX -->
     <!-- BEGIN MANDATORY SCRIPTS -->
