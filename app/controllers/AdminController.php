@@ -131,7 +131,7 @@ class AdminController extends BaseController {
             $setting->value = $value;
             $setting->save();
         }
-        return Redirect::back()->with('alert', ['type' => 'success', 'message' => 'Configuración guardada.']);
+        return Redirect::to('/dashboard/landings')->with('alert', ['type' => 'success', 'message' => 'Configuración guardada.']);
     }
 
 
