@@ -8,6 +8,10 @@ Route::group(array('before' => 'auth', 'prefix' => 'dashboard'), function()
 	Route::get('/settings', ['uses' => 'AdminController@settings']);
 	Route::post('/settings', ['uses' => 'AdminController@settings_post']);
 
+	Route::get('/landings', ['uses' => 'AdminController@landings']);
+	Route::get('/landings/{landing}', ['uses' => 'AdminController@setup_landing']);
+	Route::post('/landings', ['uses' => 'AdminController@landings_post']);
+
 	Route::get('/users-status/{status}', ['as' => 'users-status', 'uses' => 'UserController@status']);
 
 	/* Landing */

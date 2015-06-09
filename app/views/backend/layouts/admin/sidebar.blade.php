@@ -8,6 +8,10 @@
                 <a href="/dashboard/user"><i class="fa fa-user"></i><span class="sidebar-text">Usuarios</span></a>
             </li>
 
+            <li class="<?= Request::is('*landings*') ? 'current' : '' ?>">
+                <a href="/dashboard/landings"><i class="fa fa-gear"></i><span class="sidebar-text">Landings</span></a>
+            </li>
+
             <li class="<?= Request::is('*profile*') ? 'current' : '' ?>">
                 <a href="/dashboard/profile"><i class="glyph-icon flaticon-account"></i><span class="sidebar-text">Mi perfil</span></a>
             </li>

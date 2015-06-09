@@ -111,4 +111,28 @@ class AdminController extends BaseController {
         }
         return Redirect::to('/dashboard/settings')->with('alert', ['type' => 'success', 'message' => 'Configuración guardada.']);
     }
+
+    public function landings()
+    {
+        return View::make('backend.pages.landings');
+    }
+
+    public function setup_landing($landing)
+    {
+        return View::make('backend.pages.setup-landing', compact('landing'));
+    }
+
+    public function landings_post()
+    {
+        $inputs = Input::all();
+
+        foreach ($inputs as $key => $value) {
+            $setting = Setting::firstOrNew(['key' => $key]);
+            $setting->value = $value;
+            $setting->save();
+        }
+        return Redirect::back()->with('alert', ['type' => 'success', 'message' => 'Configuración guardada.']);
+    }
+
+
 }
