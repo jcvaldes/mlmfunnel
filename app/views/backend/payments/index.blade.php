@@ -23,6 +23,10 @@
             </div>
             <div class="m-t-10 no-print col-md-8 text-right">
                 <span class="btn btn-info m-r-10 m-b-10"><i class="fa fa-calendar m-r-10"></i> <strong>Vence el: {{Auth::user()->getSubscriptionEnds()}}</strong></span>
+                @if(Auth::user()->getSubscriptionId())
+                <a href="https://www.paypal.com/ve/cgi-bin/webscr?cmd=_profile-recurring-payments&encrypted_profile_id={{ Auth::user()->getSubscriptionId() }}" class="btn btn-danger m-r-10 m-b-10" target="_blank"> <i class="fa fa-trash-o m-r-10"></i> Cancelar Subscripción</a>
+                @endif
+
                 <button type="button" class="btn btn-white m-r-10 m-b-10" onclick="window.print();"><i class="fa fa-print m-r-10"></i> Imprimir</button>
             </div>
 
