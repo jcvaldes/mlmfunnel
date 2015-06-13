@@ -24,7 +24,10 @@
             <div class="m-t-10 no-print col-md-8 text-right">
                 <span class="btn btn-info m-r-10 m-b-10"><i class="fa fa-calendar m-r-10"></i> <strong>Vence el: {{Auth::user()->getSubscriptionEnds()}}</strong></span>
                 @if(Auth::user()->getSubscriptionId())
-                <a href="https://www.paypal.com/ve/cgi-bin/webscr?cmd=_profile-recurring-payments&encrypted_profile_id={{ Auth::user()->getSubscriptionId() }}" class="btn btn-danger m-r-10 m-b-10" target="_blank"> <i class="fa fa-trash-o m-r-10"></i> Cancelar Subscripción</a>
+
+
+                <button type="button" class="btn btn-danger m-r-10 m-b-10 unsubscribe"> <i class="fa fa-trash-o m-r-10"></i> Cancelar Subscripción</button>
+
                 @endif
 
                 <button type="button" class="btn btn-white m-r-10 m-b-10" onclick="window.print();"><i class="fa fa-print m-r-10"></i> Imprimir</button>
@@ -76,41 +79,27 @@
 </div>
 
 
-<div class="modal fade" id="modal-prospect" aria-hidden="true">
+<div class="modal fade" id="modal" aria-hidden="true">
     <div class="modal-dialog modal-md">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title"><strong>Editar prospecto</strong></h4>
+                <h4 class="modal-title"><strong>Cancelar Subscripción</strong></h4>
             </div>
             <div class="modal-body">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label for="field-1" class="control-label">Nombre</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="">
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label for="field-2" class="control-label">Teléfono</label>
-                            <input type="text" class="form-control"  id="phone" name="phone" placeholder="">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label for="field-3" class="control-label">Email</label>
-                            <input type="text" class="form-control" id="email" name="email" placeholder="">
-                        </div>
-                    </div>
+                <div class="row p-10 m-t-0 p-t-0">
+                    <h3>Para cancelar tu subscripción sigue estos pasos:</h3>
+                    <ul>
+                        <li class="m-t-10"> <strong>1)</strong> Ve a <a href="http://paypal.com" target="_blank">PayPal.com</a> y accede a tu cuenta. <br> <small>(Asegurate que sea la misma con la cual te registraste)</small></li>
+                        <li class="m-t-10"> <strong>2)</strong> Haz click
+                        <a href="https://www.paypal.com/ve/cgi-bin/webscr?cmd=_profile-recurring-payments&encrypted_profile_id={{ Auth::user()->getSubscriptionId() }}" class="" target="_blank"> aquí</a> y te llevaremos a tu subscripción dentro de PayPal.com </li>
+
+                        <li class="m-t-10"> <strong>3)</strong> En la parte superior encontraras el boton para cancelar tu subscripción.</li>
+                    </ul>
                 </div>
             </div>
             <div class="modal-footer text-center">
-                <input type="hidden" id="id" value=""/>
-
-                <button type="button" class="btn btn-primary" id="save" data-dismiss="modal"><i class="fa fa-check"></i> Guardar</button>
+                <button type="button" class="btn btn-primary" id="save" data-dismiss="modal"><i class="fa fa-check"></i> Cerrar</button>
             </div>
         </div>
     </div>
@@ -134,4 +123,14 @@
 <script src="{{ asset('/assets/plugins/jnotify/jNotify.jquery.min.js') }}"></script>
 <script src="{{ asset('/assets/js/notifications.js') }}"></script>
 <script src="{{ asset('/assets/plugins/jnotify/jNotify.jquery.min.js') }}"></script>
+
+<script>
+$(document).on("ready", function(){
+    /* Filtrado */
+
+    $(".unsubscribe").on("click", function(){
+        $("#modal").modal();
+    });
+});
+</script>
 @stop
