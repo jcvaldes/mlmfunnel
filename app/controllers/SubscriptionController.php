@@ -41,6 +41,8 @@ class SubscriptionController extends \BaseController {
 	{
 		$uniqid = Session::get('uniqid');
 
+		//dd(Input::all());
+
 		//tx			16J19853GV4692052
 		//st			Completed
 		//amt			0.01
@@ -59,6 +61,11 @@ class SubscriptionController extends \BaseController {
 		}else{*/
 			Session::put('register', $uniqid);
 		//}
+
+		if(Auth::user()){
+			Auth::logout();
+		}
+
 
 		return Redirect::route('register');
 	}
