@@ -42,9 +42,9 @@ Route::group(['before' => 'auth'], function () {
 
 /* Subscription */
 Route::group(['prefix' => 'subscription'], function(){
-    Route::get('/prepare', ['as' => 'prepare', 'uses' => 'SubscriptionController@prepare']);
-    Route::get('/process', ['as' => 'process', 'uses' => 'SubscriptionController@process']);
-    Route::get('/cancel', ['as' => 'cancel', 'uses' => 'SubscriptionController@cancel']);
+    Route::any('/prepare', ['as' => 'prepare', 'uses' => 'SubscriptionController@prepare']);
+    Route::any('/process', ['as' => 'process', 'uses' => 'SubscriptionController@process']);
+    Route::any('/cancel', ['as' => 'cancel', 'uses' => 'SubscriptionController@cancel']);
     Route::any('/prepare/commission', ['uses' => 'SubscriptionController@commission']);
 
 });
