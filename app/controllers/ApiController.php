@@ -104,7 +104,7 @@ class ApiController extends BaseController
         $duplicate = Payment::where('ipn_track_id', $json['ipn_track_id'])->first();
         if(count($duplicate) > 0){
             Log::info("IPN Duplicado: " .$json);
-            exit;
+            return json_encode(["error"]);
         }
 
         Log::info($json);
