@@ -100,6 +100,13 @@ class ApiController extends BaseController
     public function payment_register(){
         $json = Input::json()->all();
 
+        /* Validate duplicate */
+        $duplicate = Payment::where('ipn_track_id', $json['ipn_track_id'])->first();
+        if(count($duplicate) > 0){
+            Log::info("IPN Duplicado: " .$json);
+            exit;
+        }
+
         Log::info($json);
 
         $_CUSTOM = json_decode($json['custom'], true);
