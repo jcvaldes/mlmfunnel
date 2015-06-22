@@ -16,6 +16,8 @@ class AdminController extends BaseController {
         //$this->mailer->welcome($user);
         $data = [];
 
+        //Clickatell::send("Nuevo Interesado en ", "+584246273916");
+
         $data['active'] =   User::where('status', 'active')->get()->count();
         $data['belated'] =  User::where('status', 'belated')->get()->count();
         $data['suspended'] =User::where('status', 'suspended')->get()->count();

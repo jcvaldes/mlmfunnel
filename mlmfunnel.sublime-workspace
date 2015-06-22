@@ -4,469 +4,287 @@
 		"selected_items":
 		[
 			[
-				"end",
-				"endDate"
+				"subsc",
+				"subscription_id"
 			],
 			[
-				"pa",
-				"padding"
+				"bu",
+				"button"
 			],
 			[
-				"margin",
-				"margin-left"
+				"disa",
+				"disabled	Attr"
 			],
 			[
-				"marg",
-				"margin"
+				"text",
+				"textarea	Tag"
 			],
 			[
-				"req",
-				"required"
+				"lic",
+				"license"
 			],
 			[
-				"com",
-				"compact"
-			],
-			[
-				"contet",
-				"content"
-			],
-			[
-				"sila",
-				"silabas"
-			],
-			[
-				"fami",
-				"familia"
-			],
-			[
-				"pala",
-				"palabras"
-			],
-			[
-				"mar",
-				"margin-left"
-			],
-			[
-				"corr",
-				"correcto"
-			],
-			[
-				"inn",
-				"innerHTML"
-			],
-			[
-				"bac",
-				"background"
-			],
-			[
-				"font",
-				"font-size"
-			],
-			[
-				"rem",
-				"removeClassName"
+				"licne",
+				"license	(index.blade.php)"
 			],
 			[
 				"attr",
 				"attr	.attr() - single"
 			],
 			[
-				"add",
-				"addClass	.addClass()"
+				"time",
+				"time_left"
 			],
 			[
-				"border-to",
-				"border-top-width"
+				"che",
+				"checkClick"
 			],
 			[
-				"pad",
-				"padding-top"
+				"each",
+				"each	$.each()"
 			],
 			[
-				"remo",
-				"removeClass	.removeClass()"
+				"margi",
+				"marginLeft"
 			],
 			[
-				"dra",
-				"dragSrcEl_"
+				"pict",
+				"picture"
 			],
 			[
-				"image",
-				"imagenes"
+				"css",
+				"css	.css() - single"
 			],
 			[
-				"ea",
-				"each	.each()"
+				"payment",
+				"payment_register"
 			],
 			[
-				"prev",
-				"preventDefault"
+				"Sett",
+				"Session::get('payment"
 			],
 			[
-				"fot",
-				"font-size"
+				"com",
+				"commission_way"
 			],
 			[
-				"ba",
-				"background-color"
+				"deploy",
+				"deploy_dump_autoload"
 			],
 			[
-				"tex",
-				"text-align"
+				"get",
+				"getElementById〔function〕"
+			],
+			[
+				"wit",
+				"width"
+			],
+			[
+				"inl",
+				"inline-block"
 			],
 			[
 				"max",
 				"max-width"
 			],
 			[
-				"text",
-				"text-align"
+				"paym",
+				"paymentsPending"
 			],
 			[
-				"border-ri",
-				"border-right"
+				"payments",
+				"paymentsPending"
 			],
 			[
-				"border-r",
-				"border-radius"
-			],
-			[
-				"min",
-				"min-height"
-			],
-			[
-				"inli",
-				"inline-block"
-			],
-			[
-				"pos",
-				"position"
-			],
-			[
-				"in",
-				"inline-block"
-			],
-			[
-				"strto",
-				"strtoupper"
-			],
-			[
-				"fon",
-				"font-size"
-			],
-			[
-				"cur",
-				"cur	cursor: ${pointer};"
-			],
-			[
-				"has",
-				"hasClass	.hasClass()"
+				"landin",
+				"landings"
 			],
 			[
 				"fun",
 				"function"
 			],
 			[
-				"key",
-				"keydown	.keydown()"
+				"la",
+				"landings"
 			],
 			[
-				"ajaxs",
-				"ajaxsetup	$.ajaxSetup()"
+				"transa",
+				"transactions"
 			],
 			[
-				"margi",
-				"margin-right"
+				"tr",
+				"transaction"
 			],
 			[
-				"padd",
-				"padding-left"
-			],
-			[
-				"border",
-				"border"
-			],
-			[
-				"bold",
-				"bolder"
-			],
-			[
-				"di",
-				"display"
-			],
-			[
-				"Gato",
-				"newt_grid_add_components_to_form"
-			],
-			[
-				"path",
-				"pathinfo"
-			],
-			[
-				"Enter",
-				"enterprise"
-			],
-			[
-				"ut",
-				"utf8_encode"
-			],
-			[
-				"user",
-				"users"
-			],
-			[
-				"mysql_fetch_",
-				"mysql_fetch_object"
-			],
-			[
-				"ima",
-				"images"
-			],
-			[
-				"str_re",
-				"str_replace"
-			],
-			[
-				"desc",
-				"description"
-			],
-			[
-				"clas",
-				"clasificado"
-			],
-			[
-				"va",
-				"valor_oportunidad"
-			],
-			[
-				"valor_",
-				"valor_comercial"
-			],
-			[
-				"notifi",
-				"notifications"
-			],
-			[
-				"n",
-				"notifications"
-			],
-			[
-				"bra",
-				"branch"
-			],
-			[
-				"prop",
-				"prop	.prop() - single"
-			],
-			[
-				"modal-f",
-				"modal-filter"
-			],
-			[
-				"array_p",
-				"array_push"
-			],
-			[
-				"sub",
-				"substring"
-			],
-			[
-				"line",
-				"line_chart"
-			],
-			[
-				"get",
-				"get	$.get()"
+				"for",
+				"for	for …"
 			],
 			[
 				"json",
-				"json_encode"
+				"json_encode($inputs"
 			],
 			[
-				"em",
-				"employs"
+				"foreac",
+				"foreach	foreach …"
 			],
 			[
-				"ente",
-				"enterprises"
+				"v",
+				"visible"
 			],
 			[
-				"produc",
-				"products"
+				"rea",
+				"ready	$(document).ready"
 			],
 			[
-				"General",
-				"GeneralManager"
+				"status",
+				"status_pay"
 			],
 			[
-				"ser",
-				"service_id"
+				"type",
+				"type_pay"
 			],
 			[
-				"var",
-				"var_dump"
+				"ajaxS",
+				"ajaxSetup"
 			],
 			[
-				"pro",
-				"prop	.prop() - single"
+				"pros",
+				"prospect"
 			],
 			[
-				"pass",
-				"password"
+				"getC",
+				"getComputerDate"
 			],
 			[
-				"br",
-				"branch"
+				"paymen",
+				"payment_status"
 			],
 			[
-				"back",
-				"background-color"
+				"input",
+				"inputh	input - hidden"
 			],
 			[
-				"count",
-				"country"
+				"cre",
+				"created_at"
 			],
 			[
-				"remove",
-				"removeClass	.removeClass()"
+				"comm",
+				"commission"
 			],
 			[
-				"js",
-				"json_encode"
-			],
-			[
-				"Schem",
-				"Schema-blueprintResolver	Schema-blueprintResolver"
-			],
-			[
-				"app",
-				"appendChild"
-			],
-			[
-				"ab",
-				"absolute"
-			],
-			[
-				"first",
-				"first_video"
+				"boo",
+				"bootstrap-progressbar"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "app/models/Prospect.php",
+			"file": "app/controllers/PaypalController.php",
 			"settings":
 			{
-				"buffer_size": 3185,
+				"buffer_size": 9553,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/controllers/ProspectController.php",
+			"file": "app/controllers/SubscriptionController.php",
 			"settings":
 			{
-				"buffer_size": 4523,
+				"buffer_size": 2150,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/AuthController.php",
+			"settings":
+			{
+				"buffer_size": 3150,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/views/backend/dashboard-stats.blade.php",
+			"file": "app/views/frontend/pricing.blade.php",
 			"settings":
 			{
-				"buffer_size": 12295,
+				"buffer_size": 7507,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "<?php\nuse Carbon\\Carbon;\nclass StatisticController extends BaseController {\n	\n	/**\n	 * Store a newly created resource in storage.\n	 * POST /api/statistic/{id}/{type}\n	 *\n	 * @return Response\n	 */\n	public function store($id, $page, $type)\n	{\n		header('Access-Control-Allow-Origin: *');\n\n		$user = User::find($id);\n		if(isset($user->id)){\n			$data['user_id'] = $id;\n			$data['page'] = $page;\n			$data['type'] = $type;\n			$data['ip'] = Request::getClientIp();\n\n			$statistic = new Statistic($data);\n			if ($statistic->save())\n			{\n				return $statistic->toJson();\n			}\n\n			return $statistic->getErrors();\n		}\n		\n	}\n\n	/**\n	 * Store a newly created resource in storage.\n	 * GET /api/statistic/{id}\n	 *\n	 * @return Response\n	 */\n	public function show($id)\n	{\n\n		$start = (Input::get('start')) ? Input::get('start') : Carbon::now()->subMonth(1);\n		$end = (Input::get('end')) ? Input::get('end') : Carbon::now();\n\n\n		$property = Property::find($id);\n		if(isset($property->id)){\n			$statistics = DB::table('statistics')\n			->select(DB::raw('DATE(created_at) as date'), DB::raw('property_id, type'), DB::raw('count(*) as views'))\n			->groupBy('date', 'type')\n			->where('property_id', $id)\n			->whereBetween('created_at', array($start, $end))\n			->get();\n			$data = [];\n			foreach ($statistics as $key => $statistic) {\n				$data[$statistic->date][$statistic->type] = $statistic->views;\n			}\n			return json_encode($data);\n		}\n		\n	}\n\n	/**\n	 * Store a newly created resource in storage.\n	 * GET /api/statistic/{id}\n	 *\n	 * @return Response\n	 */\n	public function statistics()\n	{\n		/*$statistics = DB::table('statistics')\n		->select(DB::raw('DATE(created_at) as date'), DB::raw('property_id, type'), DB::raw('count(*) as views'))\n		->groupBy('date', 'type')\n		->get();*/\n\n		$start = (Input::get('start')) ? Input::get('start') : Carbon::now()->subMonth(1);\n		$end = (Input::get('end')) ? Input::get('end') : Carbon::now();\n\n\n		$statistics = DB::table('statistics')\n		->select(DB::raw('DATE(created_at) as date'), DB::raw('user_id, type'), DB::raw('count(*) as views'))\n		->whereBetween('created_at', array($start, $end))\n		->groupBy('date', 'type')\n		->get();\n\n\n		$data = [];\n		foreach ($statistics as $key => $statistic) {\n			$data[$statistic->date][$statistic->type] = $statistic->views;\n		}\n\n		return json_encode($data);\n\n	}\n\n	\n\n	\n	    \n}",
-			"file": "app/controllers/StatisticController.php",
-			"file_size": 2427,
-			"file_write_time": 130674659457563151,
+			"file": "app/routes.php",
 			"settings":
 			{
-				"buffer_size": 2326,
+				"buffer_size": 3644,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/models/Statistic.php",
+			"file": "app/views/backend/payments/index.blade.php",
 			"settings":
 			{
-				"buffer_size": 1557,
+				"buffer_size": 6986,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/C/Users/Eli Jose Carrasquero/Desktop/paypal.html",
+			"file": ".gitignore",
 			"settings":
 			{
-				"buffer_size": 478,
+				"buffer_size": 220,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/controllers/UserController.php",
+			"file": "app/models/User.php",
 			"settings":
 			{
-				"buffer_size": 1530,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/controllers/GeneralmanagerController.php",
-			"settings":
-			{
-				"buffer_size": 2740,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/backend/prospects/index.blade.php",
-			"settings":
-			{
-				"buffer_size": 9830,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/routes/user.php",
-			"settings":
-			{
-				"buffer_size": 655,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/backend/dashboard.blade.php",
-			"settings":
-			{
-				"buffer_size": 15296,
+				"buffer_size": 10689,
 				"line_ending": "Windows"
 			}
 		}
 	],
 	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
 	"command_palette":
 	{
-		"height": 81.0,
+		"height": 83.0,
+		"last_filter": "Package Control: inst",
 		"selected_items":
 		[
 			[
-				"Package Control: disa",
-				"Package Control: Disable Package"
+				"Package Control: inst",
+				"Package Control: Install Package"
 			],
 			[
-				"pac",
-				"Package Control: Disable Package"
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
 			]
 		],
-		"width": 512.0
+		"width": 528.0
 	},
 	"console":
 	{
-		"height": 0.0
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
 	},
 	"distraction_free":
 	{
@@ -477,159 +295,157 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/controllers",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/models",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/backend",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/backend/payments",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/frontend"
+	],
 	"file_history":
 	[
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/controllers/SharedController.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/prospects/index.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/public/backend/assets/js/product.show.js",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/controllers/ApiController.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/routes/user.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/landings/index.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/controllers/UserController.php",
-		"/C/wamp/www/activewear.dev/app/filters.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/routes.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/controllers/HomeController.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/filters.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/controllers/UserController.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/views/backend/classified/product/show.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/routes.php",
-		"/C/Users/Eli Jose Carrasquero/AppData/Local/Temp/Rar$EXa0.087/email-blueprints-master/templates/transactional_basic.html",
-		"/C/Users/Eli Jose Carrasquero/AppData/Local/Temp/Rar$EXa0.830/newsletter.html",
-		"/C/Users/Eli Jose Carrasquero/AppData/Local/Temp/Rar$EXa0.130/demo/index.html",
-		"/C/debut/www.freetemplates.bz/design/mile/preview/index.html",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/public/assets/js/table_prospects.js",
-		"/C/Users/Eli Jose Carrasquero/Desktop/base_boxed_2column_query.html",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/public/assets/js/application.js",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/views/backend/properties/edit.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/layouts/user/sidebar.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/layouts/master.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/layouts/user/navigation.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/views/backend/layouts/navigation.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/css/nicdark_style.css",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/layouts/sidebar.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/templates/landing/index.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/templates/landing/thanks.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/models/User.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/public/tables_dynamic.html",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/public/backend/tables_dynamic.html",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/public/backend/assets/js/application.js",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/public/backend/assets/js/animations.js",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/public/backend/assets/js/table_dynamic.js",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/public/assets/plugins/datatables/spanish.json",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/controllers/CustomerController.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/controllers/LandingController.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/controllers/StatisticController.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/templates/landing/a.html",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/public/templates/landing/css/landing.css",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/shared/profile.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/database/seeds/UserTableSeeder.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/database/migrations/2015_01_17_043408_create_users_table.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/controllers/AuthController.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/database/migrations/2015_01_17_044038_create_prospects_table.php",
-		"/C/Users/Eli Jose Carrasquero/AppData/Local/Temp/Rar$EXa0.026/index.html",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/controllers/SharedController.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/routes/shared.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/public/assets/css/landing.css",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/postreceive.sh",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/public/assets/js/account.js",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/login.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/register.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/database/migrations/2015_01_17_043643_create_landings_table.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/database/migrations/2015_01_17_043542_create_templates_table.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/controllers/AuthController.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/views/backend/login.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/routes.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/dashboard.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/controllers/UploadController.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/models/User.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/.gitignore",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/config/app.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/config/app.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/config/app.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/composer.json",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/composer.json",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/landings/create.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/models/Notification.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/models/User.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/controllers/UserController.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/composer.json",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/controllers/ProductController.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/models/Product.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/views/backend/operators/create.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/controllers/PropertyController.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/config/database.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/config/database.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/routes.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/js/familia.js",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/tercer-grado/familia-de-palabras.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/home.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/js/main/Agente.js",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/segundo-grado/a-sumar.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/js/multiplicar.js",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/tercer-grado/a-restar.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/tercer-grado/a-multiplicar.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/js/sumar.js",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/tercer-grado/a-sumar.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/segundo-grado/a-restar.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/js/adivina-la-palabra.js",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/primer-grado/adivina-la-palabra.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/tercer-grado/dameros.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/js/dameros.js",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/js/plugins/jquery.sopaletras.js",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/tercer-grado/sustantivos.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/models/Notification.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/database/seeds/DatabaseSeeder.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/database/seeds/VenezuelaTableSeeder.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/bootstrap/start.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/bootstrap/start.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/app/config/local/database.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/mlmfunnel/templates/video/index.html",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/SabuesOOnline.com/app/database/migrations/2014_06_29_184529_create_geo_tables.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/js/arrastra-los-numeros.js",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/segundo-grado/ordena-los-numeros.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/segundo-grado/arrastra-los-numeros.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/js/mayor-que-menor-que.js",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/segundo-grado/mayor-que-menor-que.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/segundo-grado/singular-y-plural.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/app/views/segundo-grado/caminos-de-flechas.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/public/js/camino-de-flechas.js",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/models/User.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/database/seeds/AppTableSeeder.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/database/migrations/2014_06_26_125148_create_usuarios_table.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/database/migrations/2015_01_15_013445_create_password_reminders_table.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/controllers/AuthController.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/routes.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/public/assets/css/style.min.css",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/controllers/RemindersController.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/forgot.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/login.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/register.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/views/layouts/usuario/navigation.blade.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/database/migrations/2015_01_15_003000_create_portal_table.php",
-		"/C/Users/Eli Jose Carrasquero/Documents/GitHub/comunal/app/database/migrations/2015_01_15_003244_create_dialogo_table.php"
+		"/C/Users/EliJosé/Documents/GitHub/licenser/app/controllers/LicenseController.php",
+		"/C/Users/EliJosé/Documents/GitHub/licenser/app/routes.php",
+		"/C/Users/EliJosé/Documents/GitHub/licenser/app/routes/shared.php",
+		"/C/Users/EliJosé/Documents/GitHub/licenser/app/views/backend/licenses/show.blade.php",
+		"/C/Users/EliJosé/Documents/GitHub/licenser/app/views/backend/licenses/index.blade.php",
+		"/C/Users/EliJosé/Documents/GitHub/licenser/app/views/backend/layouts/sidebar.blade.php",
+		"/C/Users/EliJosé/Documents/GitHub/licenser/app/models/License.php",
+		"/C/Users/EliJosé/Documents/GitHub/licenser/app/views/backend/dashboard.blade.php",
+		"/C/Users/EliJosé/Documents/GitHub/licenser/app/views/backend/layouts/navigation.blade.php",
+		"/C/Users/EliJosé/Documents/GitHub/licenser/app/views/backend/login.blade.php",
+		"/C/Users/EliJosé/Documents/GitHub/licenser/app/config/database.php",
+		"/C/Users/EliJosé/Documents/GitHub/licenser/app/storage/logs/laravel.log",
+		"/C/Users/EliJosé/Documents/GitHub/licenser/app/database/migrations/2015_06_10_192916_create_licenses_table.php",
+		"/C/Users/EliJosé/Documents/GitHub/biblioteca/app/config/database.php",
+		"/C/Users/EliJosé/Documents/GitHub/licenser/app/views/backend/licenses/create.blade.php",
+		"/C/Users/EliJosé/Documents/GitHub/licenser/app/controllers/BookController.php",
+		"/C/Users/EliJosé/Documents/GitHub/RAEU/app/controllers/StudentController.php",
+		"/C/Users/EliJosé/Documents/GitHub/RAEU/app/views/backend/ayudas.blade.php",
+		"/C/Users/EliJosé/Documents/GitHub/RAEU/app/views/backend/layouts/master.blade.php",
+		"/C/Users/EliJosé/Documents/GitHub/RAEU/app/database/migrations/2015_01_17_044038_create_prospects_table.php",
+		"/C/Users/EliJosé/Documents/GitHub/RAEU/app/database/migrations/2015_02_19_212451_create_prestamos_table.php",
+		"/C/Users/EliJosé/Documents/GitHub/RAEU/app/views/backend/students/create.blade.php",
+		"/C/Users/EliJosé/Documents/GitHub/RAEU/app/views/backend/students/show.blade.php",
+		"/C/Users/EliJosé/Documents/GitHub/RAEU/app/database/migrations/2015_01_17_043408_create_users_table.php",
+		"/C/Users/EliJosé/Documents/GitHub/RAEU/app/views/backend/layouts/user/navigation.blade.php",
+		"/C/Users/EliJosé/Documents/GitHub/RAEU/app/views/backend/layouts/user/sidebar.blade.php",
+		"/C/Users/EliJosé/Documents/GitHub/RAEU/app/routes.php",
+		"/C/Users/EliJosé/Documents/GitHub/RAEU/app/views/backend/dashboard.blade.php",
+		"/C/Users/EliJosé/Documents/GitHub/RAEU/app/database/seeds/UserTableSeeder.php",
+		"/C/Users/EliJosé/Documents/GitHub/RAEU/app/views/backend/login.blade.php",
+		"/C/Users/EliJosé/Documents/GitHub/RAEU/app/database/migrations/2015_01_17_043409_create_notifications_table.php",
+		"/C/Users/EliJosé/Documents/GitHub/RAEU/app/config/local/database.php",
+		"/C/Users/EliJosé/Documents/GitHub/RAEU/app/config/database.php",
+		"/C/Users/EliJosé/Documents/GitHub/RAEU/app/config/app.php",
+		"/C/wamp/www/wordpress/wp-content/themes/twentyfourteen/retarger.php",
+		"/C/wamp/www/wordpress/wp-content/plugins/wp_retarger/css/admin.css",
+		"/C/wamp/www/wordpress/wp-content/plugins/wp_retarger/js/jquery.modal.js",
+		"/C/wamp/www/wordpress/wp-content/plugins/wp_retarger/css/jquery.modal.css",
+		"/C/wamp/www/wordpress/wp-content/plugins/wp_retarger/css/colpick.css",
+		"/C/wamp/www/wordpress/wp-content/plugins/wp_retarger/js/colpick.js",
+		"/C/wamp/www/wordpress/wp-content/themes/twentyfourteen/empty.php",
+		"/C/wamp/www/wordpress/wp-content/themes/twentyfourteen/page.php",
+		"/C/wamp/www/wordpress/wp-content/plugins/wp_retarger/classes/RoutersTable.php",
+		"/C/Users/EliJosé/Documents/GitHub/RAEU/resources/views/welcome.blade.php",
+		"/C/Users/EliJosé/Documents/GitHub/RAEU/config/mail.php",
+		"/C/Users/EliJosé/Documents/GitHub/RAEU/.env",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/config/local/mail.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/config/mail.php",
+		"/C/Users/EliJosé/Documents/GitHub/RAEU/app/Http/routes.php",
+		"/C/Users/EliJosé/Documents/GitHub/RAEU/app/Services/Registrar.php",
+		"/C/Users/EliJosé/Documents/GitHub/RAEU/vendor/laravel/framework/src/Illuminate/Auth/Passwords/PasswordBroker.php",
+		"/C/Users/EliJosé/Documents/GitHub/RAEU/config/app.php",
+		"/C/Users/EliJosé/Documents/GitHub/RAEU/.env.example",
+		"/C/Users/EliJosé/Documents/GitHub/RAEU/config/database.php",
+		"/C/Users/EliJosé/Documents/GitHub/RAEU/app/controllers/HomeController.php",
+		"/C/wamp/www/wordpress/wp-content/plugins/wp_retarger/views/post.php",
+		"/C/wamp/www/wordpress/wp-content/themes/twentyfifteen/empty.php",
+		"/F/RESPALDOS/_/w7/AppServ/www/ielijose/api/index.php",
+		"/C/wamp/www/.htaccess",
+		"/C/wamp/www/wordpress/wp-content/plugins/wp_retarger/wp_retarger.php",
+		"/C/wamp/www/wordpress/wp-config-sample.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/controllers/BaseController.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/deploy/index.blade.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/storage/logs/laravel.log",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/frontend/pricing.blade.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/controllers/SubscriptionController.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/public/assets/css/style-frontend.css",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/public/assets/css/style.css",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/public/assets/js/main.js",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/backend/layouts/master.blade.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/backend/layouts/user/sidebar.blade.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/backend/dashboard.blade.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/public/assets/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/public/assets/css/icons/fontawesome/font-awesome.css",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/public/assets/css/icons/flaticons/flaticon.css",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/public/assets/css/bootstrap.min.css",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/public/assets/plugins/owl-carousel/owl.carousel.css",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/routes/api.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/mailers/Texter.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/models/User.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/controllers/AuthController.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/composer.json",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/controllers/ApiController.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/database/migrations/2015_05_05_020455_add_commission_to_users_table.php",
+		"/C/Users/EliJosé/Documents/GitHub/apensarsoluciones/app/database/migrations/2014_07_01_054207_create_solucion_table.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/config/database.php",
+		"/C/Users/EliJosé/Documents/GitHub/PortalComunal.info.ve/app/config/database.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/database/seeds/UserTableSeeder.php",
+		"/C/Users/EliJosé/Documents/MobaXterm_107.170.141.8root_20150510_222809.txt",
+		"/C/Users/EliJosé/Documents/GitHub/apensarsoluciones/app/controllers/HomeController.php",
+		"/C/Users/EliJosé/Documents/GitHub/apensarsoluciones/app/routes.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/database/migrations/2015_03_27_172243_add_commission_to_payments.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/backend/publicity/index.blade.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/backend/landings/index.blade.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/routes.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/routes/user.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/controllers/UserController.php",
+		"/C/Users/EliJosé/Documents/GitHub/sistemasdeprospeccion.com/app/routes.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/controllers/Server.php",
+		"/C/Users/EliJosé/Documents/GitHub/sistemasdeprospeccion.com/app/controllers/Server.php",
+		"/C/Users/EliJosé/Documents/GitHub/sistemasdeprospeccion.com/app/views/backend/pages/settings.blade.php",
+		"/C/Users/EliJosé/Documents/GitHub/sistemasdeprospeccion.com/app/models/User.php",
+		"/C/Users/EliJosé/Documents/GitHub/SabuesOOnline.com/app/config/database.php",
+		"/C/Users/EliJosé/Documents/GitHub/sistemasdeprospeccion.com/app/controllers/ApiController.php",
+		"/C/Users/EliJosé/Documents/GitHub/sistemasdeprospeccion.com/app/database/migrations/2015_05_03_014934_add_percent_commission_to_users_table.php",
+		"/C/Users/EliJosé/Documents/GitHub/sistemasdeprospeccion.com/public/assets/js/table_users.js",
+		"/C/Users/EliJosé/Documents/GitHub/sistemasdeprospeccion.com/app/views/backend/users/show.blade.php",
+		"/C/Users/EliJosé/Documents/GitHub/sistemasdeprospeccion.com/app/views/deploy/index.blade.php",
+		"/G/RESPALDOS/_/w7/www/s2e/s2e.sql",
+		"/C/Users/EliJosé/Documents/GitHub/sistemasdeprospeccion.com/app/views/backend/users/index.blade.php",
+		"/C/Users/EliJosé/Documents/GitHub/sistemasdeprospeccion.com/app/views/backend/statistics/index.blade.php",
+		"/C/Users/EliJosé/Documents/GitHub/sistemasdeprospeccion.com/app/views/backend/statistics/admin.blade.php",
+		"/C/Users/EliJosé/Documents/GitHub/sistemasdeprospeccion.com/app/database/migrations/2015_01_17_044038_create_prospects_table.php",
+		"/C/Users/EliJosé/Documents/GitHub/sistemasdeprospeccion.com/app/database/migrations/2015_02_13_041541_add_status_user_table.php",
+		"/C/Users/EliJosé/Documents/GitHub/formulario/index.html",
+		"/F/DIPLOMADO-WEBMASTER(URBE)/JavaScript/PRACTICAS/formulario/assets/js/app.js",
+		"/F/DIPLOMADO-WEBMASTER(URBE)/JavaScript/PRACTICAS/formulario/index.html",
+		"/F/DIPLOMADO-WEBMASTER(URBE)/JavaScript/PRACTICAS/formulario/assets/css/bootstrap.min.css",
+		"/C/Users/EliJosé/Documents/GitHub/sistemasdeprospeccion.com/public/assets/js/statistics-admin.angular.js",
+		"/C/Users/EliJosé/Documents/GitHub/sistemasdeprospeccion.com/app/routes/user.php",
+		"/C/Users/EliJosé/Documents/GitHub/sistemasdeprospeccion.com/app/routes/admin.php",
+		"/C/Users/EliJosé/Documents/GitHub/sistemasdeprospeccion.com/public/assets/js/statistics.angular.js",
+		"/C/Users/EliJosé/Documents/GitHub/sistemasdeprospeccion.com/app/controllers/HomeController.php",
+		"/C/Users/EliJosé/Documents/GitHub/sistemasdeprospeccion.com/app/controllers/ProspectController.php",
+		"/C/Users/EliJosé/Documents/GitHub/sistemasdeprospeccion.com/app/models/Transaction.php",
+		"/C/Users/EliJosé/Documents/GitHub/sistemasdeprospeccion.com/app/database/migrations/2015_04_30_131239_create_transactions_table.php",
+		"/C/Users/EliJosé/Documents/GitHub/sistemasdeprospeccion.com/app/models/PaymentInfo.php",
+		"/C/Users/EliJosé/Documents/GitHub/sistemasdeprospeccion.com/app/database/migrations/2015_03_13_174242_create_payments_table.php"
 	],
 	"find":
 	{
-		"height": 47.0
+		"height": 32.0
 	},
 	"find_in_files":
 	{
 		"height": 0.0,
 		"where_history":
 		[
-			"C:\\Users\\Eli Jose Carrasquero\\Documents\\GitHub\\mlmfunnel\\public\\assets\\js",
-			"C:\\Users\\Eli Jose Carrasquero\\Documents\\GitHub\\mlmfunnel",
-			"C:\\Users\\Eli Jose Carrasquero\\Documents\\GitHub\\Trackfunnel",
-			"C:\\Users\\Eli Jose Carrasquero\\AppData\\Roaming\\iSpy",
-			"C:\\wamp\\www\\ceglys",
-			"C:\\wamp\\www\\server-camaron",
-			"C:\\Users\\Eli Jose Carrasquero\\Documents\\GitHub\\SabuesOOnline.com\\app\\views\\backend\\classified",
-			"C:\\Users\\Eli Jose Carrasquero\\Documents\\GitHub\\opcioninmuebles\\app\\controllers",
-			"C:\\Users\\Eli Jose Carrasquero\\Documents\\GitHub\\opcioninmuebles\\app\\views",
-			"C:\\Users\\Eli Jose Carrasquero\\Documents\\GitHub\\opcioninmuebles\\public\\assets\\plugins",
-			"C:\\Users\\Eli Jose Carrasquero\\Documents\\GitHub\\SabuesOOnline.com\\public\\backend\\assets\\plugins",
-			"C:\\Users\\Eli Jose Carrasquero\\Documents\\GitHub\\opcioninmuebles\\public",
-			"C:\\Users\\Eli Jose Carrasquero\\Documents\\GitHub\\opcioninmuebles\\app\\views"
 		]
 	},
 	"find_state":
@@ -637,134 +453,57 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"color-dark",
-			"console",
-			"count",
-			"YYYYMMDD",
-			"YYYY-MM-DD",
-			"YYYYMMDD",
-			"yyyy-mm-dd",
-			"YYYY-MM-DD",
-			"filter",
-			"tables_dynamic",
-			".table",
-			"table",
-			"url(",
-			"pasartes",
-			"fb_xdm_frame_https",
-			"landing->",
-			"=\"a",
-			"panel",
-			"backend/",
-			"profile_picture",
-			"./templates",
-			"/assets/",
-			"properties",
-			"Receptionist",
-			"backend.",
+			"book",
+			"books",
+			"http",
+			"https://www.youtube.com/watch?v=JjBF1Faj-H4",
+			"student",
+			"prestamo",
+			"-6",
+			"prestamo",
+			"modal",
 			"\"",
-			"+",
-			"backend/",
+			"blocker",
+			"$uploadfiles",
+			"[$key]",
+			"two",
+			"html",
+			"_POST",
+			"_post",
+			"_POST",
+			"delete_option",
+			"current_action",
+			"column_cb",
+			"uniqid",
+			"json",
+			"_POST",
+			"sistemasdeprospe",
+			"tucuerpo",
+			"'cd /home/sistemasdeprospe/public_html/',",
+			"' . $this->cd",
+			"false",
+			"border",
+			"admin",
+			"$key, $type",
+			"''admin-new-user''",
+			"text",
+			"emails",
+			"payer_email",
+			"payer_status",
+			"verify_sign",
+			"recurring",
+			"amount1",
+			"80px",
+			"hr",
+			"border",
 			"/auth",
-			"/backend",
-			"type",
-			"estudiante",
-			"EstudianteC",
-			"Estudiante",
-			"alert",
-			"RewriteRule",
-			"controllers/",
-			"controller/",
-			"bootstrap.js",
-			"border-ra",
-			"alert",
-			"column",
-			"columns-full",
-			"style=\"float:right\"",
-			" ",
-			"#",
-			"segundo",
-			"<h1>a</h1>",
-			" class=\"falta\"",
-			"<input type=\"text\">",
-			"/segundo-grado/singular-y-plural",
-			"segundo-grado/singular-y-plural",
-			" ",
-			"<span></span>",
-			"createFunnelNow",
-			"}}",
-			"{{",
-			"}}",
-			"{{",
-			"category",
-			".category-tree-node",
-			"drag",
-			"btn",
-			"btn ",
-			"btn",
-			"button.btn",
-			"user",
-			"Users",
-			"src=\"//",
-			"Access this server locally through",
-			"border-ra",
-			"tab",
-			", 'descripcion' => 'Circulo'",
-			"formas-geometricas",
-			"letras-abecedario",
-			"6183A9",
-			"				 \n												\n					",
-			"nicdark_mpopup_window",
-			"--------------------------------------------------------",
-			"clientes",
-			"src=\"js",
-			"href=\"css",
-			"index.html#",
-			"components.php",
-			"single-product.php",
-			"shop-checkout.php",
-			"shop-cart.php",
-			"index.php",
-			"<?",
-			"Callee",
-			"Websocket closed, please try reloading page later.",
-			"../..",
-			"opcioninmuebles.com",
-			"navbar navbar-default",
-			"navbar",
-			"Call with",
-			"Calcelar",
-			"calcelar",
-			"Call with",
-			"Access confirmation",
-			"You",
-			"Users online",
-			"mgVideoChatSimpleUser",
-			"operator1",
-			"Login",
-			"amelia.css",
-			"config",
-			"debugg",
-			"loginParams",
-			"setCookie",
-			"index.html",
-			"include",
-			"@extends('backend.classified.layouts.master')",
-			"panel/",
-			"STATICFILES_DIRS",
-			"static",
-			"SETTINGS_PATH",
-			"./My Awesome Landing Page_files/nGt_JGHYEO4.html",
-			"facebook",
-			"col-sm-7",
-			"Auth::user()",
-			"col-lg-2 col-md-2 col-sm-2",
-			"col-lg-3 col-md-3 col-sm-3",
-			"col-lg-6 col-md-6 col-sm-6",
-			"images",
-			"dist",
-			"js/",
-			".generalmanager"
+			"=\"assets",
+			"Melaleuca",
+			"SUBMIT-BTN",
+			"thank",
+			"&amp;",
+			"filter",
+			"\n});"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -772,398 +511,757 @@
 		"regex": false,
 		"replace_history":
 		[
-			"YYYY-MM-DD",
-			"yyyy-mm-dd",
-			"YYYY-MM-DD",
-			"YYYYMMDD",
+			"license",
+			"licenses",
+			"https",
+			"$picture",
 			"",
-			"=\"/a",
+			"socrukxu",
+			"'cd '.$this->cd,",
+			"/home/sistemasdeprospe/public_html/'",
+			"$type, $key",
+			"'admin-new-user'",
+			"sms",
 			"",
-			"picture",
-			"/templates",
-			"/templates/landing/",
-			"landings",
-			"User",
-			"",
-			"'",
-			"",
-			"tipo",
-			"usuario",
-			"UsuarioC",
-			"Usuario",
-			"dnd",
-			"",
-			"imagenes",
-			"class=\"right\"",
-			"-",
-			"/tercer-grado/",
-			"tercer",
-			"",
-			"							<h4 class=\"white nicdark_margin10\">NOMBRES PROPIOS</h4>\n							<input class=\"nicdark_bg_grey2 grey small subtitle\" type=\"text\" value=\"\" placeholder=\"Escribir...\">\n							<a href=\"#\" class=\"nicdark_btn nicdark_bg_green small nicdark_shadow nicdark_radius white nicdark_margin10\"><i class=\"icon-check \"></i>&nbsp;&nbsp;&nbsp;COMPROBAR</a>\n						</div>",
-			"<div class=\"nicdark_textevidence nicdark_bg_greydark\">\n							<h4 class=\"white nicdark_margin10\">NOMBRES PROPIOS</h4>\n							<input class=\"nicdark_bg_grey2 grey small subtitle\" type=\"text\" value=\"\" placeholder=\"Escribir...\">\n							<a href=\"#\" class=\"nicdark_btn nicdark_bg_green small nicdark_shadow nicdark_radius white nicdark_margin10\"><i class=\"icon-check \"></i>&nbsp;&nbsp;&nbsp;COMPROBAR</a>\n						</div>",
-			"",
-			"-",
-			"<span class=\"falta\"></span>",
-			"btn btn-success",
-			"btn btn-success disabled",
-			"--}}",
-			"{{--",
-			"--}}",
-			"}}}",
-			"{{{",
-			".category-tree-node,\n.subcategory-tree-node ",
-			"btn boton",
-			"button.boton",
-			"src=\"http://",
-			"",
-			"partes-computador",
-			"formas-geometricas",
-			"ffffff",
-			"",
-			"src=\"/js",
-			"href=\"/css",
-			"#",
-			"/",
-			"<?php",
-			"",
-			"#",
-			"@extends('backend.layouts.master')",
-			"",
-			"https://www.youtube.com/embed/nGt_JGHYEO4",
-			"col-sm-7 m-t-10",
-			"col-sm-7  m-t-10",
-			"User::find($id)",
-			"col-lg-4 col-md-4 col-sm-4",
-			"col-lg-2 col-md-2 col-sm-2",
-			"col-lg-3 col-md-3 col-sm-3",
-			"/assets/images",
-			"./assets/images",
-			"./assets/js/",
-			"",
-			"@extends('backend.layouts.master')",
-			"backend",
-			"",
-			"$property",
-			"$employ",
-			"",
-			"branch",
-			"",
-			"$user",
-			"",
-			"customer",
-			"",
-			"customer",
-			""
+			"=\"/assets",
+			"Herbalife",
+			"&"
 		],
 		"reverse": false,
 		"show_context": true,
 		"use_buffer2": true,
 		"whole_word": false,
-		"wrap": true
+		"wrap": false
 	},
+	"folders":
+	[
+		{
+			"path": "C:\\Users\\EliJosé\\Documents\\GitHub\\mlmfunnel"
+		}
+	],
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/models/Prospect.php",
+					"file": "app/controllers/PaypalController.php",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3185,
+						"buffer_size": 9553,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2096,
-								2096
+								2497,
+								2497
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1067.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/controllers/ProspectController.php",
-					"settings":
-					{
-						"buffer_size": 4523,
-						"regions":
-						{
-						},
-						"selection":
-						[
+							"BracketHighlighterBusy": false,
+							"bh_regions":
 							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 286.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/views/backend/dashboard-stats.blade.php",
-					"settings":
-					{
-						"buffer_size": 12295,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								456,
-								456
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/controllers/StatisticController.php",
-					"settings":
-					{
-						"buffer_size": 2326,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1340,
-								1340
-							]
-						],
-						"settings":
-						{
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
+							],
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 670.0,
+						"translation.y": 1185.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/controllers/SubscriptionController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2150,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1282,
+								1282
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 828.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/controllers/AuthController.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 3150,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3091,
+								3106
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2574.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/views/frontend/pricing.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7507,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5445,
+								5445
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
+							],
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1800.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "app/models/Statistic.php",
+					"file": "app/routes.php",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1557,
+						"buffer_size": 3644,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1391,
-								1391
+								1064,
+								1064
 							]
 						],
 						"settings":
 						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
+							],
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 410.0,
+						"translation.y": 648.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "/C/Users/Eli Jose Carrasquero/Desktop/paypal.html",
+					"file": "app/views/backend/payments/index.blade.php",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 478,
+						"buffer_size": 6986,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								478,
-								478
+								4745,
+								4745
+							],
+							[
+								4976,
+								4976
+							],
+							[
+								5315,
+								5315
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1819.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": ".gitignore",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 220,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								220,
+								220
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/controllers/UserController.php",
-					"settings":
-					{
-						"buffer_size": 1530,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1489,
-								1489
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 270.0,
-						"zoom_level": 1.0
-					},
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 7,
-					"file": "/C/Users/Eli Jose Carrasquero/Documents/GitHub/opcioninmuebles/app/controllers/GeneralmanagerController.php",
+					"file": "app/models/User.php",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2740,
+						"buffer_size": 10689,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								98,
-								530
+								10680,
+								10680
 							]
 						],
 						"settings":
 						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 40.0,
+						"translation.y": 7761.0,
 						"zoom_level": 1.0
 					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "app/views/backend/prospects/index.blade.php",
-					"settings":
-					{
-						"buffer_size": 9830,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5931,
-								5931
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 41.0,
-						"translation.y": 1360.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "app/routes/user.php",
-					"settings":
-					{
-						"buffer_size": 655,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								163,
-								157
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "app/views/backend/dashboard.blade.php",
-					"settings":
-					{
-						"buffer_size": 15296,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3078,
-								3078
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 680.0,
-						"zoom_level": 1.0
-					},
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -1171,11 +1269,11 @@
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 32.0
 	},
 	"input":
 	{
-		"height": 45.0
+		"height": 41.0
 	},
 	"layout":
 	{
@@ -1200,39 +1298,571 @@
 		]
 	},
 	"menu_visible": true,
-	"output.sftp":
+	"output.find_results":
 	{
 		"height": 0.0
 	},
+	"pinned_build_system": "",
+	"project": "",
 	"replace":
 	{
-		"height": 74.0
+		"height": 60.0
 	},
 	"save_all_on_build": true,
 	"select_file":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"routes",
+				"app\\routes.php"
+			],
+			[
+				"views/pay",
+				"app\\views\\backend\\payments\\index.blade.php"
+			],
+			[
+				"paypalcontro",
+				"app\\controllers\\PaypalController.php"
+			],
+			[
+				"show",
+				"app\\views\\backend\\licenses\\show.blade.php"
+			],
+			[
+				"create",
+				"app\\database\\migrations\\2015_06_10_192916_create_licenses_table.php"
+			],
+			[
+				"laravl",
+				"app\\storage\\logs\\laravel.log"
+			],
+			[
+				"laravel",
+				"app\\storage\\logs\\laravel.log"
+			],
+			[
+				"license",
+				"app\\models\\License.php"
+			],
+			[
+				"rou",
+				"app\\routes.php"
+			],
+			[
+				"naviga",
+				"app\\views\\backend\\layouts\\navigation.blade.php"
+			],
+			[
+				"dashboard",
+				"app\\views\\backend\\dashboard.blade.php"
+			],
+			[
+				"sidebar",
+				"app\\views\\backend\\layouts\\sidebar.blade.php"
+			],
+			[
+				"create_l",
+				"app\\database\\migrations\\2015_06_10_192916_create_licenses_table.php"
+			],
+			[
+				"landing/",
+				"app\\views\\templates\\landing\\index.blade.php"
+			],
+			[
+				"admincon",
+				"app\\controllers\\AdminController.php"
+			],
+			[
+				"routesad",
+				"app\\routes\\admin.php"
+			],
+			[
+				"adminside",
+				"app\\views\\backend\\layouts\\admin\\sidebar.blade.php"
+			],
+			[
+				"setting",
+				"app\\views\\backend\\pages\\settings.blade.php"
+			],
+			[
+				"ayudas",
+				"app\\views\\backend\\ayudas\\index.blade.php"
+			],
+			[
+				"ayudas/",
+				"app\\views\\backend\\ayudas\\create.blade.php"
+			],
+			[
+				"route",
+				"app\\routes.php"
+			],
+			[
+				"student",
+				"app\\controllers\\StudentController.php"
+			],
+			[
+				"dashbo",
+				"app\\views\\backend\\dashboard.blade.php"
+			],
+			[
+				"students",
+				"app\\views\\backend\\students\\create.blade.php"
+			],
+			[
+				"create_pre",
+				"app\\database\\migrations\\2015_02_19_212451_create_prestamos_table.php"
+			],
+			[
+				"create_",
+				"app\\database\\migrations\\2015_01_17_044038_create_prospects_table.php"
+			],
+			[
+				"stude",
+				"app\\controllers\\StudentController.php"
+			],
+			[
+				"reta",
+				"classes\\Retarger.php"
+			],
+			[
+				"idebar",
+				"app\\views\\backend\\layouts\\user\\sidebar.blade.php"
+			],
+			[
+				"login",
+				"app\\views\\backend\\login.blade.php"
+			],
+			[
+				"tabs",
+				"views\\tabs.php"
+			],
+			[
+				"tab",
+				"js\\tabs.js"
+			],
+			[
+				"login.htm",
+				"public\\assets\\login.html"
+			],
+			[
+				"app.php",
+				"resources\\views\\app.blade.php"
+			],
+			[
+				"passwordbroker",
+				"vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Passwords\\PasswordBroker.php"
+			],
+			[
+				"registrar",
+				"app\\Services\\Registrar.php"
+			],
+			[
+				"homec",
+				"app\\controllers\\HomeController.php"
+			],
+			[
+				"app/config",
+				"app\\config\\app.php"
+			],
+			[
+				"basec",
+				"app\\controllers\\BaseController.php"
+			],
+			[
+				"rout",
+				"app\\routes.php"
+			],
+			[
+				"style",
+				"public\\assets\\css\\style-frontend.css"
+			],
+			[
+				"main",
+				"public\\assets\\js\\main.js"
+			],
+			[
+				"moderni",
+				"public\\assets\\plugins\\modernizr\\modernizr-2.6.2-respond-1.1.0.min.js"
+			],
+			[
+				"bootstr",
+				"public\\assets\\css\\bootstrap.min.css"
+			],
+			[
+				"owl.ca",
+				"public\\assets\\plugins\\owl-carousel\\owl.carousel.css"
+			],
+			[
+				"flat",
+				"public\\assets\\css\\icons\\flaticons\\flaticon.css"
+			],
+			[
+				"font",
+				"public\\assets\\css\\icons\\fontawesome\\font-awesome.css"
+			],
+			[
+				"font-awes",
+				"public\\assets\\css\\icons\\fontawesome\\font-awesome.css"
+			],
+			[
+				"prici",
+				"app\\views\\frontend\\pricing.blade.php"
+			],
+			[
+				"deploy",
+				"app\\views\\deploy\\index.blade.php"
+			],
+			[
+				"laravel.log",
+				"app\\storage\\logs\\laravel.log"
+			],
+			[
+				"apicon",
+				"app\\controllers\\ApiController.php"
+			],
+			[
+				"api",
+				"app\\routes\\api.php"
+			],
+			[
+				"auth",
+				"app\\controllers\\AuthController.php"
+			],
+			[
+				"pricin",
+				"app\\views\\frontend\\pricing.blade.php"
+			],
+			[
+				"texter",
+				"app\\mailers\\Texter.php"
+			],
+			[
+				"user",
+				"app\\models\\User.php"
+			],
+			[
+				"databas",
+				"app\\config\\database.php"
+			],
+			[
+				"subscriptio",
+				"app\\controllers\\SubscriptionController.php"
+			],
+			[
+				"main.js",
+				"public\\assets\\js\\main.js"
+			],
+			[
+				"addcommisi",
+				"app\\database\\migrations\\2015_05_05_020455_add_commission_to_users_table.php"
+			],
+			[
+				"add_comm",
+				"app\\database\\migrations\\2015_03_27_172243_add_commission_to_payments.php"
+			],
+			[
+				"landings/",
+				"app\\views\\backend\\landings\\index.blade.php"
+			],
+			[
+				"publicity",
+				"app\\views\\backend\\publicity\\index.blade.php"
+			],
+			[
+				"userc",
+				"app\\controllers\\UserController.php"
+			],
+			[
+				"usersidebar",
+				"app\\views\\backend\\layouts\\user\\sidebar.blade.php"
+			],
+			[
+				"subscr",
+				"app\\controllers\\SubscriptionController.php"
+			],
+			[
+				"server",
+				"app\\controllers\\Server.php"
+			],
+			[
+				"add_c",
+				"app\\database\\migrations\\2015_05_05_020455_add_commission_to_users_table.php"
+			],
+			[
+				"subs",
+				"app\\controllers\\SubscriptionController.php"
+			],
+			[
+				"authc",
+				"app\\controllers\\AuthController.php"
+			],
+			[
+				"table_user",
+				"public\\assets\\js\\table_users.js"
+			],
+			[
+				"add_per",
+				"app\\database\\migrations\\2015_05_03_014934_add_percent_commission_to_users_table.php"
+			],
+			[
+				"table_us",
+				"public\\assets\\js\\table_users.js"
+			],
+			[
+				"deploy.blade",
+				"app\\views\\deploy\\index.blade.php"
+			],
+			[
+				"apic",
+				"app\\controllers\\ApiController.php"
+			],
+			[
+				"users/index",
+				"app\\views\\backend\\users\\index.blade.php"
+			],
+			[
+				"views/backend/users",
+				"app\\views\\backend\\users\\index.blade.php"
+			],
+			[
+				"add_perc",
+				"app\\database\\migrations\\2015_05_03_014934_add_percent_commission_to_users_table.php"
+			],
+			[
+				"statistics/",
+				"app\\views\\backend\\statistics\\admin.blade.php"
+			],
+			[
+				"ettings",
+				"app\\views\\backend\\pages\\settings.blade.php"
+			],
+			[
+				"views/backend/",
+				"app\\views\\backend\\pages\\settings.blade.php"
+			],
+			[
+				"users/",
+				"app\\views\\backend\\users\\show.blade.php"
+			],
+			[
+				"prospect_",
+				"app\\database\\migrations\\2015_01_17_044038_create_prospects_table.php"
+			],
+			[
+				"add_",
+				"app\\database\\migrations\\2015_02_13_041541_add_status_user_table.php"
+			],
+			[
+				"index",
+				"index.html"
+			],
+			[
+				"boo",
+				"assets\\css\\bootstrap.min.css"
+			],
+			[
+				"inde",
+				"index.html"
+			],
+			[
+				"routes/user",
+				"app\\routes\\user.php"
+			],
+			[
+				"routes/ad",
+				"app\\routes\\admin.php"
+			],
+			[
+				"statistic",
+				"public\\assets\\js\\statistics.angular.js"
+			],
+			[
+				"pros",
+				"app\\controllers\\ProspectController.php"
+			],
+			[
+				"tra",
+				"app\\models\\Transaction.php"
+			],
+			[
+				"models/",
+				"app\\models\\Payment.php"
+			],
+			[
+				"migrapayment",
+				"app\\database\\migrations\\2015_03_13_174242_create_payments_table.php"
+			],
+			[
+				"migrationstransactions",
+				"app\\database\\migrations\\2015_04_30_131239_create_transactions_table.php"
+			],
+			[
+				"payment",
+				"app\\models\\Payment.php"
+			],
+			[
+				"paymentinfo",
+				"app\\models\\PaymentInfo.php"
+			],
+			[
+				"routes/a",
+				"app\\routes\\admin.php"
+			],
+			[
+				"statisti",
+				"app\\models\\Statistic.php"
+			],
+			[
+				"paymentin",
+				"app\\models\\PaymentInfo.php"
+			],
+			[
+				"apico",
+				"app\\controllers\\ApiController.php"
+			],
+			[
+				"statistics",
+				"public\\assets\\js\\statistics-admin.angular.js"
+			],
+			[
+				"create_pays",
+				"app\\database\\migrations\\2015_04_28_183134_create_pays_table.php"
+			],
+			[
+				"statisit",
+				"app\\views\\backend\\statistics\\index.blade.php"
+			],
+			[
+				"create_pay",
+				"app\\database\\migrations\\2015_04_28_183134_create_pays_table.php"
+			],
+			[
+				"shared",
+				"app\\controllers\\SharedController.php"
+			],
+			[
+				"profile",
+				"app\\views\\backend\\shared\\profile.blade.php"
+			],
+			[
+				"routes/api",
+				"app\\routes\\admin.php"
+			],
+			[
+				"statistics.an",
+				"public\\assets\\js\\statistics.angular.js"
+			],
+			[
+				"statisticsad",
+				"app\\views\\backend\\statistics\\index.blade.php"
+			],
+			[
+				"usercon",
+				"app\\controllers\\UserController.php"
+			],
+			[
+				"admin",
+				"app\\routes\\admin.php"
+			],
+			[
+				"js",
+				"public\\assets\\plugins\\sortable\\jquery-sortable.js"
+			],
+			[
+				"layou",
+				"app\\views\\emails\\notify\\layout.blade.php"
+			],
+			[
+				"global",
+				"app\\start\\global.php"
+			],
+			[
+				"app",
+				"app\\config\\app.php"
+			],
+			[
+				"notification/",
+				"app\\views\\backend\\notifications\\index.blade.php"
+			],
+			[
+				"sms-ed",
+				"app\\views\\backend\\pages\\sms-edit.blade.php"
+			],
+			[
+				"email-ed",
+				"app\\views\\backend\\pages\\emails-edit.blade.php"
+			],
+			[
+				"emails/lay",
+				"app\\views\\emails\\notify\\layout.blade.php"
+			],
+			[
+				"sms-e",
+				"app\\views\\backend\\pages\\sms-edit.blade.php"
+			],
+			[
+				"emails",
+				"app\\views\\backend\\pages\\emails-edit.blade.php"
+			],
+			[
+				"compo",
+				"composer.json"
+			],
+			[
+				"admin/side",
+				"app\\views\\backend\\layouts\\admin\\sidebar.blade.php"
+			],
+			[
+				"config",
+				"app\\config\\packages\\ielijose\\heywire\\config.php"
+			],
+			[
+				"moment",
+				"public\\assets\\plugins\\fullcalendar\\moment.min.js"
+			],
+			[
+				"users/ind",
+				"app\\views\\backend\\users\\index.blade.php"
+			]
 		],
 		"width": 0.0
 	},
 	"select_project":
 	{
 		"height": 500.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
 				"",
-				"/C/Users/Eli Jose Carrasquero/Documents/GitHub/agente-virtual/agente.sublime-project"
+				"C:\\Users\\EliJosé\\Documents\\GitHub\\licenser\\licenser.sublime-workspace"
 			]
 		],
 		"width": 380.0
 	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
 	"show_minimap": true,
-	"show_open_files": false,
+	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 211.0,
-	"status_bar_visible": true
+	"side_bar_width": 303.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
 }

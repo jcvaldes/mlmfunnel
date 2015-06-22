@@ -100,16 +100,18 @@ class ApiController extends BaseController
     public function payment_register(){
         $json = Input::json()->all();
 
-        /* Validate duplicate
-        //$duplicate = Payment::where('ipn_track_id', $json['ipn_track_id'])->first();
-        if(count($duplicate) > 0){
-            Log::info("IPN Duplicado: " .$json);
-            return json_encode(["error"]);
+    $_CUSTOM = json_decode($json['custom'], true);
+
+    $p = Payment::where('type', 'subscr_signup')->where('user_uniqid', $_CUSTOM['id'])->first();
+        if(isset($p)){
+        $json['error'] = "duplicado register";
+        Log::info($json);
+            return json_encode(["duplicado register"]);
         }
-*/
+
         Log::info($json);
 
-        $_CUSTOM = json_decode($json['custom'], true);
+
         $data = [];
         $data['type'] = 'subscr_signup';
 
@@ -140,20 +142,25 @@ class ApiController extends BaseController
 
         $anypayment = new Payment($data);
         if($anypayment->save()){
-            return json_encode(["saved"]);
+            return json_encode(["saved register"]);
         }else{
-            return json_encode(["error"]);
+            return json_encode(["error register"]);
         }
     }
     //Subscription
     public function payment_subscription(){
-        $json = Input::json()->all();
-        $_CUSTOM = json_decode($json['custom'], true);
+    $json = Input::json()->all();
 
-        $p = Payment::txn($json['txn_id'])->first();
+        $p = Payment::where('type', 'subscr_payment')->txn($json['txn_id'])->first();
         if(isset($p)){
-            return;
+            $json['error'] = "duplicado subscription";
+            Log::info($json);
+            return json_encode(["duplicado subscription"]);
         }
+
+        Log::info($json);
+
+        $_CUSTOM = json_decode($json['custom'], true);
 
         $data = [];
 
@@ -185,12 +192,15 @@ class ApiController extends BaseController
 
             $anypayment = new Payment($data);
             if($anypayment->save()){
+
                 $user = User::where('uniqid', $data['user_uniqid'])->first();
                 if($user){
                     $user->renewSubscription();
                 }else{
                 }
+        return json_encode(["saved subscription"]);
             }else{
+        return json_encode(["error subscription"]);
             }
         }
     }

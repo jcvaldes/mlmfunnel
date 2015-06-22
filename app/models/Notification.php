@@ -20,7 +20,7 @@ class Notification extends Model {
     {
         parent::boot();
 
-        static::created(function($notification){   
+        static::created(function($notification){
             switch ($notification->type) {
                 case 'new_prospect':
                     $prospect = Prospect::find($notification->type_id);
@@ -34,16 +34,19 @@ class Notification extends Model {
                             $message->to($user->email, $user->full_name)->subject('Nuevo prospecto! - ' . Setting::key('app_name')->first()->value);
                         });
                     }
+                    //dd($user->notif_phone);
                     if($user->notif_phone==1){
                         if(Setting::key('sms_way')->first()->value == 'clickatell'){
                             Clickatell::send("Nuevo Interesado en ".$prospect->type." - Nombre: ".$prospect->name." Email: ".$prospect->email." Tel.: ".$prospect->phone, $user->phone);
                         }else if(Setting::key('sms_way')->first()->value == 'heywire'){
                             Heywire::text($user->phone, "Nuevo Interesado en ".$prospect->type." - Nombre: ".$prospect->name." Email: ".$prospect->email." Tel.: ".$prospect->phone);
-                        }                        
-                    }                    
+                        }
+                        Log::info("entro");
+                    }
+                    Log::info($user);
                 break;
             }
-        });       
+        });
     }
 
     /* Reltaionships */
@@ -71,7 +74,7 @@ class Notification extends Model {
     public function scopeCustomer($query, $id)
     {
         return $query->where('type', '=', "new_customer")->where('type_id', $id);
-    } 
+    }
 
     public function getClass()
     {
@@ -79,7 +82,7 @@ class Notification extends Model {
             case 'question':
             return "fa-question c-blue";
             break;
-            
+
             default:
                 # code...
             break;
@@ -108,7 +111,7 @@ class Notification extends Model {
             case 'assigned':
             return "/customer/" . $this->type_id . "?ref=notify&n=" . $this->id;
             break;
-            
+
             default:
                 # code...
             break;

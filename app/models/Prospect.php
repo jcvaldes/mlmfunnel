@@ -44,7 +44,7 @@ class Prospect extends Model {
                 'user_id' => $prospect->user->id
                 ]);
             $n->save();
-
+            Log::info("created prospect");
         });
 
     }
