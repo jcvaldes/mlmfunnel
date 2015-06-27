@@ -20,10 +20,10 @@
             <li class="<?= Request::is('*payments*') ? 'current' : '' ?>">
                 <a href="{{ URL::route('payments') }}"><i class="fa fa-dollar"></i><span class="sidebar-text">Facturación</span></a>
             </li>
-<!--
+
             <li class="<?= Request::is('*publicity*') ? 'current' : '' ?>">
                 <a href="{{ URL::route('publicity') }}"><i class="fa fa-file-text"></i><span class="sidebar-text">Material Promocional</span></a>
-            </li> -->
+            </li>
 
 
 
