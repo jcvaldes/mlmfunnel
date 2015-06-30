@@ -283,7 +283,7 @@
                         <input type="hidden" name="meta_web_form_id" value="{{ Setting::key('aweber_list_id')->first()->value }}" />
                         <input type="hidden" name="meta_split_id" value="" />
                         <input type="hidden" name="listname" value="{{ Setting::key('aweber_list_name')->first()->value }}" />
-                        <input type="hidden" name="redirect" value="{{ url().'dashboard?aweber=true'}}" id="redirect_1bc2595926b33ca68afa11c71fe6c782" />
+                        <input type="hidden" name="redirect" value="{{ url().'/dashboard?aweber=true'}}" id="redirect_1bc2595926b33ca68afa11c71fe6c782" />
 
                         <input type="hidden" name="meta_adtracking" value="My_Web_Form" />
                         <input type="hidden" name="meta_message" value="1" />
