@@ -289,7 +289,7 @@
                         <input type="hidden" name="meta_message" value="1" />
                         <input type="hidden" name="meta_required" value="name,email" />
 
-
+                        <input type="hidden" name="custom telefono" value="{{ Auth::user()->phone }}" />
                         <input type="hidden" name="name" value="{{ Auth::user()->full_name }}" />
                         <input type="hidden" name="email" value="{{ Auth::user()->email }}" />
 
