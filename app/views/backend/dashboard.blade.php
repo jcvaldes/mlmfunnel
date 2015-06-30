@@ -258,6 +258,48 @@
     </div>--}}
 </div>
 
+    @if($data['aweber'] == false)
+        <div class="modal" id="modal-welcome">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <form method="post" class="af-form-wrapper" accept-charset="UTF-8" action="https://www.aweber.com/scripts/addlead.pl"  >
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title" id="myModalLabel"><strong>Bienvenido</strong> </h4>
+                        </div>
+                        <div class="modal-body ">
+
+                            <div class="row">
+                                <div class="col-md-12" align="center">
+                                    <h3>¡Felicitaciones y Bienvenid@ a {{ Setting::key('app_name')->first()->value }}!</h3>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal-footer text-center">
+                            <button type="submit" class="btn btn-success">Suscribirse</button>
+                        </div>
+
+                        <input type="hidden" name="meta_web_form_id" value="{{ Setting::key('aweber_list_id')->first()->value }}" />
+                        <input type="hidden" name="meta_split_id" value="" />
+                        <input type="hidden" name="listname" value="{{ Setting::key('aweber_list_name')->first()->value }}" />
+                        <input type="hidden" name="redirect" value="{{ url().'dashboard?aweber=true'}}" id="redirect_1bc2595926b33ca68afa11c71fe6c782" />
+
+                        <input type="hidden" name="meta_adtracking" value="My_Web_Form" />
+                        <input type="hidden" name="meta_message" value="1" />
+                        <input type="hidden" name="meta_required" value="name,email" />
+
+
+                        <input type="hidden" name="name" value="{{ Auth::user()->full_name }}" />
+                        <input type="hidden" name="email" value="{{ Auth::user()->email }}" />
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    @endif
+
+
 
 <div class="modal" id="modal-filter">
     <div class="modal-dialog modal-lg">
@@ -330,6 +372,10 @@ $(document).on("ready", function(){
         var end = $('.end').data('date') || defaultDate;
         location.href = "?start="+start+"&end="+end;
     })
+
+    if($("#modal-welcome").length){
+        $("#modal-welcome").modal();
+    }
 });
 </script>
 @stop

@@ -22,6 +22,12 @@ class UserController extends BaseController {
 		$data['prospect'] = Prospect::current()->dates($start, $end)->get()->count();
 		$data['convertion'] = ($data['unique']==0) ? 0 : ($data['prospect'] / $data['unique']) * 100;
 
+		$data['aweber'] = Auth::user()->aweber;
+		if(Input::has('aweber')){
+			Auth::user()->aweber();
+		}
+
+
 		if(is_float($data['convertion'])){
 			$data['convertion'] = number_format($data['convertion'], 2, '.', '');
 		}

@@ -195,6 +195,35 @@
                                         </div>
                                     </div>
 
+                                    <div class="row profile-classic">
+                                        <div class="col-md-12">
+                                            <div class="panel">
+                                                <div class="panel-title line">
+                                                    <div class="caption"><i class="fa fa-envelope c-gray m-r-10"></i> Aweber</div>
+                                                </div>
+                                                <div class="panel-body">
+
+
+                                                    <div class="row">
+                                                        <div class="control-label col-md-3">List ID:</div>
+                                                        <div class="col-md-6">
+                                                            <input type="text" class="form-control" name="aweber_list_id" value="{{ Setting::key('aweber_list_id')->first()->value }}">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="control-label col-md-3">List name:</div>
+                                                        <div class="col-md-6">
+                                                            <input type="text" class="form-control" name="aweber_list_name" value="{{ Setting::key('aweber_list_name')->first()->value }}">
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <div class="col-sm-12">
                                         <div class="align-center">
                                             <button class="btn btn-primary m-r-20 save-profile">Guardar</button>
