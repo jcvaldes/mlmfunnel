@@ -229,10 +229,10 @@ class UserController extends BaseController {
 	public function tutorials()
 	{
 		$videos = [
-			['id' => 'Sza3wNVuQeo', 'title' => 'Primeros Pasos'],
-			['id' => '0015yoXAS9U', 'title' => 'Dashboard'],
-			['id' => 'uBMindoDpLU', 'title' => 'Landings'],
-			['id' => 'NPjwd-hLaJw', 'title' => 'Prospectos'],
+			['id' => 'Sza3wNVuQeo', 'title' => 'Video 1: ¡Atención! Empieza Aquí'],
+			['id' => '0015yoXAS9U', 'title' => 'Video 2: Funciones del escritorio'],
+			['id' => 'uBMindoDpLU', 'title' => 'Video 3: Empezando a Generar Prospectos'],
+			['id' => 'NPjwd-hLaJw', 'title' => 'Video 4: ¿Dónde Están Mis Prospectos?'],
 		];
 		return View::make('backend.pages.tutorials', compact('videos'));
 	}

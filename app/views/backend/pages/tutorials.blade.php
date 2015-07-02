@@ -27,7 +27,7 @@
                                 </div>
                                 <img src="http://img.youtube.com/vi/{{ $video['id'] }}/hqdefault.jpg" class="img-responsive" alt="{{ $video['title'] }}" />
                                 <div class="thumbnail-meta">
-                                    <h5 class="m-l-20">{{ $video['title'] }}</h5>
+                                    <h4 class="m-l-20">{{ $video['title'] }}</h4>
                                 </div>
                             </div>
                         </div>
