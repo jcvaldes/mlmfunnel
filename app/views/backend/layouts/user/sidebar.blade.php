@@ -25,6 +25,10 @@
                 <a href="{{ URL::route('publicity') }}"><i class="fa fa-file-text"></i><span class="sidebar-text">Material Promocional</span></a>
             </li>
 
+            <li class="<?= Request::is('*tutorials*') ? 'current' : '' ?>">
+                <a href="{{ URL::route('tutorials') }}"><i class="fa fa-video-camera"></i><span class="sidebar-text">Tutoriales</span></a>
+            </li>
+
 
 
             <!--<li class="<?= Request::is('user*') ? 'current' : '' ?>">

@@ -223,4 +223,17 @@ class UserController extends BaseController {
 	{
 		return View::make('backend.publicity.index');
 	}
+
+	/* Help */
+
+	public function tutorials()
+	{
+		$videos = [
+			['id' => 'Sza3wNVuQeo', 'title' => 'Primeros Pasos'],
+			['id' => '0015yoXAS9U', 'title' => 'Dashboard'],
+			['id' => 'uBMindoDpLU', 'title' => 'Landings'],
+			['id' => 'NPjwd-hLaJw', 'title' => 'Prospectos'],
+		];
+		return View::make('backend.pages.tutorials', compact('videos'));
+	}
 }

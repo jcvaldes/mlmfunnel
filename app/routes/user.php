@@ -13,6 +13,8 @@ Route::group(array('before' => 'auth', 'prefix' => 'dashboard'), function()
 		Route::get('/delete-list/{page}', ['uses' => 'UserController@delete_list']);
 
 		Route::get('/publicity', ['as' => 'publicity', 'uses' => 'UserController@publicity']);
+
+		Route::get('/tutorials', ['as' => 'tutorials', 'uses' => 'UserController@tutorials']);
 	});
 
 	Route::get('/suspended', ['uses' => 'UserController@suspended']);

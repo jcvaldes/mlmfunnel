@@ -162,16 +162,16 @@ function sidebarHeight() {
 /* Sidebar Statistics */
 if ($.fn.sparkline) {
 
-    sparkline1_color = '#159077';  
-    sparkline2_color = '#00699e';  
+    sparkline1_color = '#159077';
+    sparkline2_color = '#00699e';
     sparkline3_color = '#9e494e';
 
-    if($.cookie('style-color') == 'dark') { sparkline1_color = '#159077'; sparkline2_color = '#00699e'; sparkline3_color = '#9e494e';}   
+    if($.cookie('style-color') == 'dark') { sparkline1_color = '#159077'; sparkline2_color = '#00699e'; sparkline3_color = '#9e494e';}
     if($.cookie('style-color') == 'red') { sparkline1_color = '#121212'; sparkline2_color = '#4AB2F8'; sparkline3_color = '#E0A832';}
     if($.cookie('style-color') == 'blue') { sparkline1_color = '#E0A832'; sparkline2_color = '#D9534F'; sparkline3_color = '#121212';}
     if($.cookie('style-color') == 'green') { sparkline1_color = '#E0A832'; sparkline2_color = '#D9534F'; sparkline3_color = '#121212';}
-    if($.cookie('style-color') == 'dark') { sparkline1_color = '#159077'; sparkline2_color = '#00699e'; sparkline3_color = '#9e494e';}   
-    
+    if($.cookie('style-color') == 'dark') { sparkline1_color = '#159077'; sparkline2_color = '#00699e'; sparkline3_color = '#9e494e';}
+
     /* Sparklines can also take their values from the first argument passed to the sparkline() function */
     var myvalues1 = [13, 14, 16, 15, 11, 14, 20, 14, 12, 16, 11, 17, 19, 16];
     var myvalues2 = [14, 17, 16, 12, 18, 16, 22, 15, 14, 17, 11, 18, 11, 12];
@@ -261,7 +261,7 @@ function chatSidebar() {
 var setColor = function (color) {
     var color_ = 'color-'+color;
     $('#theme-color').attr("href", "assets/css/colors/" + color_ + ".css");
-    if ($.cookie) {         
+    if ($.cookie) {
         $.cookie('style-color', color);
     }
 }
@@ -274,11 +274,11 @@ $('.theme-color').click(function (e) {
     $('.theme-color').parent().removeClass("c-white w-600");
     $(this).parent().addClass("c-white w-600");
 
-    if($.cookie('style-color') == 'dark') { sparkline1_color = '#159077';  sparkline2_color = '#00699e';  sparkline3_color = '#9e494e';}   
+    if($.cookie('style-color') == 'dark') { sparkline1_color = '#159077';  sparkline2_color = '#00699e';  sparkline3_color = '#9e494e';}
     if($.cookie('style-color') == 'red') { sparkline1_color = '#E0A832'; sparkline2_color = '#4AB2F8'; sparkline3_color = '#121212';}
     if($.cookie('style-color') == 'blue') { sparkline1_color = '#E0A832'; sparkline2_color = '#D9534F'; sparkline3_color = '#121212';}
     if($.cookie('style-color') == 'green') { sparkline1_color = '#E0A832'; sparkline2_color = '#D9534F'; sparkline3_color = '#121212';}
-    if($.cookie('style-color') == 'cafe') { sparkline1_color = '#159077';  sparkline2_color = '#00699e';  sparkline3_color = '#9e494e';}   
+    if($.cookie('style-color') == 'cafe') { sparkline1_color = '#159077';  sparkline2_color = '#00699e';  sparkline3_color = '#9e494e';}
 
     /* We update Sparkline colors */
     $('.dynamicbar1').sparkline(myvalues1, {type: 'bar', barColor: sparkline1_color, barWidth: 4, barSpacing: 1, height: '28px'});
@@ -444,12 +444,12 @@ if ($('.icon-validation').length && $.fn.parsley) {
         $(this).parsley().subscribe('parsley:field:success', function (formInstance) {
 
            formInstance.$element.prev().removeClass('fa-exclamation c-red').addClass('fa-check c-green');
-           
+
         });
         $(this).parsley().subscribe('parsley:field:error', function (formInstance) {
 
             formInstance.$element.prev().removeClass('fa-check c-green').addClass('fa-exclamation c-red');
-            
+
         });
 
     });
@@ -651,7 +651,7 @@ if ($('.gallery').length && $.fn.mixItUp) {
 
         $(this).mixItUp({
             animation: {
-                enable: false       
+                enable: false
             },
             callbacks: {
                 onMixLoad: function(){
@@ -659,7 +659,7 @@ if ($('.gallery').length && $.fn.mixItUp) {
                     $(this).mixItUp('setOptions', {
                         animation: {
                             enable: true,
-                            effects: "fade", 
+                            effects: "fade",
                         },
                     });
                     $(window).bind("load", function() {
@@ -683,6 +683,20 @@ if ($('.magnific').length && $.fn.magnificPopup) {
         mainClass: 'mfp-fade'
     });
 }
+
+if ($('.popup-youtube').length && $.fn.magnificPopup) {
+    $('.popup-youtube').magnificPopup({
+        disableOn: 700,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+
+        fixedContentPos: false
+    });
+}
+
+
 
 
 /****  Initiation of Main Functions  ****/
