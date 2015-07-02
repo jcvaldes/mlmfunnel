@@ -19,6 +19,9 @@
 
                     @foreach ($videos as $key => $video)
                         <div class="mix category-2 col-lg-6 col-md-6 col-sm-6 col-xs-12" data-value="2">
+                            <div class="thumbnail-meta" style="color:black">
+                                <h4 class="m-l-20">{{ $video['title'] }}</h4>
+                            </div>
                             <div class="thumbnail">
                                 <div class="overlay">
                                     <div class="thumbnail-actions">
@@ -26,9 +29,7 @@
                                     </div>
                                 </div>
                                 <img src="http://img.youtube.com/vi/{{ $video['id'] }}/hqdefault.jpg" class="img-responsive" alt="{{ $video['title'] }}" />
-                                <div class="thumbnail-meta">
-                                    <h4 class="m-l-20">{{ $video['title'] }}</h4>
-                                </div>
+
                             </div>
                         </div>
                     @endforeach
