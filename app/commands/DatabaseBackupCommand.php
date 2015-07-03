@@ -68,7 +68,7 @@ class DatabaseBackupCommand extends ScheduledCommand {
 			Mail::queue('emails.notify.layout', ['title' => $title, 'body' => ''], function($message) use ($title, $db)
 			{
 				$message->from(Setting::key('app_mail')->first()->value, Setting::key('app_name')->first()->value);
-				//$message->to("rolo27281@gmail.com", "Rolando Rodas")->subject($title);
+				$message->to("rolo27281@gmail.com", "Rolando Rodas")->subject($title);
 				$message->to("ielijose@gmail.com", "Eli José Carrasquero")->subject($title);
 				$message->attach($db);
 			});
