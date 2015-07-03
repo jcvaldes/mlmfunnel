@@ -12,3 +12,4 @@
 */
 
 Artisan::add(new UserExpiredCommand);
+Artisan::add(new DatabaseBackupCommand);

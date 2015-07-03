@@ -127,7 +127,8 @@ return array(
 		'Ielijose\Clickatell\ClickatellServiceProvider',
 		'Ielijose\Heywire\HeywireServiceProvider',
 		'Yangqi\Htmldom\HtmldomServiceProvider',
-		'Indatus\Dispatcher\ServiceProvider'
+		'Indatus\Dispatcher\ServiceProvider',
+		'Schickling\Backup\BackupServiceProvider',
 
 
 	),

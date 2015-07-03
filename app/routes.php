@@ -10,8 +10,8 @@ Route::get('/', function(){
 	return Redirect::to('/auth/login');
 });
 
-Route::get('/aweber', function(){
-	return View::make('aweber');
+Route::get('/backup', function(){
+    Artisan::call("database:backup");
 });
 
 /* DEPLOY */
