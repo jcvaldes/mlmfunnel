@@ -57,10 +57,6 @@ class DatabaseBackupCommand extends ScheduledCommand
 
         $files = File::files('app/storage/dumps');
 
-        foreach ($files as $key => $file) {
-            $this->line($file);
-        }
-
         if (count($files)) {
             $db = $files[count($files) - 1];
         }
