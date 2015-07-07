@@ -79,7 +79,7 @@ class ApiController extends BaseController
                         $dt = Carbon::now()->subMonth();
                         $delta = ($dt->diffInDays($payment->created_at, false));
 
-                        if($delta <= 0){
+                        if($delta > 0){
                            $payment->status_pay = 'to_pay';
                         }
 
