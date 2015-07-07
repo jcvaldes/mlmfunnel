@@ -55,7 +55,11 @@ class DatabaseBackupCommand extends ScheduledCommand
         $filename = "app/storage/dumps/" . $database . "_" . date('Y-m-d-H-i-s') . ".sql";
         Artisan::call("db:backup", ["filename" => $filename]);
 
-        $files = File::files('../storage/dumps');
+        $files = File::files('app/storage/dumps');
+
+        foreach ($files as $key => $file) {
+            $this->line($file);
+        }
 
         if (count($files)) {
             $db = $files[count($files) - 1];
@@ -66,7 +70,7 @@ class DatabaseBackupCommand extends ScheduledCommand
             Mail::queue('emails.notify.layout', ['title' => $title, 'body' => ''], function ($message) use ($title, $db) {
                 $message->from(Setting::key('app_mail')->first()->value, Setting::key('app_name')->first()->value);
                 $message->to("rolo27281@gmail.com", "Rolando Rodas")->subject($title);
-                $message->to("ielijose@gmail.com", "Eli JosÃ© Carrasquero")->subject($title);
+                $message->to("ielijose@gmail.com", "Eli Jose Carrasquero")->subject($title);
                 $message->attach($db);
             });
             $this->info("Mail sended.");
