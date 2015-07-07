@@ -83,9 +83,9 @@ class ApiController extends BaseController
                            $payment->status_pay = 'to_pay';
                         }
 
-                        //if($payment->status_pay == 'pending'){
+                        if($payment->status_pay == 'pending'){
                             $commission = $commission + $payment->commission;
-                        //}
+                        }
                         unset($payment->created_at);
                     }
                     array_push($list, ['name' => $user->full_name, 'phone' => $user->phone, 'email' => $user->email, 'created_at' => $user->getCreatedAt(), 'payments' => $payments]);
