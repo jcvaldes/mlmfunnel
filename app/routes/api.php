@@ -10,6 +10,8 @@ Route::group(['prefix' => 'api'], function () {
     Route::any('/referers', ['uses' => 'ApiController@referers']);
     Route::any('/referer/{id}', ['uses' => 'ApiController@referer']);
 
+    Route::any('/users-with-payments', ['uses' => 'ApiController@uwp']);
+
     Route::any('/paid/{id}', ['uses' => 'ApiController@paid']);
 
     /* IPN */

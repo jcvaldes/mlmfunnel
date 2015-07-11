@@ -97,6 +97,63 @@ class ApiController extends BaseController
             return json_encode(['id' => $id, 'count' => 0]);
         }
     }
+
+
+    public function uwp() {
+        header('Access-Control-Allow-Origin: *');
+        #USUARIOS UNICOS
+        $users = User::select('ref_id')->distinct()->where('ref_id', '<>', '')->get();
+
+        $l = [];
+
+        foreach ($users as $key => $user) {
+            #USUARIOS QUE DEPENDEN DE UN USUARIO UNICO
+            $us = User::where('ref_id', $user->ref_id)->get();
+
+            $list = [];
+            $co = 0;
+
+            foreach ($us as $key => $u) {
+                #PAGOS DE UN USUARIO
+                $payments = $u->getPayments();
+                if($payments->count() == 0){
+                    continue;
+                }
+
+                foreach ($payments as $key => $payment) {
+
+                    $payment->created_at_format = $payment->created_at->format('d/m/Y');
+
+                    $dt = Carbon::now()->subMonth();
+                    $delta = ($dt->diffInDays($payment->created_at, false));
+
+                    if($delta > 0){
+                        continue;
+                    }
+                    if($payment->status_pay == 'pending'){
+
+                        $co = $co + $payment->commission;
+                    }
+                    unset($payment->created_at);
+                }
+                array_push($list, ['name' => $u->full_name, 'phone' => $u->phone, 'email' => $u->email, 'created_at' => $u->getCreatedAt(), 'payments' => $payments]);
+            }
+            if($co > 0){
+                array_push($l, ['id' => $user->ref_id, 'count' => $us->count(), 'list' => $list, 'commission' => $co]);
+            }
+
+
+        }
+
+
+        if($l != []){
+            return json_encode($l);
+        }else {
+            return json_encode(['error' => true, 'count' => 0]);
+        }
+    }
+
+
     // mark paid from ajax call
     public function paid($id)
     {
