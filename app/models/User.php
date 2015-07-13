@@ -130,6 +130,11 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         return $query->where('uniqid', $uniqid);
     }
 
+    public function scopeOwner($query, $id)
+    {
+        return $query->where('id', $id);
+    }
+
     public function scopeClient($query)
     {
         return $query->where('type', 'user');

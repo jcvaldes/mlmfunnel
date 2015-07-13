@@ -44,6 +44,15 @@
                                                         </div>
                                                     </div>
 
+                                                    <div class="row">
+                                                        <div class="control-label col-md-3">Código:</div>
+                                                        <div class="col-md-9">
+                                                        <?php $landing_code = "landing-".$landing."_code"; ?>
+
+                                                            <textarea class="form-control" rows="10" name="{{$landing_code}}">{{ Setting::key($landing_code)->first()->value }}</textarea>
+                                                        </div>
+                                                    </div>
+
 
 
 

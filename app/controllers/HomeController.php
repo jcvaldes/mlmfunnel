@@ -22,7 +22,9 @@ class HomeController extends BaseController {
 		if($link=='dashboard'){
 			return Redirect::route('login');
 		}
-		
+
+		$app = Config::get('app.app');
+
 		$user = User::username($user)->firstOrFail();
 
 		if($user->isSuspended()){
@@ -31,18 +33,20 @@ class HomeController extends BaseController {
 
 		switch ($link) {
 			case 'landing':
-				return View::make('templates.landing.index', compact('user'));
+				$tpl = 'templates.'.$app.'.index';
+				return View::make($tpl, compact('user'));
 				break;
 
 			case 'thankyou':
-				return View::make('templates.landing.thanks', compact('user'));
+				$tpl = 'templates.'.$app.'.thanks';
+				return View::make($tpl, compact('user'));
 				break;
-			
+
 			default:
-				# code...
+				return Redirect::to('/');
 				break;
 		}
-		
+
 	}
 
 	public function suscribe()
@@ -63,7 +67,7 @@ class HomeController extends BaseController {
 		if(Request::ajax()){
 			return json_encode($data);
 		}
-		
+
 		return Redirect::to('thankyou/'.$user->username);
 	}
 
@@ -77,8 +81,8 @@ class HomeController extends BaseController {
 	}
 
 	public function unsuscribed()
-	{		
-		return View::make('backend.pages.unsuscribed');		
+	{
+		return View::make('backend.pages.unsuscribed');
 	}
 
 	public function unsuscribe_post()
@@ -86,7 +90,7 @@ class HomeController extends BaseController {
 		$inputs = Input::all();
 		if(Session::has('unsuscribe_id')){
 			$id = Session::get('unsuscribe_id');
-			$user = User::find($id);			
+			$user = User::find($id);
 
 			$inputs['notif_email'] = Input::has('notif_email');
 			$inputs['notif_phone'] = Input::has('notif_phone');
@@ -100,7 +104,7 @@ class HomeController extends BaseController {
 		}
 	}
 
-	
+
 
 
 
