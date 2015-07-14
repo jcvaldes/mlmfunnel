@@ -106,6 +106,11 @@ class AdminController extends BaseController {
 
         $inputs['app_export'] = Input::has('app_export');
 
+        $inputs['show-chat-sells'] = Input::has('show-chat-sells');
+        $inputs['show-chat-pay'] = Input::has('show-chat-pay');
+        $inputs['show-chat-register'] = Input::has('show-chat-register');
+        $inputs['show-chat-landing'] = Input::has('show-chat-landing');
+
         foreach ($inputs as $key => $value) {
             $setting = Setting::firstOrNew(['key' => $key]);
             $setting->value = $value;
