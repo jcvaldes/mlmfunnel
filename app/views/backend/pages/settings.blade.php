@@ -224,6 +224,60 @@
                                         </div>
                                     </div>
 
+                                    <div class="row profile-classic">
+                                        <div class="col-md-12">
+                                            <div class="panel">
+                                                <div class="panel-title line">
+                                                    <div class="caption"><i class="fa fa-comment-o c-gray m-r-10"></i> Chat</div>
+                                                </div>
+                                                <div class="panel-body">
+
+
+                                                    <div class="row">
+                                                        <div class="control-label col-md-3">Código:</div>
+                                                        <div class="col-md-9">
+                                                            <textarea class="form-control" rows="10" name="chat-code">{{ Setting::key('chat-code')->first()->value }}</textarea>
+
+                                                            <div class="row-fluid">
+                                                                <label>
+                                                                    {{ Form::checkbox('show-chat-landing', '1',
+                                                                    (Setting::key('show-chat-landing')->first()->value=='1')) }}
+                                                                    Landing
+                                                                </label>
+                                                            </div>
+
+                                                            <div class="row-fluid">
+                                                                <label>
+                                                                    {{ Form::checkbox('show-chat-sells', '1',
+                                                                    (Setting::key('show-chat-sells')->first()->value=='1')) }}
+                                                                    Carta De Ventas
+                                                                </label>
+                                                            </div>
+
+                                                            <div class="row-fluid">
+                                                                <label>
+                                                                    {{ Form::checkbox('show-chat-pay', '1',
+                                                                    (Setting::key('show-chat-pay')->first()->value=='1')) }}
+                                                                    Página de pago
+                                                                </label>
+                                                            </div>
+
+                                                            <div class="row-fluid">
+                                                                <label>
+                                                                    {{ Form::checkbox('show-chat-register', '1',
+                                                                    (Setting::key('show-chat-register')->first()->value=='1')) }}
+                                                                    Página de registro
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <div class="col-sm-12">
                                         <div class="align-center">
                                             <button class="btn btn-primary m-r-20 save-profile">Guardar</button>

@@ -416,9 +416,9 @@
     </script>
     @endif
 
-    <!-- Codigo de la pagina -->
-    {{ Setting::key('landing-landing_code')->first()->value }}
-    <!-- :Codigo -->
+    @if(Setting::key('show-chat-landing')->first()->value=='1')
+    {{ Setting::key('chat-code')->first()->value }}
+    @endif
 
     {{-- Analytics Code--}}
     @include('templates.partials.analytics')

@@ -417,9 +417,9 @@
     <script src="https://vjs.zencdn.net/4.11/video.js"></script>
     <script type="text/javascript" src="https://addthisevent.com/libs/1.5.8/ate.min.js"></script>
 
-    <!-- Codigo de la pagina -->
-    {{ Setting::key('landing-landing_code')->first()->value }}
-    <!-- :Codigo -->
+    @if(Setting::key('show-chat-sells')->first()->value=='1')
+    {{ Setting::key('chat-code')->first()->value }}
+    @endif
 
     {{-- Analytics Code--}}
     @include('templates.partials.analytics')

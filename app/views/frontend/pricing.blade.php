@@ -150,6 +150,11 @@
     <script src="/assets/plugins/jquery-appear/jquery.appear.js"></script>
     <!-- END MANDATORY SCRIPTS -->
     <script src="/assets/js/main.js"></script>
+
+    @if(Setting::key('show-chat-pay')->first()->value=='1')
+    {{ Setting::key('chat-code')->first()->value }}
+    @endif
+
 </body>
 
 </html>

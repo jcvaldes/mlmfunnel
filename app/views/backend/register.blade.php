@@ -41,7 +41,7 @@
                     <div class="page-icon animated bounceInDown">
                         <img src="/assets/img/account/register-icon.png" alt="Register icon" />
                     </div>
-                    
+
                     <div class="login-form">
                         <!-- Start Error box -->
                         @if($errors->all())
@@ -68,7 +68,7 @@
 							{{ Form::password('password', array('placeholder'=>'Contraseña:', 'class' => 'input-field')) }}
 
                             {{ Form::password('password_confirmation', array('placeholder'=>'Confirmar contraseña:', 'class' => 'input-field')) }}
-                            
+
                             <button  type="submit" class="btn btn-login ladda-button" data-style="expand-left"><span class="ladda-label">Registrar</span></button>
 
                         {{Form::close()}}
@@ -96,7 +96,11 @@
     <script src="/assets/plugins/backstretch/backstretch.min.js"></script>
     <script src="/assets/plugins/bootstrap-loading/lada.min.js"></script>
     <script src="/assets/js/account.js"></script>
-    <!-- END PAGE LEVEL SCRIPTS -->   
+    <!-- END PAGE LEVEL SCRIPTS -->
+
+    @if(Setting::key('show-chat-register')->first()->value=='1')
+    {{ Setting::key('chat-code')->first()->value }}
+    @endif
 </body>
 
 </html>
