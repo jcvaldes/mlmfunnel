@@ -76,16 +76,16 @@ class ApiController extends BaseController
                     foreach ($payments as $key => $payment) {
                         $payment->created_at_format = $payment->created_at->format('d/m/Y');
 
+                        if($payment->status_pay == 'pending'){
+                            $commission = $commission + $payment->commission;
+                        }
+                        #Unable Payment
                         $dt = Carbon::now()->subMonth();
                         $delta = ($dt->diffInDays($payment->created_at, false));
-
                         if($delta > 0){
                            $payment->status_pay = 'to_pay';
                         }
 
-                        if($payment->status_pay == 'pending'){
-                            $commission = $commission + $payment->commission;
-                        }
                         unset($payment->created_at);
                     }
                     array_push($list, ['name' => $user->full_name, 'phone' => $user->phone, 'email' => $user->email, 'created_at' => $user->getCreatedAt(), 'payments' => $payments]);
