@@ -154,6 +154,22 @@ class ApiController extends BaseController
     }
 
 
+    public function partners() {
+        header('Access-Control-Allow-Origin: *');
+        #Pagos
+        $payments = Payment::select('id', 'subscription_id', 'payer_email', 'description', 'total', 'status', 'commission', 'created_at', 'status_pay')->get();
+
+
+
+
+        if($payments){
+            return json_encode($payments);
+        }else {
+            return json_encode(['error' => true, 'count' => 0]);
+        }
+    }
+
+
     // mark paid from ajax call
     public function paid($id)
     {

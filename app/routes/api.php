@@ -12,6 +12,8 @@ Route::group(['prefix' => 'api'], function () {
 
     Route::any('/users-with-payments', ['uses' => 'ApiController@uwp']);
 
+    Route::any('/partners', ['uses' => 'ApiController@partners']);
+
     Route::any('/paid/{id}', ['uses' => 'ApiController@paid']);
 
     /* IPN */
