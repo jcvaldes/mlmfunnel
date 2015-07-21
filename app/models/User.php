@@ -315,7 +315,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
     public function getCommissionR($total)
     {
-        $commission = -1;
+        $commission = 0;
 
         if($this->cr_way == 'percent'){
             $percent = (($total/100) * $this->cr_value);
@@ -332,7 +332,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
     public function getCommissionS($total)
     {
-        $commission = -1;
+        $commission = 0;
 
         if($this->cs_way == 'percent'){
             $percent = (($total/100) * $this->cs_value);
