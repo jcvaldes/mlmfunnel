@@ -73,9 +73,9 @@
                         {{Form::close()}}
 
                         <div class="login-links">
-                            <a href="/auth/forgot">Olvidastes tu Password?</a>
+                            <a href="/auth/forgot">Recuperar Contraseña</a>
                             <br>
-                            <a href="http://sistemasdeprospeccion.com/ml/agustinromero">No tienes una cuenta? <strong>Registrate</strong></a>
+                            <a href="http://sistemasdeprospeccion.com/hl/rolandorodas">No tienes una cuenta? <strong>Registrate</strong></a>
                         </div>
                     </div>
                 </div>
