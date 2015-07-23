@@ -75,7 +75,7 @@
                         <div class="login-links">
                             <a href="/auth/forgot">Recuperar Contraseña</a>
                             <br>
-                            <a href="http://sistemasdeprospeccion.com/hl/rolandorodas">No tienes una cuenta? <strong>Registrate</strong></a>
+                            <a href="http://sistemasdeprospeccion.com/hl/rolandorodas">No tienes una cuenta? <strong>Regístrate</strong></a>
                         </div>
                     </div>
                 </div>
