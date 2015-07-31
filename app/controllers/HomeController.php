@@ -42,6 +42,11 @@ class HomeController extends BaseController {
 				return View::make($tpl, compact('user'));
 				break;
 
+			case 'live':
+				$tpl = 'templates.'.$app.'.live';
+				return View::make($tpl, compact('user'));
+				break;
+
 			default:
 				return Redirect::to('/');
 				break;

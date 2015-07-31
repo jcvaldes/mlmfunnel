@@ -43,6 +43,7 @@
                                 <div class="col-md-2">
                                     <select class="form-control filter" id="filter-page">
                                         <option value="landing">Landing</option>
+                                        <option value="live">Hangouts</option>
                                     </select>
                                 </div>
 
