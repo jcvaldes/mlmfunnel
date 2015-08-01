@@ -286,4 +286,13 @@ class ApiController extends BaseController
             }
         }
     }
+
+
+    public function live_video(){
+        $video = Input::get('video');
+
+        $s = Setting::key('live_video_' . Auth::user()->id )->first();
+        $s->value = $video;
+        $s->save();
+    }
 }

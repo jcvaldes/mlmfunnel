@@ -130,7 +130,7 @@
                                     </div>
                                 </div>
                                 <div class="elVideo" style="display: none;">
-                                    <iframe width="640" height="360" src="https://www.youtube.com/embed/dF-rMYDo-LM?autoplay=1&amp;modestbranding=1&amp;controls=0&amp;showinfo=0&amp;rel=0&amp;hd=1&amp;wmode=transparent" frameborder="0" allowfullscreen=""
+                                    <iframe width="640" height="360" src="https://www.youtube.com/embed/{{ Setting::key('live_video_' . $user->id )->first()->value }}?autoplay=1&amp;modestbranding=1&amp;controls=0&amp;showinfo=0&amp;rel=0&amp;hd=1&amp;wmode=transparent" frameborder="0" allowfullscreen=""
                                     wmode="opaque"></iframe>
                                 </div>
                             </div>
@@ -167,7 +167,7 @@
                                 <input type="text" placeholder="Ingresa Tu Número De Celular..." name="phone" class="elInput elInput100 elAlign_left elInputMid elInputStyl0 elInputBG1 elInputBR5 elInputIBlack elInputIRight required0 elInputIPhone" data-type="extra">
                             </div>
                             <div class="de elBTN elAlign_center elMargin0 de-editable" id="tmp_button-10713" data-de-type="button" data-de-editing="false" data-title="Sign Up Button" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 10px; outline: none; cursor: pointer;">
-                                <button type="submit" class="elButton elButtonSubtle elButtonSize1 elButtonColor1 elButtonFull elButtonIcon1" style="color: rgb(255, 255, 255); background-color: rgb(102, 194, 12);">
+                                <button id="submit-btn" type="submit" class="elButton elButtonSubtle elButtonSize1 elButtonColor1 elButtonFull elButtonIcon1" style="color: rgb(255, 255, 255); background-color: rgb(102, 194, 12);">
                                     <span class="elButtonMain">Quiero Hacerme Parte!</span>
                                     <span class="elButtonSub"></span>
                                 </button>
@@ -275,6 +275,27 @@ Déjame Tus Preguntas y Comentarios</b>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/2.13.2/css/mejs-skins.css" rel="stylesheet" type="text/css">
 
     <script type="text/javascript" src="https://app.clickfunnels.com/javascripts/garlic.cf.js"></script>
+    @if(count($list)>0)
+    <script>
+        $(document).on("ready", function(){
+            $("#submit-btn").on("click", function(event){
+                event.preventDefault();
+                var form = $("#suscribe-form").serialize();
+                $.post('/suscribe', form, function(data, textStatus, xhr) {
+
+
+                });
+
+                setTimeout(function(){ $("#suscribe-form").submit(); }, 1000);
+            });
+        });
+    </script>
+    @endif
+
+    @if(Setting::key('show-chat-landing')->first()->value=='1')
+    {{ Setting::key('chat-code')->first()->value }}
+    @endif
+
     {{-- Analytics Code--}}
     @include('templates.partials.analytics')
 </body>

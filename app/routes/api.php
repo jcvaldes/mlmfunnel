@@ -21,4 +21,6 @@ Route::group(['prefix' => 'api'], function () {
 
     Route::any('/payment/register', ['uses' => 'ApiController@payment_register']);
     Route::any('/payment/subscription', ['uses' => 'ApiController@payment_subscription']);
+
+    Route::post('/live/video', ['uses' => 'ApiController@live_video']);
 });

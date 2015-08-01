@@ -87,9 +87,25 @@
                                     <div class="search-info">
                                         {{--<span class="search-date"><i class="fa fa-rocket"></i>Inactiva</span>--}}
                                     </div>
-                                    <p><br>
+                                    <p class="m-t-20">
                                         <a class="url" target="_blank" data-qr="qr-live" href="{{url()}}/live/{{Auth::user()->username}}">{{url()}}/live/{{Auth::user()->username}}</a>
                                     </p>
+                                    <div class="row m-t-20">
+                                        <div class="col-md-4">
+                                            <h4>Video de Youtube:</h4>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" id="video" class="form-control" value="{{ Setting::key('live_video_' . Auth::user()->id )->first()->value }}">
+                                        </div>
+                                        <div class="col-md-2">
+                                            <button id="video-save" class="btn btn-success">Guardar</button>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            Ingresar solo ID del video: https://youtube.com/watch?v=<strong>LH8BKNfNQbM</strong>
+                                        </div>
+                                    </div>
+
                                 </div>
 
                                 <div class="col col-md-3 col-centered">
@@ -98,7 +114,7 @@
                                     @if(count($list) > 0)
                                     <div><a class="btn btn-primary m-t-10 edit-setup-page" data-list-data='{{ $list }}' data-page="landing" href="#"><i class="fa fa-gear"></i> Configurar</a></div>
                                     @else
-                                    <div><a class="btn btn-info m-t-10 setup-page" data-page="landing" href="#"><i class="fa fa-gear"></i> Configurar</a></div>
+                                    <div><a class="btn btn-info m-t-10 setup-page" data-page="live" data-video="true" href="#"><i class="fa fa-gear"></i> Configurar</a></div>
                                     @endif
                                 </div>
                             </div>
@@ -191,6 +207,9 @@
 
         $(".setup-page").on("click", function(){
             $("#page").val($(this).data('page'));
+            if($(this).data('video') == 'true'){
+
+            }
             $("#modal-setup").modal();
         });
 
@@ -220,6 +239,15 @@
                 colorDark : "#000000",
                 colorLight : "#ffffff",
                 correctLevel : QRCode.CorrectLevel.H
+            });
+        });
+
+        /* video live */
+
+        $("#video-save").on("click", function(){
+            var video = $("#video").val();
+            $.post('/api/live/video', {video: video}, function(data, textStatus, xhr) {
+                $("#video-save").addClass('btn-primary').removeClass('btn-success').text('Guardado');
             });
         });
     })
