@@ -90,21 +90,6 @@
                                     <p class="m-t-20">
                                         <a class="url" target="_blank" data-qr="qr-live" href="{{url()}}/live/{{Auth::user()->username}}">{{url()}}/live/{{Auth::user()->username}}</a>
                                     </p>
-                                    <div class="row m-t-20">
-                                        <div class="col-md-4">
-                                            <h4>Video de Youtube:</h4>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <input type="text" id="video" class="form-control" value="{{ Setting::key('live_video_' . Auth::user()->id )->first()->value }}">
-                                        </div>
-                                        <div class="col-md-2">
-                                            <button id="video-save" class="btn btn-success">Guardar</button>
-                                        </div>
-
-                                        <div class="col-md-12">
-                                            Ingresar solo ID del video: https://youtube.com/watch?v=<strong>LH8BKNfNQbM</strong>
-                                        </div>
-                                    </div>
 
                                 </div>
 
@@ -144,6 +129,22 @@
                             <textarea name="aweber-code" id="aweber-code" class="col-md-12" rows="10" placeholder="Inserta tu formulario de aweber aquí..."></textarea>
                         </div>
 
+                    </div>
+
+                    <div class="mostrarvideo row m-t-20 hide">
+                        <div class="col-md-4">
+                            <h4>Video de Youtube:</h4>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" id="video1" class="form-control" value="{{ Setting::key('live_video_' . Auth::user()->id )->first()->value }}">
+                        </div>
+                        <div class="col-md-2">
+                            <button type="button" data-input="video1" class="video-save btn btn-success">Guardar</button>
+                        </div>
+
+                        <div class="col-md-12">
+                            Ingresar solo ID del video: https://youtube.com/watch?v=<strong>LH8BKNfNQbM</strong>
+                        </div>
                     </div>
 
                 </div>
@@ -186,6 +187,22 @@
                         <button type="button" id="delete-list" class="btn btn-danger pull-right m-10">Eliminar lista</button>
                     </div>
 
+                    <div class="mostrarvideo row m-t-20 hide">
+                        <div class="col-md-4">
+                            <h4>Video de Youtube:</h4>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" id="video2" class="form-control" value="{{ Setting::key('live_video_' . Auth::user()->id )->first()->value }}">
+                        </div>
+                        <div class="col-md-2">
+                            <button type="button" data-input="video2" class="video-save btn btn-success">Guardar</button>
+                        </div>
+
+                        <div class="col-md-12">
+                            Ingresar solo ID del video: https://youtube.com/watch?v=<strong>LH8BKNfNQbM</strong>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="modal-footer text-center">
                     <button type="submit" data-dismiss="modal" class="btn btn-info">Cerrar</button>
@@ -207,8 +224,14 @@
 
         $(".setup-page").on("click", function(){
             $("#page").val($(this).data('page'));
-            if($(this).data('video') == 'true'){
-
+            if($(this).data('video') == true){
+                $(".mostrarvideo").each(function(){
+                    $(this).removeClass('hide');
+                });
+            }else{
+                $(".mostrarvideo").each(function(){
+                    $(this).addClass('hide');
+                });
             }
             $("#modal-setup").modal();
         });
@@ -244,10 +267,10 @@
 
         /* video live */
 
-        $("#video-save").on("click", function(){
-            var video = $("#video").val();
+        $(".video-save").on("click", function(){
+            var video = $('#'+$(this).data('input')).val();
             $.post('/api/live/video', {video: video}, function(data, textStatus, xhr) {
-                $("#video-save").addClass('btn-primary').removeClass('btn-success').text('Guardado');
+                $(".video-save").addClass('btn-primary').removeClass('btn-success').text('Guardado');
             });
         });
     })
