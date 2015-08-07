@@ -15,7 +15,22 @@ $(function () {
 
     opt.oTableTools = {
         "sSwfPath": "/assets/plugins/datatables/swf/copy_csv_xls_pdf.swf",
-        "aButtons": ["csv", "pdf"]
+        "aButtons": [
+            {
+                "sExtends": "csv",
+                "mColumns": [0, 1, 2, 4],
+                "oSelectorOpts": {
+                    page: 'current'
+                }
+            },
+            {
+                "sExtends": "pdf",
+                "mColumns": [0, 1, 2, 4],
+                "oSelectorOpts": {
+                    page: 'current'
+                }
+            }
+        ]
     };
     opt.order = [[ 4, "desc" ]]
     opt.columnDefs = [
