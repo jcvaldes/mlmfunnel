@@ -20,14 +20,18 @@ $(function () {
                 "sExtends": "csv",
                 "mColumns": [0, 1, 2, 4],
                 "oSelectorOpts": {
-                    page: 'current'
+                    filter: 'applied',
+                    order: 'current',
+                    page: 'all'
                 }
             },
             {
                 "sExtends": "pdf",
                 "mColumns": [0, 1, 2, 4],
                 "oSelectorOpts": {
-                    page: 'current'
+                    filter: 'applied',
+                    order: 'current',
+                    page: 'all'
                 }
             }
         ]
