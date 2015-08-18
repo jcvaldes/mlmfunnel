@@ -159,9 +159,6 @@ class ApiController extends BaseController
         #Pagos
         $payments = Payment::select('id', 'subscription_id', 'payer_email', 'description', 'total', 'status', 'commission', 'created_at', 'status_pay')->get();
 
-
-
-
         if($payments){
             return json_encode($payments);
         }else {

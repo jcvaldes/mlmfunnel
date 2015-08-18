@@ -69,7 +69,7 @@
                                     <br>
 
                                     <strong>Nota Importante:</strong>
-                                    <br> Recuerda que puedes cancelar tu membresía cuando quieras, enviándonos un email a <a href="mailto:soporte@sistemasdeprospeccion.com?subject=Cancelación+de+membresia">soporte@sistemasdeprospeccion.com</a>
+                                    <br> Recuerda que puedes cancelar tu membresía cuando quieras, enviándonos un email a <a href="mailto:info@sistemasdeprospeccion.com?subject=Cancelación+de+membresia">info@sistemasdeprospeccion.com</a>
 
                                     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" class=" p-t-20">
                                         <input name="cmd" type="hidden" value="_xclick-subscriptions" />
