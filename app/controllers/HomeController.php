@@ -25,7 +25,11 @@ class HomeController extends BaseController {
 
 		$app = Config::get('app.app');
 
-		$user = User::username($user)->firstOrFail();
+		$user = User::username($user)->first();
+
+		if(!$user){
+			App::abort(404);
+		}
 
 		if($user->isSuspended()){
 			return Redirect::to('http://dineroysalud.net/landing/agustinromero');

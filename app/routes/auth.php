@@ -2,6 +2,7 @@
 
 Route::group(['prefix' => 'auth'], function () {
     Route::get('/login',  ['as' => 'login', 'uses' => 'AuthController@showLogin']);
+    Route::get('/logiin',  ['as' => 'logiin', 'uses' => 'AuthController@showLogiin']);
     Route::post('/login', ['as' => 'login', 'uses' => 'AuthController@login']);
 
     Route::get('/register',  ['as' => 'register', 'uses' => 'AuthController@showRegister']);

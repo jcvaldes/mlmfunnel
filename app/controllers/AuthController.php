@@ -22,6 +22,15 @@ class AuthController extends BaseController {
 		}
 	}
 
+	public function showLogiin()
+	{
+		if(Auth::user()){
+			return Redirect::to('/dashboard');
+		}else{
+			return View::make('backend.logiin');
+		}
+	}
+
 	public function showRegister()
 	{
 		if(Auth::user()){
