@@ -94,6 +94,7 @@
                     <li class="active"><a href="#firmas" data-toggle="tab">Firmas de email</a></li>
                     <li class=""><a href="#emails" data-toggle="tab">Email para amigos</a></li>
                     <li class=""><a href="#posts" data-toggle="tab">Post para redes sociales</a></li>
+                    <li class=""><a href="#images" data-toggle="tab">Graficos para redes sociales</a></li>
                 </ul>
                 <div class="tab-content">
                     <div class="space20"></div>
@@ -253,6 +254,34 @@
                                                 </div>
 
 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="images">
+                        <div class="row profile">
+                            <div class="col-md-12">
+
+                                <div class="row profile-classic">
+                                    <div class="col-md-12">
+                                        <div class="panel">
+
+                                            <div class="panel-body">
+                                                @foreach(range(1,4) as $r)
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <h1>Grafico #{{ $r }}</h1>
+                                                            <img src="/assets/img/facebook/{{ $r }}.jpg" alt="">
+                                                            <hr>
+                                                        </div>
+
+                                                    </div>
+                                                @endforeach
                                             </div>
                                         </div>
                                     </div>
