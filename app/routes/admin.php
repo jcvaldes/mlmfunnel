@@ -38,4 +38,8 @@ Route::group(array('before' => 'auth', 'prefix' => 'dashboard'), function()
 	Route::get('/notifications/sms/{type}/{key}/preview', ['as' => 'sms-p', 'uses' => 'NotificationController@sms_preview']);
 	Route::post('/sms', ['uses' => 'NotificationController@sms_post']);
 
+	/* Offers */
+	Route::get('/offers', ['uses' => 'AdminController@getOffers']);
+	Route::post('/offer', ['uses' => 'AdminController@postOffer']);
+
 });

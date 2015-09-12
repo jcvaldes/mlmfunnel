@@ -24,6 +24,10 @@
                 <a href="/dashboard/notifications"><i class="fa fa-envelope"></i><span class="sidebar-text">Notificaciones</span></a>
             </li>
 
+            <li class="<?= Request::is('*offers*') ? 'current' : '' ?>">
+                <a href="/dashboard/offers"><i class="fa fa-dollar"></i><span class="sidebar-text">Ofertas</span></a>
+            </li>
+
             <br>
         </ul>
     </div>

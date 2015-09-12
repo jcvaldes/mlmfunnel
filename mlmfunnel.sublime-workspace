@@ -4,11 +4,15 @@
 		"selected_items":
 		[
 			[
-				"subscriptio",
-				"subscription_id"
+				"subsc",
+				"subscription"
 			],
 			[
-				"subsc",
+				"subscrip",
+				"subscription	(2015_09_09_225256_create_offers_table.php)"
+			],
+			[
+				"subscriptio",
 				"subscription_id"
 			],
 			[
@@ -184,30 +188,6 @@
 	"buffers":
 	[
 		{
-			"file": "app/routes.php",
-			"settings":
-			{
-				"buffer_size": 3652,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/config/auth.php",
-			"settings":
-			{
-				"buffer_size": 2111,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/routes/auth.php",
-			"settings":
-			{
-				"buffer_size": 862,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "app/controllers/AuthController.php",
 			"settings":
 			{
@@ -216,91 +196,51 @@
 			}
 		},
 		{
+			"file": "app/controllers/RemindersController.php",
+			"settings":
+			{
+				"buffer_size": 1692,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "app/views/backend/login.blade.php",
+			"settings":
+			{
+				"buffer_size": 20215,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/backend/forgot.blade.php",
+			"settings":
+			{
+				"buffer_size": 19879,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/routes/auth.php",
+			"settings":
+			{
+				"buffer_size": 896,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/backend/old.forgot.blade.php",
+			"settings":
+			{
+				"buffer_size": 4696,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/backend/old.login.blade.php",
 			"settings":
 			{
 				"buffer_size": 5160,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/backend/register.blade.php",
-			"settings":
-			{
-				"buffer_size": 5159,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/backend/logiin.blade.php",
-			"settings":
-			{
-				"buffer_size": 24652,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/start/global.php",
-			"settings":
-			{
-				"buffer_size": 2631,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/404.blade.php",
-			"settings":
-			{
-				"buffer_size": 2778,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/controllers/HomeController.php",
-			"settings":
-			{
-				"buffer_size": 2599,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/config/app.php",
-			"settings":
-			{
-				"buffer_size": 8273,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/config/local/app.php",
-			"settings":
-			{
-				"buffer_size": 481,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "public/templates/landing/css/lander.css",
-			"settings":
-			{
-				"buffer_size": 250503,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/templates/dys/index.blade.php",
-			"settings":
-			{
-				"buffer_size": 34660,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/C/tpls/new-register/pasartes.clickfunnels.com/thank-you-page.html",
-			"settings":
-			{
-				"buffer_size": 42244,
-				"line_ending": "Unix"
 			}
 		}
 	],
@@ -362,32 +302,71 @@
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/config",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/config/local",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/controllers",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/database",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/database/migrations",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/models",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views",
-		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/backend/shared",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/backend",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/backend/pages",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/backend/payments",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/backend/prospects",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/public",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/vendor"
 	],
 	"file_history":
 	[
-		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/backend/logiin.blade.php",
+		"/C/Users/EliJosé/Desktop/papayote/dn.sql",
+		"/C/Users/EliJosé/Desktop/app.php",
+		"/C/Users/EliJosé/Documents/GitHub/cotizador/vendor/laravel/framework/src/Illuminate/Auth/UserProviderInterface.php",
+		"/C/Users/EliJosé/AppData/Local/Temp/fz3temp-1/SystemController.php",
+		"/C/Users/EliJosé/AppData/Local/Temp/fz3temp-1/VerifyUserProvider.php",
+		"/C/Users/EliJosé/AppData/Local/Temp/fz3temp-1/routes 2.php",
+		"/C/Users/EliJosé/AppData/Local/Temp/fz3temp-1/DefinicionesController.php",
+		"/C/Users/EliJosé/AppData/Local/Temp/fz3temp-1/routes.php",
+		"/C/Users/EliJosé/AppData/Local/Temp/fz3temp-1/ParametrosController.php",
+		"/C/Users/EliJosé/AppData/Local/Temp/fz3temp-1/GestionController.php",
+		"/C/Users/EliJosé/AppData/Local/Temp/fz3temp-1/index.php",
+		"/C/Users/EliJosé/AppData/Local/Temp/fz3temp-1/wp-config.php",
+		"/C/Users/EliJosé/Desktop/wp_travel2_icl_translate(2).sql",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/backend/layouts/admin/sidebar.blade.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/routes/admin.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/controllers/AdminController.php",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/controllers/ApiController.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/controllers/UserController.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/controllers/ProspectController.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/database/migrations/2015_09_09_225256_create_offers_table.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/models/Offer.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/controllers/HomeController.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/controllers/AuthController.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/backend/offers/index.blade.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/routes.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/backend/login.blade.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/backend/register.blade.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/backend/logiin.blade.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/start/global.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/404.blade.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/config/app.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/config/local/app.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/backend/publicity/index.blade.php",
+		"/C/Users/EliJosé/Documents/GitHub/guayimano/composer.json",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/public/templates/landing/css/lander.css",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/templates/dys/index.blade.php",
+		"/C/tpls/new-register/pasartes.clickfunnels.com/thank-you-page.html",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/routes/auth.php",
+		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/config/auth.php",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/controllers/SubscriptionController.php",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/frontend/pricing.blade.php",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/public/assets/css/profile.min.css",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/vendor/bkwld/croppa/tests/TestCheckForFile.php",
-		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/config/app.php",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/templates/tcee/live.blade.php",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/templates/tcee/index.blade.php",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/backend/pages/landings.blade.php",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/routes/user.php",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/backend/landings/index.blade.php",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/public/assets/js/table_prospects.js",
-		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/controllers/HomeController.php",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/backend/prospects/index.blade.php",
 		"/C/Users/EliJosé/Downloads/frexy/themeforest-9242540-frexy-responsive-multipurpose-html5-template/HTML/Gruntfile.js",
-		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/controllers/UserController.php",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/models/Payment.php",
-		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/routes.php",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/routes/api.php",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/backend/dashboard.blade.php",
 		"/C/Users/EliJosé/Documents/GitHub/guayimano/app/config/app.php",
@@ -406,7 +385,6 @@
 		"/C/Users/EliJosé/Documents/GitHub/PortalComunal.info.ve/app/config/database.php",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/backend/layouts/user/sidebar.blade.php",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/commands/UserExpiredCommand.php",
-		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/backend/login.blade.php",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/backend/pages/tutorials.blade.php",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/composer.json",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/artisan",
@@ -416,18 +394,13 @@
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/public/assets/js/application.js",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/public/assets/plugins/magnific/magnific-popup.css",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/public/assets/plugins/magnific/jquery.magnific-popup.min.js",
-		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/backend/layouts/admin/sidebar.blade.php",
-		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/controllers/ProspectController.php",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/models/Prospect.php",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/models/Notification.php",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/config/packages/ielijose/clickatell/.gitkeep",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/config/packages/ielijose/clickatell/config.php",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/storage/logs/laravel.log",
-		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/config/auth.php",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/emails/auth/password.blade.php",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/lang/es/reminders.php",
-		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/routes/admin.php",
-		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/controllers/AdminController.php",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/controllers/LandingController.php",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/controllers/NotificationController.php",
 		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/controllers/PaypalController.php",
@@ -469,34 +442,7 @@
 		"/C/Users/EliJosé/Documents/GitHub/RAEU/app/config/app.php",
 		"/C/wamp/www/wordpress/wp-content/themes/twentyfourteen/retarger.php",
 		"/C/wamp/www/wordpress/wp-content/plugins/wp_retarger/css/admin.css",
-		"/C/wamp/www/wordpress/wp-content/plugins/wp_retarger/js/jquery.modal.js",
-		"/C/wamp/www/wordpress/wp-content/plugins/wp_retarger/css/jquery.modal.css",
-		"/C/wamp/www/wordpress/wp-content/plugins/wp_retarger/css/colpick.css",
-		"/C/wamp/www/wordpress/wp-content/plugins/wp_retarger/js/colpick.js",
-		"/C/wamp/www/wordpress/wp-content/themes/twentyfourteen/empty.php",
-		"/C/wamp/www/wordpress/wp-content/themes/twentyfourteen/page.php",
-		"/C/wamp/www/wordpress/wp-content/plugins/wp_retarger/classes/RoutersTable.php",
-		"/C/Users/EliJosé/Documents/GitHub/RAEU/resources/views/welcome.blade.php",
-		"/C/Users/EliJosé/Documents/GitHub/RAEU/config/mail.php",
-		"/C/Users/EliJosé/Documents/GitHub/RAEU/.env",
-		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/config/local/mail.php",
-		"/C/Users/EliJosé/Documents/GitHub/RAEU/app/Http/routes.php",
-		"/C/Users/EliJosé/Documents/GitHub/RAEU/app/Services/Registrar.php",
-		"/C/Users/EliJosé/Documents/GitHub/RAEU/vendor/laravel/framework/src/Illuminate/Auth/Passwords/PasswordBroker.php",
-		"/C/Users/EliJosé/Documents/GitHub/RAEU/config/app.php",
-		"/C/Users/EliJosé/Documents/GitHub/RAEU/.env.example",
-		"/C/Users/EliJosé/Documents/GitHub/RAEU/config/database.php",
-		"/C/Users/EliJosé/Documents/GitHub/RAEU/app/controllers/HomeController.php",
-		"/C/wamp/www/wordpress/wp-content/plugins/wp_retarger/views/post.php",
-		"/C/wamp/www/wordpress/wp-content/themes/twentyfifteen/empty.php",
-		"/F/RESPALDOS/_/w7/AppServ/www/ielijose/api/index.php",
-		"/C/wamp/www/.htaccess",
-		"/C/wamp/www/wordpress/wp-content/plugins/wp_retarger/wp_retarger.php",
-		"/C/wamp/www/wordpress/wp-config-sample.php",
-		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/controllers/BaseController.php",
-		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/app/views/deploy/index.blade.php",
-		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/public/assets/css/style-frontend.css",
-		"/C/Users/EliJosé/Documents/GitHub/mlmfunnel/public/assets/css/style.css"
+		"/C/wamp/www/wordpress/wp-content/plugins/wp_retarger/js/jquery.modal.js"
 	],
 	"find":
 	{
@@ -515,6 +461,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"default",
 			"input ",
 			"input",
 			"info@",
@@ -618,278 +565,11 @@
 	"groups":
 	[
 		{
-			"selected": 11,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/routes.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3652,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								950,
-								950
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
-							],
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 431.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/config/auth.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2111,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
-							],
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 252.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 14,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/routes/auth.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 862,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								365,
-								365
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"auto_complete": false,
-							"bh_regions":
-							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
-							],
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "app/controllers/AuthController.php",
 					"semi_transient": false,
 					"settings":
@@ -901,8 +581,8 @@
 						"selection":
 						[
 							[
-								465,
-								465
+								957,
+								907
 							]
 						],
 						"settings":
@@ -911,75 +591,526 @@
 							"auto_complete": false,
 							"bh_regions":
 							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
-								"bh_unmatched_content"
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content"
 							],
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 168.0,
+						"translation.y": 1488.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/controllers/RemindersController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1692,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								425,
+								425
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 372.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/views/backend/login.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 20215,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7554,
+								7505
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content"
+							],
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2108.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/views/backend/forgot.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 19879,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9201,
+								9201
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content"
+							],
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3844.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "app/views/backend/login.blade.php",
+					"file": "app/routes/auth.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 896,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								534,
+								534
+							],
+							[
+								620,
+								620
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/views/backend/old.forgot.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4696,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1665,
+								1699
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content"
+							],
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 868.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/views/backend/old.login.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
@@ -990,8 +1121,8 @@
 						"selection":
 						[
 							[
-								3078,
-								3168
+								3844,
+								3891
 							]
 						],
 						"settings":
@@ -999,146 +1130,56 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
-							],
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": false
-						},
-						"translation.x": 92.0,
-						"translation.y": 1594.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/views/backend/register.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5159,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2689,
-								3803
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
@@ -1150,813 +1191,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1624.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/views/backend/logiin.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 24652,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								10158,
-								10158
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"auto_complete": false,
-							"bh_regions":
-							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content"
-							],
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": false
-						},
-						"translation.x": 361.0,
-						"translation.y": 1915.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "app/start/global.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2631,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2175,
-								2175
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"auto_complete": false,
-							"bh_regions":
-							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content"
-							],
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1400.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "app/views/404.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2778,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2108,
-								2108
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"auto_complete": false,
-							"bh_regions":
-							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content"
-							],
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1472.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "app/controllers/HomeController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2599,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								854,
-								854
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"auto_complete": false,
-							"bh_regions":
-							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content"
-							],
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 509.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "app/config/app.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8273,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								463,
-								463
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"auto_complete": false,
-							"bh_regions":
-							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content"
-							],
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "app/config/local/app.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 481,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								419,
-								419
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"auto_complete": false,
-							"bh_regions":
-							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content"
-							],
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "public/templates/landing/css/lander.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 250503,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								227191,
-								227197
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
-							],
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 323583.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "app/views/templates/dys/index.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 34660,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1754,
-								0
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
-							],
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1444.0,
+						"translation.y": 1705.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "/C/tpls/new-register/pasartes.clickfunnels.com/thank-you-page.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 42244,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								42244
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
-							],
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
 					"type": "text"
 				}
 			]
@@ -2011,6 +1249,62 @@
 		"selected_items":
 		[
 			[
+				"remin",
+				"app\\controllers\\RemindersController.php"
+			],
+			[
+				"auth",
+				"app\\routes\\auth.php"
+			],
+			[
+				"oldf",
+				"app\\views\\backend\\old.forgot.blade.php"
+			],
+			[
+				"old.lo",
+				"app\\views\\backend\\old.login.blade.php"
+			],
+			[
+				"authc",
+				"app\\controllers\\AuthController.php"
+			],
+			[
+				"homec",
+				"app\\controllers\\HomeController.php"
+			],
+			[
+				"controllers/",
+				"app\\controllers\\ProspectController.php"
+			],
+			[
+				"userc",
+				"app\\controllers\\UserController.php"
+			],
+			[
+				"apic",
+				"app\\controllers\\ApiController.php"
+			],
+			[
+				"offers/",
+				"app\\views\\backend\\offers\\index.blade.php"
+			],
+			[
+				"adminc",
+				"app\\controllers\\AdminController.php"
+			],
+			[
+				"routes/ad",
+				"app\\routes\\admin.php"
+			],
+			[
+				"sidebar",
+				"app\\views\\backend\\layouts\\admin\\sidebar.blade.php"
+			],
+			[
+				"publicity",
+				"app\\views\\backend\\publicity\\index.blade.php"
+			],
+			[
 				"app",
 				"app\\config\\app.php"
 			],
@@ -2039,16 +1333,8 @@
 				"app\\views\\templates\\dys\\index.blade.php"
 			],
 			[
-				"authc",
-				"app\\controllers\\AuthController.php"
-			],
-			[
 				"auth.",
 				"app\\routes\\auth.php"
-			],
-			[
-				"auth",
-				"app\\config\\auth.php"
 			],
 			[
 				"route",
@@ -2085,10 +1371,6 @@
 			[
 				"payme",
 				"app\\models\\Payment.php"
-			],
-			[
-				"userc",
-				"app\\controllers\\UserController.php"
 			],
 			[
 				"api",
@@ -2159,10 +1441,6 @@
 				"public\\assets\\plugins\\magnific\\jquery.magnific-popup.min.js"
 			],
 			[
-				"sidebar",
-				"app\\views\\backend\\layouts\\user\\sidebar.blade.php"
-			],
-			[
 				"routes/us",
 				"app\\routes\\user.php"
 			],
@@ -2181,10 +1459,6 @@
 			[
 				"config/a",
 				"app\\config\\auth.php"
-			],
-			[
-				"adminc",
-				"app\\controllers\\AdminController.php"
 			],
 			[
 				"clickatellcon",
@@ -2335,10 +1609,6 @@
 				"app\\Services\\Registrar.php"
 			],
 			[
-				"homec",
-				"app\\controllers\\HomeController.php"
-			],
-			[
 				"app/config",
 				"app\\config\\app.php"
 			],
@@ -2415,10 +1685,6 @@
 				"app\\views\\backend\\landings\\index.blade.php"
 			],
 			[
-				"publicity",
-				"app\\views\\backend\\publicity\\index.blade.php"
-			],
-			[
 				"usersidebar",
 				"app\\views\\backend\\layouts\\user\\sidebar.blade.php"
 			],
@@ -2453,10 +1719,6 @@
 			[
 				"deploy.blade",
 				"app\\views\\deploy\\index.blade.php"
-			],
-			[
-				"apic",
-				"app\\controllers\\ApiController.php"
 			],
 			[
 				"users/index",
@@ -2497,30 +1759,6 @@
 			[
 				"index",
 				"index.html"
-			],
-			[
-				"boo",
-				"assets\\css\\bootstrap.min.css"
-			],
-			[
-				"inde",
-				"index.html"
-			],
-			[
-				"routes/user",
-				"app\\routes\\user.php"
-			],
-			[
-				"routes/ad",
-				"app\\routes\\admin.php"
-			],
-			[
-				"statistic",
-				"public\\assets\\js\\statistics.angular.js"
-			],
-			[
-				"pros",
-				"app\\controllers\\ProspectController.php"
 			]
 		],
 		"width": 0.0
@@ -2528,9 +1766,17 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "guayima",
+		"last_filter": "gua",
 		"selected_items":
 		[
+			[
+				"gua",
+				"C:\\Users\\EliJosé\\Documents\\GitHub\\guayimano\\guayimano.sublime-project"
+			],
+			[
+				"",
+				"C:\\Users\\EliJosé\\Documents\\GitHub\\guayimano\\guayimano.sublime-project"
+			],
 			[
 				"guayima",
 				"C:\\Users\\EliJosé\\Documents\\GitHub\\guayimano\\guayimano.sublime-project"
@@ -2538,10 +1784,6 @@
 			[
 				"guayi",
 				"C:\\Users\\EliJosé\\Documents\\GitHub\\guayimano\\guayimano.sublime-project"
-			],
-			[
-				"",
-				"C:\\Users\\EliJosé\\Documents\\GitHub\\licenser\\licenser.sublime-workspace"
 			],
 			[
 				"gu",
@@ -2574,7 +1816,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 303.0,
 	"status_bar_visible": true,
 	"template_settings":

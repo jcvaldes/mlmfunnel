@@ -141,5 +141,24 @@ class AdminController extends BaseController {
         return Redirect::to('/dashboard/landings')->with('alert', ['type' => 'success', 'message' => 'Configuración guardada.']);
     }
 
+    /* Offers */
+    public function getOffers()
+    {
+        $offers = Offer::all();
+        return View::make('backend.offers.index', compact('offers'));
+    }
+
+    public function postOffer()
+    {
+        $inputs = Input::all();
+
+        $offer = new Offer($inputs);
+        if ($offer->save())
+        {
+            return Redirect::to('/dashboard/offers')->with('alert', ['type' => 'success', 'message' => 'Oferta guardada.']);;
+        }
+        return Redirect::to('/dashboard/offers')->with('alert', ['type' => 'danger', 'message' => 'Ocurrio un error, intenta mas tarde.']);
+    }
+
 
 }
