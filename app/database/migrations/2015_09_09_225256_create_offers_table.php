@@ -20,6 +20,8 @@ class CreateOffersTable extends Migration {
 			$table->decimal('register');
 			$table->decimal('subscription');
 
+			$table->string('code', 50)->nullable();
+
 		    $table->enum('type', ['monthly', 'threemonth', 'sixmonth', 'yearly']);
 
 			$table->timestamps();

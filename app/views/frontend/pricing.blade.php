@@ -63,8 +63,8 @@
 
                                 <p class="text-justify">
                                     <strong></strong>
-                                    <br> Se debitará de tu cuenta el monto de registro que es de: <strong>{{ Setting::key('payment_register-cost')->first()->value }} U$D</strong>
-                                    <br> Y luego cada mes, la suma de: <strong>{{ Setting::key('payment_subscription-cost')->first()->value }} U$D</strong>
+                                    <br> Se debitará de tu cuenta el monto de registro que es de: <strong>{{ $p['register'] }} U$D</strong>
+                                    <br> Y luego cada {{ $p['cada'] }}, la suma de: <strong>{{ $p['subscription'] }} U$D</strong>
                                     <br>
                                     <br>
 
@@ -80,14 +80,14 @@
                                         <button type="submit" class="btn btn-blue pull-right"><i class="fa fa-dollar m-r-10"></i> Comprar Ahora</button>
                                         <input name="no_shipping" type="hidden" value="1" />
 
-                                        <input name="a1" type="hidden" value="{{ Setting::key('payment_register-cost')->first()->value }}" />
+                                        <input name="a1" type="hidden" value="{{ $p['register'] }}" />
                                         <input name="p1" type="hidden" value="1" />
                                         <input name="t1" type="hidden" Value="M" />
 
 
-                                        <input name="a3" type="hidden" value="{{ Setting::key('payment_subscription-cost')->first()->value }}" />
-                                        <input name="p3" type="hidden" value="1" />
-                                        <input name="t3" type="hidden" Value="M" />
+                                        <input name="a3" type="hidden" value="{{ $p['subscription'] }}" />
+                                        <input name="p3" type="hidden" value="{{ $p['p3'] }}" />
+                                        <input name="t3" type="hidden" Value="{{ $p['t3'] }}" />
                                         <input name="src" type="hidden" value="1" />
                                         <input name="sra" type="hidden" value="1" />
 

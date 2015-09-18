@@ -111,6 +111,7 @@
                                         <th><strong>Registro</strong></th>
                                         <th><strong>Mensualidad</strong></th>
                                         <th class="text-center"><strong>Tipo</strong></th>
+                                        <th class="text-center"><strong>LINK</strong></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -122,6 +123,10 @@
 
                                         <td class="text-center">
                                             {{ $offer->getType() }}
+                                        </td>
+
+                                        <td class="text-center">
+                                            <a class="btn btn-info" target="_blank" href="{{ URL::to('/subscription/prepare/'.$offer->code) }}">Link</a>
                                         </td>
                                     </tr>
                                     @endforeach

@@ -5,7 +5,7 @@ class Offer extends Model {
     protected $table = 'offers';
     public $timestamp = true;
 
-    protected $fillable = ['name', 'register', 'subscription', 'type'];
+    protected $fillable = ['name', 'register', 'subscription', 'type', 'code'];
 
 	protected static $rules = [
         'name' => 'required',
@@ -17,9 +17,9 @@ class Offer extends Model {
     public static function boot()
     {
         parent::boot();
-        static::creating(function($aweberlist)
+        static::creating(function($offer)
         {
-
+            $offer->code = str_random(30);
         });
 
     }

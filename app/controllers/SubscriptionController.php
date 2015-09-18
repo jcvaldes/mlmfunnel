@@ -7,16 +7,53 @@ class SubscriptionController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function prepare()
+	public function prepare($code = false)
 	{
 		if(Input::has('ref')){
 			Session::put('ref', Input::get('ref'));
 		}
 
+		$p = [
+			'register' => Setting::key('payment_register-cost')->first()->value,
+			'subscription' => Setting::key('payment_subscription-cost')->first()->value,
+			'cada' => 'mes',
+
+			'p3' => 1,
+			't3' => 'M'
+		];
+
+		if($code){
+			$offer = Offer::where('code', $code)->first();
+
+			if($offer){
+				$p['register'] = $offer->register;
+				$p['subscription'] = $offer->subscription;
+
+				if($offer->type == 'threemonth'){
+					$p['cada'] = 'tres meses';
+
+					$p['p3'] = 3;
+					$p['t3'] = 'M';
+				}else if($offer->type == 'sixmonth'){
+					$p['cada'] = 'seis meses';
+
+					$p['p3'] = 6;
+					$p['t3'] = 'M';
+				}else if($offer->type == 'yearly'){
+					$p['cada'] = 'año';
+
+					$p['p3'] = 1;
+					$p['t3'] = 'Y';
+				}
+
+			}
+
+		}
+
 		$uniqid = Hash::make(uniqid());
 		Session::put('uniqid', $uniqid);
 
-		return View::make('frontend.pricing')->with('uniqid', $uniqid);
+		return View::make('frontend.pricing', compact('uniqid', 'p'));
 	}
 
 	public function commission()
