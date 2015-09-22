@@ -61,9 +61,8 @@
                                 <div class="ne elHeadline hsSize3 lh3 elMargin0 elBGStyle0 hsTextShadow0" style="text-align: center; color: rgb(255, 255, 255);" data-bold="inherit" contenteditable="false">
                                     <font color="#f9ff95"><b>¡Bienvenid@ a</b></font> <i>Tu Cuerpo En Equilibrio!</i>
                                 </div>
-
                                 <br>
-
+                                @include('backend.partials.alert')
                                 <!-- BEGIN ERROR BOX -->
                                 @if($errors->all())
                                 <div class="alert alert-danger ">
@@ -89,7 +88,7 @@
 
                             </div>
 
-                            <div class="de elBTN elAlign_center elMargin0 de-editable" id="tmp_button-39520" data-de-type="button" data-de-editing="false" data-title="button" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 30px; outline: none; cursor: pointer;">
+                            <div class="de elBTN elAlign_center elMargin0 de-editable" style="margin-top: 30px; outline: none; cursor: pointer;">
                                 <button  type="submit" class="elButton elButtonSubtle elButtonColor1 elFont_opensans elButtonSize2 elButtonFull" style="color: rgb(255, 255, 255); background-color: rgb(255, 172, 11);">
                                     <span class="elButtonMain">Login</span>
                                     <span class="elButtonSub"></span>

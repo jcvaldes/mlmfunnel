@@ -39,7 +39,12 @@ Route::group(array('before' => 'auth', 'prefix' => 'dashboard'), function()
 	Route::post('/sms', ['uses' => 'NotificationController@sms_post']);
 
 	/* Offers */
-	Route::get('/offers', ['uses' => 'AdminController@getOffers']);
-	Route::post('/offer', ['uses' => 'AdminController@postOffer']);
+	Route::get('/offers', ['uses' => 'OfferController@index']);
+	Route::post('/offer', ['uses' => 'OfferController@store']);
+
+	Route::get('/offers/create', ['uses' => 'OfferController@create']);
+	Route::get('/offers/{id}', ['uses' => 'OfferController@show']);
+	Route::post('/offers/{id}', ['as' => 'offer.update', 'uses' => 'OfferController@update']);
+	Route::get('/offers/{id}/delete', ['as' => 'offer.update', 'uses' => 'OfferController@destroy']);
 
 });

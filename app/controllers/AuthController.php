@@ -60,20 +60,20 @@ class AuthController extends BaseController {
 			'password' => 'required'
 		);
 		$messages = [
-	        'email_login.required' => 'El correo es obligatorio.',
-	        'password_login.required' => 'La contraseña es obligatoria.',
+	        'email.required' => 'El correo es obligatorio.',
+	        'password.required' => 'La contraseña es obligatoria.',
 	    ];
 
 		$validator = Validator::make(Input::all(), $rules, $messages);
-
+		//dd(Input::all());
 		if ($validator->fails()) {
 			return Redirect::back()->withErrors($validator)->withInput(Input::except('password'));
 		} else {
 			$userdata = array(
 				'email' 	=> Input::get('email'),
-				'password' 	=>Input::get('password')
+				'password' 	=> Input::get('password')
 			);
-
+			//dd($userdata);
 			if ($r = Auth::attempt($userdata)) {
 				if(Auth::user()->status == 'suspended'){
 					return Redirect::to('/dashboard/suspended');

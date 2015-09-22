@@ -47,4 +47,9 @@ class Offer extends Model {
                 break;
         }
     }
+
+    public function getLink()
+    {
+        return URL::to('/subscription/prepare/'.$this->code);
+    }
 }

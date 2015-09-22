@@ -77,9 +77,9 @@ class SubscriptionController extends \BaseController {
 	public function process()
 	{
 
-if(!Input::has('txn_type')){
-return Redirect::to('/');
-}
+		if(!Input::has('txn_type')){
+			return Redirect::to('/');
+		}
 
 	//dd(Input::all());
 		$uniqid = Session::get('uniqid');
