@@ -45,6 +45,6 @@ Route::group(array('before' => 'auth', 'prefix' => 'dashboard'), function()
 	Route::get('/offers/create', ['uses' => 'OfferController@create']);
 	Route::get('/offers/{id}', ['uses' => 'OfferController@show']);
 	Route::post('/offers/{id}', ['as' => 'offer.update', 'uses' => 'OfferController@update']);
-	Route::get('/offers/{id}/delete', ['as' => 'offer.update', 'uses' => 'OfferController@destroy']);
+	Route::get('/offers/{id}/delete', ['as' => 'offer.delete', 'uses' => 'OfferController@destroy']);
 
 });
