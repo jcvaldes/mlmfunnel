@@ -93,4 +93,11 @@ class OfferController extends BaseController {
         return Redirect::to('/dashboard/offers')->with('alert', ['type' => 'success', 'message' => 'La oferta ha sido eliminada.']);
     }
 
+    public function apiGet()
+    {
+        header('Access-Control-Allow-Origin: *');
+        $offers = Offer::all();
+        return $offers->toJson();
+    }
+
 }

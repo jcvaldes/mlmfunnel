@@ -23,4 +23,7 @@ Route::group(['prefix' => 'api'], function () {
     Route::any('/payment/subscription', ['uses' => 'ApiController@payment_subscription']);
 
     Route::post('/live/video', ['uses' => 'ApiController@live_video']);
+
+    Route::any('/offers', ['uses' => 'OfferController@apiGet']);
+
 });
